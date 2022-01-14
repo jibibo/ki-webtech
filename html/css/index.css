@@ -65,15 +65,7 @@ li.drop {
   padding-right: 25px;
 }
 
-body, html {
-  height: 100%;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.bd-image{
+body {
   background-image: url(images/amsterdam.jpeg);
 
   filter: blur(6px);
