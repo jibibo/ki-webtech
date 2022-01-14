@@ -74,7 +74,7 @@ body, html {
 }
 
 .bd-image{
-  background-image: url("images/amsterdam.jpeg");
+  background-image: url(images/amsterdam.jpeg);
 
   filter: blur(6px);
   -webkit-filter: blur(6px);
