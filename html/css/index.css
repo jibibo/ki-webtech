@@ -86,3 +86,8 @@ li.menu {
 .currentpage {
   background-color: rgb(90, 90, 90);
 }
+
+footer {
+  position:fixed
+  background-color: rgb(200, 212, 228);
+}
