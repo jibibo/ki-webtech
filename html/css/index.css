@@ -43,7 +43,7 @@ li a:hover {
 }
 
 .bd-image{
-  background-image: url("amsterdam.jpeg");
+  background-image: url("images/amsterdam.jpeg");
 
   filter: blur(6px);
   -webkit-filter: blur(6px);
