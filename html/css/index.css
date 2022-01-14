@@ -41,3 +41,15 @@ li a:hover {
   padding-left: 25px;
   padding-right: 25px;
 }
+
+.bd-image{
+  background-image: url("amsterdam.jpeg");
+
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
