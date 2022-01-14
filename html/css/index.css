@@ -44,7 +44,7 @@ li a {
 
 /* https://www.w3schools.com/css/css_dropdowns.asp */
 li a:hover, .menu:hover .dropdown{
-  background-color: rgb(86, 101, 129);
+  background-color: rgb(59, 70, 90);
 }
 
 li.menu {
@@ -69,7 +69,7 @@ li.menu {
 }
 
 .content a:hover{
-  background-color: rgb(86, 101, 129);
+  background-color: rgb(59, 70, 90);
 }
 
 .menu:hover .content {
