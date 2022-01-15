@@ -79,4 +79,7 @@ li.menu {
   padding-right: 25px;
 }
 
+.logo{
+  filter: blur(3px);
+}
 
