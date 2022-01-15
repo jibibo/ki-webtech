@@ -91,3 +91,7 @@ li.menu {
   position:fixed
   background-color: rgb(200, 212, 228);
 }*/
+
+.searchbar {
+  float: right;
+}
