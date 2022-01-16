@@ -1,0 +1,58 @@
+body{
+    background: rgb(200, 212, 228);
+    font-family: 'Roboto', sans-serif;
+}
+
+.homebutton{
+    float: right;
+    margin-right: 60px;
+}
+
+.homebutton a{
+    
+}
+
+.container{
+    width: 80%;
+    margin: 50px auto;
+    
+}
+
+.contact_box{
+    background: white;
+    display: flex;
+}
+
+.contact_left{
+    flex-basis: 60%;
+    padding: 40px 60px;
+}
+.contact_right{
+    flex-basis: 40%;
+    padding: 40px;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+.container p{
+    margin-bottom: 50px;
+}
+
+.input_row{
+    display:ruby;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+.input_row .input_group{
+    flex-basis: 45%;
+    padding-bottom: 30px;
+}
+
+input{
+    width: 100%;
+    border: 1px solid;
+    outline: none;
+    padding-bottom: 8px;
+}
