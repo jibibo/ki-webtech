@@ -86,10 +86,21 @@ li.menu {
 .wrapper{
   float: right;
 }
-.search_bar{
-  float: right;
-  
 
+.search_bar{
+  background: rgb(115, 132, 165);
+  position: relative;
+  padding: 0;
+  border-radius: 30px;
+  display: flex;
+  margin-right: 40px;
+  margin-top: 10px;
 }
+
+.search_bar .search_btn{
+  border-radius: 100%;
+  background:rgb(72, 83, 104);
+}
+
 
 
