@@ -5,11 +5,23 @@ body{
 
 .homebutton{
     float: right;
-    margin-right: 160px;
-    margin-top: 35px;
+    display: inline-flex;
+    margin-right: 110px;
+    margin-top: 10px;
+    height: 50px;
+    padding: 0;
+    background-color: #37475A;
+    color: #FEBD69;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 50px;
 }
 
-.homebutton a{
+.homebutton:hover{
+    color: #ca8831;
     
 }
 
@@ -74,7 +86,7 @@ label{
     color: #FEBD69;
 }
 
-button{
+.messagebutton button{
     background: #FEBD69;
     width: 100px;
     border: none;
@@ -84,6 +96,9 @@ button{
     margin-top: 20px;
     cursor: pointer;
     box-shadow: 0px 5px 15px 0px rgba(28, 0, 181,0.3);
+}
+.messagebutton button:hover{
+    background-color: #ae7c3b;
 }
 
 .contact_left h3{
