@@ -82,6 +82,10 @@ li.menu {
   padding-left: 25px;
   padding-right: 25px;
 }
+
+.wrapper{
+  float: right;
+}
 .search_bar{
   float: right;
   
