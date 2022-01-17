@@ -14,6 +14,20 @@
           body {
             background-image: url('images/amsterdam.jpeg');
           }
+
+          form {
+            border: 3px;
+            border-color: antiquewhite;
+            margin: auto;
+
+          .test {
+            padding: 20px;
+          }
+          
+          }
+
+
+    }  
           </style>
     </head>
 
@@ -36,38 +50,45 @@
                 </li>
                 <li><a href="about.html">ABOUT US</a></li>
                 <li><a href="checkout.html">CHECKOUT</a></li>
-                <li><a class="currentpage" href="login.html">LOG-IN/REGISTRER</a></li>
+                <li><a href="login.html">LOG-IN/REGISTRER</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
               </ul>
             </nav>
-      
+
           </div>
         </div>
-      
+
+      <!-- <button onclick="open()">LOGIN</button> -->
       <div id="popup">
-        <form action="/action_page.php" method="post">
+        <form action="" method="post">
           <h2>Login</h2>
-          <label for="username"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="username" required>
+          <div class="test">
+            <label for="username">Username</label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <br><br>
 
-          <label for="pww"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="pww" required>
+            <label for="pww">Password</label>
+            <input type="password" placeholder="Enter Password" name="pww" required>
+            <br><br>
 
-          <button type="submit">Login</button>
-          <button type="button" onclick="close()">Close</button>
+            <button type="submit">Login</button>
+            <br><br>
+          <!--  <button type="button" onclick="close()">Close</button> 
+            <a href="">FORGOT PASSWORD</a> -->
+          </div>
         </form>
       </div>
-      
-        <script>
+
+        <!-- <script>
           function open() {
-            document.getElementById()style.display = "block";
+            document.getElementById("popup")style.display = "block";
           }
 
           function close() {
-            document.getElementById()style.display = "none";
+            document.getElementById("popup")style.display = "none";
           }
 
-        </script>
+        </script> -->
     
       </body>
 </html>
