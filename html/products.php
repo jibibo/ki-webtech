@@ -11,6 +11,7 @@
 <head>
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto" />
   <link rel="stylesheet" href="css/products.css" />
+  <link rel="stylesheet" href="css/testfooterjul.css" />
 
 </head>
 
@@ -86,6 +87,11 @@
     </div>
 
   </div>
+
+  <?php
+  include "testfooterjul.php";
+  ?>
+
 </body>
 
 </html>

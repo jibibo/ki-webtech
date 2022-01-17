@@ -1,17 +1,7 @@
 <?php
-// login info
-$servername = "localhost";
-$username = "webaccess";
-$password = "123";
-$database = "uvazon";
-// Create and check connection
-$conn = mysqli_connect($servername, $username, $password, $database);
-if ($conn) {
-  echo "Conn ok<br>";
-} else {
-  echo "Conn failed<br>";
-  die("Connection failed: " . mysqli_connect_error());
-}
+
+include "connect.php";
+
 
 if ($_GET["name"]) {
   echo "Name set<br>";
@@ -31,7 +21,6 @@ if ($_GET["name"]) {
 }
 
 mysqli_close($conn);
-echo "Conn closed<br>";
 ?>
 
 <!DOCTYPE html>
