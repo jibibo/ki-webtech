@@ -27,7 +27,8 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: rgb(115, 132, 165);
+  background-color: #FEBD69;
+  
 }
 
 li {
@@ -36,7 +37,7 @@ li {
 
 li a {
   display: block;
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -44,7 +45,7 @@ li a {
 
 /* https://www.w3schools.com/css/css_dropdowns.asp */
 li a:hover, .menu:hover .dropdown{
-  background-color: rgb(72, 85, 110);
+  background-color: #aa7e43;
 }
 
 li.menu {
