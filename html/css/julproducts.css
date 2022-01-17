@@ -24,8 +24,11 @@ body {
 }
 
 .product {
+  box-shadow: 5px 5px black;
+  max-width: 240px;
   flex: 1 1 20%;
   border: 1px solid black;
+  padding: 10px;
 }
 
 .product-name {
