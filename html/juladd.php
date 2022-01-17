@@ -26,7 +26,6 @@ if ($_GET["name"]) {
   } else {
     echo "Adding failed" . mysqli_error($conn);
   }
-
 } else {
   echo "Name not set<br>";
 }
@@ -37,15 +36,18 @@ echo "Conn closed<br>";
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>localhost</title>
-  </head>
-  <body>
-    <form action="/juladd.php" method="GET">
-      <input type="text" name="name" placeholder="product name" />
-      <input type="number" name="price" placeholder="price" />
-      <input type="text" name="image" placeholder="image url" />
-      <input type="submit" value="ADD" />
-    </form>
-  </body>
+
+<head>
+  <title>localhost</title>
+</head>
+
+<body>
+  <form action="/juladd.php" method="GET">
+    <input type="text" name="name" placeholder="product name" />
+    <input type="number" name="price" placeholder="price" />
+    <input type="text" name="image" placeholder="image url" />
+    <input type="submit" value="ADD" />
+  </form>
+</body>
+
 </html>
