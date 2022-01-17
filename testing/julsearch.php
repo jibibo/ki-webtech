@@ -20,14 +20,15 @@ if ($_GET["name"]) {
   echo "Name not set<br>";
 }
 
-mysqli_close($conn);
+include "db_disconnect.php";
+
 ?>
 
 <!DOCTYPE html>
 <html>
 
 <head>
-  <title>localhost</title>
+  <title>search</title>
 </head>
 
 <body>

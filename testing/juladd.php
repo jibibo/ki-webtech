@@ -27,7 +27,7 @@ mysqli_close($conn);
 <html>
 
 <head>
-  <title>localhost</title>
+  <title>add</title>
 </head>
 
 <body>
