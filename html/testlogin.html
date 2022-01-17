@@ -18,6 +18,9 @@
           form {
             border: 3px solid #f1f1f1;
           }
+
+
+    }  
           </style>
     </head>
 
@@ -40,6 +43,7 @@
                 </li>
                 <li><a href="about.html">ABOUT US</a></li>
                 <li><a href="checkout.html">CHECKOUT</a></li>
+                <li><a href="login.html">LOG-IN/REGISTRER</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
               </ul>
             </nav>
@@ -47,7 +51,7 @@
           </div>
         </div>
 
-      <button onclick="open()">LOG-IN/REGISTRER</button>
+      <button onclick="open()">LOGIN</button>
       <div id="popup">
         <form action="/action_page.php" method="post">
           <h2>Login</h2>
@@ -59,10 +63,11 @@
 
           <button type="submit">Login</button>
           <button type="button" onclick="close()">Close</button>
+          <a href="">FORGOT PASSWORD</a>
         </form>
       </div>
 
-        <script>
+        <!-- <script>
           function open() {
             document.getElementById("popup")style.display = "block";
           }
@@ -71,7 +76,7 @@
             document.getElementById("popup")style.display = "none";
           }
 
-        </script>
+        </script> -->
     
       </body>
 </html>
