@@ -43,8 +43,10 @@
       
           </div>
         </div>
-
+      
+      <div id="popup">
         <form action="/action_page.php" method="post">
+          <h2>Login</h2>
           <label for="username"><b>Username</b></label>
           <input type="text" placeholder="Enter Username" name="username" required>
 
@@ -52,9 +54,20 @@
           <input type="password" placeholder="Enter Password" name="pww" required>
 
           <button type="submit">Login</button>
-          <button type="button" onclick="closeForm()">Close</button>
+          <button type="button" onclick="close()">Close</button>
         </form>
-        
+      </div>
+      
+        <script>
+          function open() {
+            document.getElementById()style.display = "block";
+          }
+
+          function close() {
+            document.getElementById()style.display = "none";
+          }
+
+        </script>
     
       </body>
 </html>
