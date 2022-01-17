@@ -17,7 +17,7 @@ if ($_GET["name"]) {
   echo "Name set<br>";
 
   $name = $_GET["name"];
-  
+
   $query = "SELECT name, price, image FROM products WHERE name='$name'";
   $result = mysqli_query($conn, $query);
   if (mysqli_num_rows($result) > 0) {
@@ -27,7 +27,6 @@ if ($_GET["name"]) {
   } else {
     echo "No results<br>";
   }
-
 } else {
   echo "Name not set<br>";
 }
@@ -38,13 +37,16 @@ echo "Conn closed<br>";
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>localhost</title>
-  </head>
-  <body>
-    <form action="/julsearch.php" method="GET">
-      <input type="text" name="name" placeholder="product name" />
-      <input type="submit" value="SEARCH" />
-    </form>
-  </body>
+
+<head>
+  <title>localhost</title>
+</head>
+
+<body>
+  <form action="/julsearch.php" method="GET">
+    <input type="text" name="name" placeholder="product name" />
+    <input type="submit" value="SEARCH" />
+  </form>
+</body>
+
 </html>
