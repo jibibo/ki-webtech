@@ -13,13 +13,11 @@
         <style>
           body {
             background-image: url('images/amsterdam.jpeg');
+            place-items: center;
           }
 
-          .test {
-            background-color: antiquewhite;
-            border: 1px solid black;
-            padding: 25px;
-            margin: auto;
+          .formscreen {
+            border: none;
             text-align: center;
           }
 
@@ -40,12 +38,13 @@
 
           .form {
             display: none;
+            background-color: antiquewhite
           }
 
 
 
-    }  
-          </style>
+      
+        </style>
     </head>
 
     <body>
@@ -77,22 +76,22 @@
 
       <!-- <button onclick="open()">LOGIN</button> . -->
       <div id="popup" class="form">
-        <form action="" method="post" class="test">
-          <h2>LOGIN</h2>
+        <form action="" method="post" class="formscreen">
+          <div class="title">LOGIN</div>
+
+          <div class="textbox">
+            <input type="text" placeholder="Username" name="username" required>
+            <br><br>
+
+            <input type="password" placeholder="Password" name="pww" required>
+            <br><br>
+          </div>
+
           <div>
-            <label for="username">Username</label>
-            <input type="text" placeholder="Enter Username" name="username" required>
-            <br><br>
-
-            <label for="pww">Password</label>
-            <input type="password" placeholder="Enter Password" name="pww" required>
-            <br><br>
-
             <button type="submit" class="login">Login</button>
-            <button type="button" class="close" onclick="formClose()">Close</button>
-            <br><br>
-            <a href="">FORGOT PASSWORD</a>
-            <p>Not a member yet? <a href="register.html">Click here to register!</a></p>
+            <!-- <button type="button" class="close" onclick="formClose()">Close</button> -->
+            <a class="forgot" href="">Forgot password?</a>
+            <p class="register">Not a member yet? <a href="register.html">Click here to register!</a></p>
           <!--  <button type="button" onclick="close()">Close</button> 
             <a href="">FORGOT PASSWORD</a> -->
           </div>
@@ -105,10 +104,9 @@
             document.getElementById("idbutton").style.backgroundColor = "rgb(90, 90, 90)";
           }
 
-          function formClose() {
-            document.getElementById("popup").style.display = "none";
-          }
-
+         // function formClose() {
+          //  document.getElementById("popup").style.display = "none";
+          //}
       </script>
     
       </body>
