@@ -27,9 +27,25 @@
             text-align: center;
           }
 
-          button {
+          .button {
             color: black;
+            background-color: #FEBD69;
+            display: block;
+            border: none;
+            text-align: center;
+            font-size: 16px;
+            padding: 14px 16px;
+            text-decoration: none;
           }
+
+          .button:hover {
+            background-color: #c28e49;
+          }
+
+          .form {
+            display: none;
+          }
+
 
 
     }  
@@ -55,7 +71,7 @@
                 </li>
                 <li><a href="about.html">ABOUT US</a></li>
                 <li><a href="checkout.html">CHECKOUT</a></li>
-                <li><button onclick="open()">LOG-IN/REGISTRER</button></li>
+                <li><button class="button" class="currentpage" onclick="formOpen()">LOG-IN/REGISTRER</button></li>
                 <li><a href="contact.html">CONTACT</a></li>
               </ul>
             </nav>
@@ -64,7 +80,7 @@
         </div>
 
       <!-- <button onclick="open()">LOGIN</button> . -->
-      <div id="popup">
+      <div id="popup" class="form">
         <form action="" method="post" class="test">
           <h2>LOGIN</h2>
           <div>
@@ -77,9 +93,10 @@
             <br><br>
 
             <button type="submit" class="login">Login</button>
-            <button type="button" class="close" onclick="close()">Close</button>
+            <button type="button" class="close" onclick="formClose()">Close</button>
             <br><br>
             <a href="">FORGOT PASSWORD</a>
+            <p>Not a member yet? <a href="register.html">Click here to register!</a></p>
           <!--  <button type="button" onclick="close()">Close</button> 
             <a href="">FORGOT PASSWORD</a> -->
           </div>
@@ -87,12 +104,12 @@
       </div>
       
       <script>
-          function open() {
-            document.getElementById("popup")style.display = "block";
+          function formOpen() {
+            document.getElementById("popup").style.display = "block";
           }
 
-          function close() {
-            document.getElementById("popup")style.display = "none";
+          function formClose() {
+            document.getElementById("popup").style.display = "none";
           }
 
       </script>
