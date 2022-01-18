@@ -112,6 +112,10 @@ li.menu {
 ion-icon {
   font-size: 20px;
   padding: 0px 5px;
+  color: black;
+  font-weight: bold;
+  border: none;
+  background-color: #c28e49;
 }
 
 .filler {
