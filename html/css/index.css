@@ -94,11 +94,11 @@ li.menu {
 
 .searchbar {
   float: right;
-  padding: 6px;
+  padding: 10px;
 }
 
 .textbar input {
-  font-size: 12px;
+  font-size: 5px;
   padding: 10px;
 }
 
