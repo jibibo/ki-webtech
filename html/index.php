@@ -48,7 +48,7 @@
                     <span class="icon">
                       <ion-icon name="search-outline"></ion-icon>
                       </span>
-                </button>
+                  </button>
                 </div>
               </form>
           </div> 
