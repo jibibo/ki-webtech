@@ -8,6 +8,7 @@
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
         <link rel="stylesheet" href="css/index.css" />
         <link rel="stylesheet" href="css/login.css" />
+        <link rel="stylesheet" href="css/footer.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
@@ -33,7 +34,7 @@
                 <li><a href="about.html">ABOUT US</a></li>
                 <li><a href="checkout.html">CHECKOUT</a></li>
                 <li><a class="currentpage" href="newlogin.html">LOG-IN/REGISTRER</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="contact.php">CONTACT</a></li>
               </ul>
             </nav>
             </div>
@@ -58,9 +59,9 @@
             </form>
             </div>
         </div>
-        <php?>
-          
-        </php>
+        <?php
+        include "footer.php";
+        ?>
     
     </body>
 </html>
