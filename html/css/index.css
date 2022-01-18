@@ -102,7 +102,7 @@ li.menu {
 }
 
 .textbar input {
-  font-size: 18px;
+  font-size: 17px;
   border: none;
   width: 400px;
   border-radius: 40px;
@@ -121,7 +121,7 @@ li.menu {
 }
 
 ion-icon {
-  font-size: 17px;
+  font-size: 19px;
   margin-right: 10px;
   padding-top: 5px;
 }
