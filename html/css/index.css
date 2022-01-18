@@ -94,11 +94,6 @@ li.menu {
   padding-bottom: 7px;
 }
 
-.buttonbox {
-  padding-top: 8px;
-  padding-bottom: 6px;
-}
-
 .textbar input {
   font-size: 18px;
   border: none;
@@ -115,6 +110,7 @@ li.menu {
 .searchbutton {
   border: none;
   background-color: #febd69;
+  padding-top: 1px;
 }
 
 ion-icon {
