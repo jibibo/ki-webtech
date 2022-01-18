@@ -6,11 +6,11 @@ body{
 .homebutton{
     float: right;
     display: inline-flex;
-    margin-right: 110px;
+    margin-right: 120px;
     margin-top: 10px;
     height: 50px;
     padding: 0;
-    background-color: #37475A;
+    background-color: #8aa1b1;
     color: #FEBD69;
     border: none;
     outline: none;
