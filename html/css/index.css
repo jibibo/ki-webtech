@@ -105,7 +105,8 @@ li.menu {
   border: none;
   width: 400px;
   border-radius: 40px;
-  padding-top: 1px;
+  /*padding-top: 1px;*/
+  margin: 5px;
 }
 
 .logo {
