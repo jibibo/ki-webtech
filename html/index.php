@@ -41,13 +41,20 @@
           <div class="searchbar"> 
               <form action="">
                 <input class="textbar" type="text" placeholder="Search for..." name="search">
-                <button type="submit" class="searchbutton">Search</button>
+                <button type="submit" class="searchbutton">
+                  <span class="icon">
+                    <ion-icon name="search-outline"></ion-icon>
+                  </span>
+                </button>
               </form>
-            </div> 
+          </div> 
         </ul>
       </nav>
     </div>
   </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
   <div class="filler"></div>
 
