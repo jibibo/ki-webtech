@@ -3,6 +3,6 @@
 $output = exec("git pull origin master");
 print_r($output);
 
-echo "test pull 123"
+echo "test pull 123";
 
 ?>
