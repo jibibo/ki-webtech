@@ -96,9 +96,13 @@ li.menu {
   float: right;
 }
 
+.textbar {
+  margin-top: 10px;
+}
+
 .textbar input {
   font-size: 12px;
-  padding: 5px 90px;
+  padding: 15px;
 }
 
 .logo {
