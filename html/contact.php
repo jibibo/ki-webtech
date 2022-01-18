@@ -7,6 +7,7 @@
         <title>UVAZON/contact</title>
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
         <link rel="stylesheet" href="css/contact.css" />
+        <link rel="stylesheet" href="css/footer.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fontawesome.com/v5.15/icons/home?style=solid">
@@ -89,6 +90,9 @@
 
         </div>
       </div>
+      <?php
+        include "footer.php";
+      ?>
     </body>
 </html>
 
