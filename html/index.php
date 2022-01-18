@@ -36,7 +36,7 @@
           <li><a href="about.html">ABOUT US</a></li>
           <li><a href="checkout.html">CHECKOUT</a></li>
           <li><a href="login.html">LOG-IN/REGISTRER</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="contact.php">CONTACT</a></li>
 
           <div class="searchbar"> 
               <form action="">
