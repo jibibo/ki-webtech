@@ -5,15 +5,11 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>UVAZON</title>
+  <title>Home | UvAzon</title>
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/index.css" />
   <link rel="stylesheet" href="css/footer.css" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet" />
-  
 </head>
 
 <body>
@@ -38,20 +34,20 @@
           <li><a href="login.php">LOG-IN/REGISTRER</a></li>
           <li><a href="contact.php">CONTACT</a></li>
 
-          <div class="searchbar"> 
-              <form action="">
-                <div class="textbar">
-                  <input type="text" placeholder="  Search for..." name="search">
+          <div class="searchbar">
+            <form action="">
+              <div class="textbar">
+                <input type="text" placeholder="  Search for..." name="search">
                 <!--</div>
                 <div> -->
-                  <button type="submit" class="searchbutton">
-                    <span class="icon">
-                      <ion-icon name="search-outline"></ion-icon>
-                      </span>
-                  </button>
-                </div>
-              </form>
-          </div> 
+                <button type="submit" class="searchbutton">
+                  <span class="icon">
+                    <ion-icon name="search-outline"></ion-icon>
+                  </span>
+                </button>
+              </div>
+            </form>
+          </div>
         </ul>
       </nav>
     </div>

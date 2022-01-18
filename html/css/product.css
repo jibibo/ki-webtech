@@ -1,0 +1,181 @@
+/* global */
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  min-height: 80vh;
+  border: 1px solid black;
+}
+
+/* product details */
+
+.padding {
+  padding: 12px;
+}
+
+.product-details {
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-left {
+  flex: 1 1 0px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid yellow;
+}
+
+.product-image {
+  justify-self: center;
+  height: 500px;
+}
+
+.product-right {
+  flex: 1 1 0px;
+
+  border: 1px solid orange;
+}
+
+.product-name {
+  text-decoration: none;
+}
+
+.product-price {
+  text-decoration: none;
+}
+
+/* product rating & reviews */
+
+.rating-reviews {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.rating-reviews:hover {
+  text-decoration: underline;
+}
+
+/* shopping buttons */
+
+.shopping-btns {
+  border: 1px solid blue;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0px;
+}
+
+.shopping-btns button {
+  cursor: pointer;
+  height: 50px;
+}
+
+.buy-btn {
+  flex: 2 2 0px;
+  min-width: 100px;
+}
+
+.cart-btn {
+  flex: 1 1 0px;
+  background-color: orange;
+}
+
+.wishlist-btn {
+  flex: 1 1 0px;
+  background-color: red;
+}
+
+/* more product info, description etc */
+
+.description-label {
+  color: rgb(100, 100, 100);
+  font-style: italic;
+}
+
+.product-id {
+  font-size: 0.75em;
+  display: block;
+}
+
+.categories {
+  margin: 10px 0px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.categories a {
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  background-color: whitesmoke;
+}
+
+.categories a:hover {
+  background-color: rgb(72, 168, 228);
+}
+
+/* product reviews */
+
+.product-reviews {
+  border: 1px solid green;
+}
+
+.make-review {
+  border: 1px solid olivedrab;
+}
+
+.review-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.review-form textarea {
+  resize: vertical;
+}
+
+.customer-reviews {
+  border: 1px solid palevioletred;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-top {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.review-rating,
+.review-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.review-rating,
+.stars {
+  color: gold;
+}
+
+.review-title {
+  font-style: italic;
+}
+
+.review-body {
+  display: block;
+  text-align: center;
+}
+
+.review-author {
+  color: rgb(100, 100, 100);
+  font-style: italic;
+}

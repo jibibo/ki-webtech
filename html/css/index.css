@@ -1,15 +1,8 @@
-body {
-  background-color: #8aa1b1;
+/* body { */
+  /* padding-top: 100px; */
+  /* margin-bottom: 200px; */
+/* } */
 
-  font-family: "Roboto", sans-serif;
-
-  height: 100%;
-  padding-top: 100px;
-  margin-bottom: 200px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .register_container {
   background-color: #fff;
   padding: 20px;
