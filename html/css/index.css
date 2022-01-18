@@ -108,3 +108,7 @@ li.menu {
   background: #fff;
   padding: auto;
 }
+
+.filler {
+  height: 100vh;
+}
