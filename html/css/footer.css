@@ -13,7 +13,8 @@ body{
 }
 
 .footer{
-    width: 80%;
+    padding: 40px;
+    width: 90%;
     height: 40vh;
     background-color: #37475A;
     color: #FEBD69;
@@ -28,3 +29,17 @@ body{
     flex-direction: column;
     margin-right: 4rem;
 }
+.footer-heading h2{
+    margin-bottom: 2rem;
+}
+.footer-heading a{
+    color: #FEBD69;
+    text-decoration: none;
+    margin-bottom: 0.8rem;
+}
+.footer-heading a:hover{
+    color: #ac8047;
+    transition: 0.3s ease-in-out;
+}
+
+.footer_emailform h2
