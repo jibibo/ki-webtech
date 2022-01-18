@@ -110,14 +110,11 @@ li.menu {
 .searchbutton {
   border: none;
   background-color: #febd69;
-  padding-top: 2px;
 }
 
 ion-icon {
   font-size: 18px;
   margin-right: 10px;
-  padding-top: 4px;
- /* padding-top: 8px;*/
   --ionicon-stroke-width: 40px;
 }
 
