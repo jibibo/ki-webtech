@@ -14,11 +14,12 @@ function execPrint($command)
 }
 
 // Print the exec output inside of a pre element
-execPrint("cd /var/www/");
-execPrint("git pull origin master");
+// execPrint("cd /var/www/");
+// execPrint("git pull origin master");
 
+echo shell_exec("cd /var/www && git pull origin master");
 
-echo "test123";
+echo "test123123123";
 
 // $output = shell_exec("git pull origin master");
 
