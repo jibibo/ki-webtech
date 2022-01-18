@@ -2,14 +2,7 @@
 
 include "db_connect.php";
 
-if ($_GET["search"]) {
-  $name = htmlspecialchars($_GET["search"]);
-
-  $query = "SELECT * FROM products WHERE name LIKE '%$name%'";
-} else {
-  $query = "SELECT * FROM products";
-}
-
+$query = "SELECT * FROM products";
 $result = mysqli_query($conn, $query);
 
 include "db_disconnect.php";
@@ -20,6 +13,7 @@ include "db_disconnect.php";
 <html>
 
 <head>
+  <title>jul products</title>
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto" />
   <link rel="stylesheet" href="css/julproducts.css" />
 
@@ -33,17 +27,19 @@ include "db_disconnect.php";
 
       if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-          echo "<div class='product'>";
-          echo "<img class='product-image' src='" . $row["image_url"] . "'/>";
-          echo "<span class='product-name'>" . $row["name"] . "</span>";
-          echo "<div class='product-details'>";
-          echo "<span class='product-price'>&euro; " . $row["price"] . "</span>";
-          echo "<button class='product-wishlist'>+ wishlist</button>";
-          echo "</div>";
-          echo "</div>";
+          echo "
+          <div class='product'>
+            <img class='product-image' src='" . $row["image_url"] . "'/>
+            <span class='product-name'>" . $row["name"] . "</span>
+            <div class='product-details'>
+              <span class='product-price'>&euro; " . $row["price"] . "</span>
+              <button class='product-wishlist'>+ wishlist</button>
+            </div>
+          </div>
+          ";
         }
       } else {
-        echo "No products";
+        echo "No products!";
       }
 
       ?>
