@@ -7,9 +7,16 @@
     <title>UVAZON</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/login.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+          background-image: url('images/amsterdam.jpeg'); 
+      }
+    </style>
   </head>
 
   <body>
@@ -31,7 +38,7 @@
             </li>
             <li><a href="about.html">ABOUT US</a></li>
             <li><a href="checkout.html">CHECKOUT</a></li>
-            <li><a href="login.html">LOG-IN/REGISTRER</a></li>
+            <li><a class="currentpage" href="login.html">LOG-IN/REGISTRER</a></li>
             <li><a href="contact.html">CONTACT</a></li>
             <div class="searchbar"> 
               <form>
@@ -41,40 +48,56 @@
             </div> 
           </ul>
         </nav>
-        <div class="register_container">
+        <div class="form">
+          <form action="" class="formscreen">
+            <div class="title">CREATE AN ACCOUNT</div>
+            
             <div class="register">
-                <h1>CREATE AN ACCOUNT</h1>
-
-                <form>
-                    <div class="input_row">
-                      <div class="input_group">
-                        <label> FIRST NAME</label>
-                        <input type="text" placeholder=""></input>
-               
-                      </div>
-                      <div class="input_group">
-                       <label>LAST NAME</label>
-                       <input type="text" placeholder=""></input>
-              
-                     </div>
-                     
-                     <div class="input_group">
-                       <label>PHONE</label>
-                       <input type="text" placeholder=""></input>
-              
-                     </div>
-                     <div class="input_group">
-                      <label>EMAIL</label>
-                      <input type="email" placeholder=""></input>
-             
-                    </div>
-                    </div>
-                    
-                    <div class="messagebutton">
-                     <button type="submit">CREATE ACCOUNT</button>
-                    </div>
-
+              <!-- <label> FIRST NAME</label> -->
+              <input type="text" placeholder="First name" required>
             </div>
+               
+            <div class="register">
+              <!-- <label>LAST NAME</label> -->
+              <input type="text" placeholder="Last name" required>
+            </div>
+              
+            <div class="register">
+              <!--<label>PHONE</label> -->
+              <input type="tel" placeholder="Phone number" required>
+            </div>
+              
+            <div class="register">
+              <!-- <label>EMAIL</label> -->
+              <input type="email" placeholder="Email address" required>
+            </div>
+
+            <div class="register">
+              <!-- <label>EMAIL</label> -->
+              <input type="password" placeholder="Password of at least 8 characters" required>
+            </div>
+
+            <div class="register">
+              <!-- <label>EMAIL</label> -->
+              <input type="text" placeholder="Zip code" required>
+            </div>
+
+            <div class="register">
+              <!-- <label>EMAIL</label> -->
+              <input type="text" placeholder="House number" required>
+            </div>
+
+            <div class="register">
+              <!-- <label>EMAIL</label> -->
+              <input type="text" placeholder="Country" required>
+            </div>
+                    
+            <div>
+              <button class="create" type="submit">Create account</button>
+              <br></br>
+              <a class="text" href="login.html">Back to login</a>
+            </div>
+          </div>
         </div>
   
       </div>
