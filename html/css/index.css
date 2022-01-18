@@ -96,16 +96,14 @@ li.menu {
   float: right;
 }
 
-/*.textbar {
+.textbar {
   margin-top: 10px;
-}*/
+}
 
 .textbar input {
   font-size: 18px;
   border: none;
   width: 400px;
-  margin-top: 4px;
-  margin-bottom: 4px;
 }
 
 .logo {
@@ -121,8 +119,7 @@ li.menu {
 ion-icon {
   font-size: 18px;
   margin-right: 10px;
-  margin-top: 4px;
-  margin-bottom: 4px;
+  padding-top: 4px;
 }
 
 .filler {
