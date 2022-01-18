@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="css/footer.css" />
-
 <div id="footerplace">
   <div class="footer_container">
     <div class="footer">
@@ -28,11 +26,7 @@
       </div>
       <div class="footer_emailform">
         <h2>JOIN OUR NEWSLETTER!</h2>
-        <input
-          type="email"
-          placeholder="please enter email..."
-          id="footer_email"
-        />
+        <input type="email" placeholder="please enter email..." id="footer_email" />
         <input type="submit" value="SIGN UP!" id="footer_email_btn" />
       </div>
     </div>
