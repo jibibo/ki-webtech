@@ -117,8 +117,7 @@ li.menu {
 .searchbutton {
   border: none;
   background-color: #febd69;
-  /*margin-top: 7px;
-  margin-bottom: 7px;*/
+  margin-top: 9px;
 }
 
 ion-icon {
