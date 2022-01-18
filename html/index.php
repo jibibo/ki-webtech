@@ -41,7 +41,7 @@
           <div class="searchbar"> 
               <form action="">
                 <div class="textbar">
-                  <input type="text" placeholder="Search for..." name="search">
+                  <input type="text" placeholder=" Search for..." name="search">
                 <!--</div>
                 <div> -->
                   <button type="submit" class="searchbutton">
