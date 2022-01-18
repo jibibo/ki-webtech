@@ -19,7 +19,7 @@ function execPrint($command)
 
 echo shell_exec("cd /var/www && git pull origin master");
 
-echo "test123";
+echo "test123123123";
 
 // $output = shell_exec("git pull origin master");
 
