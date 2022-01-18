@@ -16,8 +16,9 @@ function execPrint($command)
 // Print the exec output inside of a pre element
 execPrint("cd /var/www/");
 execPrint("git pull origin master");
-execPrint("git status");
 
+
+echo "test123";
 
 // $output = shell_exec("git pull origin master");
 
