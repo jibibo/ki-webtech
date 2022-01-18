@@ -1,7 +1,8 @@
 <?php
 
-$output = exec("git pull origin master");
-print_r($output);
+$output = shell_exec("git pull origin master");
+
+echo $output;
 
 echo "test pull 123123";
 
