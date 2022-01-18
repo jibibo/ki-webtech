@@ -18,7 +18,7 @@ execPrint("cd /var/www/");
 execPrint("git pull origin master");
 
 
-echo "test123"
+echo "test123";
 
 // $output = shell_exec("git pull origin master");
 
