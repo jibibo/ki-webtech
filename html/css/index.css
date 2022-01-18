@@ -103,7 +103,7 @@ li.menu {
 .textbar input {
   font-size: 17px;
   border: none;
-  width: 100px;
+  width: 300px;
 }
 
 .logo {
@@ -117,7 +117,7 @@ li.menu {
 }
 
 ion-icon {
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .filler {
