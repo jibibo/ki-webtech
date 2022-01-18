@@ -1,14 +1,16 @@
 <?php
 
 // src: https://stackoverflow.com/questions/23136044/automation-of-git-pull-using-php-code
-function execPrint($command) {
+function execPrint($command)
+{
   $result = array();
   exec($command, $result);
   print("<pre>");
   foreach ($result as $line) {
-      print($line . "\n");
+    print($line . "\n");
   }
   print("</pre>");
+  echo "<br /><p>------------</p><br />";
 }
 
 // Print the exec output inside of a pre element
@@ -22,5 +24,3 @@ execPrint("git status");
 
 // echo "test pull 123123";
 // echo "jull";
-
-?>
