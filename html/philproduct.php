@@ -7,9 +7,12 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
     // Query code
-    $product_query = "SELECT * FROM products WHERE id = $id";
-    $query2 = "SELECT image_url FROM products WHERE NOT id = $id AND category_id = 1";
-    $review_query = "SELECT * FROM product_reviews WHERE product_id = $id LIMIT 10";
+    $product_query = "SELECT * FROM products WHERE id=$id";
+    $query2 = "SELECT image_url 
+    FROM products INNER JOIN product_categories ON products.id=product_categories.product_id 
+    WHERE NOT id = $id AND category_id=1";
+
+    $review_query = "SELECT * FROM product_reviews WHERE product_id=$id LIMIT 10";
 
     // QPerform query on database
     $product_results = mysqli_query($conn, $product_query);
@@ -21,7 +24,6 @@ if (isset($_GET['id'])) {
     # $related_products = mysqli_fetch_assoc($query_results2);
 
     # print_r($related_products);
-
 }
 
 include "db_disconnect.php"
@@ -37,7 +39,7 @@ include "db_disconnect.php"
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>philip products</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="css/philproducts.css" />
+    <link rel="stylesheet" href="css/philproduct.css" />
 
 </head>
 
@@ -69,6 +71,7 @@ include "db_disconnect.php"
             </div>
         </div>
     </div>
+
     <div class="related_products product vertical">
         <h2> Related products </h2>
         <div class="images_related horizontal">
@@ -90,24 +93,26 @@ include "db_disconnect.php"
         $review_rating = htmlspecialchars($reviews["rating"]);
         $review_body = htmlspecialchars($reviews["body"]);
 
-        echo "<div class='reviews product vertical'>
-        <table class='review-table'>
-        <thead>
-        <tr>
-        <td rowspan='2'>$review_title</td>
-        <td>$review_rating</td> 
-        </tr>
-        <tr>
-        <td colspan='2'>$review_user</td>
-        </tr>
-        </thead>
-        <tbody>
-        <tr> 
-        <td colspan='2' height='100' valign='top'>$review_body</td>
-        </tr>
-        </tbody>
-        </table> 
-        </div> ";
+        echo "
+        <div class='reviews product vertical'>
+            <table class='review-table'>
+                <thead>
+                    <tr>
+                        <td rowspan='2'>$review_title</td>
+                        <td>$review_rating</td> 
+                    </tr>
+                    <tr>
+                        <td colspan='2'>$review_user</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr> 
+                        <td colspan='2' height='100' valign='top'>$review_body</td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+        ";
     }
     ?>
 

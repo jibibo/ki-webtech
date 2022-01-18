@@ -1,14 +1,7 @@
-
-
-
-
-
 body {
-    background-color: #9ea1a5;
-  
-  font-family: 'Roboto', sans-serif;
+  background-color: #9ea1a5;
 
-
+  font-family: "Roboto", sans-serif;
 
   height: 100%;
   padding-top: 100px;
@@ -17,17 +10,15 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.register_container{
+.register_container {
   background-color: #fff;
   padding: 20px;
 }
-.register h1{
-  color: #FEBD69;
+.register h1 {
+  color: #febd69;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
-
-
 }
 
 h1 {
@@ -40,8 +31,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #FEBD69;
-  
+  background-color: #febd69;
 }
 
 li {
@@ -57,7 +47,8 @@ li a {
 }
 
 /* https://www.w3schools.com/css/css_dropdowns.asp */
-li a:hover, .menu:hover .dropdown{
+li a:hover,
+.menu:hover .dropdown {
   background-color: #c28e49;
 }
 
@@ -70,7 +61,7 @@ li.menu {
   position: absolute;
   background-color: #fff;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -82,15 +73,15 @@ li.menu {
   text-align: left;
 }
 
-.content a:hover{
-  background-color: #FEBD69;
+.content a:hover {
+  background-color: #febd69;
 }
 
 .menu:hover .content {
   display: block;
 }
 
-.container{
+.container {
   max-width: 1400px;
   margin: auto;
   padding-left: 25px;
@@ -111,13 +102,13 @@ li.menu {
   padding: 6px;
   margin-top: 8px;
   margin-right: 16px;
-  
 }
 
-.logo{
+.logo {
   background: #fff;
   padding: auto;
-
 }
 
-
+.content {
+  background-color: white;
+}
