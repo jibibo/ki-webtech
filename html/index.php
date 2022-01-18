@@ -37,19 +37,20 @@
           <li><a href="checkout.html">CHECKOUT</a></li>
           <li><a href="login.html">LOG-IN/REGISTRER</a></li>
           <li><a href="contact.html">CONTACT</a></li>
-          <div class="searchbar">
-            <form>
-              <input type="tekst" placeholder="Search for..." name="search" />
-              <button>Search</button>
-            </form>
-          </div>
+
+          <div class="searchbar"> 
+              <form action="">
+                <input class="textbar" type="text" placeholder="Search for..." name="search">
+                <button type="submit" class="searchbutton">Search</button>
+              </form>
+            </div> 
         </ul>
       </nav>
     </div>
   </div>
 
   <?php
-  include "footer.html";
+  include "footer.php";
   ?>
 </body>
 
