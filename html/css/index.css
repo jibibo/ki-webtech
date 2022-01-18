@@ -104,6 +104,8 @@ li.menu {
   font-size: 18px;
   border: none;
   width: 400px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 .logo {
