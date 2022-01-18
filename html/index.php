@@ -40,7 +40,9 @@
 
           <div class="searchbar"> 
               <form action="">
-                <input class="textbar" type="text" placeholder="Search for..." name="search">
+                <div class="textbar">
+                  <input type="text" placeholder="Search for..." name="search">
+                </div>
                 <button type="submit" class="searchbutton">
                   <span class="icon">
                     <ion-icon name="search-outline"></ion-icon>
