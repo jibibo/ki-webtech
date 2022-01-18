@@ -97,8 +97,8 @@ li.menu {
 }
 
 .textbar {
-  margin-top: 7px;
-  margin-bottom: 7px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 .textbar input {
@@ -117,8 +117,8 @@ li.menu {
 .searchbutton {
   border: none;
   background-color: #febd69;
-  margin-top: 7px;
-  margin-bottom: 7px;
+  /*margin-top: 7px;
+  margin-bottom: 7px;*/
 }
 
 ion-icon {
