@@ -35,6 +35,19 @@
                 <li><a href="checkout.html">CHECKOUT</a></li>
                 <li><a class="currentpage" href="newlogin.html">LOG-IN/REGISTRER</a></li>
                 <li><a href="contact.php">CONTACT</a></li>
+
+                <div class="searchbar">
+                  <form action="">
+                    <div class="textbar">
+                      <input type="text" placeholder="Search for..." name="search">
+                      <button type="submit" class="searchbutton">
+                        <span class="icon">
+                          <ion-icon name="search-outline"></ion-icon>
+                        </span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
               </ul>
             </nav>
             </div>
@@ -57,19 +70,6 @@
                     <p>Not a member yet? Click here to <a class="text" href="register.html">register!</a></p>
                 </div>
             </form>
-            </div>
-            <div class="searchbar">
-              <form action="">
-                <div class="textbar">
-                  <input type="text" placeholder="Search for..." name="search">
-                  <button type="submit" class="searchbutton">
-                    <span class="icon">
-                      <ion-icon name="search-outline"></ion-icon>
-                    </span>
-                  </button>
-                </div>
-              </form>
-            </div>
         </div>
         <?php
         include "footer.php";
