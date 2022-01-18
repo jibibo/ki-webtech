@@ -47,7 +47,7 @@
                   <button type="submit" class="searchbutton">
                     <span class="icon">
                       <ion-icon name="search-outline"></ion-icon>
-                    </span>
+                      </span>
                 </button>
                 </div>
               </form>
