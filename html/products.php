@@ -14,6 +14,7 @@ include "db_disconnect.php";
 
 <head>
   <title>Products | UvAzon</title>
+  <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/products.css" />
 </head>
 
@@ -44,6 +45,26 @@ include "db_disconnect.php";
       }
 
       ?>
+
+      <div class="product">
+        <img src="https://www.automobielmanagement.nl/wp-content/uploads/2019/04/Lada-Combi-1600x1123.jpg" />
+        <span class="product-name">[product name]</span>
+        <div class="product-details">
+          <span class="product-price">&euro; [product price]]</span>
+          <button class="product-wishlist">+ wishlist</button>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="product-left">
+          <img src="https://www.automobielmanagement.nl/wp-content/uploads/2019/04/Lada-Combi-1600x1123.jpg" />
+
+        </div>
+        <div class="product-right">
+          <span class="product-name">[product name]</span>
+
+        </div>
+      </div>
     </div>
   </div>
 </body>

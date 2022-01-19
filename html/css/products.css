@@ -1,14 +1,9 @@
 /* global */
 
-body {
-  margin: 0px;
-  font-family: "Roboto", sans-serif;
-}
-
 .container {
   max-width: 1200px;
   margin: auto;
-  height: 80vh;
+  background-color: white;
 }
 
 /* products */
@@ -16,26 +11,26 @@ body {
 .products {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;
+  gap: 1rem;
   margin: auto;
-  border: 1px solid red;
-  padding: 20px;
+  padding: 2rem;
 }
 
 .product {
-  box-shadow: 5px 5px black;
+  box-shadow: 0.5rem 0.5rem 0.5rem gray;
   max-width: 240px;
   flex: 1 1 20%;
   border: 1px solid black;
-  padding: 10px;
+  border-radius: 1rem;
+  padding: 0.5rem;
 }
 
 .product-name {
   display: block;
 }
 
-.product-image {
+.product img {
   width: 100px;
 }
 
