@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Home | UvAzon</title>
+  <title>Checkout | UvAzon</title>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/checkout.css" />
 </head>
 
 <body>
@@ -18,7 +18,7 @@
   include "navbar.php";
   ?>
 
-  <div class="filler"></div>
+  Checkout
 
   <?php
   include "footer.php";
