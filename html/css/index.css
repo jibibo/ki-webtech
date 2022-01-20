@@ -46,7 +46,7 @@ padding-right: 25px;
 .imagecontainer button {
     border-radius: 40px;
     position: absolute;
-    left: 50%;
+    left: 45%;
     top: 80%;
     padding-left: 0.7rem;
     padding-right: 0.7rem;
@@ -63,6 +63,7 @@ padding-right: 25px;
 .nikelink {
     text-decoration: none;
     color: #FEBD69;
+    font-family: "Roboto", sans-serif;
 }
 
 .nike {
