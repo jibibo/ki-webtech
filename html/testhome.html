@@ -66,13 +66,33 @@
                 margin-left: 100px;
             }
 
+            .beautycontainer {
+                background-color: white;
+                position: relative;
+                padding-top: 250px;
+            }
+
             .beautyrow {
                 display: flex;
+                width: 1200px;
+                margin-left: 100px;
+                /* box-sizing: border-box; */
+                flex-wrap: wrap;
+            }
+
+            .picture img {
+                float: left;
+                width:  170px;
+                height: 170px;
+                object-fit: cover;
+            }
+
+            .picture:hover {
+                background-color: rgb(202, 196, 196);
             }
 
             .picture {
-                flex: 20%;
-                padding: 5px;
+                flex: 25%;
             }
 
                
@@ -86,22 +106,25 @@
                 <img src="https://theplaybook.asia/wp-content/uploads/sites/27/2019/06/cropped-sale_malaysia_nike_com.png" alt="Nike sale">
                 <button><a href="" class="nikelink">Go to collection</a></button>
             </div>
-
-            <div class="beautyrow">
-                <div class="picture">
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/71OK6VII-lL._SL1500_.jpg" alt="Fenty eyeshadow palette">
-                </div>
-                <div class="picture">
-                    <img src="https://i0.wp.com/angelteam.biz/wp-content/uploads/2019/06/s2113033-main-zoom.jpg?fit=2000%2C2000&ssl=1" alt="Fenty highlighter">
-                </div>
-                <div class="picture">
-                    <img src="https://shielabeautyworld.com/wp-content/uploads/2020/03/sweet-mouth.png" alt="Fenty lip gloss">
-                </div>
-                <div class="picture">
-                    <img src="https://cdn11.bigcommerce.com/s-h0vxbu2ww9/images/stencil/500x500/products/2696/6282/5602__29379.1575033839.jpg?c=2" alt="Laneige lip balm">
-                </div>
-                <div class="picture">
-                    <img src="https://cdn.webshopapp.com/shops/243452/files/323036432/image.jpg" alt="Belif eye cream">
+            
+            <div class="beautycontainer">
+                <h2 class="headertext">Beauty Bestsellers</h2>
+                <div class="beautyrow">
+                    <div class="picture">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/71OK6VII-lL._SL1500_.jpg" alt="Fenty eyeshadow palette">
+                    </div>
+                    <div class="picture">
+                        <img src="https://i0.wp.com/angelteam.biz/wp-content/uploads/2019/06/s2113033-main-zoom.jpg?fit=2000%2C2000&ssl=1" alt="Fenty highlighter">
+                    </div>
+                    <div class="picture">
+                        <img src="https://shielabeautyworld.com/wp-content/uploads/2020/03/sweet-mouth.png" alt="Fenty lip gloss">
+                    </div>
+                    <div class="picture">
+                        <img src="https://cdn11.bigcommerce.com/s-h0vxbu2ww9/images/stencil/500x500/products/2696/6282/5602__29379.1575033839.jpg?c=2" alt="Laneige lip balm">
+                    </div>
+                    <div class="picture">
+                        <img src="https://cdn.webshopapp.com/shops/243452/files/323036432/image.jpg" alt="Belif eye cream">
+                    </div>
                 </div>
             </div>
 
