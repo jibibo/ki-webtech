@@ -65,13 +65,6 @@ li.dropdown-menu:hover .dropdown-content {
   display: block;
 }
 
-/* .container {
-  max-width: 1400px;
-  margin: auto;
-  padding-left: 25px;
-  padding-right: 25px;
-} */
-
 nav a.active {
   background-color: rgb(100, 100, 100);
 }
