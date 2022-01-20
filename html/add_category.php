@@ -1,7 +1,7 @@
 <?php
 
 include "db_connect.php";
-include "utils.php"
+include "utils.php";
 
 
 if (isset($_POST["name"])) {
