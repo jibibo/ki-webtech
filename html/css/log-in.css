@@ -1,110 +1,108 @@
 .form {
-    background-color: white;
-    padding: 70px;
+  background-color: white;
+  padding: 70px;
 }
 
 .formscreen {
-    text-align: center;
-    place-items: center;
-    border: black;
+  text-align: center;
+  place-items: center;
+  border: black;
 }
 
 .title {
-    color: #FEBD69;
-    font-size: 38px;
-    font-weight: bolder;
-    padding: 25px;
+  color: #febd69;
+  font-size: 38px;
+  font-weight: bolder;
+  padding: 25px;
 }
 
 .textbox {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .textbox input {
-    font-size: 20px;
-    padding: 10px;
+  font-size: 20px;
+  padding: 10px;
 }
 
 .login {
-    font-size: 20px;
-    color: black;
-    padding: 10px 140px;
-    background-color: #FEBD69;
-    border-color: #FEBD69;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    cursor: pointer;
-    box-shadow: 0px 5px 15px 0px rgba(28, 0, 181,0.3);
-    margin-top: 20px;
-
+  font-size: 20px;
+  color: black;
+  padding: 10px 140px;
+  background-color: #febd69;
+  border-color: #febd69;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+  margin: 20px 0px;
 }
 
 .login:hover {
-    background-color: #e4b271;
+  background-color: #e4b271;
 }
 
 .send:hover {
-    background-color: #e4b271;
+  background-color: #e4b271;
 }
 
-.create:hover{
-    background-color: #e4b271;
+.create:hover {
+  background-color: #e4b271;
 }
 
 .text {
-    text-decoration: none;
-    color: #FEBD69;
-    font-weight: bolder;
+  text-decoration: none;
+  color: #febd69;
+  font-weight: bolder;
 }
 
 .text:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .send {
-    font-size: 20px;
-    color: black;
-    padding: 10px 140px;
-    background-color: #FEBD69;
-    border-color: #FEBD69;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    cursor: pointer;
-    box-shadow: 0px 5px 15px 0px rgba(28, 0, 181,0.3);
-    margin-top: 20px;
+  font-size: 20px;
+  color: black;
+  padding: 10px 140px;
+  background-color: #febd69;
+  border-color: #febd69;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+  margin-top: 20px;
 }
 
 .email {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .email input {
-    font-size: 20px;
-    padding: 10px;
+  font-size: 20px;
+  padding: 10px;
 }
 
 .register {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .register input {
-    font-size: 20px;
-    padding: 10px;
+  font-size: 20px;
+  padding: 10px;
 }
 
 .create {
-    font-size: 20px;
-    color: black;
-    padding: 10px 95px;
-    background-color: #FEBD69;
-    border-color: #FEBD69;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    cursor: pointer;
-    box-shadow: 0px 5px 15px 0px rgba(28, 0, 181,0.3);
-    margin-top: 20px;
-
+  font-size: 20px;
+  color: black;
+  padding: 10px 95px;
+  background-color: #febd69;
+  border-color: #febd69;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+  margin-top: 20px;
 }

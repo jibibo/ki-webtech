@@ -14,24 +14,23 @@
 </head>
 
 <body>
-  <!-- 
-    Ff geen navbar.php hier want japie heeft een andere navbar op deze pagina gemaakt
-        -->
+  <?php
+  include "navbar.php";
+  ?>
 
-  <a href="index.php">
+  <!-- <a href="index.php">
     <button type="button" class="homebutton">
       <span class="button_icon">
         <ion-icon name="home-outline"></ion-icon>
       </span>
     </button>
-  </a>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  </a> -->
 
-  <div class="container">
-    <h1>CONTACT US!
-      <img src="images/uvazone.png" alt="Uvazone logo" width="250px">
+  <div class="contact-container">
+    <!-- <h1>CONTACT US!
+      <img src="images/uvazon.png" alt="Uvazon logo" width="250px">
     </h1>
-    <p>If you have any questions about you product or order, please fill in the following information</p>
+    <p>If you have any questions about you product or order, please fill in the following information</p> -->
 
     <div class="contact_box">
       <div class="contact_left">

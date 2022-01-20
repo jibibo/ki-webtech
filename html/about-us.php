@@ -19,17 +19,14 @@
   ?>
 
   <div class="container">
-    <h1>Who are we?</h1>
-    <p>We are ...</p>
-    <p>Uvazon started in ...</p>
-    <p>...</p>
-    <p>...</p>
-    <p>...</p>
-    <p>...</p>
-    <p>...</p>
-    <p>...</p>
-    <p>...</p>
-    <p>...</p>
+    <div class="about-us">
+      <h1>About us</h1>
+      <p>UvAzon (not related to Amazon.com, Inc. in any form), is a small
+        startup company based in the Netherlands. Created by four enthousiastic
+        students (FOTO'S!) their aim is to provide any other student with all
+        the supplies they need during their stay on the University of Amsterdan
+        and Science Park.</p>
+    </div>
   </div>
 
   <?php

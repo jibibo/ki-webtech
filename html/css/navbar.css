@@ -1,6 +1,11 @@
 /* navbar */
 /* src: https://www.w3schools.com/css/css_navbar.asp */
 
+nav {
+  margin: auto;
+  max-width: 1200px;
+}
+
 nav ul {
   list-style-type: none;
   margin: 0;
