@@ -20,7 +20,7 @@
 }
 
 .contact-container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -109,7 +109,7 @@ tr td:first-child {
   padding-right: 30px;
 }
 tr td {
-  padding-top: 28px;
+  padding-top: 30px;
 }
 /* 
 img {
