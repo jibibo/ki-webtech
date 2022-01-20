@@ -5,6 +5,9 @@ body {
   background-color: #8aa1b1;
   height: 100vh;
   margin: 0px;
+}
 
-
+.container {
+  max-width: 1200px;
+  margin: auto;
 }
