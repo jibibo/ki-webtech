@@ -10,5 +10,6 @@ body {
 .container {
   max-width: 1400px;
   margin: auto;
-  background-color: white;
-}
+  padding-left: 25px;
+  padding-right: 25px;
+  } 
