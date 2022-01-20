@@ -28,7 +28,9 @@ if (isset($_POST["name"])) {
 
 $query = "SELECT name FROM categories";
 $result = mysqli_query($conn, $query);
-pre_print($result);
+while ($row = mysqli_fetch_assoc($result)) {
+  pre_print($row["name"]);
+}
 
 include "db_disconnect.php"
 
