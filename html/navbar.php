@@ -16,7 +16,7 @@
     <li><a href="about-us.php">About us</a></li>
     <li><a href="checkout.php">Checkout</a></li>
     <li><a href="log-in.php">Log-in / Register</a></li>
-    <li><a href="contact.php">Contact</a></li>
+    <li><a href="contact-us.php">Contact us</a></li>
 
     <div class="search-wrapper">
       <form action="search.php">

@@ -37,18 +37,26 @@ include "db_disconnect.php";
       if (mysqli_num_rows($result) > 0) {
         while ($product = mysqli_fetch_assoc($result)) {
           $product_id = $product["id"];
-          $product_image_url = $product["image_url"];
+          $product_img = $product["image_url"];
           $product_name = $product["name"];
           $product_price = number_format($product["price"], 2);
           echo "
-          <div class='product'>
-            <a href='product.php?id=$product_id'>
-              <img class='product-image' src='$product_image_url'/>
-            </a>
-            <span class='product-name'>$product_name</span>
-            <div class='product-details'>
-              <span class='product-price'>&euro; $product_price</span>
-              <button class='product-buy'>Buy!</button>
+          <div class='product-list-item'>
+            <div class='product-img-wrapper'>
+              <a href='product.php?id=$product_id'>
+                <img src='$product_img' />
+              </a>
+            </div>
+            <div>
+              <a class='product-name' href='product.php?id=$product_id'>$product_name</a>
+              <div class='product-details'>
+                <span class='product-price'>&euro; $product_price</span>
+                <div class='product-buttons'>
+                  <button class='product-buy'>Buy</button>
+                  <button class='product-cart'>Cart</button>
+                  <button class='product-wishlist'>Wishlist</button>
+                </div>
+              </div>
             </div>
           </div>
           ";
@@ -59,7 +67,24 @@ include "db_disconnect.php";
 
       ?>
 
-      
+      <!-- <div class='product-list-item'>
+        <div class='product-img-wrapper'>
+          <a href='product.php?id=$product_id'>
+            <img src='https://www.automobielmanagement.nl/wp-content/uploads/2019/04/Lada-Combi-1600x1123.jpg' />
+          </a>
+        </div>
+        <div>
+          <a class='product-name' href='product.php?id=$product_id'>$product_name</a>
+          <div class='product-details'>
+            <span class='product-price'>&euro; $product_price</span>
+            <div class='product-buttons'>
+              <button class='product-buy'>Buy</button>
+              <button class='product-cart'>Cart</button>
+              <button class='product-wishlist'>Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
 
     </div>
   </div>

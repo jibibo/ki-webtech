@@ -41,7 +41,7 @@ while ($row = mysqli_fetch_assoc($result_categories)) {
 
   $result_related = mysqli_query(
     $conn,
-    "SELECT product_id, name
+    "SELECT *
     FROM product_categories pc
     JOIN products p ON pc.product_id=p.id
     WHERE category_id=$category_id AND p.id!=$product_id"
@@ -52,6 +52,8 @@ while ($row = mysqli_fetch_assoc($result_categories)) {
     $related_ids_array[] = $row["product_id"];
   }
 }
+
+// pre_print($related_products_array);
 
 // src: https://stackoverflow.com/questions/30626785/php-most-frequent-value-in-array
 $product_occurences = array_count_values($related_ids_array);
@@ -155,7 +157,7 @@ include "db_disconnect.php";
             ";
           }
           ?>
-          <a href="products.php">[category name]</a>
+          <!-- <a href="products.php">[category name]</a> -->
         </div>
 
         <span class="product-id">(prod. nr. <?php echo $product_id ?>)</span>
@@ -164,27 +166,51 @@ include "db_disconnect.php";
 
     <div class="related-products">
       <div class="related-products-header">
-        <span>TODO Related products</span>
+        <h2>Related products</h2>
       </div>
-      <div class="related-products-content">
+      <div class="related-products-list">
+
         <?php
-        foreach ($top_5_related as $related_id) {
-          // todo HERHAAL CODE VAN products.php
+        if ($related_products_array) {
+          foreach ($related_products_array as $product) {
+            $product_id = $product["id"];
+            $product_img = $product["image_url"];
+            $product_name = $product["name"];
+            $product_price = number_format($product["price"], 2);
+            echo "
+            <div class='product-list-item'>
+            <div class='product-img-wrapper'>
+            <a href='product.php?id=$product_id'>
+            <img src='$product_img' />
+            </a>
+            </div>
+            <div>
+            <a class='product-name' href='product.php?id=$product_id'>$product_name</a>
+            <div class='product-details'>
+            <span class='product-price'>&euro; $product_price</span>
+            <div class='product-buttons'>
+            <button class='product-buy'>Buy</button>
+            <button class='product-cart'>Cart</button>
+            <button class='product-wishlist'>Wishlist</button>
+            </div>
+            </div>
+            </div>
+            </div>
+            ";
+          }
+        } else {
           echo "
-          <div class='product'>
-            [product id $related_id]
-          </div>
+          <h3><em>No related products</em></h3>
           ";
         }
         ?>
 
-        <div class="product">
-          [test]
-        </div>
       </div>
     </div>
 
-    <div class="product-reviews padding">
+    <div class="product-reviews">
+      <h2 class="reviews-header">Customer reviews</h2>
+
       <div class="make-review padding">
         <form class="review-form" action="review.php" method="GET">
           <label for="rating">Stars:</label>
@@ -224,14 +250,14 @@ include "db_disconnect.php";
         }
         ?>
 
-        <div class="review padding">
+        <!-- <div class="review padding">
           <div class="review-top">
             <span class="review-rating">[review rating]</span>
             <span class="review-title">"[review title]"</span>
           </div>
           <p class="review-body">[review body review body review body]</p>
           <span class="review-author">― [review author name]</span>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

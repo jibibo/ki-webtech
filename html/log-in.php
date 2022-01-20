@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>About us | UvAzon</title>
+  <title>Log in | UvAzon</title>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,8 +33,8 @@
 
         <div>
           <button type="submit" class="login" title="Login">Login</button>
-          <p>Forgotten your <a class="text" href="password.html">password?</a></p>
-          <p>Not a member yet? Click here to <a class="text" href="register.html">register!</a></p>
+          <p>Forgotten your <a class="text" href="forgot-password.php">password?</a></p>
+          <p>Not a member yet? Click here to <a class="text" href="register.php">register!</a></p>
         </div>
       </form>
     </div>
