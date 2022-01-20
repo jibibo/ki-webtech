@@ -1,4 +1,4 @@
-<nav class="container">
+<nav>
   <div class="logo">
     <img src="images/uvazon.png" alt="UvAzon Logo" width="250px" />
   </div>

@@ -1,6 +1,11 @@
 /* navbar */
 /* src: https://www.w3schools.com/css/css_navbar.asp */
 
+nav {
+  margin: auto;
+  max-width: 1200px;
+}
+
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -59,13 +64,6 @@ li.dropdown-menu .dropdown-content a {
 li.dropdown-menu:hover .dropdown-content {
   display: block;
 }
-
-/* .container {
-  max-width: 1400px;
-  margin: auto;
-  padding-left: 25px;
-  padding-right: 25px;
-} */
 
 nav a.active {
   background-color: rgb(100, 100, 100);

@@ -24,7 +24,7 @@
         <div class="title">LOGIN</div>
 
         <div class="textbox">
-          <input type="text" placeholder="Username" name="username" required>
+          <input type="text" placeholder="Username" name="username" autofocus required>
           <br><br>
 
           <input type="password" placeholder="Password" name="pww" required>

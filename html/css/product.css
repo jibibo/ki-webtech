@@ -1,18 +1,9 @@
-/* global */
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  background-color: white;
-}
-
 /* product details */
 
 .container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 10px;
 }
 
 .padding {
@@ -21,8 +12,8 @@
 
 .product-details,
 .related-products {
-  border: 1px solid black;
-  border-radius: 1rem;
+  /* border: 1px solid black; */
+  /* border-radius: 1rem; */
   display: flex;
   flex-wrap: wrap;
 }
@@ -67,7 +58,7 @@
 /* shopping buttons */
 
 .shopping-btns {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   display: flex;
   flex-wrap: wrap;
   gap: 10px;

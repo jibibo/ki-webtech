@@ -1,79 +1,75 @@
-body{
-    font-family: 'roboto', sans-serif;
-    background-color: #8AA1B1;
-}
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+body {
+  font-family: "roboto", sans-serif;
+  background-color: #8aa1b1;
 }
 
-.footer_container{
-    background-color: #37475A;
-    color: #FEBD69;
-}
-#footerplace{
-    clear: both;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-
-}
-.footer{
-    padding: 60px;
-    width: 90%;
-    height: 40vh;
-    background-color: #37475A;
-    color: #FEBD69;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.footer-heading{
-    display: flex;
-    flex-direction: column;
-    margin-right: 4rem;
+.footer_container {
+  background-color: #37475a;
+  color: #febd69;
 }
-.footer-heading h2{
-    margin-bottom: 2rem;
+#footerplace {
+  clear: both;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
-.footer-heading a{
-    color: #FEBD69;
-    text-decoration: none;
-    margin-bottom: 0.8rem;
-}
-.footer-heading a:hover{
-    color: #ac8047;
-    
-}
-
-.footer_emailform h2{
-    margin-bottom: 2rem;
-}
-#footer_email{
-    width: 250px;
-    height: 40px;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    padding-left: 0.5rem;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-#footer_email_btn{
-    width: 100px;
-    height: 40px;
-    border-radius: 5px;
-    background-color:#FEBD69;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 1rem;
-}
-#footer_email_btn:hover{
-    background: #ac8047;
+.footer {
+  padding: 60px;
+  width: 90%;
+  background-color: #37475a;
+  color: #febd69;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
+.footer-heading {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4rem;
+}
+.footer-heading h2 {
+  margin-bottom: 2rem;
+}
+.footer-heading a {
+  color: #febd69;
+  text-decoration: none;
+  margin-bottom: 0.8rem;
+}
+.footer-heading a:hover {
+  color: #ac8047;
+}
 
+.footer_emailform h2 {
+  margin-bottom: 2rem;
+}
+#footer_email {
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding-left: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+#footer_email_btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #febd69;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+#footer_email_btn:hover {
+  background: #ac8047;
+}
