@@ -12,8 +12,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
         <style>
             body {
-                background-image: url('images/amsterdam.jpeg');
+                background-color: grey;
             }
+
+            .container {
+            max-width: 1400px;
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+            } 
 
             .form {
                 background-color: white;
@@ -63,6 +70,52 @@
             .text:hover {
                 text-decoration: underline;
             }
+
+            /*https://www.w3schools.com/howto/howto_css_button_on_image.asp*/
+
+            .imagecontainer img{
+                display: block;
+                margin-left: 100px;
+                margin-right: 100px;
+                height: 600px;
+                width: 1200px; 
+                /*margin-left: 100px;
+                width: 90%;
+                height: 50%; */
+            }
+
+            .imagecontainer {
+                background-color: white;
+                position: relative;
+                padding-top: 40px;
+            }
+
+            .imagecontainer button {
+                border-radius: 40px;
+                position: absolute;
+                left: 43%;
+                top: 80%;
+                font-size: 25px;
+                margin-bottom: 100px;
+                background-color: black;
+                border-color: #FEBD69;
+            }
+
+            .imagecontainer button:hover{
+                background-color: #4e4d4c;
+            }
+
+            .nikelink {
+                text-decoration: none;
+                color: #FEBD69;
+            }
+
+            .headertext {
+                text-align: left;
+                margin-left: 100px;
+            }
+
+
                
         </style>
     </head>
@@ -92,25 +145,18 @@
             </nav>
             </div>
 
-            <div class="form">
-            <form action="" class="formscreen">
-                <div class="title">LOGIN</div>
 
-                <div class="textbox">
-                    <input type="text" placeholder="Username" name="username" required>
-                    <br><br>
 
-                    <input type="password" placeholder="Password" name="pww" required>
-                    <br><br>
-                </div>
-
-                <div>
-                    <button type="submit" class="login" title="Login">Login</button> 
-                    <p class="forgot">Forgotten your <a class="text" href="password.html">password?</a></p>
-                    <p class="register">Not a member yet? Click here to <a class="text" href="register.html">register!</a></p>
-                </div>
-            </form>
+            <div class="imagecontainer">
+                <h2 class="headertext">Begin the year with Nike</h2>
+                <img src="https://theplaybook.asia/wp-content/uploads/sites/27/2019/06/cropped-sale_malaysia_nike_com.png" alt="Nike sale">
+                <button><a href="" class="nikelink">Go to collection</a></button>
             </div>
+
+            <div class="row">
+
+            </div>
+
         </div>
     
     </body>
