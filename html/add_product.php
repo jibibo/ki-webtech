@@ -47,7 +47,7 @@ include "db_disconnect.php"
     <textarea name="description" placeholder="description"></textarea>
     <input type="number" name="price" placeholder="price" />
     <input type="text" name="image_url" placeholder="image url" />
-    <input type="text" name="auth" placeholder="auth" value="<?php echo $authorization_code ?>" />
+    <input type="text" name="auth" placeholder="auth" />
     <input type="submit" value="ADD" />
   </form>
 </body>
