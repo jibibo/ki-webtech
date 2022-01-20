@@ -67,7 +67,7 @@
         <div>
           <button class="create" type="submit">Create account!</button>
           <br></br>
-          <a class="text" href="log-in.php">Back to login</a>
+          <a class="text" href="login.html">Back to login</a>
         </div>
     </div>
   </div>
