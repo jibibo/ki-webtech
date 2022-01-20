@@ -24,6 +24,7 @@
 .product-list-item .product-img-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .product-list-item img {
