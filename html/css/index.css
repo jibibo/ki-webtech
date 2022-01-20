@@ -17,7 +17,9 @@
 /* index.php  */
 
 
-.homepage {
+.container {
+  max-width: 1400px;
+  margin: auto;
   padding-left: 25px;
   padding-right: 25px;
   } 

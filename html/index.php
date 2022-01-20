@@ -18,7 +18,7 @@
   include "navbar.php";
   ?>
 
-  <div class="homepage">
+  <div class="container">
     <div class="imagecontainer">
       <span class="headertext">Begin the year with Nike</span>
         <img src="https://theplaybook.asia/wp-content/uploads/sites/27/2019/06/cropped-sale_malaysia_nike_com.png" alt="Nike sale" class="nike">
