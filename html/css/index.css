@@ -48,6 +48,8 @@
       position: absolute;
       left: 45%;
       top: 80%;
+      padding-left: 0.7rem;
+      padding-right: 0.7rem;
       font-size: 25px;
       margin-bottom: 100px;
       background-color: black;
