@@ -227,7 +227,7 @@
 .product-list-item {
   flex: 1 1 100%;
   max-width: 250px;
-  max-height: 300px;
+  max-height: 275px;
 
   display: flex;
   flex-direction: column;
