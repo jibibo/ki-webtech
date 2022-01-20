@@ -46,8 +46,10 @@ padding-right: 25px;
 .imagecontainer button {
     border-radius: 40px;
     position: absolute;
-    left: 43%;
+    left: 50%;
     top: 80%;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
     font-size: 25px;
     margin-bottom: 100px;
     background-color: black;
