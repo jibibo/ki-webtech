@@ -46,8 +46,10 @@ padding-right: 25px;
 .imagecontainer button {
     border-radius: 40px;
     position: absolute;
-    left: 43%;
+    left: 45%;
     top: 80%;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
     font-size: 25px;
     margin-bottom: 100px;
     background-color: black;
@@ -61,6 +63,7 @@ padding-right: 25px;
 .nikelink {
     text-decoration: none;
     color: #FEBD69;
+    font-family: "Roboto", sans-serif;
 }
 
 .nike {
@@ -72,7 +75,7 @@ padding-right: 25px;
     margin-left: 100px;
     font-size: 30px;
     font-weight: bolder;
-    /*color: #FEBD69; */
+    color: #FEBD69; 
 }
 
 /* https://www.w3schools.com/cssref/css3_pr_flex-wrap.asp
@@ -104,7 +107,7 @@ padding-right: 25px;
     padding-right: 50px;
 }
 
-.hover:hover, .view:hover {
+.hover:hover, .view:hover, .nike:hover {
     opacity: 0.3;
 }
 
