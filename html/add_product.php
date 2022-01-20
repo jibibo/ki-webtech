@@ -42,7 +42,7 @@ include "db_disconnect.php"
 <body>
   <p>add product</p>
   <h4><a href="add_product.php">reload page</a></h4>
-  <form action="/add_product.php" method="POST">
+  <form action="add_product.php" method="POST">
     <input type="text" name="name" placeholder="name" autofocus />
     <textarea name="description" placeholder="description"></textarea>
     <input type="number" name="price" placeholder="price" />
