@@ -107,7 +107,7 @@ padding-right: 25px;
     padding-right: 50px;
 }
 
-.hover:hover, .view:hover {
+.hover:hover, .view:hover, .nike:hover {
     opacity: 0.3;
 }
 
