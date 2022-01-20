@@ -31,7 +31,7 @@
 
 .contact_left {
   flex-basis: 60%;
-  padding: 40px 60px;
+  padding: 39px 60px;
 }
 .contact_right {
   flex-basis: 40%;
@@ -109,7 +109,7 @@ tr td:first-child {
   padding-right: 30px;
 }
 tr td {
-  padding-top: 28px;
+  padding-top: 30px;
 }
 /* 
 img {
