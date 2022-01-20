@@ -1,6 +1,6 @@
 <nav>
   <div class="logo">
-    <img src="images/uvazon.png" alt="UvAzon Logo" width="250px" />
+    <a href="index.php"><img src="images/uvazon.png" alt="UvAzon Logo" width="250px"/></a>
   </div>
   <ul id="nav-ul">
     <li><a href="index.php">Home</a></li>
