@@ -3,11 +3,18 @@
 include "db_connect.php";
 
 
-if (isset($_GET["name"])) {
-  $name = htmlspecialchars($_GET["name"]);
-  $description = htmlspecialchars($_GET["description"]);
-  $price = htmlspecialchars($_GET["price"]);
-  $image_url = htmlspecialchars($_GET["image_url"]);
+if (isset($_POST["name"])) {
+  $auth = htmlspecialchars($_POST["auth"]);
+
+  if ($auth != $authorization_code) {
+    echo "Invalid auth code";
+    return;
+  }
+
+  $name = htmlspecialchars($_POST["name"]);
+  $description = htmlspecialchars($_POST["description"]);
+  $price = htmlspecialchars($_POST["price"]);
+  $image_url = htmlspecialchars($_POST["image_url"]);
 
   $query = "INSERT INTO products (name, description, price, image_url) 
     VALUES ('$name', '$description', $price, '$image_url')";
@@ -34,11 +41,13 @@ include "db_disconnect.php"
 
 <body>
   <p>add product</p>
-  <form action="/juladd.php" method="GET">
-    <input type="text" name="name" placeholder="name" autofocus/>
+  <h4><a href="add_product.php">reload page</a></h4>
+  <form action="/add_product.php" method="POST">
+    <input type="text" name="name" placeholder="name" autofocus />
     <textarea name="description" placeholder="description"></textarea>
     <input type="number" name="price" placeholder="price" />
     <input type="text" name="image_url" placeholder="image url" />
+    <input type="text" name="auth" placeholder="auth" value="<?php echo $authorization_code ?>" />
     <input type="submit" value="ADD" />
   </form>
 </body>
