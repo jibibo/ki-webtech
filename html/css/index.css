@@ -40,7 +40,7 @@ padding-right: 25px;
 .imagecontainer {
     background-color: white;
     position: relative;
-    padding-top: 45px;
+    padding-top: 40px;
 }
 
 .imagecontainer button {
@@ -85,7 +85,7 @@ padding-right: 25px;
 .beautycontainer, .trendingcontainer, .categorycontainer {
     background-color: white;
     position: relative;
-    padding-top: 170px;
+    padding-top: 200px;
 }
 
 .beautyrow, .trending {
