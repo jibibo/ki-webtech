@@ -87,7 +87,7 @@ I
         <div>
           <button type="submit" class="send">Send</button>
           <br></br>
-          <a class="text" href="login.php">Back to login</a>
+          <a class="text" href="login.html">Back to login</a>
         </div>
       </form>
     </div>

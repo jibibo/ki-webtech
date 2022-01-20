@@ -23,7 +23,7 @@
 
   <div class="col-container">
     <div class="shipping-info">
-      <h2>Shipping information </h2>
+      <h2 class="bottom">Shipping information </h2>
       <form>
         <label for="first-name">First name</label>
         <input type="text" id="first-name" placeholder=""><br>
@@ -34,12 +34,9 @@
         <input type="text" id="adress" placeholder=><br>
         <label for="postal-code">Postal code</label>
         <input type="text" id="postal-code" placeholder=""><br>
-        <!--   <div class="payment"> 
-                        <input type="submit" value="Continue to payment">
-                    </div>  --->
       </form>
       <div class="contact-info">
-        <h2> Contact information </h2>
+        <h2 class="bottom">Contact information </h2>
         <form>
           <label for="e-mail">E-mail adress</label>
           <input type="text" id="e-mail" placeholder="">
@@ -54,7 +51,7 @@
     
     <div class="cart">
       <div class="cart-container">
-        <h2> Cart </h2>
+        <h2 class="bottom">Cart</h2>
         <div class="order-info">
           <table>
             <tr>
@@ -90,8 +87,8 @@
                 <td class="left">
                   <h3> €10 </h3>
                 </td>
+                </tfoot>
             </tr>
-            </tfoot>
           </table>
         </div>
       </div>
