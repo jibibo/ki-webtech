@@ -8,9 +8,8 @@ if (!isset($_GET["id"])) {
   header("Location: products.php");
 }
 
+// product-specific information
 $product_id = htmlspecialchars($_GET["id"]);
-
-
 $result_product = mysqli_query(
   $conn,
   "SELECT * 
@@ -19,12 +18,17 @@ $result_product = mysqli_query(
   LIMIT 1"
 );
 $product = mysqli_fetch_assoc($result_product);
+if (!$product) {
+  // redirect user to products.php if selected id does not exist
+  header("Location: products.php");
+}
 $product_name = $product["name"];
 $product_description = $product["description"];
 $product_image_url = $product["image_url"];
 $product_price = number_format($product["price"], 2);
 
-
+// product categories & related products
+// todo remove duplicate related products
 $result_categories = mysqli_query(
   $conn,
   "SELECT name, id
@@ -53,14 +57,7 @@ while ($row = mysqli_fetch_assoc($result_categories)) {
   }
 }
 
-// pre_print($related_products_array);
-
-// src: https://stackoverflow.com/questions/30626785/php-most-frequent-value-in-array
-$product_occurences = array_count_values($related_ids_array);
-arsort($product_occurences);
-$top_5_related = array_slice(array_keys($product_occurences), 0, 5, true);
-
-
+// customer reviews
 $result_reviews = mysqli_query(
   $conn,
   "SELECT * 
@@ -73,7 +70,7 @@ while ($row = mysqli_fetch_assoc($result_reviews)) {
   $reviews[] = $row;
 }
 
-
+// product rating and review count
 $result_rating = mysqli_query(
   $conn,
   "SELECT AVG(rating), COUNT(*)
