@@ -63,6 +63,7 @@
   .nikelink {
       text-decoration: none;
       color: #FEBD69;
+      font-family: "Roboto", sans-serif;
   }
 
   .nike {
@@ -91,7 +92,7 @@
       display: flex;
       width: 1300px;
       margin-left: 100px;
-      /* box-sizing: border-box; */
+      /*  box-sizing: border-box; */
       flex-wrap: wrap;
   }
 
