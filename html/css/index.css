@@ -122,9 +122,8 @@
 
 .category {
   display: flex;
-  width: 1200px;
+  width: 1150px;
   margin-left: 100px;
-  margin-right: 50px;
   /* box-sizing: border-box; */
   flex-wrap: wrap;
 }
