@@ -41,14 +41,16 @@
           <label for="e-mail">E-mail adress</label>
           <input type="text" id="e-mail" placeholder="">
           <label for="phone">Phone number</label>
-          <input type="text" id=phone" placeholder="">
+          <input type="text" id="phone" placeholder="">
+          <label><input type="checkbox" id="save-account"> Make an account for faster checkout</label>
+          <label><input type="checkbox" id="agree-tos"> I agree to the <a href="#">Terms of Service</a></label>
           <div class="payment">
             <input type="submit" value="Continue to payment">
           </div>
         </form>
       </div>
     </div>
-    
+
     <div class="cart">
       <div class="cart-container">
         <h2 class="bottom">Cart</h2>
@@ -87,7 +89,7 @@
                 <td class="left">
                   <h3> €10 </h3>
                 </td>
-                </tfoot>
+              </tfoot>
             </tr>
           </table>
         </div>
