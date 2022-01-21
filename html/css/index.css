@@ -120,12 +120,20 @@
   margin-top: 25px;
 }
 
-.category {
+/*.category {
   display: flex;
   width: 1150px;
   margin-left: 100px;
-  /* box-sizing: border-box; */
+  / box-sizing: border-box; 
   flex-wrap: wrap;
+}*/
+
+.category {
+  display: flex;
+  margin-left: 100px;
+  margin-right: 100px;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 .categorycontainer {
