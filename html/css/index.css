@@ -89,13 +89,21 @@
   padding-top: 200px;
 }
 
-.beautyrow,
+/*.beautyrow,
 .trending {
   display: flex;
   width: 1300px;
   margin-left: 100px;
-  /*  box-sizing: border-box; */
+  / box-sizing: border-box; 
   flex-wrap: wrap;
+}*/
+
+.beautyrow, 
+.trending {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-left: 100px;
 }
 
 .picture img {
