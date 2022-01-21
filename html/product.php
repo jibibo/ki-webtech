@@ -126,7 +126,7 @@ include "db_disconnect.php";
             if ($rating) {
               echo "
               <span class='stars'>$rating</span>
-              ($review_count reviews)
+              ($review_count review(s))
               ";
             } else {
               echo "No reviews yet!";
