@@ -67,6 +67,7 @@ li.dropdown-menu:hover .dropdown-content {
 
 nav a.active {
   background-color: #37475a;
+  color: #febd69;
 }
 
 .logo {
