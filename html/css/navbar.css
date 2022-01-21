@@ -71,7 +71,7 @@ nav a.active {
 
 .logo {
   background: #fff;
-  padding: auto;
+  float: left;
 
 }
 .container-logo{
