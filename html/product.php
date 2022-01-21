@@ -27,35 +27,38 @@ $product_description = $product["description"];
 $product_image_url = $product["image_url"];
 $product_price = number_format($product["price"], 2);
 
-// product categories & related products
-// todo remove duplicate related products
+// product's categories
 $result_categories = mysqli_query(
   $conn,
-  "SELECT category, name
+  "SELECT id, name
   FROM product_categories pc
   JOIN categories c ON pc.category=c.id 
-  WHERE product=$product_id"
+  WHERE pc.product=$product_id"
 );
-$categories = array();
-$related_ids_array = array();
-$related_products_array = array();
+$product_category_ids = array();
+$product_category_names = array();
+
 while ($row = mysqli_fetch_assoc($result_categories)) {
-  $categories[] = $row;
-  $category_id = $row["category"];
-
-  $result_related = mysqli_query(
-    $conn,
-    "SELECT *
-    FROM product_categories pc
-    JOIN products p ON pc.product=p.id
-    WHERE category=$category_id AND p.id!=$product_id"
-  );
-
-  while ($row = mysqli_fetch_assoc($result_related)) {
-    $related_products_array[] = $row;
-    $related_ids_array[] = $row["product"];
-  }
+  $product_category_ids[] = $row["id"];
+  $product_category_names[] = $row["name"];
 }
+
+// related products: related to product by sharing a category
+// src: https://stackoverflow.com/a/3919563/13216113
+$category_array = "(" . join(", ", $product_category_ids) . ")";
+$result_related = mysqli_query(
+  $conn,
+  "SELECT DISTINCT id, name, price, image_url
+  FROM product_categories pc
+  JOIN products p ON pc.product=p.id
+  WHERE pc.category IN $category_array AND p.id!=$product_id"
+);
+$related_products = array();
+
+while ($row = mysqli_fetch_assoc($result_related)) {
+  $related_products[] = $row;
+}
+
 
 // customer reviews
 $result_reviews = mysqli_query(
@@ -63,7 +66,7 @@ $result_reviews = mysqli_query(
   "SELECT * 
   FROM product_reviews pr
   JOIN customers c ON pr.customer=c.id
-  WHERE product=$product_id"
+  WHERE pr.product=$product_id"
 );
 $reviews = array();
 while ($row = mysqli_fetch_assoc($result_reviews)) {
@@ -146,9 +149,7 @@ include "db_disconnect.php";
 
         <div class="categories">
           <?php
-          foreach ($categories as $category) {
-            $category_name = $category["name"];
-
+          foreach ($product_category_names as $category_name) {
             echo "
             <a href='products.php'>$category_name</a>
             ";
@@ -157,7 +158,7 @@ include "db_disconnect.php";
           <!-- <a href="products.php">[category name]</a> -->
         </div>
 
-        <span class="product-id">(prod. nr. <?php echo $product_id ?>)</span>
+        <span class="product-id">(prod. nr.: <?php echo $product_id ?>)</span>
       </div>
     </div>
 
@@ -168,8 +169,8 @@ include "db_disconnect.php";
       <div class="related-products-list">
 
         <?php
-        if ($related_products_array) {
-          foreach ($related_products_array as $product) {
+        if ($related_products) {
+          foreach ($related_products as $product) {
             $product_id = $product["id"];
             $product_img = $product["image_url"];
             $product_name = $product["name"];
