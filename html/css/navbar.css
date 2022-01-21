@@ -101,6 +101,7 @@ nav a.active {
 .search-button {
   border: none;
   background-color: #febd69;
+  justify-content: center;
 }
 
 ion-icon {
