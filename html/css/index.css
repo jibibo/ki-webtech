@@ -16,12 +16,12 @@
 
 /* index.php  */
 
-.container {
+/*.container {
   max-width: 1400px;
   margin: auto;
   padding-left: 25px;
-  padding-right: 25px;
-}
+  padding-right: 25px; 
+} */
 
 /*https://www.w3schools.com/howto/howto_css_button_on_image.asp*/
 
@@ -30,7 +30,7 @@
   margin-left: 100px;
   margin-right: 100px;
   height: 600px;
-  width: 1150px;
+  width: 1200px;
   /*margin-left: 100px;
       width: 90%;
       height: 50%; */
@@ -89,13 +89,21 @@
   padding-top: 200px;
 }
 
-.beautyrow,
+/*.beautyrow,
 .trending {
   display: flex;
   width: 1300px;
   margin-left: 100px;
-  /*  box-sizing: border-box; */
+  / box-sizing: border-box; 
   flex-wrap: wrap;
+}*/
+
+.beautyrow, 
+.trending {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-left: 100px;
 }
 
 .picture img {
@@ -116,17 +124,23 @@
 
 .picture,
 .column {
-  flex: 20%;
   margin-top: 25px;
 }
 
+/*.category {
+  display: flex;
+  width: 1150px;
+  margin-left: 100px;
+  / box-sizing: border-box; 
+  flex-wrap: wrap;
+}*/
+
 .category {
   display: flex;
-  width: 1200px;
+  width: 1200;
+  margin-right: 100px;
   margin-left: 100px;
-  margin-right: 50px;
-  /* box-sizing: border-box; */
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .categorycontainer {

@@ -27,11 +27,17 @@
       <div class="footer_emailform">
         <h2>JOIN OUR NEWSLETTER!</h2>
         <input type="email" placeholder="please enter email..." id="footer_email" />
-        <input type="submit" value="SIGN UP!" id="footer_email_btn" />
+        <input type="submit" onclick="message()" value="SIGN UP!" id="footer_email_btn" />
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  function message() {
+    alert("Thank You For Signing Up!");
+  }
+</script>
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
