@@ -92,7 +92,7 @@ nav a.active {
 
 .search-input {
   font-size: 17px;
-  border: none;
+  border: black;
   outline: black;
   width: 400px;
   border-radius: 40px;
