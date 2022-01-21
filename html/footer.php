@@ -35,7 +35,7 @@
 
 <script>
   function message() {
-    alert("Thanks for signing in!");
+    alert("Thank You For Signing Up!");
   }
 </script>
 
