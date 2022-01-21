@@ -91,3 +91,7 @@ label {
 .order-info h3 {
   margin: 1em;
 }
+
+.contact-info input[type="checkbox"] {
+  margin-bottom: 10px;
+}

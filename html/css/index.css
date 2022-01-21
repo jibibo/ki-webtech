@@ -16,148 +16,154 @@
 
 /* index.php  */
 
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
 
-  .container {
-      max-width: 1400px;
-      margin: auto;
-      padding-left: 25px;
-      padding-right: 25px;
-  } 
+/*https://www.w3schools.com/howto/howto_css_button_on_image.asp*/
 
-  /*https://www.w3schools.com/howto/howto_css_button_on_image.asp*/
-
-  .imagecontainer img{
-      display: block;
-      margin-left: 100px;
-      margin-right: 200px;
-      height: 600px;
-      width: 1100px; 
-      /*margin-left: 100px;
+.imagecontainer img {
+  display: block;
+  margin-left: 100px;
+  margin-right: 200px;
+  height: 600px;
+  width: 1100px;
+  /*margin-left: 100px;
       width: 90%;
       height: 50%; */
-  }
+}
 
-  .imagecontainer {
-      background-color: white;
-      position: relative;
-      padding-top: 40px;
-  }
+.imagecontainer {
+  background-color: white;
+  position: relative;
+  padding-top: 40px;
+}
 
-  .imagecontainer button {
-      border-radius: 40px;
-      position: absolute;
-      left: 45%;
-      top: 80%;
-      padding-left: 0.7rem;
-      padding-right: 0.7rem;
-      font-size: 25px;
-      margin-bottom: 100px;
-      background-color: black;
-      border-color: #FEBD69;
-  }
+.imagecontainer button {
+  border-radius: 40px;
+  position: absolute;
+  left: 45%;
+  top: 80%;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  font-size: 25px;
+  margin-bottom: 100px;
+  background-color: black;
+  border-color: #febd69;
+}
 
-  .imagecontainer button:hover{
-      background-color: #4e4d4c;
-  }
+.imagecontainer button:hover {
+  background-color: #4e4d4c;
+}
 
-  .nikelink {
-      text-decoration: none;
-      color: #FEBD69;
-      font-family: "Roboto", sans-serif;
-  }
+.nikelink {
+  text-decoration: none;
+  color: #febd69;
+  font-family: "Roboto", sans-serif;
+}
 
-  .nike {
-      margin-top: 25px;
-  }
+.nike {
+  margin-top: 25px;
+}
 
-  .headertext {
-      text-align: left;
-      margin-left: 100px;
-      font-size: 30px;
-      font-weight: bolder;
-      color: #FEBD69; 
-  }
+.headertext {
+  text-align: left;
+  margin-left: 100px;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #febd69;
+}
 
-  /* https://www.w3schools.com/cssref/css3_pr_flex-wrap.asp
+/* https://www.w3schools.com/cssref/css3_pr_flex-wrap.asp
      https://www.w3schools.com/howto/howto_css_images_side_by_side.asp
   */
 
-  .beautycontainer, .trendingcontainer, .categorycontainer {
-      background-color: white;
-      position: relative;
-      padding-top: 200px;
-  }
+.beautycontainer,
+.trendingcontainer,
+.categorycontainer {
+  background-color: white;
+  position: relative;
+  padding-top: 200px;
+}
 
-  .beautyrow, .trending {
-      display: flex;
-      width: 1300px;
-      margin-left: 100px;
-      /*  box-sizing: border-box; */
-      flex-wrap: wrap;
-  }
+.beautyrow,
+.trending {
+  display: flex;
+  width: 1300px;
+  margin-left: 100px;
+  /*  box-sizing: border-box; */
+  flex-wrap: wrap;
+}
 
-  .picture img {
-      float: left;
-      width:  180px;
-      height: 180px;
-      object-fit: cover;
-  }
+.picture img {
+  float: left;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
 
-  .hover {
-      padding-right: 50px;
-  }
+.hover {
+  /* padding-right: 50px; */
+}
 
-  .hover:hover, .view:hover {
-      opacity: 0.3;
-  }
+.hover:hover,
+.view:hover {
+  opacity: 0.3;
+}
 
-  .picture, .column {
-      flex: 20%;
-      margin-top: 25px;
-  }
+.picture,
+.column {
+  flex: 20%;
+  margin-top: 25px;
+}
 
-  .category {
-      display: flex;
-      width: 1200px;
-      margin-left: 100px;
-      /* box-sizing: border-box; */
-      flex-wrap: wrap;
-  }
+.category {
+  display: flex;
+  width: 1200px;
+  margin-left: 100px;
+  /* box-sizing: border-box; */
+  flex-wrap: wrap;
+}
 
-  .categorycontainer {
-      padding-bottom: 70px;
-      background-color: white;
-  }
+.categorycontainer {
+  padding-bottom: 70px;
+  background-color: white;
+}
 
-  .column img {
-      float: left;
-      width:  240px;
-      height: 262px;
-      object-fit: cover;
-  }
+.column img {
+  float: left;
+  width: 240px;
+  height: 262px;
+  object-fit: cover;
+}
 
-  /*.hyperlinks {
+/*.hyperlinks {
       margin-left: 130px;
       background-color: white;
   } */
 
-  .imagelink {
-      float: left;
-      margin-top: 10px;
-      margin-left: 10px;
-  }
+.imagelink {
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+}
 
-  .imagelink .shop, .shopshoes {
-      text-decoration: none;
-      color: #FEBD69;
-      font-size: 18px;
-      font-weight: bolder;
-  }
+.imagelink .shop,
+.shopshoes {
+  text-decoration: none;
+  color: #febd69;
+  font-size: 18px;
+  font-weight: bolder;
+}
 
-  .shop:hover, .shopshoes:hover {
-      text-decoration: underline;
-  }
+.shop:hover,
+.shopshoes:hover {
+  text-decoration: underline;
+}
 
-  .shopshoes {
-      margin-right: 20px;
-  }
+.shopshoes {
+  margin-right: 20px;
+}

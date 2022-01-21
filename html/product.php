@@ -31,29 +31,29 @@ $product_price = number_format($product["price"], 2);
 // todo remove duplicate related products
 $result_categories = mysqli_query(
   $conn,
-  "SELECT name, id
+  "SELECT category, name
   FROM product_categories pc
-  JOIN categories c ON pc.category_id=c.id 
-  WHERE product_id=$product_id"
+  JOIN categories c ON pc.category=c.id 
+  WHERE product=$product_id"
 );
 $categories = array();
 $related_ids_array = array();
 $related_products_array = array();
 while ($row = mysqli_fetch_assoc($result_categories)) {
   $categories[] = $row;
-  $category_id = $row["id"];
+  $category_id = $row["category"];
 
   $result_related = mysqli_query(
     $conn,
     "SELECT *
     FROM product_categories pc
-    JOIN products p ON pc.product_id=p.id
-    WHERE category_id=$category_id AND p.id!=$product_id"
+    JOIN products p ON pc.product=p.id
+    WHERE category=$category_id AND p.id!=$product_id"
   );
 
   while ($row = mysqli_fetch_assoc($result_related)) {
     $related_products_array[] = $row;
-    $related_ids_array[] = $row["product_id"];
+    $related_ids_array[] = $row["product"];
   }
 }
 
@@ -62,8 +62,8 @@ $result_reviews = mysqli_query(
   $conn,
   "SELECT * 
   FROM product_reviews pr
-  JOIN customers c ON pr.customer_id=c.id
-  WHERE product_id=$product_id"
+  JOIN customers c ON pr.customer=c.id
+  WHERE product=$product_id"
 );
 $reviews = array();
 while ($row = mysqli_fetch_assoc($result_reviews)) {
@@ -75,7 +75,7 @@ $result_rating = mysqli_query(
   $conn,
   "SELECT AVG(rating), COUNT(*)
   FROM product_reviews
-  WHERE product_id=$product_id"
+  WHERE product=$product_id"
 );
 // this query only returns 1 row, containing AVG and COUNT
 $row = mysqli_fetch_assoc($result_rating);
@@ -126,7 +126,7 @@ include "db_disconnect.php";
             if ($rating) {
               echo "
               <span class='stars'>$rating</span>
-              ($review_count reviews)
+              ($review_count review(s))
               ";
             } else {
               echo "No reviews yet!";
