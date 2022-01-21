@@ -74,6 +74,10 @@ nav a.active {
   padding: auto;
 
 }
+.container-logo{
+  background-color: #fff;
+  padding: auto;
+}
 
 /* searchbar */
 /* src: https://ionic.io/ionicons/usage */
