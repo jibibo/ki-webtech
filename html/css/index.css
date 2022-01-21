@@ -30,7 +30,7 @@
   margin-left: 100px;
   margin-right: 100px;
   height: 600px;
-  width: 1150px;
+  width: 1200px;
   /*margin-left: 100px;
       width: 90%;
       height: 50%; */
@@ -130,7 +130,8 @@
 
 .category {
   display: flex;
-  width: 1300;
+  width: 1200;
+  margin-right: 100px;
   margin-left: 100px;
   flex-wrap: nowrap;
 }
