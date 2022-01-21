@@ -131,7 +131,7 @@
 .category {
   display: flex;
   margin-left: 100px;
-  margin-right: 100px;
+  margin-right: 150px;
   flex-wrap: nowrap;
   flex-direction: row;
 }
