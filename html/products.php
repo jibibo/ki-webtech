@@ -22,6 +22,7 @@ include "db_disconnect.php";
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/products.css" />
+
 </head>
 
 <body>
@@ -53,7 +54,7 @@ include "db_disconnect.php";
                 <span class='product-price'>&euro; $product_price</span>
                 <div class='product-buttons'>
                   <button class='product-buy'>Buy</button>
-                  <button class='product-cart'>Cart</button>
+                  <button class='product-cart'><ion-icon name="cart-outline"></ion-icon></button>
                   <button class='product-wishlist'>Wishlist</button>
                 </div>
               </div>
@@ -92,6 +93,8 @@ include "db_disconnect.php";
   <?php
   include "footer.php";
   ?>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
