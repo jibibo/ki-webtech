@@ -26,8 +26,10 @@
       </div>
       <div class="footer_emailform">
         <h2>JOIN OUR NEWSLETTER!</h2>
-        <input type="email" placeholder="please enter email..." id="footer_email" />
-        <input type="submit" onclick="message()" value="SIGN UP!" id="footer_email_btn" />
+        <form action="" method="post"> 
+          <input type="email" placeholder="please enter email..." id="footer_email" />
+          <input type="submit" onclick="message()" value="SIGN UP!" id="footer_email_btn" />
+        </form>
       </div>
     </div>
   </div>
