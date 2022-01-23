@@ -43,7 +43,7 @@
     if (input_valid.checkValidity()) {
       alert("Thank You For Signing Up!");
     } else {
-      alert("Invalid email");
+      alert("Invalid email"); //test
     }
   }
 </script>
