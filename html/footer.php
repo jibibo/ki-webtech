@@ -39,7 +39,12 @@
 
 <script>
   function message() {
-    alert("Thank You For Signing Up!");
+    var input_valid = document.getElementById("footer_email");
+    if (input_valid.checkValidity()) {
+      alert("Thank You For Signing Up!");
+    } else {
+      alert("Invalid email");
+    }
   }
 </script>
 
