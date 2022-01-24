@@ -17,9 +17,10 @@
   <?php
   include "navbar.php";
   ?>
-
+ 
   <div class="container">
-    <div class="about-us">
+    <img src="images/Location-Roeterseiland.jpeg" alt="UVA">
+    <div class="about-us-text">
       <h1>About us</h1>
       <p>UvAzon (not related to Amazon.com, Inc. in any form), is a small
         startup company based in the Netherlands. Created by four enthousiastic
