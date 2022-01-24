@@ -50,4 +50,8 @@
 }
 .product-buttons{
   display: flex;
+  outline: none;
+  border: none;
+  background-color: #37475a;
+  color: #febd69;
 }
