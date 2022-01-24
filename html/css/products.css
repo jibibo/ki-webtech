@@ -66,3 +66,19 @@
   border: none;
 
 }
+.product-buttons .product-cart{
+  background-color: #37475a;
+  color: #febd69;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+
+}
+.product-buttons .product-wishlist{
+  background-color: #37475a;
+  color: #febd69;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+
+}
