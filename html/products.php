@@ -68,7 +68,7 @@ include "db_disconnect.php";
 
       ?>
 
-      <!-- <div class='product-list-item'>
+      <div class='product-list-item'>
         <div class='product-img-wrapper'>
           <a href='product.php?id=$product_id'>
             <img src='https://www.automobielmanagement.nl/wp-content/uploads/2019/04/Lada-Combi-1600x1123.jpg' />
@@ -79,13 +79,13 @@ include "db_disconnect.php";
           <div class='product-details'>
             <span class='product-price'>&euro; $product_price</span>
             <div class='product-buttons'>
-              <button class='product-buy'>Buy</button>
+              <button class='product-buy'><ion-icon name="cart-outline"></ion-icon></button>
               <button class='product-cart'>Cart</button>
               <button class='product-wishlist'>Wishlist</button>
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
 
     </div>
   </div>
