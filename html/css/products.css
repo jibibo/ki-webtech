@@ -67,10 +67,9 @@
   color: #37475a;
   outline: none;
   border: #37475a;
-  padding-left: 4px;
   cursor: pointer;
-  margin: 3px;
-  font-size: 10px;
+  margin: 2px;
+  font-size: 14px;
 
 }
 .product-buttons .product-cart{
@@ -79,8 +78,8 @@
   outline: none;
   border: none;
   cursor: pointer;
-  margin: 3px;
-  font-size: 10px;
+  margin: 2px;
+  font-size: 14px;
 
 }
 .product-buttons .product-wishlist{
@@ -89,7 +88,7 @@
   outline: none;
   border: none;
   cursor: pointer;
-  margin: 3px;
-  font-size: 10px;
+  margin: 2px;
+  font-size: 14px;
 
 }
