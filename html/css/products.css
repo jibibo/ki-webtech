@@ -53,10 +53,10 @@
 .product-buttons{
   flex-wrap: wrap;
   display: flex;
-  padding: 5px;
+  padding: 1px;
   outline: none;
   border: none;
-  background-color: #37475a;
+  background-color: #fff;
   color: #febd69;
   font-size: 0.5em;
 }
