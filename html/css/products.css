@@ -71,7 +71,7 @@
   cursor: pointer;
   margin: 2px;
   font-size: 14px;
-
+  bottom: 0;
 }
 .product-buttons .product-cart{
   background-color: #fff;
@@ -81,7 +81,7 @@
   cursor: pointer;
   margin: 2px;
   font-size: 14px;
-
+  bottom: 0;
 }
 .product-buttons .product-wishlist{
   background-color: #fff;
@@ -91,5 +91,5 @@
   cursor: pointer;
   margin: 2px;
   font-size: 14px;
-
+  bottom: 0;
 }
