@@ -66,7 +66,7 @@
 .product-buttons .product-buy{
   background-color: #fff;
   color: #37475a;
-  outline: none;
+  outline: #37475a;
   border: #37475a;
   cursor: pointer;
   margin: 2px;
