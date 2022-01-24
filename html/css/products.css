@@ -68,6 +68,7 @@
   padding-left: 4px;
   cursor: pointer;
   margin: 3px;
+  font-size: 10px;
 
 }
 .product-buttons .product-cart{
@@ -77,6 +78,7 @@
   border: none;
   cursor: pointer;
   margin: 3px;
+  font-size: 10px;
 
 }
 .product-buttons .product-wishlist{
@@ -86,5 +88,6 @@
   border: none;
   cursor: pointer;
   margin: 3px;
+  font-size: 10px;
 
 }
