@@ -60,6 +60,7 @@
   font-size: 0.5em;
   float: right;
   align-items: flex-end;
+  bottom: 0;
 
 }
 .product-buttons .product-buy{
