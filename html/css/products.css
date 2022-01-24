@@ -62,24 +62,24 @@
   background-color: #fff;
   color: #37475a;
   outline: none;
-  border-radius: 5px;
-  border: none;
+  border: #37475a;
   padding-left: 4px;
+  cursor: pointer;
 
 }
 .product-buttons .product-cart{
   background-color: #fff;
   color: #37475a;
   outline: none;
-  border-radius: 5px;
   border: none;
+  cursor: pointer;
 
 }
 .product-buttons .product-wishlist{
   background-color: #fff;
   color: #37475a;
   outline: none;
-  border-radius: 5px;
   border: none;
+  cursor: pointer;
 
 }
