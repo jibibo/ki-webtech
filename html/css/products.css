@@ -48,3 +48,6 @@
   display: flex;
   justify-content: space-between;
 }
+.product-buttons{
+  flex: 1fr 1fr 1fr;
+}
