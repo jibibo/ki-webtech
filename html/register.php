@@ -65,6 +65,10 @@
         </div>
 
         <div>
+          <p>By creating an account you agree to our <a href="#" class="terms">Terms & Privacy</a>.</p>
+        </div>
+
+        <div>
           <button class="create" type="submit">Create account!</button>
           <br></br>
           <a class="text" href="log-in.php">Back to login</a>

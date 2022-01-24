@@ -43,14 +43,6 @@
   background-color: #e4b271;
 }
 
-.send:hover {
-  background-color: #e4b271;
-}
-
-.create:hover {
-  background-color: #e4b271;
-}
-
 .text {
   text-decoration: none;
   color: #febd69;
@@ -59,50 +51,4 @@
 
 .text:hover {
   text-decoration: underline;
-}
-
-.send {
-  font-size: 20px;
-  color: black;
-  padding: 10px 140px;
-  background-color: #febd69;
-  border-color: #febd69;
-  border: none;
-  outline: none;
-  border-radius: 40px;
-  cursor: pointer;
-  box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
-  margin-top: 20px;
-}
-
-.email {
-  padding-bottom: 20px;
-}
-
-.email input {
-  font-size: 20px;
-  padding: 10px;
-}
-
-.register {
-  padding-bottom: 20px;
-}
-
-.register input {
-  font-size: 20px;
-  padding: 10px;
-}
-
-.create {
-  font-size: 20px;
-  color: black;
-  padding: 10px 95px;
-  background-color: #febd69;
-  border-color: #febd69;
-  border: none;
-  outline: none;
-  border-radius: 40px;
-  cursor: pointer;
-  box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
-  margin-top: 20px;
 }
