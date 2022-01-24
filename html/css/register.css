@@ -55,7 +55,10 @@
 
   .terms {
     color:dodgerblue;
-    font-size: 20px;
   }
 
+  .agree {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
   
