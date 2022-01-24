@@ -71,7 +71,7 @@
   cursor: pointer;
   margin: 2px;
   font-size: 14px;
-  bottom: 0;
+  margin-bottom: 5px;
 }
 .product-buttons .product-cart{
   background-color: #fff;
