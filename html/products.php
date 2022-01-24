@@ -79,7 +79,7 @@ include "db_disconnect.php";
           <div class='product-details'>
             <span class='product-price'>&euro; $product_price</span>
             <div class='product-buttons'>
-              <button class='product-buy'>BUY NOW!</button>
+              <button class='product-buy'>BUY!</button>
               <button class='product-cart'><ion-icon name="cart-outline"></ion-icon></button>
               <button class='product-wishlist'><ion-icon name="heart-outline"></ion-icon></button>
             </div>
