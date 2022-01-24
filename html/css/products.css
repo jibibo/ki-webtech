@@ -32,7 +32,7 @@
 .product-list-item img {
   max-width: 230px;
   max-height: 190px;
-  border: 1px solid black;
+  border: none;
 }
 
 /* other product info  */
@@ -60,5 +60,8 @@
 .product-buttons .product-buy{
   background-color: #37475a;
   color: #febd69;
+  outline: none;
+  border-radius: 5px;
+  border: none;
 
 }
