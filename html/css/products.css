@@ -59,6 +59,7 @@
   color: #febd69;
   font-size: 0.5em;
   float: right;
+  align-items: flex-end;
 
 }
 .product-buttons .product-buy{
