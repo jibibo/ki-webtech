@@ -64,7 +64,7 @@
           <input type="text" placeholder="Country" required>
         </div>
 
-        <div>
+        <div class="register">
           <p>By creating an account you agree to our <a href="#" class="terms">Terms & Privacy</a>.</p>
         </div>
 
