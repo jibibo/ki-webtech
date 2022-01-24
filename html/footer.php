@@ -42,9 +42,9 @@
     var input_valid = document.getElementById("footer_email");
     if (input_valid.checkValidity()) {
       alert("Thank You For Signing Up!");
-    } else {
+    } /*else {
       alert("Invalid email"); // test internet
-    }
+    } */
   }
 </script>
 
