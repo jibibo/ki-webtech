@@ -22,7 +22,7 @@ include "db_disconnect.php";
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/products.css" />
-
+  <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -96,7 +96,7 @@ include "db_disconnect.php";
   ?>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  
 
 </body>
 
