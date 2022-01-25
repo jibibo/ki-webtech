@@ -23,45 +23,42 @@
     <div class="form">
       <form action="" method="post" class="formscreen">
         <div class="title">CREATE AN ACCOUNT</div>
+        <p><span>* required field</span><p>
 
         <div class="register">
-          <!-- <label> FIRST NAME</label> -->
-          <input type="text" placeholder="First name" required>
+          <input type="text" placeholder="First name" name="fname" required>*
         </div>
 
         <div class="register">
-          <!-- <label>LAST NAME</label> -->
-          <input type="text" placeholder="Last name" required>
+          <input type="text" placeholder="Last name" name="lname" required>*
         </div>
 
         <div class="register">
-          <!--<label>PHONE</label> -->
-          <input type="tel" placeholder="Phone number" required>
+          <input type="tel" placeholder="Phone number" name="phonenumber" required>*
         </div>
 
         <div class="register">
-          <!-- <label>EMAIL</label> -->
-          <input type="email" placeholder="Email address" required>
+          <input type="email" placeholder="Email address" name="email" required>*
         </div>
 
         <div class="register">
-          <!-- <label>EMAIL</label> -->
-          <input type="password" placeholder="Password of at least 8 characters" required>
+          <input type="password" placeholder="Password of at least 8 characters" name="password" required>*
         </div>
 
         <div class="register">
-          <!-- <label>EMAIL</label> -->
-          <input type="text" placeholder="Zip code" required>
+          <input type="text" placeholder="Address" name="address" required>*
         </div>
 
         <div class="register">
-          <!-- <label>EMAIL</label> -->
-          <input type="text" placeholder="House number" required>
+          <input type="text" placeholder="Zip code" name="zipcode" required>*
         </div>
 
         <div class="register">
-          <!-- <label>EMAIL</label> -->
-          <input type="text" placeholder="Country" required>
+          <input type="text" placeholder="City" name="city" required>*
+        </div>
+
+        <div class="register">
+          <input type="text" placeholder="Country" name="country" required>*
         </div>
 
         <div class="agree">
