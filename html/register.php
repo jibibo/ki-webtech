@@ -21,7 +21,7 @@
   <div class="container">
 
     <div class="form">
-      <form action="" class="formscreen">
+      <form action="" method="post" class="formscreen">
         <div class="title">CREATE AN ACCOUNT</div>
 
         <div class="register">

@@ -20,7 +20,7 @@
 
   <div class="container">
     <div class="form">
-      <form action="" class="formscreen">
+      <form action="" method="post" class="formscreen">
         <div class="title">LOGIN</div>
 
         <div class="textbox">
