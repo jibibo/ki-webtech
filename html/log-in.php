@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,11 +26,11 @@
 
   <div class="container">
     <div class="form">
-      <form action="" method="post" class="formscreen">
+      <form action="loggedin.php" method="post" class="formscreen">
         <div class="title">LOGIN</div>
 
         <div class="textbox">
-          <input type="email" placeholder="Email" name="email" autofocus required>
+          <input type="text" placeholder="Username" name="username" autofocus required>
           <br><br>
 
           <input type="password" placeholder="Password" name="pww" required>
@@ -38,6 +44,15 @@
         </div>
       </form>
     </div>
+
+    <?php if(isset($_SESSION['username'])) {
+      echo "
+      <form action='logout.php' method='post' class='formscreen'>
+            <div>
+          <button type='submit' class='logout' title='Logout'>Logout</button> </div>
+          "; 
+    }  ?>
+
   </div>
 
   <?php
