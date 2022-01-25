@@ -5,16 +5,19 @@ include "db_connect.php";
 session_start();
 
 
-$username = $_SESSION["username"];
+if (isset($_SESSION["username"])) {
+  $username = $_SESSION["username"];
+  $user_query = "SELECT id FROM customers WHERE email = '$username'";
+  $user_result = mysqli_query($conn, $user_query);
+  $user_id = mysqli_fetch_array($user_result);
 
-$user_query = "SELECT id FROM customers WHERE email = '$username'";
-$user_result = mysqli_query($conn, $user_query);
-$user_id = mysqli_fetch_array($user_result);
+
+  $cart_query = "SELECT product_id FROM cart_item WHERE cart_id = '$user_id[0]'";
+  $cart_result = mysqli_query($conn, $cart_query);
+  $rows = mysqli_num_rows($cart_result);
+}
 
 
-$cart_query = "SELECT product_id FROM cart_item WHERE cart_id = '$user_id[0]'";
-$cart_result = mysqli_query($conn, $cart_query);
-$rows = mysqli_num_rows($cart_result);
 
 
 /*
