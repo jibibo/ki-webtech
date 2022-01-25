@@ -12,6 +12,9 @@ function clean_data($data) {
 } 
 
 // did not include password yet!!
+// address weghalen --> ook in phpmyadmin weghalen? 
+// wachtwoord in zelfde table stoppen?? 
+// zipcode voldoende en makkelijker? 
 
 // set variables to empty values
 $fname = $lname = $phonenumber = $email = $password = $address = $zipcode = $city = $country = "";
