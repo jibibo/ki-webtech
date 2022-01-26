@@ -1,5 +1,4 @@
 <?php 
-// TO DO: create connection with database
 // check connection
 include "db_connect.php";
 
@@ -39,8 +38,7 @@ $query = "INSERT INTO newsletter VALUES ('$email')";
         echo "Error" . mysqli_error($conn);
 }
 
-
-// TO DO: close connection database
+// disconnect
 include "db_disconnect.php"
 
 ?>
