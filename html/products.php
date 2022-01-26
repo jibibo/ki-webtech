@@ -22,7 +22,7 @@ include "db_disconnect.php";
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/products.css" />
-  <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <script src="products.js" type="text/javascript"></script>
 </head>
 
 <body>
