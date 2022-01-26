@@ -16,6 +16,9 @@ nav ul {
   position: sticky;
   width: 100%;
 }
+#nav-ul{
+  position: sticky;
+}
 
 nav li {
   float: left;
@@ -81,7 +84,7 @@ nav a.active {
 }
 .container-logo{
   background-color: #fff;
-  padding: auto;
+  padding: auto;]
   margin-bottom: -35px;
 }
 
