@@ -4,7 +4,6 @@
   justify-content: center;
   gap: 3rem;
   padding: 2rem;
-  visibility: hidden;
 }
 .fadeIn {
   -webkit-animation: animat_show 0.8s;
@@ -22,6 +21,7 @@
 }
 
 .product-list-item {
+  visibility: hidden;
   flex: 1 1 100%;
   max-width: 250px;
 
