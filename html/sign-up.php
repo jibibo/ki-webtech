@@ -33,11 +33,11 @@ $query = "INSERT INTO newsletter VALUES ('$email')";
     insert into tablename (code) values ('1448523')
     End */
 
-if(mysqli_query($conn, $query)) {
+/*if(mysqli_query($conn, $query)) {
         echo "Succesfully subscribed to our Newsletter!";
 } else {
         echo "This email is already subscribed, please enter with an other email." . mysqli_error($conn);
-}
+}*/
 
 // disconnect
 include "db_disconnect.php"
