@@ -17,7 +17,7 @@ nav ul {
   width: 100%;
 }
 #nav-ul{
-  position: sticky;
+  position: fixed;
 }
 
 nav li {
