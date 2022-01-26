@@ -68,6 +68,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
+    
+
     // address weghalen --> ook in phpmyadmin? 
     // zipcode voldoende en makkelijker? 
 
