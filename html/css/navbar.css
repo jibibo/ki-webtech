@@ -121,5 +121,5 @@ ion-icon {
 }
 .sticky{
   top: 0;
-  position: sticky;
+  position: fixed;
 }
