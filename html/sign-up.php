@@ -33,11 +33,24 @@ $query = "INSERT INTO newsletter VALUES ('$email')";
     insert into tablename (code) values ('1448523')
     End */
 
-/*if(mysqli_query($conn, $query)) {
+/*if (mysqli_query($conn, $query)) {
         echo "Succesfully subscribed to our Newsletter!";
 } else {
         echo "This email is already subscribed, please enter with an other email." . mysqli_error($conn);
 }*/
+  if (mysqli_query($conn, $query)) {
+        echo '<script language="javascript">';
+        echo 'alert("Succesfully subscribed to our Newsletter!")';
+        echo '</script>';
+  } else {
+        echo '<script language="javascript">';
+        echo 'alert("This email is already subscribed, please enter with an other email.")';
+        echo '</script>';
+  }
+
+/* echo '<script language="javascript">';
+echo 'alert("message successfully sent")';
+echo '</script>';*/
 
 // disconnect
 include "db_disconnect.php"
@@ -65,8 +78,18 @@ include "db_disconnect.php"
 
   <div class="container">
 
-  </div>
 
+  </div>
+<!-- <script>
+  function message() {
+    var input_valid = document.getElementById("footer_email");
+    if (input_valid.checkValidity()) {
+      alert("Thank You For Signing Up!");
+    } //else {
+      //alert("Invalid email");  test internet
+    //} 
+  }
+</script> -->
   <?php
   include "footer.php";
   ?>
