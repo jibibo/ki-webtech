@@ -12,10 +12,10 @@ function showProducts() {
 
 // if the image in the window of browser when the page is loaded, show that image
 $(document).ready(function(){
-    showProducts();
+    showProducts("product-list-item");
 });
 
 // if the image in the window of browser when scrolling the page, show that image
 $(window).scroll(function() {
-    showProducts();
+    showProducts("product-list-item");
 });
