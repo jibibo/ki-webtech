@@ -1,0 +1,14 @@
+body {
+    background-color: white;
+}
+
+.gif {
+    width: 100%;
+    height: auto;
+}
+
+.subscribe {
+    text-align: center;
+    font-size: 30px;
+    color: #febd69;
+}
