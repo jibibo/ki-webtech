@@ -107,6 +107,10 @@ label {
   font-weight: 600;
   color: #37475a;
 }
+a{
+  color: #37475a;
+  text-decoration: none;
+}
 
 tr td:first-child {
   padding-right: 30px;

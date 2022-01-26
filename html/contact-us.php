@@ -85,7 +85,7 @@
           </tr>
           <tr>
             <td>ADRESS</td>
-            <td>Science Park 904, 1098 XH Amsterdam</td>
+            <td><a href="https://www.google.com/maps/place/Science+Park+904/@52.3544089,4.9535252,17z/data=!3m1!4b1!4m5!3m4!1s0x47c60944ecd0187d:0xbae0bc22b93e4985!8m2!3d52.3544089!4d4.9557139" >Science Park 904, 1098 XH Amsterdam</a></td>
           </tr>
         </table>
       </div>
