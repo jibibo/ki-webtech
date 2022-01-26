@@ -72,6 +72,7 @@ include "db_disconnect.php"
   ?>
 
   <div class="gif">
+    <!--<img src="https://c.tenor.com/q-zZSTX6jSIAAAAC/mail-download.gif" alt="Mail gif">-->
     <img src="https://c.tenor.com/q-zZSTX6jSIAAAAC/mail-download.gif" alt="Mail gif">
   </div>
 
