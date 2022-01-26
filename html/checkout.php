@@ -3,7 +3,8 @@
 include "db_connect.php";
 # include "cookies.php";
 session_start();
-
+$rows = 0;
+$subtotal = 0;
 
 if (isset($_SESSION["username"])) {
   $username = $_SESSION["username"];
