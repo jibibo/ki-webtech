@@ -12,7 +12,7 @@
   visibility: visible !important;
 }
 
-@-webkit-keyframes animat_show{
+@keyframes animat_show{
   0%{opacity:0}
   100%{opacity:1}
 }
