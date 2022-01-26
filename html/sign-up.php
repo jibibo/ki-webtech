@@ -36,7 +36,7 @@ $query = "INSERT INTO newsletter VALUES ('$email')";
 if(mysqli_query($conn, $query)) {
         echo "Succesfully subscribed to our Newsletter!";
 } else {
-        echo "Error" . mysqli_error($conn);
+        echo "This email is already subscribed, please enter with an other email." . mysqli_error($conn);
 }
 
 // disconnect
