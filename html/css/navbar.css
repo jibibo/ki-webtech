@@ -1,10 +1,10 @@
 /* navbar */
 /* src: https://www.w3schools.com/css/css_navbar.asp */
 
-#nav-ul{
+nav{
   margin: auto;
   max-width: 100%;
-  position: fixed;
+  position: sticky;
 }
 
 nav ul {
@@ -13,7 +13,6 @@ nav ul {
   padding: 0;
   overflow: hidden;
   background-color: #febd69;
-  position: fixed;
 }
 
 nav li {
