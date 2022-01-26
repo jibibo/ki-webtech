@@ -1,7 +1,7 @@
 /* navbar */
 /* src: https://www.w3schools.com/css/css_navbar.asp */
 
-nav {
+#nav-ul{
   margin: auto;
   max-width: 100%;
   position: sticky;
