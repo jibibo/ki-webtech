@@ -38,7 +38,7 @@ $query = "INSERT INTO newsletter VALUES ('$email')";
 // shows alert message if the user is subscribed or not subscribed 
 if (mysqli_query($conn, $query)) {
   echo '<script language="javascript">';
-  echo 'alert("Successfully subscribed to our Newsletter!")';
+  echo 'alert("Thank You for subscribing to our Newsletter!")';
   echo '</script>';
 } else {
   echo '<script language="javascript">';
