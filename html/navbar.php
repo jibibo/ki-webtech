@@ -25,13 +25,11 @@
     <div class="search-wrapper">
       <form action="search.php">
         <input class="search-input" type="text" placeholder="Search for..." name="search">
-        <div class="searchbut">
         <button type="submit" class="search-button">
           <span class="icon">
             <ion-icon name="search-outline"></ion-icon>
           </span>
         </button>
-        </div>
       </form>
     </div>
   </ul>
