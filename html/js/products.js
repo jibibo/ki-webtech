@@ -1,4 +1,4 @@
-function    showProducts() {
+function showProducts() {
     let windowHeight = $(window).height();
     $(".products .product-list-item").each(function(){
         let thisPos = $(this).offset().top;
