@@ -37,16 +37,16 @@
   </div>
 </div>
 
-<script>
+<!-- <script>
   function message() {
     var input_valid = document.getElementById("footer_email");
     if (input_valid.checkValidity()) {
       alert("Thank You For Signing Up!");
-    } /*else {
-      alert("Invalid email"); // test internet
-    } */
+    } //else {
+      //alert("Invalid email");  test internet
+    //} 
   }
-</script>
+</script> -->
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
