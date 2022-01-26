@@ -20,6 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $email = clean_data($_POST["email"]);
 
+        // checks whether the email form is correct
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $email = clean_data($_POST["email"]);
         }
@@ -27,11 +28,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $query = "INSERT INTO newsletter VALUES ('$email')";
-// --> alleen inserten als het nog niet bestaat? 
-/*  If Not Exists(select * from tablename where code='144....')
-    Begin
-    insert into tablename (code) values ('1448523')
-    End */
 
 /*if (mysqli_query($conn, $query)) {
         echo "Succesfully subscribed to our Newsletter!";
@@ -40,7 +36,7 @@ $query = "INSERT INTO newsletter VALUES ('$email')";
 }*/
 
 // shows alert message if the user is subscribed or not subscribed 
-/*if (mysqli_query($conn, $query)) {
+if (mysqli_query($conn, $query)) {
   echo '<script language="javascript">';
   echo 'alert("Successfully subscribed to our Newsletter!")';
   echo '</script>';
@@ -48,11 +44,7 @@ $query = "INSERT INTO newsletter VALUES ('$email')";
   echo '<script language="javascript">';
   echo 'alert("This email is already subscribed, please enter with an other email.")';
   echo '</script>';
-}*/
-
-/* echo '<script language="javascript">';
-echo 'alert("message successfully sent")';
-echo '</script>';*/
+}
 
 // disconnect
 include "db_disconnect.php"
@@ -83,27 +75,7 @@ include "db_disconnect.php"
 
 
   </div>
-<?php 
-  if (mysqli_query($conn, $query)) {
-  echo '<script language="javascript">';
-  echo 'alert("Successfully subscribed to our Newsletter!")';
-  echo '</script>'; 
-  } else {
-  echo '<script language="javascript">';
-  echo 'alert("This email is already subscribed, please enter with an other email.")';
-  echo '</script>';
-  }
-?>
-<!-- <script>
-  function message() {
-    var input_valid = document.getElementById("footer_email");
-    if (input_valid.checkValidity()) {
-      alert("Thank You For Signing Up!");
-    } //else {
-      //alert("Invalid email");  test internet
-    //} 
-  }
-</script> -->
+
   <?php
   include "footer.php";
   ?>
