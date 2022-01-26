@@ -15,13 +15,14 @@ $email = "";
 
 // checks whether form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($POST["email"])) {
+    if (empty($_POST["email"])) {
         $email = ""; // goede manier???
-    } elseif (!empty($POST["email"]) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $email = clean_data($POST["email"]);
-        /*if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $email = "";
-        }*/
+    } else {
+        $email = clean_data($_POST["email"]);
+
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $email = clean_data($_POST["email"]);
+        }
     }
 }
 
