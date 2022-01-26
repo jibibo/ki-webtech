@@ -32,7 +32,7 @@ $query = "INSERT INTO newsletter VALUES ('$email')";
     insert into tablename (code) values ('1448523')
     End */
 
-if(mysqli_query($conn, $sql)) {
+if(mysqli_query($conn, $query)) {
         echo "Succesfully subscribed to our Newsletter!";
 } else {
         echo "Error" . mysqli_error($conn);
