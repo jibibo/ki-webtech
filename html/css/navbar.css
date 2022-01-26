@@ -3,7 +3,8 @@
 
 nav {
   margin: auto;
-  max-width: 1400px;
+  max-width: 100%;
+  position: fixed;
 }
 
 nav ul {
@@ -12,7 +13,6 @@ nav ul {
   padding: 0;
   overflow: hidden;
   background-color: #febd69;
-  position: fixed;
 }
 
 nav li {
