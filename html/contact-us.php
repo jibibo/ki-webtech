@@ -1,3 +1,8 @@
+<?php
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,7 +66,7 @@
             </div>
           </div>
           <label>MESSAGE</label>
-          <textarea rows="10" placeholder="your message..."></textarea>
+          <textarea rows="10" placeholder="max 200 characters"></textarea>
           <div class="messagebutton">
             <button type="submit">SUBMIT</button>
           </div>
