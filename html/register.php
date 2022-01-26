@@ -21,7 +21,7 @@
   <div class="container">
 
     <div class="form">
-      <form action="" method="post" class="formscreen">
+      <form action="customers.php" method="post" class="formscreen">
         <div class="title">CREATE AN ACCOUNT</div>
         <p class="required"><span>* required field</span><p>
 
