@@ -40,23 +40,23 @@
           <div class="input_row">
             <div class="input_group">
               <label>NAME</label>
-              <input type="text" placeholder="dr.bibo"></input>
+              <input class="input-form" type="text" placeholder="dr.bibo"></input>
 
             </div>
             <div class="input_group">
               <label>PHONE</label>
-              <input type="text" placeholder="+31 ..."></input>
+              <input class="input-form" type="text" placeholder="+31 ..."></input>
 
             </div>
 
             <div class="input_group">
               <label>EMAIL</label>
-              <input type="email" placeholder="dr.bibo@gmail.com"></input>
+              <input class="input-form" type="email" placeholder="dr.bibo@gmail.com"></input>
 
             </div>
             <div class="input_group">
               <label>SUBJECT</label>
-              <input type="text" placeholder="subject of contact"></input>
+              <input class="input-form" type="text" placeholder="subject of contact"></input>
 
             </div>
           </div>
