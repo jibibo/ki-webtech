@@ -26,7 +26,7 @@
       </div>
       <div class="footer_emailform">
         <h2>JOIN OUR NEWSLETTER!</h2>
-        <form action="" method="post"> 
+        <form action="sign-up.php" method="post"> 
           <input type="email" placeholder="please enter email..." id="footer_email" name="email" required 
           oninvalid="this.setCustomValidity('Please enter an email address')"
           oninput="this.setCustomValidity('')"/>
