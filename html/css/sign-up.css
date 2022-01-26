@@ -13,7 +13,5 @@ body {
     text-align: center;
     font-size: 50px;
     color: #febd69;
-    display: flex;
-    justify-content: center;
-    padding: auto;
+    margin: auto;
 }

@@ -73,7 +73,7 @@ include "db_disconnect.php"
 
   <div class="gif">
     <!--<img src="https://c.tenor.com/q-zZSTX6jSIAAAAC/mail-download.gif" alt="Mail gif">-->
-    <img src="https://c.tenor.com/q-zZSTX6jSIAAAAC/mail-download.gif" alt="Mail gif">
+    <img src="https://cdn.dribbble.com/users/1551941/screenshots/6346538/thankyoudribble.gif" alt="Mail gif">
   </div>
 
   <div class="subscribe"> 
