@@ -40,23 +40,23 @@
           <div class="input_row">
             <div class="input_group">
               <label>NAME</label>
-              <input type="text" placeholder="dr.bibo"></input>
+              <input class="input-form" type="text" placeholder="dr.bibo"></input>
 
             </div>
             <div class="input_group">
               <label>PHONE</label>
-              <input type="text" placeholder="+31 ..."></input>
+              <input class="input-form" type="text" placeholder="+31 ..."></input>
 
             </div>
 
             <div class="input_group">
               <label>EMAIL</label>
-              <input type="email" placeholder="dr.bibo@gmail.com"></input>
+              <input class="input-form" type="email" placeholder="dr.bibo@gmail.com"></input>
 
             </div>
             <div class="input_group">
               <label>SUBJECT</label>
-              <input type="text" placeholder="subject of contact"></input>
+              <input class="input-form" type="text" placeholder="subject of contact"></input>
 
             </div>
           </div>
@@ -75,7 +75,9 @@
         <table>
           <tr>
             <td>EMAIL</td>
-            <td>uvazon@contact.com</td>
+            
+              <td><a href="mailto:uvazon@contact.nl">uvazon@contact.com</a></td>
+            
           </tr>
           <tr>
             <td>PHONE</td>
@@ -83,7 +85,7 @@
           </tr>
           <tr>
             <td>ADRESS</td>
-            <td>Science Park 904, 1098 XH Amsterdam</td>
+            <td><a href="https://www.google.com/maps/place/Science+Park+904/@52.3544089,4.9535252,17z/data=!3m1!4b1!4m5!3m4!1s0x47c60944ecd0187d:0xbae0bc22b93e4985!8m2!3d52.3544089!4d4.9557139" >Science Park 904, 1098 XH Amsterdam</a></td>
           </tr>
         </table>
       </div>

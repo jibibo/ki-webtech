@@ -64,7 +64,10 @@ input {
   width: 100%;
   border: 1px solid;
   outline: none;
-  padding-bottom: 8px;
+  
+}
+.input-form{
+  padding: 6px;
 }
 
 textarea {
@@ -103,6 +106,10 @@ label {
   margin-bottom: 40px;
   font-weight: 600;
   color: #37475a;
+}
+a{
+  color: #37475a;
+  text-decoration: none;
 }
 
 tr td:first-child {
