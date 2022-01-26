@@ -13,5 +13,6 @@ body {
     text-align: center;
     font-size: 50px;
     color: #febd69;
-    padding: 30px;
+    display: flex;
+    justify-content: center;
 }

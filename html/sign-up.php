@@ -75,7 +75,9 @@ include "db_disconnect.php"
     <img src="https://c.tenor.com/q-zZSTX6jSIAAAAC/mail-download.gif" alt="Mail gif">
   </div>
 
-  <h2 class="subscribe">Subscribe to our Newsletter!</h2>
+  <div class="subscribe"> 
+    <h2>Subscribe to our Newsletter!</h2>
+  </div>
 
   <?php
   include "footer.php";
