@@ -1,7 +1,7 @@
 <?php 
 // TO DO: create connection with database
 // check connection
-// include "db_connect.php";
+include "db_connect.php";
 
 // cleans the input of users 
 function clean_data($data) {
@@ -26,21 +26,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// $query = "INSERT INTO signup VALUES ('$email')";
+$query = "INSERT INTO newsletter VALUES ('$email')";
 // --> alleen inserten als het nog niet bestaat? 
 /*  If Not Exists(select * from tablename where code='144....')
     Begin
     insert into tablename (code) values ('1448523')
     End */
 
-/*  if(mysqli_query($conn, $sql)) {
+/if(mysqli_query($conn, $sql)) {
         echo "Succesfully subscribed to our Newsletter!";
-    } else {
+} else {
         echo "Error" . mysqli_error($conn);
-    }
-*/
+}
+
 
 // TO DO: close connection database
-// include "db_disconnect.php"
+include "db_disconnect.php"
 
 ?>
