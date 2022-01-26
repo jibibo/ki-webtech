@@ -11,7 +11,7 @@
       </div>
       <div class="footer-heading footer-2">
         <h2>CONTACT</h2>
-        <a href="#">uvazon@contact.nl</a>
+        <a href="mailto:uvazon@contact.nl">uvazon@contact.nl</a>
         <a href="#">06-87654321</a>
         <a href="#">Science Park 904, 1098 XH Amsterdam</a>
         <a href="#">fax</a>
