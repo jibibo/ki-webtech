@@ -114,4 +114,5 @@ ion-icon {
   margin-right: 10px;
   --ionicon-stroke-width: 40px;
   cursor: pointer;
+  margin-top: 5px;
 }
