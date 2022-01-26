@@ -33,7 +33,7 @@ nav a {
 nav li a:hover,
 .dropdown-menu:hover .dropdown-button {
   background-color: #c28e49;
-  color: #37475a;
+  color: black;
 }
 
 li.dropdown-menu {
