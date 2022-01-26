@@ -1,10 +1,11 @@
 <nav>
+
   <div class="container-logo">
   <a href="index.php">
   <div class="logo">
     <img src="images/uvazon.png" alt="UvAzon Logo" width="250px" />
   </div>
-  </div>
+  
   </a>
   <div class="sticky">
   <ul id="nav-ul">
@@ -34,5 +35,6 @@
       </form>
     </div>
   </ul>
+</div>
 </div>
 </nav>
