@@ -12,7 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
-            $("#slideshow > div:gt(0)").hide();
+            /*$("#slideshow > div:gt(0)").hide();
 
             setInterval(function() { 
             $('#slideshow > div:first')
@@ -21,7 +21,14 @@
             .fadeIn(1000)
             .end()
             .appendTo('#slideshow');
-            }, 3000);
+            }, 3000);*/
+            $(function() {
+                $('.gallery-slideshow').slideshow({
+                    interval: 3000,
+                    width: 600,
+                    height: 400
+                });
+            });
         </script>
         <style>
             body {
@@ -60,17 +67,17 @@
 
     <body>
         <div class="container">
-            <div id="slideshow">
+            <!--<div id="slideshow">
                 <div class="slide">
-                    <img src="https://assets.ey.com/content/dam/ey-sites/ey-com/en_sg/topics/sustainability/ey-how-to-enhance-long-term-business-value-through-sustainability-meta.jpg" alt="Sustainable">
+                    <img src="https://images0.persgroep.net/rcs/On5FbdnHSXwMtzB76-AmfaHcs2I/diocontent/175970572/_fitwidth/763?appId=93a17a8fd81db0de025c8abd1cca1279&quality=0.8" alt="Science park">
                 </div>
                 <div class="slide">
                     <img src="https://ideadrop.s3.eu-west-2.amazonaws.com/wp-content/uploads/2019/03/16124806/rsz_1digital-innovation-news-768x538.jpg" alt="Innovative">
                 </div>
                 <div class="slide">
-                    <img src="https://media.cntraveler.com/photos/5d090bc1244f6a7ae3031eb3/master/pass/Chicago_GettyImages-1065188752.jpg" alt="International">
+                    <img src="https://student.uva.nl/binaries/_ht_1539768369787/cardmedium/content/gallery/faculteiten-en-diensten/restyling18-generiek-beeld/roeterseiland-wouter-van-der-wolk.jpg" alt="students">
                 </div>
-            </div>
+            </div> -->
             <!-- <div class="about-us">
                 <h1>About us</h1>
                 <p>UvAzon (not related to Amazon.com, Inc. in any form), is a small
@@ -79,6 +86,12 @@
                   the supplies they need during their stay on the University of Amsterdan
                   and Science Park.</p>
             </div> -->
+            <ul class="slideshow">
+                <li><img src="https://images0.persgroep.net/rcs/On5FbdnHSXwMtzB76-AmfaHcs2I/diocontent/175970572/_fitwidth/763?appId=93a17a8fd81db0de025c8abd1cca1279&quality=0.8" alt="Science park"></li>
+                <li><img src="https://ideadrop.s3.eu-west-2.amazonaws.com/wp-content/uploads/2019/03/16124806/rsz_1digital-innovation-news-768x538.jpg" alt="Innovative"></li>
+                <li><img src="https://student.uva.nl/binaries/_ht_1539768369787/cardmedium/content/gallery/faculteiten-en-diensten/restyling18-generiek-beeld/roeterseiland-wouter-van-der-wolk.jpg" alt="students"></li>
+            </ul>
+
         </div>
     </body>
 </html>
