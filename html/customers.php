@@ -147,7 +147,7 @@ $query = "INSERT INTO customers VALUES ('$fname', '$lname', '$phonenumber', '$em
     insert into tablename (code) values ('1448523')
     End */
 
-if(mysqli_query($conn, $sql)) {
+if(mysqli_query($conn, $query)) {
     echo "Succesfully created an account!";
 } else {
     echo "Error" . mysqli_error($conn);
