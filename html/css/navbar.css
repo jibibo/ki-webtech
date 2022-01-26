@@ -4,7 +4,7 @@
 nav{
   margin: auto;
   max-width: 100%;
-  position: fixed;
+  position: sticky;
 }
 
 nav ul {
