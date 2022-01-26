@@ -6,6 +6,7 @@
   </div>
   </div>
   </a>
+  <div class="sticky">
   <ul id="nav-ul">
     <li><a href="index.php">Home</a></li>
     <li class="dropdown-menu">
@@ -33,4 +34,5 @@
       </form>
     </div>
   </ul>
+</div>
 </nav>
