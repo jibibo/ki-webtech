@@ -16,7 +16,7 @@ $email = "";
 // checks whether form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["email"])) {
-        $email = ""; // goede manier???
+        $email = ""; 
     } else {
         $email = clean_data($_POST["email"]);
 
@@ -38,14 +38,16 @@ $query = "INSERT INTO newsletter VALUES ('$email')";
 } else {
         echo "This email is already subscribed, please enter with an other email." . mysqli_error($conn);
 }*/
-  if (mysqli_query($conn, $query)) {
-        echo '<script language="javascript">';
-        echo 'alert("Succesfully subscribed to our Newsletter!")';
-        echo '</script>';
-  } else {
-        echo '<script language="javascript">';
-        echo 'alert("This email is already subscribed, please enter with an other email.")';
-        echo '</script>';
+
+// shows alert message if the user is subscribed or not subscribed 
+if (mysqli_query($conn, $query)) {
+  echo '<script language="javascript">';
+  echo 'alert("Successfully subscribed to our Newsletter!")';
+  echo '</script>';
+} else {
+  echo '<script language="javascript">';
+  echo 'alert("This email is already subscribed, please enter with an other email.")';
+  echo '</script>';
   }
 
 /* echo '<script language="javascript">';
@@ -81,6 +83,7 @@ include "db_disconnect.php"
 
 
   </div>
+ 
 <!-- <script>
   function message() {
     var input_valid = document.getElementById("footer_email");
