@@ -63,7 +63,6 @@ include "db_disconnect.php"
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/index.css" />
 </head>
 
 <body>
@@ -71,9 +70,8 @@ include "db_disconnect.php"
   include "navbar.php";
   ?>
 
-  <div class="container">
+  <div class="gif">
     <img src="https://c.tenor.com/q-zZSTX6jSIAAAAC/mail-download.gif" alt="Mail gif">
-
   </div>
 
   <?php
