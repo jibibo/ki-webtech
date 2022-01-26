@@ -75,7 +75,9 @@
         <table>
           <tr>
             <td>EMAIL</td>
-            <td>uvazon@contact.com</td>
+            <a href="mailto:uvazon@contact.nl">
+              <td>uvazon@contact.com</td>
+            </a>
           </tr>
           <tr>
             <td>PHONE</td>
