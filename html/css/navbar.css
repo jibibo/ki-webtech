@@ -120,6 +120,7 @@ ion-icon {
   margin-top: 3px;
 }
 .sticky{
-  top: 0;
-  position: fixed;
+  top: 100px;
+  position: sticky;
+  z-index: 100;
 }
