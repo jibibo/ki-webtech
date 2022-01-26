@@ -1,7 +1,6 @@
 <?php 
-// TO DO: create connection with database
-// check connection
-// include "db_connect.php";
+// create connection with database
+include "db_connect.php";
 
 // cleans the input of users 
 function clean_data($data) {
@@ -22,7 +21,7 @@ $fname_err = $lname_err = $phonenumber_err = $email_err = $password_err = $addre
 
 // checks whether form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($POST["fname"])) {
+    if (empty($_POST["fname"])) {
         $fname_err = "First name is required";
     } else {
         $fname = clean_data($_POST["fname"]);
@@ -33,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    if (empty($POST["lname"])) {
+    if (empty($_POST["lname"])) {
         $lname_err = "Last name is required";
     } else {
         $lname = clean_data($_POST["lname"]);
@@ -44,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    if (empty($POST["phonenumber"])) {
+    if (empty($_POST["phonenumber"])) {
         $phonenumber_err = "Phone number is required";
     } else {
         $phonenumber = clean_data($_POST["phonenumber"]);
@@ -57,10 +56,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // /0[1-9][0-9]{8}/ 
   
-    if (empty($POST["email"])) {
+    if (empty($_POST["email"])) {
         $email_err = "Email is required";
     } else {
-        $email = clean_data($POST["email"]);
+        $email = clean_data($_POST["email"]);
 
         // check if email address is valid and well-formed
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -68,15 +67,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    
+    // https://stackoverflow.com/questions/8141125/regex-for-password-php
+    $uppercase = preg_match('@[A-Z]@', $password);
+    $lowercase = preg_match('@[a-z]@', $password);
+    $number    = preg_match('@[0-9]@', $password);
+
+    if (empty($_POST["password"])) {
+        $password_err = "Password is required";
+    } else {
+        $password = clean_data($_POST["password"]);
+
+        // check if password is valid and secure
+        if (!$uppercase || !$lowercase || !$number || strlen($password) < 8) {
+            $password_err = "Please enter a valid email address";
+        }
+    }
+
+
+
+// https://murani.nl/blog/2015-09-28/nederlandse-reguliere-expressies/ --> address regex
+    if (empty($_POST["address"])) {
+        $address_err = "Address is required";
+    } else {
+        $address = clean_data($_POST["address"]);
+
+        // check if address is a valid address in the Netherlands
+        if (!preg_match("/^([1-9][e][\s])*([a-zA-Z]+(([\.][\s])|([\s]))?)+[1-9][0-9]*(([-][1-9][0-9]*)|([\s]?[a-zA-Z]+))?$/i", $address)) {
+            $address_err = "Please enter a valid address";
+        }
+    }
 
     // address weghalen --> ook in phpmyadmin? 
     // zipcode voldoende en makkelijker? 
 
-    if (empty($POST["zipcode"])) {
+    if (empty($_POST["zipcode"])) {
         $zipcode_err = "Zipcode is required";
     } else {
-        $zipcode = clean_data($POST["zipcode"]);
+        $zipcode = clean_data($_POST["zipcode"]);
 
         // check if zipcode is a valid zipcode in the Netherlands
         if (!preg_match("/[1-9][0-9]{3}˽?[A-z]{2}/", $zipcode)) {
@@ -87,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //[1-9][0-9]{3}˽?[A-z]{2}/
     // /^(?:NL-)?(\d{4})\s*([A-Z]{2})$/i
 
-    if (empty($POST["city"])) {
+    if (empty($_POST["city"])) {
         $city_err = "City is required";
     } else {
         $city = clean_data($_POST["city"]);
@@ -98,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    if (empty($POST["country"])) {
+    if (empty($_POST["country"])) {
         $country_err = "Country is required";
     } else {
         $country = clean_data($_POST["country"]);
@@ -113,21 +140,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 }
 
-// $query = "INSERT INTO customers VALUES ('$fname', '$lname', '$phonenumber', '$email', '$password', 'address', '$zipcode', '$city', '$country')";
+$query = "INSERT INTO customers VALUES ('$fname', '$lname', '$phonenumber', '$email', '$password', '$address', '$zipcode', '$city', '$country')";
 // --> alleen inserten als het nog niet bestaat? 
 /*  If Not Exists(select * from tablename where code='144....')
     Begin
     insert into tablename (code) values ('1448523')
     End */
 
-/*  if(mysqli_query($conn, $sql)) {
-        echo "Succesfully subscribed to our Newsletter!";
-    } else {
-        echo "Error" . mysqli_error($conn);
-    }
-*/
+if(mysqli_query($conn, $sql)) {
+    echo "Succesfully created an account!";
+} else {
+    echo "Error" . mysqli_error($conn);
+}
 
-// TO DO: close connection database
-// include "db_disconnect.php"
+
+// close connection database
+include "db_disconnect.php"
 
 ?>
