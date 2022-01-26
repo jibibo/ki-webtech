@@ -18,7 +18,7 @@
   include "navbar.php";
   ?>
  
-  <div class="main">
+  <div class="container">
     <img src="images/Location-Roeterseiland.jpeg" alt="UVA">
     <div class="about-us-text">
       <h1>About us</h1>
