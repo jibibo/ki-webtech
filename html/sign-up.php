@@ -40,7 +40,7 @@ $query = "INSERT INTO newsletter VALUES ('$email')";
 }*/
 
 // shows alert message if the user is subscribed or not subscribed 
-if (mysqli_query($conn, $query)) {
+/*if (mysqli_query($conn, $query)) {
   echo '<script language="javascript">';
   echo 'alert("Successfully subscribed to our Newsletter!")';
   echo '</script>';
@@ -48,7 +48,7 @@ if (mysqli_query($conn, $query)) {
   echo '<script language="javascript">';
   echo 'alert("This email is already subscribed, please enter with an other email.")';
   echo '</script>';
-  }
+}*/
 
 /* echo '<script language="javascript">';
 echo 'alert("message successfully sent")';
@@ -83,7 +83,17 @@ include "db_disconnect.php"
 
 
   </div>
- 
+<?php 
+  if (mysqli_query($conn, $query)) {
+  echo '<script language="javascript">';
+  echo 'alert("Successfully subscribed to our Newsletter!")';
+  echo '</script>'; 
+  } else {
+  echo '<script language="javascript">';
+  echo 'alert("This email is already subscribed, please enter with an other email.")';
+  echo '</script>';
+  }
+?>
 <!-- <script>
   function message() {
     var input_valid = document.getElementById("footer_email");
