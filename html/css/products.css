@@ -6,8 +6,8 @@
   padding: 2rem;
 }
 .fadeIn {
-  -webkit-animation: animat_show 0.8s;
-  animation: animat_show 0.8s;
+  -webkit-animation: animat_show 0.7s;
+  animation: animat_show 0.7s;
   visibility: visible !important;
 }
 
