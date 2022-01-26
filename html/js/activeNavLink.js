@@ -14,7 +14,7 @@ $(document).ready(() => {
       (pathname === "/" && el.href.indexOf("index.php") !== -1)
     ) {
       $(el).addClass("active");
-      console.debug("added .active", el);
+      console.debug("added .active", el);cvx 
     }
   });
 });

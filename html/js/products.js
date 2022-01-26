@@ -1,9 +1,9 @@
-function showImages(el) {
-    var windowHeight = jQuery( window ).height();
-    $(el).each(function(){
-        var thisPos = $(this).offset().top;
+function    showProducts() {
+    let windowHeight = $(window).height();
+    $(".products .product-list-item").each(function(){
+        let thisPos = $(this).offset().top;
 
-        var topOfWindow = $(window).scrollTop();
+        let topOfWindow = $(window).scrollTop();
         if (topOfWindow + windowHeight - 200 > thisPos ) {
             $(this).addClass("fadeIn");
         }
@@ -12,10 +12,10 @@ function showImages(el) {
 
 // if the image in the window of browser when the page is loaded, show that image
 $(document).ready(function(){
-    showImages('.products');
+    showProducts();
 });
 
 // if the image in the window of browser when scrolling the page, show that image
 $(window).scroll(function() {
-    showImages('.products');
+    showProducts();
 });
