@@ -154,20 +154,16 @@ VALUES ('$fname', '$lname', '$phonenumber', '$emailaddress', '$password', '$addr
     echo "Error" . mysqli_error($conn);
 }*/
 
-if (mysqli_query($conn, $query)) {
-    echo '<script language="javascript">';
-    echo 'alert("Thank You for subscribing to our Newsletter!")';
-    echo '</script>';
-} else {
-    echo '<script language="javascript">';
-    echo 'alert("This email is already subscribed, please enter with an other email.")';
-    echo '</script>';
-}
-
 if ($fname != "" && $lname != "" && $phonenumber != "" && $emailaddress != "" && $password != "" && $address != "" && $zipcode != "" && $city != "" && $country != "") {
     header ("Location: https://webtech-ki15.webtech-uva.nl/");
+    echo '<script language="javascript">';
+    echo 'alert("Thank You for Signing Up!")';
+    echo '</script>';
 } else {
-    echo "error";
+    header ("Location: https://webtech-ki15.webtech-uva.nl/register.php");
+    echo '<script language="javascript">';
+    echo 'alert("This email is already in use, please register with an other email.")';
+    echo '</script>';
 }
 
 
