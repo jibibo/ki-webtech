@@ -49,7 +49,6 @@ $query = "INSERT INTO newsletter VALUES ('$email')";
 if (mysqli_query($conn, $query)) {
   echo ("<script LANGUAGE='JavaScript'>
       window.alert('Thank You for subscribing to our Newsletter!');
-      window.location.href='https://webtech-ki15.webtech-uva.nl/sign-up.php';
       </script>");
 } else {
   echo ("<script LANGUAGE='JavaScript'>
