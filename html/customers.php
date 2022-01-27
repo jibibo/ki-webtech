@@ -153,10 +153,6 @@ VALUES ('$fname', '$lname', '$phonenumber', '$emailaddress', '$password', '$addr
 } else {
     echo "Error" . mysqli_error($conn);
 }*/
-echo "<script>
-alert('There are no fields to generate a report');
-window.location.href='admin/ahm/panel';
-</script>";
 
 if (mysqli_query($conn, $query)) {
     // header ("Location: https://webtech-ki15.webtech-uva.nl/");
@@ -171,7 +167,6 @@ if (mysqli_query($conn, $query)) {
     echo 'window.location.href="register.php"';
     echo '</script>';
 }
-
 
 // close connection database
 include "db_disconnect.php"
