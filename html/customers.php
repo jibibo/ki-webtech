@@ -16,8 +16,8 @@ function clean_data($data) {
 // zipcode voldoende en makkelijker? 
 
 // set variables to empty values
-$fname = $lname = $phonenumber = $email = $password = $address = $zipcode = $city = $country = "";
-$fname_err = $lname_err = $phonenumber_err = $email_err = $password_err = $address_err = $zipcode_err = $city_err = $country_err = "";
+$fname = $lname = $phonenumber = $emailaddress = $password = $address = $zipcode = $city = $country = "";
+$fname_err = $lname_err = $phonenumber_err = $emailaddress_err = $password_err = $address_err = $zipcode_err = $city_err = $country_err = "";
 
 // checks whether form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -56,14 +56,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // /0[1-9][0-9]{8}/ 
   
-    if (empty($_POST["email"])) {
-        $email_err = "Email is required";
+    if (empty($_POST["emailaddress"])) {
+        $emailaddress_err = "Email is required";
     } else {
-        $email = clean_data($_POST["email"]);
+        $emailaddress = clean_data($_POST["emailaddress"]);
 
         // check if email address is valid and well-formed
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $email_err = "Please enter a valid email address";
+        if (!filter_var($emailaddress, FILTER_VALIDATE_EMAIL)) {
+            $emailaddress_err = "Please enter a valid email address";
         }
     }
 
@@ -141,7 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $query = "INSERT INTO customer (first_name, last_name, phonenumber, email, password, address, zip, city, country) 
-VALUES ('$fname', '$lname', '$phonenumber', '$email', '$password', '$address', '$zipcode', '$city', '$country')";
+VALUES ('$fname', '$lname', '$phonenumber', '$emailaddress', '$password', '$address', '$zipcode', '$city', '$country')";
 // --> alleen inserten als het nog niet bestaat? 
 /*  If Not Exists(select * from tablename where code='144....')
     Begin

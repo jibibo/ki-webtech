@@ -38,7 +38,7 @@
         </div>
 
         <div class="register">
-          <input type="email" placeholder="Email address" name="email" required><span> * </span>
+          <input type="email" placeholder="Email address" name="emailaddress" required><span> * </span>
         </div>
 
         <div class="register">
