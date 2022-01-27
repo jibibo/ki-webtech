@@ -140,20 +140,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 }
 
+// insert data into database
 $query = "INSERT INTO customers (first_name, last_name, phonenumber, email, password, address, zip, city, country) 
 VALUES ('$fname', '$lname', '$phonenumber', '$emailaddress', '$password', '$address', '$zipcode', '$city', '$country')";
-// --> alleen inserten als het nog niet bestaat? 
-/*  If Not Exists(select * from tablename where code='144....')
-    Begin
-    insert into tablename (code) values ('1448523')
-    End */
 
-/*if(mysqli_query($conn, $query)) {
-    echo "Succesfully created an account!";
-} else {
-    echo "Error" . mysqli_error($conn);
-}*/
+// https://www.codegrepper.com/code-examples/javascript/how+to+redirect+to+another+page+in+php+after+alert+message
 
+// if query is succeeded return to homepage, else try again on the register page
 if (mysqli_query($conn, $query)) {
     // header ("Location: https://webtech-ki15.webtech-uva.nl/");
     echo ("<script LANGUAGE='JavaScript'>

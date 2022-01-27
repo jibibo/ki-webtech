@@ -36,7 +36,7 @@ $query = "INSERT INTO newsletter VALUES ('$email')";
 }*/
 
 // shows alert message if the user is subscribed or not subscribed 
-if (mysqli_query($conn, $query)) {
+/*if (mysqli_query($conn, $query)) {
   echo '<script language="javascript">';
   echo 'alert("Thank You for subscribing to our Newsletter!")';
   echo '</script>';
@@ -44,6 +44,18 @@ if (mysqli_query($conn, $query)) {
   echo '<script language="javascript">';
   echo 'alert("This email is already subscribed, please enter with an other email.")';
   echo '</script>';
+}*/
+
+if (mysqli_query($conn, $query)) {
+  echo ("<script LANGUAGE='JavaScript'>
+      window.alert('Thank You for subscribing to our Newsletter!');
+      window.location.href='https://webtech-ki15.webtech-uva.nl/sign-up.php';
+      </script>");
+} else {
+  echo ("<script LANGUAGE='JavaScript'>
+      window.alert('This email is already subscribed, please enter with an other email.');
+      window.location.href='https://webtech-ki15.webtech-uva.nl/';
+      </script>");
 }
 
 // disconnect
@@ -77,7 +89,7 @@ include "db_disconnect.php"
   </div>
 
   <div class="subscribe"> 
-    <h2>Subscribe to our Newsletter!</h2>
+    <h2>Subscribed to our Newsletter!</h2>
   </div>
 
   <?php
