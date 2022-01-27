@@ -154,7 +154,7 @@ VALUES ('$fname', '$lname', '$phonenumber', '$emailaddress', '$password', '$addr
     echo "Error" . mysqli_error($conn);
 }*/
 
-if ($fname != "" && $lname != "" && $phonenumber != "" && $emailaddress != "" && $password != "" && $address != "" && $zipcode != "" && $city != "" && $country != "") {
+if (mysqli_query($conn, $query)) {
     header ("Location: https://webtech-ki15.webtech-uva.nl/");
     echo '<script language="javascript">';
     echo 'alert("Thank You for Signing Up!")';
