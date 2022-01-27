@@ -11,7 +11,7 @@ function clean_data($data) {
 } 
 
 // set variables to empty values
-$email = "";
+$email = $email_err = "";
 
 // checks whether form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -21,8 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = clean_data($_POST["email"]);
 
         // checks whether the email form is correct
-        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $email = clean_data($_POST["email"]);
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $email_err = "Please enter a valid email address";
         }
     }
 }

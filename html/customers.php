@@ -132,7 +132,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // check if country only consists of whitespaces and letters
         if (!preg_match("/^[a-zA-Z ]+$/", $country)) {
-            $country = "Please enter a valid country";
+            $country_err = "Please enter a valid country";
         }
     }
 
