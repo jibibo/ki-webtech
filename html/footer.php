@@ -28,12 +28,7 @@
       <div class="footer_emailform">
         <h2>JOIN OUR NEWSLETTER!</h2>
         <form action="sign-up.php" method="post"> 
-          <input type="email" placeholder="Please enter email..." id="footer_email" name="email"><br>
-          <?php echo $email_err; ?> 
-          
-          <!-- required 
-          oninvalid="this.setCustomValidity('Please enter an email address')"
-          oninput="this.setCustomValidity('')"/> -->
+          <input type="email" placeholder="user@example.com" id="footer_email" name="email"><?php echo $email_err; ?> 
           <input type="submit" value="SIGN UP!" id="footer_email_btn" name="submit">
         </form>
       </div>
@@ -51,6 +46,10 @@
     //} 
   }
 </script> -->
+
+          <!-- required 
+          oninvalid="this.setCustomValidity('Please enter an email address')"
+          oninput="this.setCustomValidity('')"/> -->
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
