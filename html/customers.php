@@ -156,16 +156,16 @@ VALUES ('$fname', '$lname', '$phonenumber', '$emailaddress', '$password', '$addr
 
 if (mysqli_query($conn, $query)) {
     // header ("Location: https://webtech-ki15.webtech-uva.nl/");
-    echo '<script language="javascript">';
-    echo 'alert("Thank You for Signing Up!")';
-    echo 'window.location="https://webtech-ki15.webtech-uva.nl/"';
-    echo '</script>';
+    echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Thank You for Signing Up!');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/';
+        </script>");
 } else {
     //header ("Location: https://webtech-ki15.webtech-uva.nl/register.php");
-    echo '<script language="javascript">';
-    echo 'alert("This email is already in use, please register with an other email.")';
-    echo 'window.location.href="https://webtech-ki15.webtech-uva.nl/register.php"';
-    echo '</script>';
+    echo ("<script LANGUAGE='JavaScript'>
+        window.alert('This email is already in use, please register with an other email.');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
+        </script>");
 }
 
 // close connection database
