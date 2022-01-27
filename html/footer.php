@@ -1,3 +1,4 @@
+<?php $email = $email_err =""; ?>
 <div id="footerplace">
   <div class="footer_container">
     <div class="footer">
