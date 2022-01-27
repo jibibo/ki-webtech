@@ -140,7 +140,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 }
 
-$query = "INSERT INTO customer (first_name, last_name, phonenumber, email, password, address, zip, city, country) 
+$query = "INSERT INTO customers (first_name, last_name, phonenumber, email, password, address, zip, city, country) 
 VALUES ('$fname', '$lname', '$phonenumber', '$emailaddress', '$password', '$address', '$zipcode', '$city', '$country')";
 // --> alleen inserten als het nog niet bestaat? 
 /*  If Not Exists(select * from tablename where code='144....')
