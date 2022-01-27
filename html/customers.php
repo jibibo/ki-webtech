@@ -153,16 +153,22 @@ VALUES ('$fname', '$lname', '$phonenumber', '$emailaddress', '$password', '$addr
 } else {
     echo "Error" . mysqli_error($conn);
 }*/
+echo "<script>
+alert('There are no fields to generate a report');
+window.location.href='admin/ahm/panel';
+</script>";
 
 if (mysqli_query($conn, $query)) {
-    header ("Location: https://webtech-ki15.webtech-uva.nl/");
+    // header ("Location: https://webtech-ki15.webtech-uva.nl/");
     echo '<script language="javascript">';
     echo 'alert("Thank You for Signing Up!")';
+    echo 'window.location.href="index.php"';
     echo '</script>';
 } else {
-    header ("Location: https://webtech-ki15.webtech-uva.nl/register.php");
+    //header ("Location: https://webtech-ki15.webtech-uva.nl/register.php");
     echo '<script language="javascript">';
     echo 'alert("This email is already in use, please register with an other email.")';
+    echo 'window.location.href="register.php"';
     echo '</script>';
 }
 
