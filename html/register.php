@@ -34,7 +34,7 @@
         </div>
 
         <div class="register">
-          <input type="tel" placeholder="Phone number" name="phonenumber" required><span> * </span>
+          <input type="tel" placeholder="Phone number" name="phonenumber" ><span> * </span>
         </div>
 
         <div class="register">
