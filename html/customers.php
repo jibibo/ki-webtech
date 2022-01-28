@@ -142,7 +142,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fname = clean_data($_POST["fname"]);
 
     // check if first name only consists of whitespaces and letters
-    if (!preg_match("/^[a-zA-Z ]+$/", $fname)) {
+    if (!preg_match("/^[a-zA-Z ]+$/", $fname) && strlen($fname) < 3) {
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid name');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
@@ -153,7 +153,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lname = clean_data($_POST["lname"]);
 
     // check if last name only consists of whitespaces and letters
-    if (!preg_match("/^[a-zA-Z ]+$/", $lname)) {
+    if (!preg_match("/^[a-zA-Z ]+$/", $lname) && strlen($lname) < 3) {
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid name');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
@@ -192,7 +192,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // check if password is valid and secure
     if (strlen($psw) < 8) {
         echo ("<script LANGUAGE='JavaScript'>
-        window.alert('The password should contain at least 8 characters, 1 number, 1 lowercase and 1 uppercase character');
+        window.alert('The password should contain at least 8 characters');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
         exit;
@@ -234,7 +234,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $city = clean_data($_POST["city"]);
 
     // check if city only consists of whitespaces and letters
-    if (!preg_match("/^[a-zA-Z ]+$/", $city)) {
+    if (!preg_match("/^[a-zA-Z ]+$/", $city) && strlen($city) < 3) {
         $city_err = "Please enter a valid city";
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid city');
@@ -247,7 +247,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $country = clean_data($_POST["country"]);
 
     // check if country only consists of whitespaces and letters
-    if (!preg_match("/^[a-zA-Z ]+$/", $country)) {
+    if (!preg_match("/^[a-zA-Z ]+$/", $country) && strlen($country) < 3) {
         $country_err = "Please enter a valid country";
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid country');
