@@ -142,7 +142,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fname = clean_data($_POST["fname"]);
 
     // check if first name only consists of whitespaces and letters
-    if (!preg_match("/^[a-zA-Z ]+$/", $fname) && strlen($fname) < 3) {
+    if (!preg_match("/^[a-zA-Z ]+$/", $fname) && strlen($fname) < 10) {
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid name');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
