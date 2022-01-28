@@ -141,29 +141,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // insert data into database
-if (empty($fname_err) && empty($lname_err) && empty($phonenumber_err) && empty($emailaddress_err) && 
-empty($password_err) && empty($address_err) && empty($zipcode_err) && empty($city_err) && empty($country_err)) {
-    $query = "INSERT INTO customers (first_name, last_name, phonenumber, email, password, address, zip, city, country) 
-    VALUES ('$fname', '$lname', '$phonenumber', '$emailaddress', '$password', '$address', '$zipcode', '$city', '$country')";
+$query = "INSERT INTO customers (first_name, last_name, phonenumber, email, password, address, zip, city, country) 
+VALUES ('$fname', '$lname', '$phonenumber', '$emailaddress', '$password', '$address', '$zipcode', '$city', '$country')";
 
-    if (mysqli_query($conn, $query)) {
-    // header ("Location: https://webtech-ki15.webtech-uva.nl/");
-    echo ("<script LANGUAGE='JavaScript'>
-        window.alert('Thank You for Signing Up!');
-        window.location.href='https://webtech-ki15.webtech-uva.nl/';
-        </script>");
-    } else {
-    //header ("Location: https://webtech-ki15.webtech-uva.nl/register.php");
-    echo ("<script LANGUAGE='JavaScript'>
-        window.alert('Something went wrong, please try again with other inputs.');
-        window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
-        </script>");
-    }
-}
 // https://www.codegrepper.com/code-examples/javascript/how+to+redirect+to+another+page+in+php+after+alert+message
 
 // if query is succeeded return to homepage, else try again on the register page
-/*if (mysqli_query($conn, $query)) {
+if (mysqli_query($conn, $query)) {
     // header ("Location: https://webtech-ki15.webtech-uva.nl/");
     echo ("<script LANGUAGE='JavaScript'>
         window.alert('Thank You for Signing Up!');
@@ -172,10 +156,10 @@ empty($password_err) && empty($address_err) && empty($zipcode_err) && empty($cit
 } else {
     //header ("Location: https://webtech-ki15.webtech-uva.nl/register.php");
     echo ("<script LANGUAGE='JavaScript'>
-        window.alert('Something went wrong, please try again with other inputs.');
+        window.alert('This email is already in use, please register with an other email.');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
-}*/
+}
 
 // close connection database
 include "db_disconnect.php"
