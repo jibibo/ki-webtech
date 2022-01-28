@@ -41,7 +41,7 @@
       <div class="contact_left">
         <h3>FILL IN BELOW</h3>
 
-        <form>
+        <form name="frmContact" method="post" action="contacted.php">
           <div class="input_row">
             <div class="input_group">
               <label>NAME</label>
