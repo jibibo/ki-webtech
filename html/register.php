@@ -19,9 +19,6 @@
   ?>
  
   <?php 
-  // create connection with database
-  include "db_connect.php";
-
   // cleans the input of users 
   function clean_data($data) {
       $data = trim($data);
@@ -159,30 +156,6 @@
       // /^[a-zA-Z ]+$/
 
   }
-
-  // insert data into database
-  $query = "INSERT INTO customers (first_name, last_name, phonenumber, email, password, address, zip, city, country) 
-  VALUES ('$fname', '$lname', '$phonenumber', '$emailaddress', '$password', '$address', '$zipcode', '$city', '$country')";
-
-  // https://www.codegrepper.com/code-examples/javascript/how+to+redirect+to+another+page+in+php+after+alert+message
-
-  // if query is succeeded return to homepage, else try again on the register page
-  if (mysqli_query($conn, $query)) {
-      // header ("Location: https://webtech-ki15.webtech-uva.nl/");
-      echo ("<script LANGUAGE='JavaScript'>
-          window.alert('Thank You for Signing Up!');
-          window.location.href='https://webtech-ki15.webtech-uva.nl/';
-          </script>");
-  } else {
-      //header ("Location: https://webtech-ki15.webtech-uva.nl/register.php");
-      echo ("<script LANGUAGE='JavaScript'>
-          window.alert('This email is already in use, please register with an other email.');
-          window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
-          </script>");
-  }
-
-  // close connection database
-  include "db_disconnect.php"
 
   ?>
  
