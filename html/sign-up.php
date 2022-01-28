@@ -46,8 +46,13 @@ $query = "INSERT INTO newsletter VALUES ('$email')";
   echo '</script>';
 }*/
 
-if (mysqli_query($conn, $query)) {
+if (!mysqli_query($conn, $query)) {
   echo ("<script LANGUAGE='JavaScript'>
+      window.alert('This email is already subscribed, please enter with an other email.');
+      window.location.href='https://webtech-ki15.webtech-uva.nl/';
+      </script>");
+}
+  /*echo ("<script LANGUAGE='JavaScript'>
       window.alert('Thank You for subscribing to our Newsletter!');
       </script>");
 } else {
@@ -55,7 +60,7 @@ if (mysqli_query($conn, $query)) {
       window.alert('This email is already subscribed, please enter with an other email.');
       window.location.href='https://webtech-ki15.webtech-uva.nl/';
       </script>");
-}
+} */
 
 // disconnect
 include "db_disconnect.php"
