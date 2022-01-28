@@ -84,7 +84,10 @@
           }
       }
 
-      // https://www.the-art-of-web.com/javascript/validate-password/
+      // source: https://stackoverflow.com/questions/8141125/regex-for-password-php
+      $uppercase = preg_match("@[A-Z]@", $password);
+      $lowercase = preg_match("@[a-z]@", $password);
+      $number    = preg_match("@[0-9]@", $password);
 
       if (empty($_POST["password"])) {
           $password_err = "Password is required";
@@ -92,7 +95,7 @@
           $password = clean_data($_POST["password"]);
 
           // check if password is valid and secure
-          if (!preg_match("/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/")) {
+          if (!$uppercase || !$lowercase || !$number || strlen($password) < 8) {
               $password_err = "The password should contain at least 1 number, 1 lowercase and 1 uppercase character";
           }
       }
