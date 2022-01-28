@@ -26,39 +26,39 @@
         <p class="required"><span>* required field</span><p>
 
         <div class="register">
-          <input type="text" placeholder="First name" name="fname"><span> * </span>
+          <input type="text" placeholder="First name" name="fname" required><span> * </span>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="Last name" name="lname" ><span> * </span>
+          <input type="text" placeholder="Last name" name="lname" required><span> * </span>
         </div>
 
         <div class="register">
-          <input type="tel" placeholder="Phone number" name="phonenumber"><span> * </span>
+          <input type="tel" placeholder="Phone number" name="phonenumber" required><span> * </span>
         </div>
 
         <div class="register">
-          <input type="email" placeholder="Email address" name="emailaddress" ><span> * </span>
+          <input type="email" placeholder="Email address" name="emailaddress" required><span> * </span>
         </div>
 
         <div class="register">
-          <input type="password" placeholder="Password of at least 8 characters" name="password" ><span> * </span>
+          <input type="password" placeholder="Password of at least 8 characters" name="password" required><span> * </span>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="Address" name="address" ><span> * </span>
+          <input type="text" placeholder="Address" name="address" required><span> * </span>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="Zip code" name="zipcode" ><span> * </span>
+          <input type="text" placeholder="Zip code" name="zipcode" required><span> * </span>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="City" name="city" ><span> * </span>
+          <input type="text" placeholder="City" name="city" required><span> * </span>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="Country" name="country" ><span> * </span>
+          <input type="text" placeholder="Country" name="country" required><span> * </span>
         </div>
 
         <div class="agree">

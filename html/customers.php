@@ -17,11 +17,11 @@ function clean_data($data) {
 
 // set variables to empty values
 $fname = $lname = $phonenumber = $emailaddress = $password = $address = $zipcode = $city = $country = "";
-$fname_err = $lname_err = $phonenumber_err = $emailaddress_err = $password_err = $address_err = $zipcode_err = $city_err = $country_err = "";
+//$fname_err = $lname_err = $phonenumber_err = $emailaddress_err = $password_err = $address_err = $zipcode_err = $city_err = $country_err = "";
 
 // checks whether form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["fname"])) {
+    /*if (empty($_POST["fname"])) {
         $fname_err = "First name is required";
     } else {
         $fname = clean_data($_POST["fname"]);
@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = clean_data($_POST["password"]);
 
         // check if password is valid and secure
-        if (!$uppercase || !$lowercase || !$number || strlen($password) < 8) {
+        if (!preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#", $password)) {
             $password_err = "The password should contain at least 1 number, 1 lowercase and 1 uppercase character";
         }
     }
@@ -137,7 +137,116 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // /^[a-zA-Z ]+$/
+    // /^[a-zA-Z ]+$/ */
+
+    $fname = clean_data($_POST["fname"]);
+
+    // check if first name only consists of whitespaces and letters
+    if (!preg_match("/^[a-zA-Z ]+$/", $fname)) {
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Please enter a valid name');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
+        </script>");
+    }
+
+    $lname = clean_data($_POST["lname"]);
+
+    // check if last name only consists of whitespaces and letters
+    if (!preg_match("/^[a-zA-Z ]+$/", $lname)) {
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Please enter a valid name');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
+        </script>");
+    }
+
+    $phonenumber = clean_data($_POST["phonenumber"]);
+
+    // check if phone number is a valid number in the Netherlands
+    if (!preg_match("/0[1-9][0-9]{8}/", $phonenumber)) {
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Please enter a valid phone number');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
+        </script>");
+    }
+
+// /0[1-9][0-9]{8}/ 
+
+    $emailaddress = clean_data($_POST["emailaddress"]);
+
+    // check if email address is valid and well-formed
+    if (!filter_var($emailaddress, FILTER_VALIDATE_EMAIL)) {
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Please enter a valid email address');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
+        </script>");
+    }
+
+// source: https://stackoverflow.com/questions/8141125/regex-for-password-php
+
+    $password = clean_data($_POST["password"]);
+
+    // check if password is valid and secure
+    if (!preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#", $password)) {
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('The password should contain at least 8 characters, 1 number, 1 lowercase and 1 uppercase character');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
+        </script>");
+    }
+
+
+
+// https://murani.nl/blog/2015-09-28/nederlandse-reguliere-expressies/ --> address regex
+
+    $address = clean_data($_POST["address"]);
+
+    // check if address is a valid address in the Netherlands
+    if (!preg_match("/^([1-9][e][\s])*([a-zA-Z]+(([\.][\s])|([\s]))?)+[1-9][0-9]*(([-][1-9][0-9]*)|([\s]?[a-zA-Z]+))?$/i", $address)) {
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Please enter a valid address');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
+        </script>");
+    }
+
+// address weghalen --> ook in phpmyadmin? 
+// zipcode voldoende en makkelijker? 
+//https://stackoverflow.com/questions/17898523/regular-expression-for-dutch-zip-postal-code
+
+    $zipcode = clean_data($_POST["zipcode"]);
+
+    // check if zipcode is a valid zipcode in the Netherlands
+    if (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i", $zipcode)) {
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Please enter a valid zipcode');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
+        </script>");
+    }
+
+//[1-9][0-9]{3}˽?[A-z]{2}/
+// /^(?:NL-)?(\d{4})\s*([A-Z]{2})$/i
+
+    $city = clean_data($_POST["city"]);
+
+    // check if city only consists of whitespaces and letters
+    if (!preg_match("/^[a-zA-Z ]+$/", $city)) {
+        $city_err = "Please enter a valid city";
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Please enter a valid city');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
+        </script>");
+    }
+
+
+    $country = clean_data($_POST["country"]);
+
+    // check if country only consists of whitespaces and letters
+    if (!preg_match("/^[a-zA-Z ]+$/", $country)) {
+        $country_err = "Please enter a valid country";
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Please enter a valid country');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
+        </script>");
+    }
+    
 
 }
 
