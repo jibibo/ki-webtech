@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // check if password is valid and secure
         if (!$uppercase || !$lowercase || !$number || strlen($password) < 8) {
-            $password_err = "Please enter a valid email address";
+            $password_err = "The password should contain at least 1 number, 1 lowercase and 1 uppercase character";
         }
     }
 
