@@ -26,8 +26,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // checks whether the email form is correct
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $email_err = "Please enter an email address";
-        }
+          echo ("<script LANGUAGE='JavaScript'>
+          window.alert('Please enter a valid email address');
+          window.location.href='https://webtech-ki15.webtech-uva.nl/';
+          </script>");
+          exit;
     }
 }
 

@@ -1,4 +1,3 @@
-<?php $email = $email_err =""; ?>
 <div id="footerplace">
   <div class="footer_container">
     <div class="footer">
@@ -28,7 +27,7 @@
       <div class="footer_emailform">
         <h2>JOIN OUR NEWSLETTER!</h2>
         <form action="newsletter.php" method="post"> 
-          <input type="email" placeholder="user@example.com" id="footer_email" name="email"><?php echo $email_err; ?> 
+          <input type="email" placeholder="user@example.com" id="footer_email" name="email">
           <input type="submit" value="SIGN UP!" id="footer_email_btn" name="submit">
         </form>
       </div>
