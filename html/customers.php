@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // https://stackoverflow.com/questions/8141125/regex-for-password-php
+    // source: https://stackoverflow.com/questions/8141125/regex-for-password-php
     $uppercase = preg_match('@[A-Z]@', $password);
     $lowercase = preg_match('@[a-z]@', $password);
     $number    = preg_match('@[0-9]@', $password);

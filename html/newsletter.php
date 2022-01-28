@@ -1,5 +1,5 @@
 <?php 
-// check connection
+// create connection with database
 include "db_connect.php";
 
 // cleans the input of users 
@@ -27,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
+// insert form data into database
 $query = "INSERT INTO newsletter VALUES ('$email')";
 
 /*if (mysqli_query($conn, $query)) {
@@ -46,6 +47,7 @@ $query = "INSERT INTO newsletter VALUES ('$email')";
   echo '</script>';
 }*/
 
+// if the email is already subscribed, alert user and redirect user to homepage
 if (!mysqli_query($conn, $query)) {
   echo ("<script LANGUAGE='JavaScript'>
       window.alert('This email is already subscribed, please enter with an other email.');
@@ -62,7 +64,7 @@ if (!mysqli_query($conn, $query)) {
       </script>");
 } */
 
-// disconnect
+// disconnect with database
 include "db_disconnect.php"
 
 ?>
@@ -89,6 +91,8 @@ include "db_disconnect.php"
 
   <div class="gif">
     <!--<img src="https://c.tenor.com/q-zZSTX6jSIAAAAC/mail-download.gif" alt="Mail gif">-->
+
+    <!-- shows user that the subscription to the newsletter was successfull -->
     <img src="https://cdn.dribbble.com/users/1551941/screenshots/6346538/thankyoudribble.gif" alt="Mail gif">
   </div>
 
