@@ -185,7 +185,7 @@
         </div>
 
         <div class="register">
-          <input type="password" placeholder="Password of at least 8 characters" name="password" value="<?php echo $password;?>><span> * <?php echo $password_err;?></span>
+          <input type="password" placeholder="Password of at least 8 characters" name="password" value="<?php echo $password;?>"><span> * <?php echo $password_err;?></span>
         </div>
 
         <div class="register">
