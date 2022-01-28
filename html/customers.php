@@ -99,6 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // address weghalen --> ook in phpmyadmin? 
     // zipcode voldoende en makkelijker? 
+    //https://stackoverflow.com/questions/17898523/regular-expression-for-dutch-zip-postal-code
 
     if (empty($_POST["zipcode"])) {
         $zipcode_err = "Zipcode is required";
@@ -106,7 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $zipcode = clean_data($_POST["zipcode"]);
 
         // check if zipcode is a valid zipcode in the Netherlands
-        if (!preg_match("/[1-9][0-9]{3}˽?[A-z]{2}/", $zipcode)) {
+        if (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i", $zipcode)) {
             $zipcode_err = "Please enter a valid zipcode";
         }
     }
