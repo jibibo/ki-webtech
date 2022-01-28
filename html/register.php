@@ -26,39 +26,39 @@
         <p class="required"><span>* required field</span><p>
 
         <div class="register">
-          <input type="text" placeholder="First name" name="fname" value="<?php echo $fname;?>"><span> * <?php echo $fname_err;?></span>
+          <input type="text" placeholder="First name" name="fname"><span> * </span>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="Last name" name="lname" value="<?php echo $lname;?>"><span> * <?php echo $lname_err;?></span>
+          <input type="text" placeholder="Last name" name="lname" ><span> * </span>
         </div>
 
         <div class="register">
-          <input type="tel" placeholder="Phone number" name="phonenumber" value="<?php echo $phonenumber;?>"><span> * <?php echo $phonenumber_err;?></span>
+          <input type="tel" placeholder="Phone number" name="phonenumber"><span> * </span>
         </div>
 
         <div class="register">
-          <input type="email" placeholder="Email address" name="emailaddress" value="<?php echo $emailaddress;?>"><span> * <?php echo $emailaddress_err;?></span>
+          <input type="email" placeholder="Email address" name="emailaddress" ><span> * </span>
         </div>
 
         <div class="register">
-          <input type="password" placeholder="Password of at least 8 characters" name="password" value="<?php echo $password;?>"><span> * <?php echo $password_err;?></span>
+          <input type="password" placeholder="Password of at least 8 characters" name="password" ><span> * </span>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="Address" name="address" value="<?php echo $address;?>"><span> * <?php echo $address_err;?></span>
+          <input type="text" placeholder="Address" name="address" ><span> * </span>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="Zip code" name="zipcode" value="<?php echo $zipcode;?>"><span> * <?php echo $zipcode_err;?></span>
+          <input type="text" placeholder="Zip code" name="zipcode" ><span> * </span>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="City" name="city" value="<?php echo $city;?>"><span> * <?php echo $city_err;?></span>
+          <input type="text" placeholder="City" name="city" ><span> * </span>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="Country" name="country" value="<?php echo $country;?>"><span> * <?php echo $country_err;?></span>
+          <input type="text" placeholder="Country" name="country" ><span> * </span>
         </div>
 
         <div class="agree">
