@@ -18,6 +18,11 @@
   include "navbar.php";
   ?>
 
+  <?php 
+  $fname = $lname = $phonenumber = $emailaddress = $password = $address = $zipcode = $city = $country = "";
+  $fname_err = $lname_err = $phonenumber_err = $emailaddress_err = $password_err = $address_err = $zipcode_err = $city_err = $country_err = "";
+  ?>  
+
   <div class="container">
 
     <div class="form">
@@ -26,39 +31,39 @@
         <p class="required"><span>* required field</span><p>
 
         <div class="register">
-          <input type="text" placeholder="First name" name="fname" required><span> * </span>
+          <input type="text" placeholder="First name" name="fname" value="<?php echo $fname;?>"><span> * </span>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="Last name" name="lname" required><span> * </span>
+          <input type="text" placeholder="Last name" name="lname" value="<?php echo $lname;?>"><span> * </span>
         </div>
 
         <div class="register">
-          <input type="tel" placeholder="Phone number" name="phonenumber" ><span> * </span>
+          <input type="tel" placeholder="Phone number" name="phonenumber" value="<?php echo $phonenumber;?>"><span> * </span>
         </div>
 
         <div class="register">
-          <input type="email" placeholder="Email address" name="emailaddress" required><span> * </span>
+          <input type="email" placeholder="Email address" name="emailaddress" value="<?php echo $emailaddress;?>"><span> * </span>
         </div>
 
         <div class="register">
-          <input type="password" placeholder="Password of at least 8 characters" name="password" required><span> * </span>
+          <input type="password" placeholder="Password of at least 8 characters" name="password"><span> * </span>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="Address" name="address" required><span> * </span>
+          <input type="text" placeholder="Address" name="address" value="<?php echo $address;?>"><span> * </span>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="Zip code" name="zipcode" required><span> * </span>
+          <input type="text" placeholder="Zip code" name="zipcode" value="<?php echo $zipcode;?>"><span> * </span>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="City" name="city" required><span> * </span>
+          <input type="text" placeholder="City" name="city" value="<?php echo $city;?>"><span> * </span>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="Country" name="country" required><span> * </span>
+          <input type="text" placeholder="Country" name="country" value="<?php echo $country;?>"><span> * </span>
         </div>
 
         <div class="agree">

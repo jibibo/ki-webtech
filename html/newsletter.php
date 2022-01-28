@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // checks whether the email form is correct
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $email_err = "Please enter a valid email address";
+            $email_err = "Please enter an email address";
         }
     }
 }
