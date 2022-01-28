@@ -16,7 +16,7 @@ function clean_data($data) {
 // zipcode voldoende en makkelijker? 
 
 // set variables to empty values
-$fname = $lname = $phonenumber = $emailaddress = $password = $address = $zipcode = $city = $country = "";
+$fname = $lname = $phonenumber = $emailaddress = $psw = $address = $zipcode = $city = $country = "";
 //$fname_err = $lname_err = $phonenumber_err = $emailaddress_err = $password_err = $address_err = $zipcode_err = $city_err = $country_err = "";
 
 // checks whether form has been submitted
@@ -183,10 +183,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // source: https://stackoverflow.com/questions/8141125/regex-for-password-php
 
-    $password = clean_data($_POST["password"]);
+    $uppercase = preg_match("@[A-Z]@", $psw);
+    $lowercase = preg_match("@[a-z]@", $psw);
+    $number    = preg_match("@[0-9]@", $psw);
+
+    $psw = clean_data($_POST["psw"]);
 
     // check if password is valid and secure
-    if (!preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#", $password)) {
+    if (!$uppercase || !$lowercase || !$number || strlen($psw) < 8) {
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('The password should contain at least 8 characters, 1 number, 1 lowercase and 1 uppercase character');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';

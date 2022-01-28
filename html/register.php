@@ -42,7 +42,7 @@
         </div>
 
         <div class="register">
-          <input type="password" placeholder="Password of at least 8 characters" name="password" required><span> * </span>
+          <input type="password" placeholder="Password of at least 8 characters" name="psw" required><span> * </span>
         </div>
 
         <div class="register">

@@ -20,6 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       window.alert('This field is empty, please enter an email for signing up.');
       window.location.href='https://webtech-ki15.webtech-uva.nl/';
       </script>");
+      exit;
     } else {
         $email = clean_data($_POST["email"]);
 
