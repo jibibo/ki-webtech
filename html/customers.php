@@ -147,6 +147,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         window.alert('Please enter a valid name');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
+        exit;
     }
 
     $lname = clean_data($_POST["lname"]);
@@ -157,6 +158,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         window.alert('Please enter a valid name');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
+        exit;
     }
 
     $phonenumber = clean_data($_POST["phonenumber"]);
@@ -167,6 +169,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         window.alert('Please enter a valid phone number');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
+        exit;
     }
 
 // /0[1-9][0-9]{8}/ 
@@ -179,22 +182,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         window.alert('Please enter a valid email address');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
+        exit;
     }
 
 // source: https://stackoverflow.com/questions/8141125/regex-for-password-php
 
-    $uppercase = preg_match("@[A-Z]@", $psw);
-    $lowercase = preg_match("@[a-z]@", $psw);
-    $number    = preg_match("@[0-9]@", $psw);
-
     $psw = clean_data($_POST["psw"]);
 
     // check if password is valid and secure
-    if (!$uppercase || !$lowercase || !$number || strlen($psw) < 8) {
+    if (strlen($psw) < 8) {
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('The password should contain at least 8 characters, 1 number, 1 lowercase and 1 uppercase character');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
+        exit;
     }
 
 
@@ -209,6 +210,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         window.alert('Please enter a valid address');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
+        exit;
     }
 
 // address weghalen --> ook in phpmyadmin? 
@@ -223,6 +225,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         window.alert('Please enter a valid zipcode');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
+        exit;
     }
 
 //[1-9][0-9]{3}˽?[A-z]{2}/
@@ -237,6 +240,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         window.alert('Please enter a valid city');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
+        exit;
     }
 
 
@@ -249,6 +253,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         window.alert('Please enter a valid country');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
+        exit;
     }
     
 
@@ -256,7 +261,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // insert data into database
 $query = "INSERT INTO customers (first_name, last_name, phonenumber, email, password, address, zip, city, country) 
-VALUES ('$fname', '$lname', '$phonenumber', '$emailaddress', '$password', '$address', '$zipcode', '$city', '$country')";
+VALUES ('$fname', '$lname', '$phonenumber', '$emailaddress', '$psw', '$address', '$zipcode', '$city', '$country')";
 
 // https://www.codegrepper.com/code-examples/javascript/how+to+redirect+to+another+page+in+php+after+alert+message
 
