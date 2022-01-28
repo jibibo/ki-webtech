@@ -16,7 +16,10 @@ $email = $email_err = "";
 // checks whether form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["email"])) {
-        $email = ""; 
+      echo ("<script LANGUAGE='JavaScript'>
+      window.alert('This field is empty, please enter an email for signing up.');
+      window.location.href='https://webtech-ki15.webtech-uva.nl/';
+      </script>");
     } else {
         $email = clean_data($_POST["email"]);
 
