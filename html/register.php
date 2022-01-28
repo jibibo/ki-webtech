@@ -193,7 +193,7 @@
         </div>
 
         <div class="register">
-          <input type="text" placeholder="Zip code" name="zipcode" value="<?php echo $zipcode;?>"><span> * <?php echo $zipcode;?></span>
+          <input type="text" placeholder="Zip code" name="zipcode" value="<?php echo $zipcode;?>"><span> * <?php echo $zipcode_err;?></span>
         </div>
 
         <div class="register">
