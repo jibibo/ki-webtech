@@ -15,27 +15,28 @@ $email = $email_err = "";
 
 // checks whether form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["email"])) {
-      echo ("<script LANGUAGE='JavaScript'>
-      window.alert('This field is empty, please enter an email for signing up.');
-      window.location.href='https://webtech-ki15.webtech-uva.nl/';
-      </script>");
-      exit;
-    } else {
-        $email = clean_data($_POST["email"]);
+  // if empty return to homepage and exit code, else get input value
+  if (empty($_POST["email"])) {
+    echo ("<script LANGUAGE='JavaScript'>
+    window.alert('This field is empty, please enter an email for signing up.');
+    window.location.href='https://webtech-ki15.webtech-uva.nl/';
+    </script>");
+    exit;
+  } else {
+      $email = clean_data($_POST["email"]);
 
-        // checks whether the email form is correct
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-          echo ("<script LANGUAGE='JavaScript'>
-          window.alert('Please enter a valid email address');
-          window.location.href='https://webtech-ki15.webtech-uva.nl/';
-          </script>");
-          exit;
-        } 
-    }
+      // if input is not valid, return to home page and exit code
+      if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Please enter a valid email address');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/';
+        </script>");
+        exit;
+      } 
+  }
 }
 
-// insert form data into database
+// only insert form data into database if input was valid
 $query = "INSERT INTO newsletter VALUES ('$email')";
 
 /*if (mysqli_query($conn, $query)) {

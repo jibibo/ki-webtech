@@ -185,11 +185,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-// source: https://stackoverflow.com/questions/8141125/regex-for-password-php
-
     $psw = clean_data($_POST["psw"]);
 
-    // check if password is valid and secure
+    // check if password contains at least 8 characters
     if (strlen($psw) < 8) {
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('The password should contain at least 8 characters');
@@ -259,7 +257,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 }
 
-// insert data into database
+// insert data into database if all input was valid
 $query = "INSERT INTO customers (first_name, last_name, phonenumber, email, password, address, zip, city, country) 
 VALUES ('$fname', '$lname', '$phonenumber', '$emailaddress', '$psw', '$address', '$zipcode', '$city', '$country')";
 
