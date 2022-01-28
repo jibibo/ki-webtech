@@ -31,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           window.location.href='https://webtech-ki15.webtech-uva.nl/';
           </script>");
           exit;
+        } 
     }
 }
 
