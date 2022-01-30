@@ -39,8 +39,6 @@ foreach ($_GET as $key => $values) {
   }
 }
 
-pre_print($categories_checked);
-
 if (isset($_GET["search"])) {
   $categories_join = join(",", $categories_checked);
   $search = htmlspecialchars($_GET["search"]);
@@ -153,7 +151,9 @@ include "db_disconnect.php";
 
       <?php
 
-      if (isset($_GET["search"])) {
+      if (
+        (isset($_GET["search"]) && $_GET["search"]) || isset($_GET["c"])
+      ) {
         echo <<<END
         <span>Search results: $products_count product(s)</span>
         END;
@@ -195,7 +195,7 @@ include "db_disconnect.php";
           END;
         }
       } else {
-        echo "No products exist (yet)!";
+        echo "No products found!";
       }
 
       ?>

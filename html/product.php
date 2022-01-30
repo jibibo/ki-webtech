@@ -45,20 +45,24 @@ while ($row = mysqli_fetch_assoc($result_categories)) {
 
 // related products: related to product by sharing a category
 // src: https://stackoverflow.com/a/3919563/13216113
-$category_array = "(" . join(", ", $product_category_ids) . ")";
-$result_related = mysqli_query(
-  $conn,
-  "SELECT DISTINCT id, name, price, image_url
-  FROM product_categories pc
-  JOIN products p ON pc.product=p.id
-  WHERE pc.category IN $category_array AND p.id!=$product_id"
-);
+$category_array = join(",", $product_category_ids);
+pre_print($category_array);
 $related_products = array();
 
-while ($row = mysqli_fetch_assoc($result_related)) {
-  $related_products[] = $row;
-}
+if (count($product_category_ids) > 0) {
+  $result_related = mysqli_query(
+    $conn,
+    "SELECT DISTINCT id, name, price, image_url
+    FROM product_categories pc
+      JOIN products p ON pc.product=p.id
+    WHERE pc.category IN ($category_array)
+      AND p.id!=$product_id"
+  );
 
+  while ($row = mysqli_fetch_assoc($result_related)) {
+    $related_products[] = $row;
+  }
+}
 
 // customer reviews
 $result_reviews = mysqli_query(
