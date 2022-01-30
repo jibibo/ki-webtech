@@ -2,10 +2,10 @@
 
 include "db_connect.php";
 
-if (!isset($_COOKIE["session_token"])) {
-  header("Location: index.php");
-  return;
-}
+// if (!isset($_COOKIE["session_token"])) {
+//   header("Location: /");
+//   return;
+// }
 
 $session_token = htmlspecialchars($_COOKIE["session_token"]);
 
