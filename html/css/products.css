@@ -21,7 +21,7 @@
 }
 
 .product-list-item {
-  visibility: hidden;
+  /* visibility: hidden; */
   flex: 1 1 100%;
   max-width: 250px;
 
