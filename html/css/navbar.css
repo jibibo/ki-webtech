@@ -43,8 +43,9 @@ nav a {
   }
 }
 @media (max-width: 600px) {
-  nav li{
+  nav li ,.search-wrapper{
     width: 100%;
+    float: center;
   }
 }
 
