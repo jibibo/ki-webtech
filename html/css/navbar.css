@@ -34,12 +34,20 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
 }
-@media screen and (max-width: 400px) {
+@media (max-width: 600px) {
+  .search-wrapper{
+    width: 100vw;
+  }
+  .nav li{
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
   nav li{
     width: 100%;
   }
-  
 }
+
 
 /* navbar dropdown menu */
 /* src: https://www.w3schools.com/css/css_dropdowns.asp */
@@ -109,7 +117,7 @@ nav a.active {
   font-size: 17px;
   border: black;
   outline: black;
-  width: 400px;
+  min-width: 400px;
   border-radius: 40px;
   padding-left: 0.7rem;
   margin: 6px;
