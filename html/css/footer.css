@@ -28,6 +28,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .footer-heading {
