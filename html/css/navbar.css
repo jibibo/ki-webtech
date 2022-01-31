@@ -114,6 +114,7 @@ nav a.active {
   float: right;
   padding-top: 2px;
   padding-bottom: 5px;
+  display: flex;
 }
 
 .search-input {
