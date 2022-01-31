@@ -11,7 +11,7 @@
         <li class="dropdown-menu">
           <a href="products.php" class="dropdown-button">Products</a>
           <div class="dropdown-content">
-        <!-- https://stackoverflow.com/questions/6243051/how-to-pass-an-array-within-a-query-string -->
+            <!-- https://stackoverflow.com/questions/6243051/how-to-pass-an-array-within-a-query-string -->
             <a href="products.php?c[]=12&c[]=13">Kleding</a>
             <a href="products.php?c[]=2">Auto's</a>
             <a href="products.php?c[]=3">Schoenen</a>
