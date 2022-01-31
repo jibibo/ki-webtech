@@ -46,7 +46,6 @@ while ($row = mysqli_fetch_assoc($result_categories)) {
 // related products: related to product by sharing a category
 // src: https://stackoverflow.com/a/3919563/13216113
 $category_array = join(",", $product_category_ids);
-pre_print($category_array);
 $related_products = array();
 
 if (count($product_category_ids) > 0) {
