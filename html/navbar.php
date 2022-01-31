@@ -5,7 +5,7 @@
         <img src="images/uvazon.png" alt="UvAzon Logo" width="250px" />
       </div>
     </a>
-    <div>
+    <div class="sticky">
       <ul id="nav-ul">
         <li><a href="index.php">Home</a></li>
         <li class="dropdown-menu">

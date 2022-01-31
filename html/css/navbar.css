@@ -17,7 +17,6 @@ nav ul {
   position: sticky;
   width: 100%;
 }
-
 #nav-ul {
   position: sticky;
 }
@@ -125,4 +124,10 @@ nav a.active {
   padding: 5px;
   margin-top: -5;
   size: flex;
+}
+
+.sticky {
+  top: 0;
+  position: sticky;
+  z-index: 100;
 }
