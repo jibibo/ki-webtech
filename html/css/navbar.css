@@ -125,9 +125,3 @@ nav a.active {
   margin-top: -5;
   size: flex;
 }
-
-.sticky {
-  top: 0;
-  position: sticky;
-  z-index: 100;
-}

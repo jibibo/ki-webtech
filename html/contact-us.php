@@ -41,28 +41,27 @@
       <div class="contact_left">
         <h3>FILL IN BELOW</h3>
 
-        <form name="frmContact" method="post" action="contacted
-        .php">
+        <form name="frmContact" method="post" action="contacted.php">
           <div class="input_row">
             <div class="input_group">
               <label>NAME</label>
-              <input class="input-form" type="text" placeholder="dr.bibo"></input>
+              <input name="NAME" class="input-form" type="text" placeholder="dr.bibo"></input>
 
             </div>
             <div class="input_group">
               <label>PHONE</label>
-              <input class="input-form" type="text" placeholder="+31 ..."></input>
+              <input name="PHONE" class="input-form" type="text" placeholder="+31 ..."></input>
 
             </div>
 
             <div class="input_group">
               <label>EMAIL</label>
-              <input class="input-form" type="email" placeholder="dr.bibo@gmail.com"></input>
+              <input name="EMAIL" class="input-form" type="email" placeholder="dr.bibo@gmail.com"></input>
 
             </div>
             <div class="input_group">
               <label>SUBJECT</label>
-              <input class="input-form" type="text" placeholder="subject of contact"></input>
+              <input name="SUBJECclass="input-form" type="text" placeholder="subject of contact"></input>
 
             </div>
           </div>
