@@ -38,6 +38,8 @@ nav a {
   .search-input {
     width: 100%;
     margin: 0px 10%;
+    float: center;
+    
   }
 
   nav li,
