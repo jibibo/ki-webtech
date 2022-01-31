@@ -36,8 +36,10 @@ nav a {
 
 @media (max-width: 600px) {
   .search-input {
-    width: 80%;
-    float: center;
+    width: 100%;
+    margin: 6px 0px;
+    justify-content: center;
+    align-items: center;
   }
 
   nav li,
