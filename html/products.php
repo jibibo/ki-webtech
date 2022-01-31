@@ -177,20 +177,19 @@ include "db_disconnect.php";
           $product_name = $product["name"];
           $product_price = number_format($product["price"], 2);
           echo <<<END
-          <div class='product-list-item'>
-            <div class='product-img-wrapper'>
-              <a href='product.php?id=$product_id'>
-                <img src='$product_img' />
+          <div class="product-list-item">
+            <div class="product-img-wrapper">
+              <a href="product.php?id=$product_id">
+                <img src="$product_img" />
               </a>
             </div>
             <div>
-              <a class='product-name' href='product.php?id=$product_id'>$product_name</a>
-              <div class='product-details'>
-                <span class='product-price'>&euro; $product_price</span>
-                <div class='product-buttons'>
-                  <button class='product-buy'>Buy</button>
-                  <button class='product-cart'>cart</button>
-                  <button class='product-wishlist'>Wishlist</button>
+              <a class="product-name" href="product.php?id=$product_id">$product_name</a>
+              <div class="product-details">
+                <span class="product-price">&euro; $product_price</span>
+                <div class="product-buttons">
+                  <button class="product-cart">cart</button>
+                  <button class="product-wishlist">Wishlist</button>
                 </div>
               </div>
             </div>
@@ -203,38 +202,12 @@ include "db_disconnect.php";
 
       ?>
 
-      <div class='product-list-item'>
-        <div class='product-img-wrapper'>
-          <a href='product.php?id=$product_id'>
-            <img src='https://www.automobielmanagement.nl/wp-content/uploads/2019/04/Lada-Combi-1600x1123.jpg' />
-          </a>
-        </div>
-        <div>
-          <a class='product-name' href='product.php?id=$product_id'>$product_name</a>
-          <div class='product-details'>
-            <span class='product-price'>&euro; $product_price</span>
-            <div class='product-buttons'>
-              <button class='product-buy'>BUY!</button>
-              <button class='product-cart'>
-                <ion-icon name="cart-outline"></ion-icon>
-              </button>
-              <button class='product-wishlist'>
-                <ion-icon name="heart-outline"></ion-icon>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 
   <?php
   include "footer.php";
   ?>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 
 </body>
 
