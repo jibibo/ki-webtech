@@ -22,7 +22,6 @@
 .contact-container {
   max-width: 1400px;
   margin: auto;
-  display: flex;
 }
 
 .contact_box {
