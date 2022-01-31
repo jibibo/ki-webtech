@@ -1,7 +1,7 @@
 /* navbar */
 /* src: https://www.w3schools.com/css/css_navbar.asp */
 
-nav{
+nav {
   margin: auto;
   width: 100%;
   position: relative;
@@ -17,9 +17,8 @@ nav ul {
   position: sticky;
   width: 100%;
 }
-#nav-ul{
+#nav-ul {
   position: sticky;
-
 }
 
 nav li {
@@ -34,23 +33,19 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
 }
+
 @media (max-width: 600px) {
-  .search-wrapper{
-    width: 100vw;
-  }
-  .nav li{
+  .search-wrapper {
     width: 100%;
   }
-}
-@media (max-width: 600px) {
-  nav li ,.search-wrapper, form{
+
+  nav li,
+  nav form {
     width: 100%;
     justify-content: center;
     align-items: center;
-
   }
 }
-
 
 /* navbar dropdown menu */
 /* src: https://www.w3schools.com/css/css_dropdowns.asp */
@@ -99,9 +94,8 @@ nav a.active {
 .logo {
   background: #fff;
   float: center;
-
 }
-.container-logo{
+.container-logo {
   background-color: #fff;
   padding: auto;
   margin-bottom: -35px;
@@ -114,7 +108,6 @@ nav a.active {
   float: right;
   padding-top: 2px;
   padding-bottom: 5px;
-  display: flex;
 }
 
 .search-input {
@@ -143,9 +136,8 @@ ion-icon {
   cursor: pointer;
   margin-top: 3px;
 }
-.sticky{
+.sticky {
   top: 0;
   position: sticky;
   z-index: 100;
-
 }
