@@ -35,8 +35,9 @@ nav a {
 }
 
 @media (max-width: 600px) {
-  .search-wrapper {
+  .search-input {
     width: 100%;
+    margin: 0px 10%;
   }
 
   nav li,
