@@ -177,19 +177,23 @@ include "db_disconnect.php";
           $product_name = $product["name"];
           $product_price = number_format($product["price"], 2);
           echo <<<END
-          <div class="product-list-item">
-            <div class="product-img-wrapper">
-              <a href="product.php?id=$product_id">
-                <img src="$product_img" />
+          <div class='product-list-item'>
+            <div class='product-img-wrapper'>
+              <a href='product.php?id=$product_id'>
+                <img src='$product_img' />
               </a>
             </div>
             <div>
-              <a class="product-name" href="product.php?id=$product_id">$product_name</a>
-              <div class="product-details">
-                <span class="product-price">&euro; $product_price</span>
-                <div class="product-buttons">
-                  <button class="product-cart">cart</button>
-                  <button class="product-wishlist">Wishlist</button>
+              <a class='product-name' href='product.php?id=$product_id'>$product_name</a>
+              <div class='product-details'>
+                <span class='product-price'>&euro; $product_price</span>
+                <div class='product-buttons'>
+                  <button class='product-cart'>
+                    <ion-icon name="cart-outline"></ion-icon>
+                  </button>
+                  <button class='product-wishlist'>
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
                 </div>
               </div>
             </div>
