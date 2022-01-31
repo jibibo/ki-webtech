@@ -1,4 +1,6 @@
 .concontainer{
     background-color: white;
     padding: 300px 100px;
+    justify-content: center;
+    align-items: center;
 }
