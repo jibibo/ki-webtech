@@ -34,11 +34,16 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
 }
-@media screen and (max-width: 400px) {
+@media (max-width: 400px) {
   nav li{
     width: 100%;
   }
-  
+}
+@media (max-width: 600px) {
+  .search-wrapper{
+    width: 100vw;
+  }
+
 }
 
 /* navbar dropdown menu */
