@@ -5,20 +5,7 @@
   gap: 3rem;
   padding: 2rem;
 }
-.fadeIn {
-  -webkit-animation: animat_show 0.7s;
-  animation: animat_show 0.7s;
-  visibility: visible !important;
-}
 
-@keyframes animat_show {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 .product-list-item {
   /* visibility: hidden; */
