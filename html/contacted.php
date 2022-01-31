@@ -2,20 +2,21 @@
 
 include "db_connect.php";
 
-if (isset($_POST["name"])) {
-  $name = htmlspecialchars($_POST["name"]);
-  $phone = htmlspecialchars($_POST["phone"]);
-  $email = htmlspecialchars($_POST["email"]);
-  $subject = htmlspecialchars($_POST["subject"]);
-  $message = htmlspecialchars($_POST["message"]);
-  
-  $query = "INSERT INTO `contact_form` (`name`, `phone`, `email`, `subject`, `message`, `id`) VALUES ('$name', '$phone', '$email', '$subject', '$message', NULL);";
-  $success = false;
-  if (mysqli_query($conn, $query)) {
-    $success = true;
-  }
+if (!isset($_POST["name"])) {
+  header("Location: /");
 }
 
+$name = htmlspecialchars($_POST["name"]);
+$phone = htmlspecialchars($_POST["phone"]);
+$email = htmlspecialchars($_POST["email"]);
+$subject = htmlspecialchars($_POST["subject"]);
+$message = htmlspecialchars($_POST["message"]);
+
+$query = "INSERT INTO `contact_form` (`name`, `phone`, `email`, `subject`, `message`, `id`) VALUES ('$name', '$phone', '$email', '$subject', '$message', NULL);";
+$success = false;
+if (mysqli_query($conn, $query)) {
+  $success = true;
+}
 
 include "db_disconnect.php";
 
@@ -46,17 +47,17 @@ include "db_disconnect.php";
 
       if ($success) {
         echo <<<END
-        <div class="concontainer">
-          <h1>Thank you for contacting us! We will reply as soon as possible.</h1>
-        </div>
         END;
       } else {
         echo <<<END
         <h1>broke</h1>
         END;
       }
-
+      
       ?>
+      <div class="concontainer">
+        <h1>Thank you for contacting us! We will reply as soon as possible.</h1>
+      </div>
 
 </div>
 
