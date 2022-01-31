@@ -34,11 +34,6 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
 }
-@media (max-width: 400px) {
-  nav li{
-    width: 100%;
-  }
-}
 @media (max-width: 600px) {
   .search-wrapper{
     width: 100vw;
@@ -46,8 +41,13 @@ nav a {
   .nav li{
     width: 100%;
   }
-
 }
+@media (max-width: 400px) {
+  nav li{
+    width: 100%;
+  }
+}
+
 
 /* navbar dropdown menu */
 /* src: https://www.w3schools.com/css/css_dropdowns.asp */
