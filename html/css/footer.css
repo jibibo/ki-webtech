@@ -29,12 +29,14 @@ body {
   flex-wrap: wrap;
   margin: 0 auto;
   margin-bottom: 20px;
+  align-content: flex-start;
 }
 
 .footer-heading {
   display: flex;
   flex-direction: column;
   margin-right: 4rem;
+  padding-bottom: 20px;
 }
 .footer-heading h2 {
   margin-bottom: 2rem;
