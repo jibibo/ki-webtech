@@ -19,7 +19,7 @@
   ?>
  
   <div class="container">
-    <img class="nicepix" src="images/Location-Roeterseiland.jpeg" alt="UVA">
+    <!-- <img class="nicepix" src="images/Location-Roeterseiland.jpeg" alt="UVA"> -->
     <div class="about-us-text">
       <h1>About us</h1>
       <h5>How it started</h5>

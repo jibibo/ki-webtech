@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+body {
+  background-image: url("../images/Location-Roeterseiland.jpeg") !important;
+}
+
 .about-us-text {
   width: 100%;
   padding: 78px 0px;
@@ -11,5 +15,4 @@
 .nicepix{
   height: 100vh;
   width: 100vw;
-  position: absolute;
 }
