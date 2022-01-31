@@ -36,7 +36,7 @@ nav a {
 
 @media (max-width: 600px) {
   .search-input {
-    width: 100%;
+    width: 90%;
     margin: 6px 0px;
     justify-content: center;
     align-items: center;
@@ -126,20 +126,6 @@ nav a.active {
   size: flex;
 }
 
-.search-button {
-  border: none;
-  background-color: #febd69;
-  justify-content: center;
-  align-items: center;
-}
-
-ion-icon {
-  font-size: 24px;
-  margin-right: 10px;
-  --ionicon-stroke-width: 40px;
-  cursor: pointer;
-  margin-top: 3px;
-}
 .sticky {
   top: 0;
   position: sticky;
