@@ -39,10 +39,11 @@ nav a {
     width: 100%;
     margin: 0px 10%;
     float: center;
-    
+
   }
 
   nav li,
+  nav .search-wrapper,
   nav form {
     width: 100%;
     justify-content: center;
