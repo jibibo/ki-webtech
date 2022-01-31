@@ -43,6 +43,9 @@ nav a {
   .search-wrapper{
     width: 100vw;
   }
+  .nav li{
+    width: 100%;
+  }
 
 }
 
