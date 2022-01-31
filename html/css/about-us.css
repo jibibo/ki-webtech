@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -12,7 +12,10 @@ body {
   width: 100%;
   padding: 78px 0px;
 }
-.nicepix{
+.nicepix {
   height: 100vh;
   width: 100vw;
+}
+.container {
+  margin-top: 400px;
 }
