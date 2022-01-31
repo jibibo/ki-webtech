@@ -46,8 +46,8 @@ include "db_disconnect.php";
 
       if ($success) {
         echo <<<END
-        <div class="concontainer>
-        <h1>Thank you for contacting us! We will reply as soon as possible.</h1>
+        <div class="concontainer">
+          <h1>Thank you for contacting us! We will reply as soon as possible.</h1>
         </div>
         END;
       } else {
@@ -57,7 +57,8 @@ include "db_disconnect.php";
       }
 
       ?>
-  </div>
+
+</div>
 
   <?php
   include "footer.php";
