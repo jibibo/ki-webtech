@@ -6,11 +6,7 @@ include "utils.php";
 // src: https://stackoverflow.com/a/6324360/13216113
 $result_categories = mysqli_query(
   $conn,
-  "SELECT (name, id, COUNT(name))
-  FROM categories c 
-    JOIN product_categories pc ON c.id=pc.category 
-  GROUP BY c.name 
-  ORDER BY COUNT(name) DESC, c.name;"
+  "SELECT name, id, COUNT(*) FROM categories c JOIN product_categories pc ON c.id=pc.category GROUP BY c.name ORDER BY COUNT(*) DESC, c.name, c.id;"
 );
 $categories = array();
 while ($row = mysqli_fetch_assoc($result_categories)) {
