@@ -48,7 +48,8 @@ include "db_disconnect.php";
       <input type="text" name="name" placeholder="Name" autofocus />
       <textarea name="description" placeholder="Description"></textarea>
       <input type="number" name="price" step="0.01" placeholder="Price" />
-      <input type="text" name="image_url" placeholder="Image URL" />
+      <input type="text" name="image_url" placeholder="Image (URL)" />
+      <input type="text" name="categories" placeholder="Category IDs (1,2,3)" />
       <input type="submit" value="Add product" />
       <input type="hidden" name="action" value="add_product" />
     </form>
@@ -69,8 +70,6 @@ include "db_disconnect.php";
       <input type="hidden" name="action" value="add_category" />
     </form>
   </div>
-
-
 
   <?php include "footer.php" ?>
 </body>

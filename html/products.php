@@ -154,8 +154,11 @@ include "db_disconnect.php";
       if (
         (isset($_GET["search"]) && $_GET["search"]) || isset($_GET["c"])
       ) {
+        $search = htmlspecialchars($_GET["search"]);
+        $category_count = count($categories_checked);
+
         echo <<<END
-        <span>Search results: $products_count product(s)</span>
+        <span>$products_count product(s) found matching query "$search", </span>
         END;
       }
 
