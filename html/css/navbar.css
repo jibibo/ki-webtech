@@ -85,7 +85,7 @@ nav a.active {
 }
 .container-logo{
   background-color: #fff;
-  padding: auto;]
+  padding: auto;
   margin-bottom: -35px;
 }
 
@@ -95,7 +95,7 @@ nav a.active {
 .search-wrapper {
   float: right;
   padding-top: 2px;
-  padding-bottom: 7px;
+  padding-bottom: 5px;
 }
 
 .search-input {
