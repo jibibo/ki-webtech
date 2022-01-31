@@ -133,6 +133,7 @@ nav a.active {
   border: none;
   background-color: #febd69;
   justify-content: center;
+  align-items: center;
 }
 
 ion-icon {
