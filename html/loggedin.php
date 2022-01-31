@@ -5,32 +5,34 @@ $success = false;
 if(!empty($_POST['username'])) {
 
     include "db_connect.php";
-    $stmt = $conn->prepare('SELECT id FROM customers WHERE email =? AND password=?');
-    $stmt->bind_param('ss', $_POST['username'], $_POST['pww']);    
+    $stmt = $conn->prepare('SELECT id, password FROM customers WHERE email=?');
+    $stmt->bind_param('s', $_POST['username']);    
     $stmt->execute();
-    $result = mysqli_stmt_fetch($stmt);
- 
-    if($result) {
-        $success = true;
-        echo "test";
-        /* Hier zou je nog password hashing bij kunnen toevoegen
-
-        if(password_verify('password', $hash)) {
-            $success = true; 
-            INSERT INTO DB 
-        } */
-    }
+    $result = $stmt -> get_result();
+    $user_info = $result -> fetch_assoc();
     
-}
+    // verify if input password is equal to hashed password
+    if($result) {
+        if(password_verify($_POST['pww'], $user_info['password'])) {
+            $success = true;
+        }
+    }
 
 if ($success) {
     session_start();
     $_SESSION['username'] = $_POST['username'];
     header("Location: index.php");
+} else {
+    echo "
+    
+    <script>
+        window.alert('Wrong password or username!');
+        window.location.href = 'log-in.php';
+        </script>
+        ";
+    #header("Location: log-in.php");
+    }
 }
-
-
-
 
 
 

@@ -196,6 +196,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
+    // password hashing
+
+    $hashed_psw = password_hash($psw, PASSWORD_DEFAULT);
+
 
 
 // https://murani.nl/blog/2015-09-28/nederlandse-reguliere-expressies/ --> address regex
@@ -259,7 +263,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // insert data into database if all input was valid
 $query = "INSERT INTO customers (first_name, last_name, phonenumber, email, password, address, zip, city, country) 
-VALUES ('$fname', '$lname', '$phonenumber', '$emailaddress', '$psw', '$address', '$zipcode', '$city', '$country')";
+VALUES ('$fname', '$lname', '$phonenumber', '$emailaddress', '$hashed_psw', '$address', '$zipcode', '$city', '$country')";
 
 // https://www.codegrepper.com/code-examples/javascript/how+to+redirect+to+another+page+in+php+after+alert+message
 
@@ -279,6 +283,7 @@ if (mysqli_query($conn, $query)) {
 }
 
 // close connection database
-include "db_disconnect.php"
+include "db_disconnect.php";
+header("Location: index.php");
 
 ?>
