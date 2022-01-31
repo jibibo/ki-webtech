@@ -34,6 +34,12 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
 }
+@media screen and (max-width: 400px) {
+  nav li{
+    width: 100%;
+  }
+  
+}
 
 /* navbar dropdown menu */
 /* src: https://www.w3schools.com/css/css_dropdowns.asp */
