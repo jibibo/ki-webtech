@@ -42,6 +42,9 @@
   .contact_box{
     flex-wrap: wrap;
   }
+  .contact_left h3{
+    width: 100%;
+  }
 }
 .contact_right {
   flex-basis: 40%;
@@ -112,6 +115,7 @@ label {
   color: #febd69;
   font-weight: 600;
 }
+
 .contact_right h3 {
   margin-bottom: 40px;
   font-weight: 600;
