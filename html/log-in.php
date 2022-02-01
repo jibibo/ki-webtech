@@ -17,10 +17,10 @@ if (isset($_POST["in_out"])) {
     $password = htmlspecialchars($_POST["password"]);
     $query_result = mysqli_query(
       $conn,
-      "SELECT * FROM customers WHERE email=$email LIMIT 1"
+      "SELECT * FROM customers WHERE email='$email' LIMIT 1"
     );
     // check if customer with that email exists
-    if (mysqli_num_rows($query_result) > 0) {
+    if ($query_result) {
       $customer = mysqli_fetch_assoc($query_result);
       // check password
       if (password_verify($password, $customer["password"])) {
@@ -41,6 +41,7 @@ if (isset($_POST["in_out"])) {
     } else {
       $status = "Email is not registered";
     }
+
   } elseif ($in_out == "out" && isset($_COOKIE["session_token"])) {
     // user should be logged OUT, clear the users session token cookie and db id
     $session_token = htmlspecialchars($_COOKIE["session_token"]);
@@ -48,16 +49,18 @@ if (isset($_POST["in_out"])) {
       $conn,
       "SELECT * 
       FROM customer_session_tokens cst
-      WHERE session_token=$session_token 
+      WHERE session_token='$session_token' 
       LIMIT 1"
     );
-    if (mysqli_num_rows($query_result) > 0) {
+
+    if ($query_result) {
       mysqli_query(
         $conn,
         "DELETE FROM customer_session_tokens cst 
-        WHERE cst.session_token=$session_token"
+        WHERE cst.session_token='$session_token'"
       );
     }
+
     setcookie("session_token");
     // if invalid session token OR successfully deleted session token, redirect
     header("Location: /");

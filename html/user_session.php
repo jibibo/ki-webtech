@@ -11,7 +11,7 @@ if (isset($_COOKIE["session_token"])) {
     $conn,
     "SELECT * 
     FROM customers c JOIN customer_session_tokens cst ON c.id=cst.customer 
-    WHERE cst.session_token=$session_token 
+    WHERE cst.session_token='$session_token' 
     LIMIT 1"
   );
 
