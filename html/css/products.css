@@ -8,12 +8,27 @@ div.category-checkbox {
   display: inline;
 }
 
-.container .search-wrapper {
+.container .products-search-wrapper {
   margin-top: 24px;
 }
 
 #search-input {
   padding: 5px;
+}
+
+.products-search-wrapper button {
+  background: #febd69;
+  width: 100px;
+  border: none;
+  outline: none;
+  height: 35px;
+  border-radius: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+}
+.products-search-wrapper button:hover {
+  background-color: #ae7c3b;
 }
 
 /* products */

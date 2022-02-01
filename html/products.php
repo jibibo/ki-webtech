@@ -106,7 +106,7 @@ include "db_disconnect.php";
   ?>
 
   <div class="container">
-    <div class="search-wrapper">
+    <div class="products-search-wrapper">
       <form action="products.php" method="GET" id="search-form">
 
         <input id="search-input" type="text" placeholder="Search" name="search" />

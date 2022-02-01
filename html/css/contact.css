@@ -1,24 +1,3 @@
-.homebutton {
-  float: right;
-  display: inline-flex;
-  margin-right: 120px;
-  margin-top: 10px;
-  height: 50px;
-  padding: 0;
-  background-color: #8aa1b1;
-  color: #febd69;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  cursor: pointer;
-  overflow: hidden;
-  font-size: 50px;
-}
-
-.homebutton:hover {
-  color: #ae7c3b;
-}
-
 .contact-container {
   max-width: 1400px;
   margin: auto;
@@ -33,6 +12,7 @@
   flex-basis: 60%;
   padding: 40px 60px;
 }
+
 @media (max-width: 600px) {
   .contact_left,
   .contact_right {
