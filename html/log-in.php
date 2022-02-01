@@ -31,7 +31,7 @@ if (isset($_POST["in_out"])) {
         $customer_id = $customer["id"];
         mysqli_query(
           $conn,
-          "INSERT INTO customer_session_tokens ('customer', 'session_token') 
+          "INSERT INTO customer_session_tokens (customer, session_token) 
           VALUES ($customer_id, '$session_token')"
         );
         $name = $customer["first_name"];
