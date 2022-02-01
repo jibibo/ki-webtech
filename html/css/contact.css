@@ -39,6 +39,9 @@
     display: flex;
     flex-basis: 100%;
   }
+  .contact_box{
+    flex-wrap: wrap;
+  }
 }
 .contact_right {
   flex-basis: 40%;
