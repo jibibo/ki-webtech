@@ -55,7 +55,7 @@ include "db_disconnect.php";
         END;
       } else {
         echo <<<END
-        <h1>broke</h1>
+        <h1>Something went wrong!</h1>
         END;
       }
       

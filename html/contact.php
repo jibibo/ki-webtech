@@ -23,19 +23,8 @@
   include "navbar.php";
   ?>
 
-  <!-- <a href="index.php">
-    <button type="button" class="homebutton">
-      <span class="button_icon">
-        <ion-icon name="home-outline"></ion-icon>
-      </span>
-    </button>
-  </a> -->
-
   <div class="contact-container">
-    <!-- <h1>CONTACT US!
-      <img src="images/uvazon.png" alt="Uvazon logo" width="250px">
-    </h1>
-    <p>If you have any questions about you product or order, please fill in the following information</p> -->
+    <!-- <p>If you have any questions about you product or order, please fill in the following information</p> --> -->
 
     <div class="contact_box">
       <div class="contact_left">
@@ -44,31 +33,31 @@
         <form method="post" action="contacted.php">
           <div class="input_row">
             <div class="input_group">
-              <label>NAME</label>
+              <label>Name</label>
               <input name="name" class="input-form" type="text" placeholder="dr.bibo" required></input>
 
             </div>
             <div class="input_group">
-              <label>PHONE</label>
+              <label>Phone</label>
               <input name="phone" class="input-form" type="text" placeholder="+31 ..." required></input>
 
             </div>
 
             <div class="input_group">
-              <label>EMAIL</label>
+              <label>Email address</label>
               <input name="email" class="input-form" type="email" placeholder="dr.bibo@gmail.com" required></input>
 
             </div>
             <div class="input_group">
-              <label>SUBJECT</label>
+              <label>Subject</label>
               <input name="subject" class="input-form" type="text" placeholder="subject of contact" required></input>
 
             </div>
           </div>
-          <label>MESSAGE</label>
+          <label>Message</label>
           <textarea name="message" rows="10" placeholder="max 200 characters" required></textarea>
           <div class="messagebutton">
-            <button type="submit">SUBMIT</button>
+            <button type="submit">Submit</button>
           </div>
 
 
@@ -81,12 +70,12 @@
           <tr>
             <td>EMAIL</td>
             
-              <td><a href="mailto:uvazon@contact.nl">uvazon@contact.com</a></td>
+              <td><a href="mailto:info@uvazon.nl">info@uvazon.nl</a></td>
             
           </tr>
           <tr>
             <td>PHONE</td>
-            <td>06-beldrbibo</td>
+            <td>06-12345678</td>
           </tr>
           <tr>
             <td>ADRESS</td>
