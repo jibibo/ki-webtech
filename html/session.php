@@ -123,21 +123,22 @@ if (isset($_POST["in_out"])) {
           <p><a class="text" href="forgot-password.php">Forgot password</a></p>
           <p>Not a member yet? <a class="text" href="register.php">Click here to register!</a></p>
         </div>
-
-        <?php
-        if (isset($_COOKIE["session_token"])) {
-          echo <<<END
-          <div>
-            <form action="log-in.php" method="post" class="formscreen">
-              <input type="hidden" name="in_out" value="out" />
-              <button type="submit" class="logout" title="Log out">Log out</button>
-            </form>
-          </div>
-          END;
-        }
-        ?>
-
       </form>
+
+      <?php
+      
+      if (isset($_COOKIE["session_token"])) {
+        echo <<<END
+        <div>
+          <form action="log-in.php" method="post" class="formscreen">
+            <input type="hidden" name="in_out" value="out" />
+            <button type="submit" class="logout" title="Log out">Log out</button>
+          </form>
+        </div>
+        END;
+      }
+      ?>
+
     </div>
 
   </div>
