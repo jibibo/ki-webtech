@@ -36,6 +36,7 @@
 @media (max-width: 600px){
   .contact_left, .contact_right{
     width: 100%;
+    display: flex;
   }
 }
 .contact_right {
