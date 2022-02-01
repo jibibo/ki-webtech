@@ -1,6 +1,71 @@
 <?php
 
-session_start();
+// session_start();
+
+include "user_session.php";
+
+include "db_connect.php";
+
+$status = "";
+
+if (isset($_POST["in_out"])) {
+  $in_out = htmlspecialchars($_POST["in_out"]);
+
+  if ($in_out == "in") {
+    // user should be logged IN
+    $email = htmlspecialchars($_POST["email"]);
+    $password = htmlspecialchars($_POST["password"]);
+    $query_result = mysqli_query(
+      $conn,
+      "SELECT * FROM customers WHERE email=$email LIMIT 1"
+    );
+    // check if customer with that email exists
+    if (mysqli_num_rows($query_result) > 0) {
+      $customer = mysqli_fetch_assoc($query_result);
+      // check password
+      if (password_verify($password, $customer["password"])) {
+        // src: https://www.php.net/manual/en/function.random-bytes.php
+        // generate session token
+        $session_token = bin2hex(random_bytes(32));
+        setcookie("session_token", $session_token);
+        $customer_id = $customer["id"];
+        mysqli_query(
+          $conn,
+          "INSERT INTO customer_session_tokens ('customer', 'session_token') 
+          VALUES ($customer_id, '$session_token')"
+        );
+        header("Location: /");
+      } else {
+        $status = "Invalid password";
+      }
+    } else {
+      $status = "Email is not registered";
+    }
+  } elseif ($in_out == "out" && isset($_COOKIE["session_token"])) {
+    // user should be logged OUT, clear the users session token cookie and db id
+    $session_token = htmlspecialchars($_COOKIE["session_token"]);
+    $query_result = mysqli_query(
+      $conn,
+      "SELECT * 
+      FROM customer_session_tokens cst
+      WHERE session_token=$session_token 
+      LIMIT 1"
+    );
+    if (mysqli_num_rows($query_result) > 0) {
+      mysqli_query(
+        $conn,
+        "DELETE FROM customer_session_tokens cst 
+        WHERE cst.session_token=$session_token"
+      );
+    }
+    setcookie("session_token");
+    // if invalid session token OR successfully deleted session token, redirect
+    header("Location: /");
+  } else {
+    // invalid log in/out option, or not logged in & wanted to log out
+    $status = "Something went wrong, please try again";
+  }
+}
 
 ?>
 
@@ -26,32 +91,50 @@ session_start();
 
   <div class="container">
     <div class="form">
-      <form action="loggedin.php" method="post" class="formscreen">
-        <div class="title">LOGIN</div>
+      <form action="log-in.php" method="post" class="formscreen">
+        <div class="title">Log in</div>
+
+        <?php
+
+        if ($status) {
+          echo <<<END
+          <br />
+          <span class="status">$status</span>
+          END;
+        }
+
+        ?>
 
         <div class="textbox">
-          <input type="text" placeholder="Username" name="username" autofocus required>
+          <input type="text" placeholder="Email address" name="email" autofocus required>
           <br><br>
 
-          <input type="password" placeholder="Password" name="pww" required>
+          <input type="password" placeholder="Password" name="password" required>
           <br><br>
         </div>
 
         <div>
-          <button type="submit" class="login" title="Login">Login</button>
-          <p>Forgotten your <a class="text" href="forgot-password.php">password?</a></p>
-          <p>Not a member yet? Click here to <a class="text" href="register.php">register!</a></p>
+          <input type="hidden" name="in_out" value="in" />
+          <button type="submit" class="login" title="Login">Log in</button>
+          <p><a class="text" href="forgot-password.php">Forgot password</a></p>
+          <p>Not a member yet? <a class="text" href="register.php">Click here to register!</a></p>
         </div>
       </form>
     </div>
 
-    <?php if(isset($_SESSION['username'])) {
-      echo "
-      <form action='logout.php' method='post' class='formscreen'>
-            <div>
-          <button type='submit' class='logout' title='Logout'>Logout</button> </div>
-          "; 
-    }  ?>
+    <?php
+    // if (isset($_SESSION['username'])) {
+    if (isset($_COOKIE["session_token"])) {
+      echo <<<END
+      <form action="log-in.php" method="post" class="formscreen">
+        <div>
+          <input type="hidden" name="in_out" value="out" />
+          <button type="submit" class="logout" title="Logout">Logout</button>
+        </div>
+      </form>
+      END;
+    }
+    ?>
 
   </div>
 

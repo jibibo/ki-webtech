@@ -1,3 +1,9 @@
+<?php
+
+include "user_session.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,12 +25,23 @@
   ?>
 
   <div class="container">
+    <?php
+
+    if ($user_session) {
+      $first_name = $user_session["first_name"];
+      echo <<<END
+      <h2>Signed in as $first_name</h2>
+      END;
+    }
+
+    ?>
+
     <div class="imagecontainer">
       <span class="headertext">Begin the year with Nike</span>
-        <img src="https://theplaybook.asia/wp-content/uploads/sites/27/2019/06/cropped-sale_malaysia_nike_com.png" alt="Nike sale" class="nike">
-        <button><a href="" class="nikelink">Go to collection</a></button>
+      <img src="https://theplaybook.asia/wp-content/uploads/sites/27/2019/06/cropped-sale_malaysia_nike_com.png" alt="Nike sale" class="nike">
+      <button><a href="" class="nikelink">Go to collection</a></button>
     </div>
-            
+
     <div class="beautycontainer">
       <span class="headertext">Beauty Bestsellers</span>
       <div class="beautyrow">
@@ -42,7 +59,7 @@
           <a href="">
             <img src="https://shielabeautyworld.com/wp-content/uploads/2020/03/sweet-mouth.png" alt="Fenty lip gloss" class="hover">
           </a>
-          </div>
+        </div>
         <div class="picture">
           <a href="">
             <img src="https://cdn11.bigcommerce.com/s-h0vxbu2ww9/images/stencil/500x500/products/2696/6282/5602__29379.1575033839.jpg?c=2" alt="Laneige lip balm" class="hover">
@@ -104,7 +121,7 @@
           </a>
           <div class="imagelink">
             <a href="" class="shop">Cosmetics</a>
-          </div> 
+          </div>
         </div>
         <div class="column">
           <a href="">
@@ -112,7 +129,7 @@
           </a>
           <div class="imagelink">
             <a href="" class="shop">Clothing</a>
-          </div> 
+          </div>
         </div>
         <div class="column">
           <a href="">
@@ -120,7 +137,7 @@
           </a>
           <div class="imagelink">
             <a href="" class="shopshoes">Shoes</a>
-          </div> 
+          </div>
         </div>
         <div class="column">
           <a href="">
@@ -128,8 +145,8 @@
           </a>
           <div class="imagelink">
             <a href="" class="shop">Cars</a>
-          </div> 
-        </div>  
+          </div>
+        </div>
       </div>
     </div>
 
