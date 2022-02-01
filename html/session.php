@@ -1,7 +1,5 @@
 <?php
 
-include "user_session.php";
-
 include "db_connect.php";
 
 $status = "";
@@ -34,7 +32,7 @@ if (isset($_POST["in_out"])) {
         );
         $name = $customer["first_name"];
         $status = "Logged in as $name";
-        // header("Location: /");
+        header("Location: /");
       } else {
         $status = "Invalid password";
       }
@@ -64,7 +62,7 @@ if (isset($_POST["in_out"])) {
     // if invalid session token OR successfully deleted session token, redirect
     $status = "Logged out";
 
-    // header("Location: /");
+    header("Location: /");
   } else {
     // invalid log in/out option, or not logged in & wanted to log out
     $status = "Something went wrong, please try again";
