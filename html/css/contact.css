@@ -33,6 +33,17 @@
   flex-basis: 60%;
   padding: 40px 60px;
 }
+@media (max-width: 600px){
+  .contact_left, .contact_right{
+    width: 100%;
+    display: flex;
+    flex-basis: 100%;
+  }
+  .contact_box{
+    flex-wrap: wrap;
+  }
+  
+}
 .contact_right {
   flex-basis: 40%;
   padding: 40px;
@@ -102,6 +113,7 @@ label {
   color: #febd69;
   font-weight: 600;
 }
+
 .contact_right h3 {
   margin-bottom: 40px;
   font-weight: 600;

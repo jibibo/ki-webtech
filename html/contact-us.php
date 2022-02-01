@@ -41,32 +41,32 @@
       <div class="contact_left">
         <h3>FILL IN BELOW</h3>
 
-        <form name="frmContact" method="post" action="contacted.php">
+        <form method="post" action="contacted.php">
           <div class="input_row">
             <div class="input_group">
               <label>NAME</label>
-              <input name="NAME" class="input-form" type="text" placeholder="dr.bibo"></input>
+              <input name="name" class="input-form" type="text" placeholder="dr.bibo" required></input>
 
             </div>
             <div class="input_group">
               <label>PHONE</label>
-              <input name="PHONE" class="input-form" type="text" placeholder="+31 ..."></input>
+              <input name="phone" class="input-form" type="text" placeholder="+31 ..." required></input>
 
             </div>
 
             <div class="input_group">
               <label>EMAIL</label>
-              <input name="EMAIL" class="input-form" type="email" placeholder="dr.bibo@gmail.com"></input>
+              <input name="email" class="input-form" type="email" placeholder="dr.bibo@gmail.com" required></input>
 
             </div>
             <div class="input_group">
               <label>SUBJECT</label>
-              <input name="SUBJECclass="input-form" type="text" placeholder="subject of contact"></input>
+              <input name="subject" class="input-form" type="text" placeholder="subject of contact" required></input>
 
             </div>
           </div>
           <label>MESSAGE</label>
-          <textarea rows="10" placeholder="max 200 characters"></textarea>
+          <textarea name="message" rows="10" placeholder="max 200 characters" required></textarea>
           <div class="messagebutton">
             <button type="submit">SUBMIT</button>
           </div>
