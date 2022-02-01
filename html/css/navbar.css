@@ -85,6 +85,7 @@ li.dropdown-menu .dropdown-content a {
   display: block;
   text-align: left;
   text-transform: none;
+  z-index: 2000;
 }
 
 li.dropdown-menu:hover .dropdown-content {
