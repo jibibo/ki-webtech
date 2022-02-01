@@ -27,6 +27,7 @@ div.category-checkbox {
   cursor: pointer;
   box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
 }
+
 .products-search-wrapper button:hover {
   background-color: #ae7c3b;
 }
