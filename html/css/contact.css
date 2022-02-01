@@ -42,9 +42,7 @@
   .contact_box{
     flex-wrap: wrap;
   }
-  .contact_left h3{
-    width: 100%;
-  }
+  
 }
 .contact_right {
   flex-basis: 40%;
