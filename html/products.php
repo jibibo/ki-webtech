@@ -143,7 +143,7 @@ include "db_disconnect.php";
           ?>
         </div>
 
-        <input type="submit" value="Search!" />
+        <button type="submit" value="Search!" />
       </form>
     </div>
 
