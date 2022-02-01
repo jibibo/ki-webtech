@@ -6,6 +6,7 @@ session_start();
 $rows = 0;
 $subtotal = 0;
 
+
 if (isset($_SESSION["username"])) {
   $username = $_SESSION["username"];
   $user_query = "SELECT id FROM customers WHERE email = '$username'";
@@ -13,7 +14,7 @@ if (isset($_SESSION["username"])) {
   $user_id = mysqli_fetch_array($user_result);
 
 
-  $cart_query = "SELECT product_id FROM cart_item WHERE cart_id = '$user_id[0]'";
+  $cart_query = "SELECT product_id FROM cart_items WHERE user_id = '$username'";
   $cart_result = mysqli_query($conn, $cart_query);
   $rows = mysqli_num_rows($cart_result);
 }
@@ -56,31 +57,30 @@ $product_info = mysqli_fetch_assoc($product_result);
   <div class="col-container">
     <div class="shipping-info">
       <h2 class="bottom">Shipping information </h2>
-      <form>
+      <form id="order-form" action="order.php" method="post">
         <label for="first-name">First name</label>
-        <input type="text" id="first-name" placeholder=""><br>
+        <input type="text" name="first-name" required><br>
         <label for="last-name">Last name</label>
-        <input type="text" id="last-name" placeholder=""><br>
+        <input type="text" name="last-name" required><br>
 
         <label for="adress">Street name and house number</label>
-        <input type="text" id="adress" placeholder=><br>
+        <input type="text" name="adress" required><br>
         <label for="postal-code">Postal code</label>
-        <input type="text" id="postal-code" placeholder=""><br>
-      </form>
-      <div class="contact-info">
-        <h2 class="bottom">Contact information </h2>
-        <form>
+        <input type="text" name="postal-code" required><br>
+     
+        <div class="contact-info">
+          <h2 class="bottom">Contact information </h2>
           <label for="e-mail">E-mail adress</label>
-          <input type="text" id="e-mail" placeholder="">
+          <input type="text" name="e-mail" required>
           <label for="phone">Phone number</label>
-          <input type="text" id="phone" placeholder="">
+          <input type="text" name="phone" required>
           <label><input type="checkbox" id="save-account"> Make an account for faster checkout</label>
           <label><input type="checkbox" id="agree-tos"> I agree to the <a href="#">Terms of Service</a></label>
           <div class="payment">
-            <input type="submit" value="Continue to payment">
+            <input type="submit" value="Buy now"/>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
 
     <div class="cart">
@@ -177,6 +177,7 @@ $product_info = mysqli_fetch_assoc($product_result);
       </div>
     </div>
   </div>
+  
 
   <?php
   include "footer.php";
