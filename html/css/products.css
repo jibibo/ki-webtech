@@ -8,8 +8,8 @@ div.category-checkbox {
   display: inline;
 }
 
-.search-wrapper input[type=text] {
-  padding: 20px;
+#search-input {
+  padding: 5px;
 }
 
 /* products */
