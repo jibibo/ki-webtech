@@ -34,6 +34,8 @@ if (isset($_POST["in_out"])) {
           "INSERT INTO customer_session_tokens ('customer', 'session_token') 
           VALUES ($customer_id, '$session_token')"
         );
+        $name = $customer["first_name"];
+        $status = "Logged in as $name";
         // header("Location: /");
       } else {
         $status = "Invalid password";
@@ -63,6 +65,8 @@ if (isset($_POST["in_out"])) {
 
     setcookie("session_token");
     // if invalid session token OR successfully deleted session token, redirect
+    $status = "Logged out";
+
     // header("Location: /");
   } else {
     // invalid log in/out option, or not logged in & wanted to log out
