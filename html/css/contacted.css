@@ -3,8 +3,10 @@
     padding: 300px 100px;
     justify-content: center;
     align-items: center;
+    display: flex;
 }
 h1,h5{
     align-items: center;
     justify-content: center;
+    display: flex;
 }
