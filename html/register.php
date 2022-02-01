@@ -1,3 +1,14 @@
+<?php
+
+include "db_connect.php";
+
+
+
+
+include "db_disconnect.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,26 +35,25 @@
       <form action="customers.php" method="post" class="formscreen">
         <div class="title">CREATE AN ACCOUNT</div>
         <p class="required"><span>* required field</span>
-        <p>
 
         <div class="register">
-          <input type="text" placeholder="First name" name="fname" required><span> * </span>
+          <input type="text" placeholder="First name" name="first_name" required><span> * </span>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="Last name" name="lname" required><span> * </span>
+          <input type="text" placeholder="Last name" name="last_name" required><span> * </span>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="Phone number" name="phonenumber" required><span> * </span>
+          <input type="tel" placeholder="Phone number" name="phone" required><span> * </span>
         </div>
 
         <div class="register">
-          <input type="email" placeholder="Email address" name="emailaddress" required><span> * </span>
+          <input type="email" placeholder="Email address" name="email" required><span> * </span>
         </div>
 
         <div class="register">
-          <input type="password" placeholder="Password of at least 8 characters" name="psw" required><span> * </span>
+          <input type="password" placeholder="Password (8+ characters)" name="password" required><span> * </span>
         </div>
 
         <div class="register">

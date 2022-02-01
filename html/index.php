@@ -25,17 +25,6 @@ include "user_session.php";
   ?>
 
   <div class="container">
-    <?php
-
-    if ($user_session) {
-      $first_name = $user_session["first_name"];
-      echo <<<END
-      <h2>Signed in as $first_name</h2>
-      END;
-    }
-
-    ?>
-
     <div class="imagecontainer">
       <span class="headertext">Begin the year with Nike</span>
       <img src="https://theplaybook.asia/wp-content/uploads/sites/27/2019/06/cropped-sale_malaysia_nike_com.png" alt="Nike sale" class="nike">

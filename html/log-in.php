@@ -1,7 +1,5 @@
 <?php
 
-// session_start();
-
 include "user_session.php";
 
 include "db_connect.php";
@@ -43,7 +41,6 @@ if (isset($_POST["in_out"])) {
     } else {
       $status = "Email is not registered";
     }
-
   } elseif ($in_out == "out" && isset($_COOKIE["session_token"])) {
     // user should be logged OUT, clear the users session token cookie and db id
     $session_token = htmlspecialchars($_COOKIE["session_token"]);
@@ -126,22 +123,22 @@ if (isset($_POST["in_out"])) {
           <p><a class="text" href="forgot-password.php">Forgot password</a></p>
           <p>Not a member yet? <a class="text" href="register.php">Click here to register!</a></p>
         </div>
+
+        <?php
+        if (isset($_COOKIE["session_token"])) {
+          echo <<<END
+          <div>
+            <form action="log-in.php" method="post" class="formscreen">
+              <input type="hidden" name="in_out" value="out" />
+              <button type="submit" class="logout" title="Logout">Logout</button>
+            </form>
+          </div>
+          END;
+        }
+        ?>
+
       </form>
     </div>
-
-    <?php
-    // if (isset($_SESSION['username'])) {
-    if (isset($_COOKIE["session_token"])) {
-      echo <<<END
-      <form action="log-in.php" method="post" class="formscreen">
-        <div>
-          <input type="hidden" name="in_out" value="out" />
-          <button type="submit" class="logout" title="Logout">Logout</button>
-        </div>
-      </form>
-      END;
-    }
-    ?>
 
   </div>
 

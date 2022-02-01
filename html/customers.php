@@ -164,15 +164,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phonenumber = clean_data($_POST["phonenumber"]);
 
     // check if phone number is a valid number in the Netherlands
-    if (!preg_match("/0[1-9][0-9]{8}/", $phonenumber)) {
+    // src regex: https://stackoverflow.com/a/123666/13216113
+    if (!preg_match("/^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/", $phonenumber)) {
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid phone number');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
         exit;
     }
-
-// /0[1-9][0-9]{8}/ 
 
     $emailaddress = clean_data($_POST["emailaddress"]);
 
