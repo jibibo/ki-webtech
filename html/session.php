@@ -83,7 +83,7 @@ if (isset($_POST["in_out"])) {
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/log-in.css" />
+  <link rel="stylesheet" href="css/session.css" />
 </head>
 
 <body>

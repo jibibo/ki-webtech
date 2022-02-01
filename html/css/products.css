@@ -1,8 +1,18 @@
 .container {
   display: flex;
   flex-direction: column;
-  
+  padding: 0px 20px;
 }
+
+div.category-checkbox {
+  display: inline;
+}
+
+.search-wrapper input[type=text] {
+  padding: 20px;
+}
+
+/* products */
 
 .products {
   display: flex;
@@ -97,4 +107,8 @@
   margin: 2px;
   font-size: 12px;
   bottom: 0;
+}
+
+.product-buttons ion-icon {
+  height: 50px;
 }

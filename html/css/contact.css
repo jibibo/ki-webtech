@@ -33,16 +33,16 @@
   flex-basis: 60%;
   padding: 40px 60px;
 }
-@media (max-width: 600px){
-  .contact_left, .contact_right{
+@media (max-width: 600px) {
+  .contact_left,
+  .contact_right {
     width: 100%;
     display: flex;
     flex-basis: 100%;
   }
-  .contact_box{
+  .contact_box {
     flex-wrap: wrap;
   }
-  
 }
 .contact_right {
   flex-basis: 40%;
@@ -75,9 +75,8 @@ input {
   width: 100%;
   border: 1px solid;
   outline: none;
-  
 }
-.input-form{
+.input-form {
   padding: 6px;
 }
 
@@ -119,7 +118,7 @@ label {
   font-weight: 600;
   color: #37475a;
 }
-a{
+a {
   color: #37475a;
   text-decoration: none;
 }
