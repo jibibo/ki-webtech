@@ -34,7 +34,7 @@
   padding: 40px 60px;
 }
 @media (max-width: 600px){
-  .contact_left, .contact_right{
+  .contact_left, .contact_right, .contact_box{
     width: 100%;
     display: flex;
   }
