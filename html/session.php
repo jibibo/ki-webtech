@@ -95,7 +95,7 @@ if (isset($_POST["in_out"])) {
 
   <div class="container">
     <div class="form">
-      <form action="log-in.php" method="post" class="formscreen">
+      <form action="session.php" method="post" class="formscreen">
         <div class="title">Log in</div>
 
         <?php
@@ -126,11 +126,11 @@ if (isset($_POST["in_out"])) {
       </form>
 
       <?php
-      
+
       if (isset($_COOKIE["session_token"])) {
         echo <<<END
         <div>
-          <form action="log-in.php" method="post" class="formscreen">
+          <form action="session.php" method="post" class="formscreen">
             <input type="hidden" name="in_out" value="out" />
             <button type="submit" class="logout" title="Log out">Log out</button>
           </form>
