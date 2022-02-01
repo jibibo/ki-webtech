@@ -17,13 +17,14 @@
   <?php
   include "navbar.php";
   ?>
- 
+
   <div class="container">
 
     <div class="form">
       <form action="customers.php" method="post" class="formscreen">
         <div class="title">CREATE AN ACCOUNT</div>
-        <p class="required"><span>* required field</span><p>
+        <p class="required"><span>* required field</span>
+        <p>
 
         <div class="register">
           <input type="text" placeholder="First name" name="fname" required><span> * </span>
@@ -34,7 +35,7 @@
         </div>
 
         <div class="register">
-          <input type="tel" placeholder="Phone number" name="phonenumber" required><span> * </span>
+          <input type="text" placeholder="Phone number" name="phonenumber" required><span> * </span>
         </div>
 
         <div class="register">
@@ -70,6 +71,7 @@
           <br></br>
           <a class="text" href="log-in.php">Back to login</a>
         </div>
+      </form>
     </div>
   </div>
 
