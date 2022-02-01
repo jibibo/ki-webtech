@@ -1,5 +1,4 @@
 .container {
-  margin-top: 24px;
   display: flex;
   flex-direction: column;
   padding: 0px 20px;
@@ -7,6 +6,10 @@
 
 div.category-checkbox {
   display: inline;
+}
+
+.container .search-wrapper {
+  margin-top: 24px;
 }
 
 #search-input {
