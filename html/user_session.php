@@ -26,4 +26,6 @@ if (isset($_COOKIE["session_token"])) {
   }
 
   include "db_disconnect.php";
+} else {
+  pre_print("no sestok");
 }
