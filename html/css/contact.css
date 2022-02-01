@@ -33,6 +33,11 @@
   flex-basis: 60%;
   padding: 40px 60px;
 }
+@media (max-width: 600px){
+  .contact_left, .contact_right{
+    width: 100%;
+  }
+}
 .contact_right {
   flex-basis: 40%;
   padding: 40px;
