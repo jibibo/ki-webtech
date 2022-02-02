@@ -17,7 +17,7 @@
     ?>
     <div class="container">
         <div class="form">
-        <?php /*
+        <?php 
         // https://laratutorials.com/php-send-reset-password-link-email/
 
         if($_GET['key'] && $_GET['token'])
@@ -26,22 +26,25 @@
             
             $email = $_GET['key'];
             $token = $_GET['token'];
-            $query = mysqli_query($conn,
-            "SELECT * FROM `users` WHERE `token`='".$token."' and `email`='".$email."';"
-            );
+            $first_query = mysqli_query($conn,"SELECT id FROM customers WHERE email='$email'");
+            $id = mysqli_fetch_assoc($first_query);
+            $query = mysqli_query($conn,"SELECT customer FROM reset_password_tokens WHERE token='$token'");
+            $customer_id = mysqli_fetch_assoc($query);
             
-            if (mysqli_num_rows($query) > 0) {
-                $row= mysqli_fetch_array($query);
-            }
-
+            if ($id != $customer_id) {
+                echo ("<script LANGUAGE='JavaScript'>
+                window.alert('Your emailaddress doesn't match the submitted one.');
+                window.location.href='https://webtech-ki15.webtech-uva.nl/';
+                </script>");
+                exit;
+            } 
             include "db_disconnect.php";
-        } */
+        } 
         ?> 
 
             <form action="update_password.php" method="post" class="formscreen">
             <div class="title">Reset password</div>
-            <input type="hidden" name="email" >
-            <input type="hidden" name="token" >
+            <input type="hidden" name="email" value="<?php echo $email;?>">
             <div class="textbox">
                 <input type="password" placeholder="New Password" name='password' required>
             </div>                
