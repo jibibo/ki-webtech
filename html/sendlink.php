@@ -31,6 +31,11 @@ if(isset($_POST['reset_password']) && $_POST['input_email'])
         $update = mysqli_query($conn,"UPDATE users set  password='" . $password . "', token='" . $token . "' WHERE email='" . $emailId . "'");
         $link = "<a href='https://webtech-ki15.webtech-uva.nl/reset_password.php?key=".$resetmail."&token=".$token."'>Click To Reset password</a>";
 
+        $to_email = 'name @ company . com';
+        $subject = 'Testing PHP Mail';
+        $message = 'This mail is sent using the PHP mail function';
+        $headers = 'From: noreply @ company . com';
+        mail($to_email,$subject,$message,$headers);
         
     }
 

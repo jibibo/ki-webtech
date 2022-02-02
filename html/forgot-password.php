@@ -87,7 +87,7 @@ I
         <div>
           <button type="submit" class="send" name="reset_password">Send</button>
           <br></br>
-          <a class="text" href="log-in.php">Back to login</a>
+          <a class="text" href="session.php">Back to login</a>
         </div>
       </form>
     </div>
