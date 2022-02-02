@@ -3,10 +3,10 @@
     <div class="footer">
       <div class="footer-heading footer-1">
         <h2>ABOUT US</h2>
-        <a href="#">Blog</a>
-        <a href="#">PRODUCTS</a>
-        <a href="#">huppelepup</a>
-        <a href="#">terms of service</a>
+        <a href="https://www.lisanneleeft.nl/mijn-favoriete-blogs/">Blog</a>
+        <a href="products.php">PRODUCTS</a>
+        <a href="">huppelepup</a>
+        <a href="terms.php">terms of service</a>
         <a href="#">delivery</a>
       </div>
       <div class="footer-heading footer-2">
@@ -18,11 +18,11 @@
       </div>
       <div class="footer-heading footer-3">
         <h2>SOCIALS</h2>
-        <a href="#">hyves</a>
-        <a href="#">Instagram</a>
-        <a href="#">habbo</a>
-        <a href="#">twitter</a>
-        <a href="#">facebook</a>
+        <a href="https://hyvesgames.nl/">hyves</a>
+        <a href="https://www.instagram.com/">Instagram</a>
+        <a href="https://www.habbo.nl/registration">habbo</a>
+        <a href="https://twitter.com/?lang=nl">twitter</a>
+        <a href="https://www.facebook.com/">facebook</a>
       </div>
       <div class="footer_emailform">
         <h2>JOIN OUR NEWSLETTER!</h2>
