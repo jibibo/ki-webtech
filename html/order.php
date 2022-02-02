@@ -159,7 +159,7 @@ $order_products_info_joined = join("\n", $order_products_info);
 <body>
   Thank you for your purchase:
   <br />
-  <?php echo $order_products_info_joined ?>
+  <?php echo join("<br />", $order_products_info) ?>
   <?php
 
   include "utils.php";
