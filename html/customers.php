@@ -165,6 +165,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // check if phone number is a valid number in the Netherlands
     // src regex: https://stackoverflow.com/a/123666/13216113
+    // https://regexr.com/3aevr
     if (!preg_match("/^((\+|00(\s|\s?\-\s?)?)31(\s|\s?\-\s?)?(\(0\)[\-\s]?)?|0)[1-9]((\s|\s?\-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$/", $phonenumber)) {
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid phone number');
