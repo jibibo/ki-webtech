@@ -12,16 +12,20 @@
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/contacted.css" />
+  
 </head>
 
 <body>
   <?php
   include "navbar.php";
   ?>
+  <div class="termscontainer">
+      <h1>Waarom ben je hier, niemand kijkt hier naar</h1>
+      <a href="index.php">
+      <button class="termbutton">Klik hier om terug te gaan</button>
+  </div>
 
-  
- 
+
   
 
   <?php
