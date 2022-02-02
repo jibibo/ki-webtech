@@ -50,7 +50,7 @@ if(isset($_POST['reset_password']) && $_POST['input_email'])
         </body>
         </html>
         ";
-        $headers = 'From: uvazon@contact.nl';
+        $headers = "From: uvazon@contact.nl";
         mail($to_email,$subject,$message,$headers);
 
         echo "send";
