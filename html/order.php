@@ -87,7 +87,7 @@ $order_products_info[] = "Total: € $subtotal";
 // update recently created order to show the total price
 mysqli_query(
   $conn,
-  "UPDATE orders SET total_price=$subtotal WHERE id=1;"
+  "UPDATE orders SET total_price=$subtotal WHERE id=$order_id;"
 );
 // clear user's cart cookie
 setcookie("cart");
