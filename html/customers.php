@@ -150,7 +150,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $lname = clean_data($_POST["lname"]);
+    $lname = clean_data($_POST["last_name"]);
 
     // check if last name only consists of whitespaces and letters
     if (!preg_match("/^[a-zA-Z ]+$/", $lname)) {
@@ -161,7 +161,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $phonenumber = clean_data($_POST["phonenumber"]);
+    $phonenumber = clean_data($_POST["phone"]);
 
     // check if phone number is a valid number in the Netherlands
     // src regex: https://stackoverflow.com/a/123666/13216113
@@ -173,7 +173,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $emailaddress = clean_data($_POST["emailaddress"]);
+    $emailaddress = clean_data($_POST["email"]);
 
     // check if email address is valid and well-formed
     if (!filter_var($emailaddress, FILTER_VALIDATE_EMAIL)) {
@@ -184,7 +184,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $psw = clean_data($_POST["psw"]);
+    $psw = clean_data($_POST["password"]);
 
     // check if password contains at least 8 characters
     if (strlen($psw) < 8) {
