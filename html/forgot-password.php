@@ -76,18 +76,18 @@ I
 
   <div class="container">
     <div class="form">
-      <form action="" method="post" class="formscreen">
+      <form action="sendlink.php" method="post" class="formscreen">
         <div class="title">RESET YOUR PASSWORD</div>
         <p class="paragraph">No worries! We will send you an email with instructions to reset your password.</p>
 
         <div class="email">
-          <input type="text" placeholder="Email address" name="email" required>
+          <input type="text" placeholder="Email address" name="input_email" required>
         </div>
 
         <div>
-          <button type="submit" class="send">Send</button>
+          <button type="submit" class="send" name="reset_password">Send</button>
           <br></br>
-          <a class="text" href="log-in.php">Back to login</a>
+          <a class="text" href="session.php">Back to login</a>
         </div>
       </form>
     </div>

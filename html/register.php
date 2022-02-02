@@ -79,11 +79,11 @@ include "db_disconnect.php";
         <div>
           <button class="create" type="submit">Create account!</button>
           <br></br>
-          <a class="text" href="log-in.php">Back to login</a>
+          <a class="text" href="session.php">Back to login</a>
         </div>
       </form>
     </div>
-  </div>
+  </div> 
 
   <?php
   include "footer.php";
