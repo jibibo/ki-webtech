@@ -18,7 +18,7 @@
     <div class="container">
         <div class="title">Reset password</div>
         <div class="form">
-        <?php
+        <?php /*
         if($_GET['key'] && $_GET['token'])
         {
             include "db_connect.php";
@@ -30,11 +30,16 @@
             );
             
             if (mysqli_num_rows($query) > 0) {
-            $row= mysqli_fetch_array($query);
-            ?>
+                $row= mysqli_fetch_array($query);
+            }
+
+            include "db_disconnect.php";
+        } */
+        ?> 
+
             <form action="update_password.php" method="post" class="formscreen">
-            <input type="hidden" name="email" value="<?php echo $email;?>">
-            <input type="hidden" name="token" value="<?php echo $token;?>">
+            <input type="hidden" name="email" >
+            <input type="hidden" name="token" >
             <div class="textbox">
                 <input type="password" placeholder="New Password" name='password' required>
             </div>                
@@ -43,9 +48,6 @@
             </div>
             <button type="submit" name="submit_password" class="login">Change Password</button>
             </form>
-            <?php include "db_disconnect.php";} 
-        }
-        ?>
         </div>
     </div>
     <?php
