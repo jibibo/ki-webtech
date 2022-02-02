@@ -1,16 +1,28 @@
 <?php 
     // https://laratutorials.com/php-send-reset-password-link-email/
 
-    //include "db_connect.php";
+    include "db_connect.php";
 
     //if($_GET['key'] && $_GET['token'])
     //{        
         $email = $_GET["key"];
-        /*$token = $_GET["token"];
-        $first_result = mysqli_query($conn,"SELECT id FROM customers WHERE email='$email'");
-        $id = mysqli_fetch_assoc($first_result);
-        $result = mysqli_query($conn,"SELECT customer FROM reset_password_tokens WHERE token='$token'");
-        $customer_id = mysqli_fetch_assoc($result);
+        $token = $_GET["token"];
+        $first_result = mysqli_query($conn,"SELECT * FROM customers WHERE email='$email'");
+        $result = mysqli_query($conn,"SELECT * FROM reset_password_tokens WHERE token='$token'");
+       
+        if($first_result) {
+            $customer = mysqli_fetch_assoc($first_result);
+            $id = $customer["id"];
+        } 
+
+        if($result)
+        {
+            $customer_reset = mysqli_fetch_assoc($result);
+            $customer_id = $customer_reset["customer"];
+        }
+        //$id = mysqli_fetch_assoc($first_result);
+        //$result = mysqli_query($conn,"SELECT customer FROM reset_password_tokens WHERE token='$token'");
+        //$customer_id = mysqli_fetch_assoc($result);
         
         if ($id != $customer_id) {
             echo ("<script LANGUAGE='JavaScript'>
@@ -18,10 +30,10 @@
             window.location.href='https://webtech-ki15.webtech-uva.nl/';
             </script>");
             exit;
-        } */
+        } 
    // } 
 
-    //include "db_disconnect.php"; 
+    include "db_disconnect.php"; 
 ?> 
 
 <!DOCTYPE html>
@@ -46,7 +58,7 @@
         <div class="form">
             <form action="update_password.php" method="post" class="formscreen">
             <div class="title">Reset password</div>
-            <input type="text" name="email" value="<?php echo $email;?>">
+            <input type="hidden" name="email" value="<?php echo $email;?>">
             <div class="textbox">
                 <input type="password" placeholder="New Password" name='password' required>
             </div>                
