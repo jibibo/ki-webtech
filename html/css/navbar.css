@@ -45,10 +45,15 @@ nav a {
 
   nav li,
   nav .search-wrapper,
-  nav form {
+  nav form,
+  li {
     width: 100%;
     justify-content: center;
     align-items: center;
+  }
+  button {
+    margin-left: 40.5%;
+    margin-right: auto;
   }
 }
 
@@ -131,4 +136,18 @@ nav a.active {
 .sticky {
   top: 0;
   position: sticky;
+}
+
+button {
+  background-color: #febd69;
+  border: none;
+  padding: 0.95rem;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+}
+
+button:hover {
+  background-color: #c28e49;
+  cursor: pointer;
 }
