@@ -24,7 +24,7 @@
     include "db_disconnect.php";
 ?> 
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Reset | UvAzon</title>
