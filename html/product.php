@@ -163,8 +163,8 @@ include "db_disconnect.php";
                       <ion-icon name="heart-outline"></ion-icon>
                     </button>
                   </div> -->
-          <button class="cart-btn shopping-btn">add to cart<ion-icon name="cart-outline"></ion-icon></button>
-          <button class="wishlist-btn shopping-btn">add to wishlist<ion-icon name="heart-outline"></ion-icon></button>
+          <button class="cart-btn shopping-btn">ADD <ion-icon name="cart-outline"></ion-icon></button>
+          <button class="wishlist-btn shopping-btn">ADD <ion-icon name="heart-outline"></ion-icon></button>
         </div>
 
         <span class="description-label">description ―</span>
