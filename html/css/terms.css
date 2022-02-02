@@ -4,6 +4,7 @@
     background-color: white;
     color: #febd69;
     text-align: center;
+    justify-content: center;
 }
 .termscontainer h1{
     align-content: center;
