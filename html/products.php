@@ -106,7 +106,7 @@ include "db_disconnect.php";
   ?>
 
   <div class="container">
-    <div class="products-search-wrapper">
+    <div class="products-left">
       <form action="products.php" method="GET" id="search-form">
 
         <input id="search-input" type="text" placeholder="Search" name="search" />
@@ -147,7 +147,7 @@ include "db_disconnect.php";
       </form>
     </div>
 
-    <div class="products-search-count">
+    <div class="products-right">
 
       <?php
 
@@ -160,50 +160,53 @@ include "db_disconnect.php";
       }
 
       ?>
-    </div>
 
+      <div class="product-list">
 
-    <div class="products">
+        <?php
 
-      <?php
-
-      if ($products_count > 0) {
-        foreach ($products as $product) {
-          $product_id = $product["id"];
-          $product_img = $product["image_url"];
-          $product_name = $product["name"];
-          $product_price = number_format($product["price"], 2);
-          echo <<<END
-          <div class="product-list-item">
-            <div class="product-img-wrapper">
-              <a href="product.php?id=$product_id">
-                <img src="$product_img" />
-              </a>
-            </div>
-            <div>
-              <a class="product-name" href="product.php?id=$product_id">$product_name</a>
-              <div class="product-details">
-                <span class="product-price">&euro; $product_price</span>
-                <div class="product-buttons">
-                  <button class="product-cart">
-                    <ion-icon name="cart-outline"></ion-icon>
-                  </button>
-                  <button class="product-wishlist">
-                    <ion-icon name="heart-outline"></ion-icon>
-                  </button>
+        if ($products_count > 0) {
+          foreach ($products as $product) {
+            $product_id = $product["id"];
+            $product_img = $product["image_url"];
+            $product_name = $product["name"];
+            $product_price = number_format($product["price"], 2);
+            echo <<<END
+            <div class="product-list-item">
+              <div class="product-img-wrapper">
+                <a href="product.php?id=$product_id">
+                  <img src="$product_img" />
+                </a>
+              </div>
+              <div>
+                <a class="product-name" href="product.php?id=$product_id">$product_name</a>
+                <div class="product-details">
+                  <span class="product-price">&euro; $product_price</span>
+                  <div class="product-buttons">
+                    <button class="product-cart">
+                      <ion-icon name="cart-outline"></ion-icon>
+                    </button>
+                    <button class="product-wishlist">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          END;
+            END;
+          }
+        } else {
+          echo "No products found!";
         }
-      } else {
-        echo "No products found!";
-      }
 
-      ?>
+        ?>
+
+      </div>
 
     </div>
+
+
+
   </div>
 
   <?php

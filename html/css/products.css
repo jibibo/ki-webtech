@@ -1,14 +1,27 @@
 .container {
   display: flex;
-  flex-direction: column;
-  padding: 0px 20px;
+  flex-direction: row;
+  padding: 0px 10px;
 }
 
-div.category-checkbox {
-  display: inline;
+@media (max-width: 600px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  .products-left {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
 }
 
-.container .products-search-wrapper {
+.category-checkbox {
+  display: block;
+}
+
+.container .products-left,
+.container .products-right {
   margin-top: 24px;
 }
 
@@ -16,7 +29,7 @@ div.category-checkbox {
   padding: 5px;
 }
 
-.products-search-wrapper button {
+.products-left button {
   background: #febd69;
   width: 100px;
   border: none;
@@ -28,13 +41,23 @@ div.category-checkbox {
   box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
 }
 
-.products-search-wrapper button:hover {
+.products-left button:hover {
   background-color: #ae7c3b;
 }
 
-/* products */
+.products-right {
+  display: flex;
+  flex-direction: column;
+}
 
-.products {
+.products-right > span {
+  display: block;
+  text-align: center;
+}
+
+/* product list */
+
+.product-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
