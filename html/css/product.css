@@ -78,12 +78,18 @@
 
 .cart-btn {
   flex: 1 1 0px;
-  background-color: orange;
+  background-color:#febd69;
+  color: #37475a;
+  border: none;
+  outline: none;
 }
 
 .wishlist-btn {
   flex: 1 1 0px;
-  background-color: red;
+  background-color:#37475a;
+  color: #febd69;
+  border: none;
+  outline: none;
 }
 
 /* more product info, description etc */
