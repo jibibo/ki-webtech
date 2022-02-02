@@ -14,6 +14,8 @@ if (
 }
 
 // get order info
+
+/*
 $first_name = htmlspecialchars($_POST["first_name"]);
 $last_name = htmlspecialchars($_POST["last_name"]);
 $address = htmlspecialchars($_POST["address"]);
@@ -21,8 +23,98 @@ $zip = htmlspecialchars($_POST["zip"]);
 $country = htmlspecialchars($_POST["country"]);
 $email = htmlspecialchars($_POST["email"]);
 $phonenumber = htmlspecialchars($_POST["phonenumber"]);
+*/
 
-// INPUT VALIDATION
+// input validation and order info
+
+function clean_data($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+} 
+
+$first_name = clean_data($_POST["first_name"]);
+
+  // check if first name only consists of whitespaces and letters
+  if (!preg_match("/^[a-zA-Z ]+$/", $first_name)) {
+      echo ("<script LANGUAGE='JavaScript'>
+      window.alert('Please enter a valid name');
+      window.location.href='https://webtech-ki15.webtech-uva.nl/checkout.php';
+      </script>");
+      exit;
+  }
+
+  $last_name = clean_data($_POST["last_name"]);
+
+  // check if last name only consists of whitespaces and letters
+  if (!preg_match("/^[a-zA-Z ]+$/", $last_name)) {
+      echo ("<script LANGUAGE='JavaScript'>
+      window.alert('Please enter a valid name');
+      window.location.href='https://webtech-ki15.webtech-uva.nl/checkout.php';
+      </script>");
+      exit;
+  }
+
+	$address = clean_data($_POST["address"]);
+
+    // check if address is a valid address in the Netherlands
+    if (!preg_match("/^([1-9][e][\s])*([a-zA-Z]+(([\.][\s])|([\s]))?)+[1-9][0-9]*(([-][1-9][0-9]*)|([\s]?[a-zA-Z]+))?$/i", $address)) {
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Please enter a valid address');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/checkout.php';
+        </script>");
+        exit;
+    }
+
+    $zip = clean_data($_POST["zip"]);
+
+    // check if zipcode is a valid zipcode in the Netherlands
+    if (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i", $zip)) {
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Please enter a valid zipcode');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/checkout.php';
+        </script>");
+        exit;
+    }   
+    
+     $country = clean_data($_POST["country"]);
+
+    // check if country only consists of whitespaces and letters
+    if (!preg_match("/^[a-zA-Z ]+$/", $country)) {
+        $country_err = "Please enter a valid country";
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Please enter a valid country');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/checkout.php';
+        </script>");
+        exit;
+    }
+
+    $email = clean_data($_POST["email"]);
+
+    // check if email address is valid and well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Please enter a valid email address');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/checkout.php';
+        </script>");
+        exit;
+    }
+
+    $phonenumber = clean_data($_POST["phonenumber"]);
+
+    // check if phone number is a valid number in the Netherlands
+    // src regex: https://stackoverflow.com/a/123666/13216113
+    // https://regexr.com/3aevr
+    if (!preg_match("/^((\+|00(\s|\s?\-\s?)?)31(\s|\s?\-\s?)?(\(0\)[\-\s]?)?|0)[1-9]((\s|\s?\-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$/", $phonenumber)) {
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Please enter a valid phone number');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/checkout.php';
+        </script>");
+        exit;
+    }
+    // /^((\+|00(\s|\s?\-\s?)?)31(\s|\s?\-\s?)?(\(0\)[\-\s]?)?|0)[1-9]((\s|\s?\-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$/gm
+
 
 // create order in db
 mysqli_query(
