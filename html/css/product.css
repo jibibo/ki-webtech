@@ -321,3 +321,54 @@
   display: flex;
   justify-content: space-between;
 }
+.cart{
+  position: fixed;
+  float: left;
+  border: 1px solid black;
+  z-index: 10;
+  background-color: white;
+  width: 200px;
+  transform: scale(0);
+}
+.modal.active{
+  transform: scale(1);
+}
+.cart-header{
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+
+}
+.cart-header .cart-title{
+  font-size: 1.25rem;
+  font: bold;
+
+}
+.cart-header .close-button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background:none;
+  font-size: 1.25rem;
+  font: bold;
+
+}
+.carting{
+  padding: 10px 15px;
+}
+#overlay{
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0, .5);
+  pointer-events: none;
+}
+#overlay.active{
+  opacity: 1;
+  pointer-events: all;
+}

@@ -119,6 +119,8 @@ include "db_disconnect.php";
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/product.css" />
   <script src="js/clickCart.js"></script>
+  <script src="js/cart.js"></script>
+
 </head>
 
 <body>
@@ -163,7 +165,18 @@ include "db_disconnect.php";
                       <ion-icon name="heart-outline"></ion-icon>
                     </button>
                   </div> -->
-          <button class="cart-btn shopping-btn" onclick="clickCart(<?php echo $product_id ?>)">ADD <ion-icon name="cart-outline"></ion-icon></button>
+          <button data-modal-target="#modal" class="cart-btn shopping-btn" onclick="clickCart(<?php echo $product_id ?>)">ADD <ion-icon name="cart-outline"></ion-icon></button>
+          <div class="modal" id="modal">
+            <div class="cart-header">
+              <div class="cart-title">CART</div>
+              <button data-close-button class="close-button">&times;</button>
+
+            </div>
+            <div class="carting">
+
+            </div>
+          </div>
+          <div id="overlay"></div>
           <button class="wishlist-btn shopping-btn">ADD <ion-icon name="heart-outline"></ion-icon></button>
         </div>
 
