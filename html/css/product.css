@@ -72,6 +72,7 @@
 .shopping-btns button ion-icon{
   cursor: pointer;
   font-size: 1.2em;
+  margin-top: 5px;
 }
 
 .cart-btn {
