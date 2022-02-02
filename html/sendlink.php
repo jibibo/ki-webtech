@@ -28,7 +28,7 @@ if(isset($_POST['reset_password']) && $_POST['input_email'])
         </script>");
         exit;
     }
-    $query = mysqli_query($conn,"SELECT * FROM customers WHERE email='$resetemail'");
+    $query = mysqli_query($conn,"SELECT * FROM customers WHERE email='$resetmail'");
 
     $row= mysqli_fetch_array($query);
 
