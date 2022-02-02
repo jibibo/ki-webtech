@@ -96,14 +96,6 @@ setcookie("cart");
 $order_products_info_joined = join("\n", $order_products_info);
 echo $order_products_info_joined;
 
-echo <<<END
-<script>
-window.alert("$order_products_info_joined");
-window.location.href = "/";
-</script>
-END;
-
-
 
 
 // if (isset($_SESSION['username'])) {
@@ -156,3 +148,19 @@ END;
 // {
 // unset($_SESSION['cart']);
 // }
+
+?>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+  Thank you for your purchase:
+  <br />
+  <?php echo $order_products_info_joined ?>
+</body>
+
+</html>
