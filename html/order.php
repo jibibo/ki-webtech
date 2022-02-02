@@ -160,6 +160,13 @@ $order_products_info_joined = join("\n", $order_products_info);
   Thank you for your purchase:
   <br />
   <?php echo $order_products_info_joined ?>
+  <?php
+
+  include "utils.php";
+
+  pre_print($product_counts);
+
+  ?>
 </body>
 
 </html>
