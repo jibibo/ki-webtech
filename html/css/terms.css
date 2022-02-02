@@ -3,10 +3,12 @@
     height: 800px;
     background-color: white;
     color: #febd69;
+    align-items: center;
+    justify-content: center;
 }
 
 .termbutton{
-    background: #febd69;
+  background: #febd69;
   width: 100px;
   border: none;
   outline: none;
