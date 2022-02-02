@@ -23,8 +23,8 @@ $phonenumber = htmlspecialchars($_POST["phonenumber"]);
 // create order in db
 mysqli_query(
   $conn,
-  "INSERT INTO orders (first_name, last_name, address, zip, country, email, phonenumber, total_price) 
-  VALUES ('$first_name', '$last_name', '$address', '$zip', '$country', '$email', '$phonenumber', -1)"
+  "INSERT INTO orders ('first_name', 'last_name', 'address', 'zip', 'country', 'email', 'phonenumber') 
+  VALUES ('$first_name', '$last_name', '$address', '$zip', '$country', '$email', '$phonenumber')"
 );
 
 // get the newly generated order id
