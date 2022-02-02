@@ -19,8 +19,6 @@
   ?>
 
   <div class="contact-container">
-    <!-- <p>If you have any questions about you product or order, please fill in the following information</p> --> -->
-
     <div class="contact_box">
       <div class="contact_left">
         <h3>Please fill in your information</h3>
