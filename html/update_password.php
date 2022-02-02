@@ -25,8 +25,8 @@ if(isset($_POST['submit_password'])) {
     // if both passwords doesn't contain at least 8 characters, print error message
     if (strlen($pass) < 8 || strlen($confirm) < 8) {
         echo ("<script LANGUAGE='JavaScript'>
-        window.alert('The password should contain at least 8 characters');
-        window.location.href='https://webtech-ki15.webtech-uva.nl/reset_password.php';
+        window.alert('The password should contain at least 8 characters, please try again');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/forgot-password.php';
         </script>");
         exit;
     }
@@ -47,7 +47,7 @@ if(isset($_POST['submit_password'])) {
     } else {
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('Something went wrong, please try again.');
-        window.location.href='https://webtech-ki15.webtech-uva.nl/reset_password.php';
+        window.location.href='https://webtech-ki15.webtech-uva.nl/forgot-password.php';
         </script>");
         exit;
     }
