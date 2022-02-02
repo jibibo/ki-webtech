@@ -30,6 +30,7 @@ mysqli_query(
 
 // get the newly generated order id
 $order_id = mysqli_insert_id($conn);
+echo "created id $order_id <br/>";
 
 // get ordered products (stored in cookie)
 $cartcookie = htmlspecialchars($_COOKIE["cart"]);
@@ -91,6 +92,8 @@ setcookie("cart");
 
 // alert the user of the order info
 $order_products_info_joined = join("\n", $order_products_info);
+echo $order_products_info_joined;
+
 echo <<<END
 <script>
 window.alert("$order_products_info_joined");
