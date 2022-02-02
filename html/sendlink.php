@@ -33,9 +33,9 @@ if(isset($_POST['reset_password']) && $_POST['input_email'])
     $row= mysqli_fetch_array($query);
 
     if($row) {
-        $token = md5($resetmail).rand(10,9999);
-        $query = "INSERT INTO reset_password_tokens (token, customer) 
-        VALUES ('$token', '$id')";
+        $token = bin2hex(random_bytes(32));
+        $id = $customer["id"];
+        mysqli_query($conn, "INSERT INTO reset_password_tokens (token, customer) VALUES ('$token', '$id')");
 
         // $update = mysqli_query($conn,"UPDATE users set password='" . $password . "', token='" . $token . "' WHERE email='" . $resetmail . "'");
         $link = "Click on the following link to reset your password: https://webtech-ki15.webtech-uva.nl/reset_password.php?key=".$resetmail."&token=".$token."";
