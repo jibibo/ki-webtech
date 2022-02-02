@@ -27,6 +27,7 @@
 
 #search-input {
   padding: 5px;
+  margin-bottom: 8px;
 }
 
 .products-left button {
@@ -109,6 +110,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 .product-buttons {
   flex-wrap: wrap;
   display: flex;
@@ -121,16 +123,7 @@
   align-items: flex-end;
   bottom: 0;
 }
-.product-buttons .product-buy {
-  background-color: #fff;
-  color: #37475a;
-  outline: #37475a;
-  border: #37475a;
-  cursor: pointer;
-  margin: 2px;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
+
 .product-buttons .product-cart {
   background-color: #fff;
   color: #37475a;
@@ -141,6 +134,7 @@
   font-size: 12px;
   bottom: 0;
 }
+
 .product-buttons .product-wishlist {
   background-color: #fff;
   color: #37475a;
@@ -153,5 +147,5 @@
 }
 
 .product-buttons ion-icon {
-  height: 50px;
+  font-size: 24px;
 }
