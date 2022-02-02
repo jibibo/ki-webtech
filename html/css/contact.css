@@ -19,6 +19,7 @@
     width: 100%;
     display: flex;
     flex-basis: 100%;
+    flex-grow: 1;
   }
   .contact_box {
     flex-wrap: wrap;
