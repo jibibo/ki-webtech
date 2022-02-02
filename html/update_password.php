@@ -27,9 +27,21 @@ if(isset($_POST['submit_password'])
     $hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
 
     // $query = mysqli_query($conn,"SELECT password FROM customers WHERE email='$email'");
-    $query = mysqli_query($conn,"UPDATE customers SET password='$hashed_pass' WHERE email='$email'");
+    $result = mysqli_query($conn,"UPDATE customers SET password='$hashed_pass' WHERE email='$email'");
 
-    
+    if (result) {
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('The password should contain at least 8 characters');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/reset_password.php';
+        </script>");
+        exit;
+    } else
+    {
+
+    }
+
+
+
 
 
 }
