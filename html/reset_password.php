@@ -18,6 +18,8 @@
     <div class="container">
         <div class="form">
         <?php /*
+        // https://laratutorials.com/php-send-reset-password-link-email/
+
         if($_GET['key'] && $_GET['token'])
         {
             include "db_connect.php";
