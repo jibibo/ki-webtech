@@ -151,9 +151,9 @@ include "db_disconnect.php";
         </span>
 
         <div class="shopping-btns">
-          <form method="post">
+          <!-- <form method="post">
             <button formaction="add_cart.php" class="cart-btn shopping-btn">+ Cart</button>
-          </form>
+          </form> -->
           <button class="cart-btn shopping-btn">+ Cart</button>
           <button class="wishlist-btn shopping-btn">+ Wishlist</button>
         </div>
