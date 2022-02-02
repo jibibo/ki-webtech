@@ -1,20 +1,30 @@
 <?php 
-    // https://laratutorials.com/php-send-reset-password-link-email/
+    // https://laratutorials.com/php-send-reset-password-link-email/ --> ter inspiratie gebruikt
 
+    // connect with database
     include "db_connect.php";
 
     //if($_GET['key'] && $_GET['token'])
-    //{        
+    //{
+        
+        // get key value from url
         $email = $_GET["key"];
+        // get token value from url
         $token = $_GET["token"];
+
+        // select everything from customers table where the given email is the same
         $first_result = mysqli_query($conn,"SELECT * FROM customers WHERE email='$email'");
+
+        // select everything from reset_password_tokens where the given token is the samen
         $result = mysqli_query($conn,"SELECT * FROM reset_password_tokens WHERE token='$token'");
        
+        // if query succeeds, get customer id from customers table
         if($first_result) {
             $customer = mysqli_fetch_assoc($first_result);
             $id = $customer["id"];
         } 
 
+        // if query succeeds, get customer id from reset_password_tokens table
         if($result)
         {
             $customer_reset = mysqli_fetch_assoc($result);
@@ -24,16 +34,18 @@
         //$result = mysqli_query($conn,"SELECT customer FROM reset_password_tokens WHERE token='$token'");
         //$customer_id = mysqli_fetch_assoc($result);
         
+        // if those two customer id's do not match, print error message and return to forgot password page
         if ($id != $customer_id) {
             echo ("<script LANGUAGE='JavaScript'>
             window.alert('Your emailaddress doesn't match the submitted one.');
-            window.location.href='https://webtech-ki15.webtech-uva.nl/';
+            window.location.href='https://webtech-ki15.webtech-uva.nl/forgot-password.php';
             </script>");
             exit;
         } 
    // } 
 
-    include "db_disconnect.php"; 
+   // disconnect database
+   include "db_disconnect.php"; 
 ?> 
 
 <!DOCTYPE html>
