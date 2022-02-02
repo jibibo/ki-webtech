@@ -3,8 +3,7 @@
     height: 800px;
     background-color: white;
     color: #febd69;
-    align-content: center;
-    justify-items: center;
+    text-align: center;
 }
 .termscontainer h1{
     align-content: center;
