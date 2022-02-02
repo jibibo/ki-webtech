@@ -20,7 +20,6 @@ if(isset($_POST['submit_password'])) {
     if (strlen($pass) < 8 || strlen($confirm) < 8) {
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('The password should contain at least 8 characters');
-        window.location.href='https://webtech-ki15.webtech-uva.nl/reset_password.php';
         </script>");
         exit;
     }
