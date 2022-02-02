@@ -16,8 +16,8 @@
     include "navbar.php";
     ?>
     <div class="container">
-        <div class="title">Reset password</div>
         <div class="form">
+        <div class="title">Reset password</div>
         <?php /*
         if($_GET['key'] && $_GET['token'])
         {
