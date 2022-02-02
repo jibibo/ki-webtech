@@ -8,6 +8,8 @@ function clean_data($data) {
     return $data;
 } 
 
+$pass="" = $confirm = "";
+
 if(isset($_POST['submit_password']) {
   $email=clean_data($_POST['email']);
   $pass = clean_data($_POST["password"]);
