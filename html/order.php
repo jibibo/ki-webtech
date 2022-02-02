@@ -34,7 +34,7 @@ function clean_data($data) {
     return $data;
 } 
 
-$fname = clean_data($_POST["first_name"]);
+$first_name = clean_data($_POST["first_name"]);
 
   // check if first name only consists of whitespaces and letters
   if (!preg_match("/^[a-zA-Z ]+$/", $fname)) {
@@ -45,7 +45,7 @@ $fname = clean_data($_POST["first_name"]);
       exit;
   }
 
-  $lname = clean_data($_POST["last_name"]);
+  $last_name = clean_data($_POST["last_name"]);
 
   // check if last name only consists of whitespaces and letters
   if (!preg_match("/^[a-zA-Z ]+$/", $lname)) {
@@ -67,7 +67,7 @@ $fname = clean_data($_POST["first_name"]);
         exit;
     }
 
-    $zipcode = clean_data($_POST["zip"]);
+    $zip = clean_data($_POST["zip"]);
 
     // check if zipcode is a valid zipcode in the Netherlands
     if (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i", $zipcode)) {
@@ -90,7 +90,7 @@ $fname = clean_data($_POST["first_name"]);
         exit;
     }
 
-    $emailaddress = clean_data($_POST["email"]);
+    $email = clean_data($_POST["email"]);
 
     // check if email address is valid and well-formed
     if (!filter_var($emailaddress, FILTER_VALIDATE_EMAIL)) {
