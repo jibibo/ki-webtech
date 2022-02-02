@@ -18,19 +18,19 @@
   include "navbar.php";
   ?>
   <div class="termscontainer">
-      <p>IRELAND - 2-3 DAYS
+      <p>IRELAND - 2-3 DAYS<br><br>
 
-         USA - NOW EXPRESS AS STANDARD - WITHIN 4 WORKING DAYS
+         USA - NOW EXPRESS AS STANDARD - WITHIN 4 WORKING DAYS<br><br>
 
-         GERMANY - 4-5 DAYS
+         GERMANY - 4-5 DAYS<br><br>
 
-         NL, DENMARK, FRANCE, BELGIUM, SWEDEN, AUSTRIA - 4-6 DAYS
+         NL, DENMARK, FRANCE, BELGIUM, SWEDEN, AUSTRIA - 4-6 DAYS<br><br>
 
-         SPAIN, ITALY, PORTUGAL, NORWAY, SWITZERLAND - 5-7 DAYS
+         SPAIN, ITALY, PORTUGAL, NORWAY, SWITZERLAND - 5-7 DAYS<br><br>
 
-         AUSTRALIA - 6-9 DAYS
+         AUSTRALIA - 6-9 DAYS<br><br>
 
-         ROW - 6-12 DAYS (allow longer in certain places)</p>
+         ROW - 6-12 DAYS (allow longer in certain places)<br><br></p>
       <a href="index.php">
       <button class="termbutton">Klik hier om terug te gaan</button>
   </div>
