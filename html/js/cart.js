@@ -1,5 +1,6 @@
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const openModalButtons = document.querySelectorAll('[data-close-button]')
+console.log(openModalButtons);
 const overlay = document.getElementById('overlay')
 
 openModalButtons.forEach(button => {
