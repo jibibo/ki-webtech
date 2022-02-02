@@ -81,11 +81,11 @@ I
         <p class="paragraph">No worries! We will send you an email with instructions to reset your password.</p>
 
         <div class="email">
-          <input type="text" placeholder="Email address" name="email" required>
+          <input type="text" placeholder="Email address" name="input_email" required>
         </div>
 
         <div>
-          <button type="submit" class="send">Send</button>
+          <button type="submit" class="send" name="reset_password">Send</button>
           <br></br>
           <a class="text" href="log-in.php">Back to login</a>
         </div>
