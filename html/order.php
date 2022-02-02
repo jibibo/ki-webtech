@@ -37,7 +37,7 @@ function clean_data($data) {
 $first_name = clean_data($_POST["first_name"]);
 
   // check if first name only consists of whitespaces and letters
-  if (!preg_match("/^[a-zA-Z ]+$/", $fname)) {
+  if (!preg_match("/^[a-zA-Z ]+$/", $first_name)) {
       echo ("<script LANGUAGE='JavaScript'>
       window.alert('Please enter a valid name');
       window.location.href='https://webtech-ki15.webtech-uva.nl/checkout.php';
@@ -48,7 +48,7 @@ $first_name = clean_data($_POST["first_name"]);
   $last_name = clean_data($_POST["last_name"]);
 
   // check if last name only consists of whitespaces and letters
-  if (!preg_match("/^[a-zA-Z ]+$/", $lname)) {
+  if (!preg_match("/^[a-zA-Z ]+$/", $last_name)) {
       echo ("<script LANGUAGE='JavaScript'>
       window.alert('Please enter a valid name');
       window.location.href='https://webtech-ki15.webtech-uva.nl/checkout.php';
@@ -70,7 +70,7 @@ $first_name = clean_data($_POST["first_name"]);
     $zip = clean_data($_POST["zip"]);
 
     // check if zipcode is a valid zipcode in the Netherlands
-    if (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i", $zipcode)) {
+    if (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i", $zip)) {
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid zipcode');
         window.location.href='https://webtech-ki15.webtech-uva.nl/checkout.php';
@@ -93,7 +93,7 @@ $first_name = clean_data($_POST["first_name"]);
     $email = clean_data($_POST["email"]);
 
     // check if email address is valid and well-formed
-    if (!filter_var($emailaddress, FILTER_VALIDATE_EMAIL)) {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid email address');
         window.location.href='https://webtech-ki15.webtech-uva.nl/checkout.php';
