@@ -53,8 +53,8 @@ if (isset($_POST["in_out"])) {
     if ($query_result) {
       mysqli_query(
         $conn,
-        "DELETE FROM customer_session_tokens cst 
-        WHERE cst.session_token='$session_token'"
+        "DELETE FROM customer_session_tokens 
+        WHERE session_token='$session_token'"
       );
     }
 

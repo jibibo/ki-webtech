@@ -70,11 +70,6 @@
   height: 50px;
 }
 
-.buy-btn {
-  flex: 2 2 0px;
-  min-width: 100px;
-}
-
 .cart-btn {
   flex: 1 1 0px;
   background-color: orange;
@@ -157,13 +152,10 @@
 
 /* product reviews */
 
-/* .product-reviews {
-  border: 1px solid green;
-} */
-
-/* .make-review {
-  border: 1px solid olivedrab;
-} */
+.make-review .sign-in {
+  text-align: center;
+  margin: 20px 0;
+}
 
 .reviews-header {
   text-align: center;
@@ -179,9 +171,20 @@
   resize: vertical;
 }
 
-/* .customer-reviews {
-  border: 1px solid palevioletred;
-} */
+.review-form button {
+  background: #febd69;
+  width: 100px;
+  border: none;
+  outline: none;
+  height: 35px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+}
+
+.review-form button:hover {
+  background-color: #ae7c3b;
+}
 
 .review {
   display: flex;
@@ -238,6 +241,46 @@
   border-radius: 1rem;
   box-shadow: 0.5rem 0.5rem 0.5rem gray;
 }
+
+.product-buttons {
+  flex-wrap: wrap;
+  display: flex;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  color: #febd69;
+  font-size: 0.5em;
+  float: right;
+  align-items: flex-end;
+  bottom: 0;
+}
+
+.product-buttons .product-cart {
+  background-color: #fff;
+  color: #37475a;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin: 2px;
+  font-size: 12px;
+  bottom: 0;
+}
+
+.product-buttons .product-wishlist {
+  background-color: #fff;
+  color: #37475a;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin: 2px;
+  font-size: 12px;
+  bottom: 0;
+}
+
+.product-buttons ion-icon {
+  font-size: 24px;
+}
+
 
 /* img & img wrapper */
 .product-list-item .product-img-wrapper {

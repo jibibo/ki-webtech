@@ -1,7 +1,8 @@
 <?php
 
+include "user_session.php";
+
 include "db_connect.php";
-include "utils.php";
 
 // rediret if "id" parameter is not set
 if (!isset($_GET["id"])) {
@@ -130,10 +131,9 @@ include "db_disconnect.php";
           <a href="#reviews">
             <?php
             if ($rating) {
-              echo "
-              <span class='stars'>$rating</span>
-              ($review_count review(s))
-              ";
+              echo <<<END
+              <span class="stars">$rating</span> ($review_count review(s))
+              END;
             } else {
               echo "No reviews yet!";
             }
@@ -142,9 +142,8 @@ include "db_disconnect.php";
         </span>
 
         <div class="shopping-btns">
-          <button class="buy-btn shopping-btn">BUY NOW</button>
           <form method="post">
-          <button formaction="add_cart.php" class="cart-btn shopping-btn">+ Cart</button>
+            <button formaction="add_cart.php" class="cart-btn shopping-btn">+ Cart</button>
           </form>
           <button class="wishlist-btn shopping-btn">+ Wishlist</button>
         </div>
@@ -155,12 +154,11 @@ include "db_disconnect.php";
         <div class="categories">
           <?php
           foreach ($product_category_names as $category_name) {
-            echo "
-            <a href='products.php'>$category_name</a>
-            ";
+            echo <<<END
+            <a href="products.php">$category_name</a>
+            END;
           }
           ?>
-          <!-- <a href="products.php">[category name]</a> -->
         </div>
 
         <span class="product-id">(prod. nr.: <?php echo $product_id ?>)</span>
@@ -180,31 +178,34 @@ include "db_disconnect.php";
             $product_img = $product["image_url"];
             $product_name = $product["name"];
             $product_price = number_format($product["price"], 2);
-            echo "
-            <div class='product-list-item'>
-              <div class='product-img-wrapper'>
-                <a href='product.php?id=$product_id'>
-                  <img src='$product_img' />
+            echo <<<END
+            <div class="product-list-item">
+              <div class="product-img-wrapper">
+                <a href="product.php?id=$product_id">
+                  <img src="$product_img" />
                 </a>
               </div>
               <div>
-                <a class='product-name' href='product.php?id=$product_id'>$product_name</a>
-                <div class='product-details'>
-                  <span class='product-price'>&euro; $product_price</span>
-                  <div class='product-buttons'>
-                    <button class='product-buy'>Buy</button>
-                    <button class='product-cart'>Cart</button>
-                    <button class='product-wishlist'>Wishlist</button>
+                <a class="product-name" href="product.php?id=$product_id">$product_name</a>
+                <div class="product-details">
+                  <span class="product-price">&euro; $product_price</span>
+                  <div class="product-buttons">
+                    <button class="product-cart">
+                      <ion-icon name="cart-outline"></ion-icon>
+                    </button>
+                    <button class="product-wishlist">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
-            ";
+            END;
           }
         } else {
-          echo "
+          echo <<<END
           <h3><em>No related products</em></h3>
-          ";
+          END;
         }
         ?>
 
@@ -214,14 +215,27 @@ include "db_disconnect.php";
     <div class="product-reviews">
       <h2 class="reviews-header">Customer reviews</h2>
 
-      <div class="make-review padding">
-        <form class="review-form" action="review.php" method="GET">
-          <label for="rating">Stars:</label>
-          <input id="rating" type="number" name="rating" min="1" max="5">
-          <textarea name="review" placeholder="Write us a review... (optional)"></textarea>
-          <input type="submit" value="Submit review">
-        </form>
-      </div>
+      <?php
+
+      if ($user_session) {
+        echo <<<END
+        <div class="make-review padding">
+          <form class="review-form" action="review.php" method="get">
+            <input id="rating" type="number" name="rating" min="1" max="5" placeholder="*?" required>
+            <input type="text" name="review" placeholder="Write us a review... (optional)">
+            <button type="submit">Submit review</button>
+          </form>
+        </div>
+        END;
+      } else {
+        echo <<<END
+        <div class="make-review">
+          <div class="sign-in">Please sign in to submit a review</div>
+        </div>
+        END;
+      }
+
+      ?>
 
       <div class="customer-reviews" id="reviews">
         <?php
@@ -232,35 +246,27 @@ include "db_disconnect.php";
             $review_body = $review["body"];
             $review_author = $review["first_name"] . " " . $review["last_name"];
 
-            echo "
-            <div class='review padding'>
-              <div class='review-top'>
-                <span class='review-rating'>$review_rating ★</span>
-                <span class='review-title'>&quot;$review_title&quot;</span>
+            echo <<<END
+            <div class="review padding">
+              <div class="review-top">
+                <span class="review-rating">$review_rating ★</span>
+                <span class="review-title">&quot;$review_title&quot;</span>
               </div>
-              <p class='review-body'>$review_body</p>
-              <span class='review-author'>― $review_author</span>
+              <p class="review-body">$review_body</p>
+              <span class="review-author">― $review_author</span>
             </div>
-            ";
+            END;
           }
         } else {
-          echo "
-          <div class='review'>
-            <div class='review-top'>
-              <span class='no-reviews'>No reviews yet!</span>
+          echo <<<END
+          <div class="review">
+            <div class="review-top">
+              <span class="no-reviews">No reviews yet!</span>
             </div>
-          </div>";
+          END;
         }
         ?>
 
-        <!-- <div class="review padding">
-          <div class="review-top">
-            <span class="review-rating">[review rating]</span>
-            <span class="review-title">"[review title]"</span>
-          </div>
-          <p class="review-body">[review body review body review body]</p>
-          <span class="review-author">― [review author name]</span>
-        </div> -->
       </div>
     </div>
   </div>
