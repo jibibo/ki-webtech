@@ -1,6 +1,5 @@
 <?php
 
-include "user_session.php";
 
 ?>
 
