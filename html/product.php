@@ -154,8 +154,17 @@ include "db_disconnect.php";
           <!-- <form method="post">
             <button formaction="add_cart.php" class="cart-btn shopping-btn">+ Cart</button>
           </form> -->
-          <button class="cart-btn shopping-btn">+ Cart</button>
-          <button class="wishlist-btn shopping-btn">+ Wishlist</button>
+
+          <!-- <div class="product-buttons">
+                    <button class="product-cart">
+                      <ion-icon name="cart-outline"></ion-icon>
+                    </button>
+                    <button class="product-wishlist">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+                  </div> -->
+          <button class="cart-btn shopping-btn"><ion-icon name="cart-outline"></ion-icon></button>
+          <button class="wishlist-btn shopping-btn"><ion-icon name="heart-outline"></ion-icon></button>
         </div>
 
         <span class="description-label">description ―</span>
