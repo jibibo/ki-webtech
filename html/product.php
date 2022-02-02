@@ -165,8 +165,8 @@ include "db_disconnect.php";
                       <ion-icon name="heart-outline"></ion-icon>
                     </button>
                   </div>
-                class="cart-btn shopping-btn" onclick="clickCart(<?php echo $product_id ?>)" -->
-          <button data-modal-target="#modal" class="cart-btn shopping-btn">ADD <ion-icon name="cart-outline"></ion-icon></button>
+                class="cart-btn shopping-btn" onclick="clickCa -->
+          <button data-modal-target="#modal" class="cart-btn shopping-btn" onclick="clickCart(<?php echo $product_id ?>)">ADD <ion-icon name="cart-outline"></ion-icon></button>
           <div class="modal" id="modal">
             <div class="cart-header">
               <div class="cart-title">CART</div>
