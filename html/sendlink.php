@@ -21,6 +21,13 @@ if(isset($_POST['reset_password']) && $_POST['input_email'])
 {
     $resetmail = clean_data($_POST['input_email']);
 
+    if (!filter_var($resetmail, FILTER_VALIDATE_EMAIL)) {
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Please enter a valid email address');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
+        </script>");
+        exit;
+    }
     $query = mysqli_query($conn,"SELECT * FROM customers WHERE email='" . $resetmail . "'");
 
     $row= mysqli_fetch_array($query);
@@ -29,18 +36,17 @@ if(isset($_POST['reset_password']) && $_POST['input_email'])
         $token = md5($resetmail).rand(10,9999);
 
         $update = mysqli_query($conn,"UPDATE users set  password='" . $password . "', token='" . $token . "' WHERE email='" . $emailId . "'");
-        $link = "<a href='https://webtech-ki15.webtech-uva.nl/reset_password.php?key=".$resetmail."&token=".$token."'>Click To Reset password</a>";
+        $link = "<a href='https://webtech-ki15.webtech-uva.nl/index.php?key=".$resetmail."&token=".$token."'>Click To Reset password</a>";
 
-        $to_email = 'name @ company . com';
-        $subject = 'Testing PHP Mail';
-        $message = 'This mail is sent using the PHP mail function';
-        $headers = 'From: noreply @ company . com';
+        $to_email = "$resetmail";
+        $subject = "Reset password Uvazon";
+        $message = "$link";
+        $headers = 'From: uvazon@contact.nl';
         mail($to_email,$subject,$message,$headers);
         
     }
-
-
-
 }
+
+include "db_disconnect.php";
 
 ?>

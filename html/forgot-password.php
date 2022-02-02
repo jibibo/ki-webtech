@@ -76,7 +76,7 @@ I
 
   <div class="container">
     <div class="form">
-      <form action="" method="post" class="formscreen">
+      <form action="sendlink.php" method="post" class="formscreen">
         <div class="title">RESET YOUR PASSWORD</div>
         <p class="paragraph">No worries! We will send you an email with instructions to reset your password.</p>
 
