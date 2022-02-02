@@ -10,10 +10,11 @@ function clean_data($data) {
 
 $pass = $confirm = "";
 
-if(isset($_POST['submit_password']) {
-  $email=clean_data($_POST['email']);
-  $pass = clean_data($_POST["password"]);
-  $confirm = clean_data($_POST["cpassword"]);
+if(isset($_POST['submit_password'])) {
+
+    $email= $_POST['email'];
+    $pass = clean_data($_POST["password"]);
+    $confirm = clean_data($_POST["cpassword"]);
 
     // check if password contains at least 8 characters
     if (strlen($pass) < 8 || strlen($confirm) < 8) {
