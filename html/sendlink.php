@@ -40,9 +40,19 @@ if(isset($_POST['reset_password']) && $_POST['input_email'])
 
         $to_email = "$resetmail";
         $subject = "Reset password Uvazon";
-        $message = '<a href="https://webtech-ki15.webtech-uva.nl/index.php">Click To Reset password</a>';
+        $mail_content = "
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Reset password link</title>
+        </head>
+        <body>
+            <p><a href='https://webtech-ki15.webtech-uva.nl/index.php?key=".$resetmail."&token=".$token."'>Click To Reset password</a></p>
+        </body>
+        </html>
+        ";
         $headers = "From: uvazon@contact.nl";
-        mail($to_email,$subject,$message,$headers);
+        mail($to_email,$subject,$mail_content,$headers);
 
         echo "send";
     }
