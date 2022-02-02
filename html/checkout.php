@@ -43,25 +43,24 @@ $subtotal = 0;
       <h2 class="bottom">Shipping information </h2>
       <form id="order-form" action="order.php" method="post">
         <label for="first-name">First name</label>
-        <input type="text" name="first-name" required value="<?php if ($user_session) echo $user_session["first_name"] ?>"><br>
+        <input type="text" name="first_name" required value="<?php if ($user_session) echo $user_session["first_name"] ?>"><br>
         <label for="last-name">Last name</label>
-        <input type="text" name="last-name" required value="<?php if ($user_session) echo $user_session["last_name"] ?>"><br>
+        <input type="text" name="last_name" required value="<?php if ($user_session) echo $user_session["last_name"] ?>"><br>
 
         <label for="adress">Street name and house number</label>
-        <input type="text" name="adress" required value="<?php if ($user_session) echo $user_session["address"] ?>"><br>
+        <input type="text" name="address" required value="<?php if ($user_session) echo $user_session["address"] ?>"><br>
         <label for="postal-code">Postal code</label>
-        <input type="text" name="postal-code" required value="<?php if ($user_session) echo $user_session["zip"] ?>"><br>
+        <input type="text" name="zip" required value="<?php if ($user_session) echo $user_session["zip"] ?>"><br>
         <label for="country">Country</label>
         <input type="text" name="country" required value="<?php if ($user_session) echo $user_session["country"] ?>"><br>
 
         <div class="contact-info">
           <h2 class="bottom">Contact information </h2>
           <label for="e-mail">E-mail adress</label>
-          <input type="text" name="e-mail" required value="<?php if ($user_session) echo $user_session["email"] ?>">
+          <input type="text" name="email" required value="<?php if ($user_session) echo $user_session["email"] ?>">
           <label for="phone">Phone number</label>
-          <input type="text" name="phone" required value="<?php if ($user_session) echo $user_session["phonenumber"] ?>">
-          <label><input type="checkbox" id="save-account"> Make an account for faster checkout</label>
-          <label><input type="checkbox" id="agree-tos" required> I agree to the <a href="#">Terms of Service</a></label>
+          <input type="text" name="phonenumber" required value="<?php if ($user_session) echo $user_session["phonenumber"] ?>">
+          <label><input type="checkbox" id="agree-tos" required> I agree to the <a href="terms.php">Terms of Service</a></label>
           <div class="payment">
             <input type="submit" value="Buy now" />
           </div>
@@ -91,7 +90,7 @@ $subtotal = 0;
                 }
 
                 $product_id = intval($product_id_str);
-                
+
                 // get product info
                 $product_result = mysqli_query(
                   $conn,
@@ -108,7 +107,7 @@ $subtotal = 0;
                 $product_price = $product["price"];
                 $product_image = $product["image_url"];
                 $subtotal = $subtotal + $product_price;
-                
+
                 echo <<<END
                 <tr>
                   <td>
@@ -125,35 +124,6 @@ $subtotal = 0;
               }
             }
 
-            include "db_disconnect.php";
-            ?>
-            <!--
-            <tr>
-              <td>
-                <h3>Product name 1</h3>
-              </td>
-              <td class="left">
-                <h3> €10 </h3>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <h3>Product name 2</h3>
-              </td>
-              <td class="left">
-                <h3> €10 </h3>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <h3>Product name 3</h3>
-              </td>
-              <td class="left">
-                <h3> €10 </h3>
-              </td>
-            </tr>
-          -->
-            <?php
             if ($cart_count) {
               echo <<<END
               <tr>
@@ -168,8 +138,10 @@ $subtotal = 0;
               </tr>
               END;
             }
-            ?>
 
+            include "db_disconnect.php";
+
+            ?>
 
           </table>
         </div>
