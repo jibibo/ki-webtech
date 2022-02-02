@@ -181,7 +181,7 @@ include "db_disconnect.php";
                 <div class="product-details">
                   <span class="product-price">&euro; $product_price</span>
                   <div class="product-buttons">
-                    <button class="product-cart">
+                    <button class="product-cart" onclick="clickCart($product_id)">
                       <ion-icon name="cart-outline"></ion-icon>
                     </button>
                     <button class="product-wishlist">
