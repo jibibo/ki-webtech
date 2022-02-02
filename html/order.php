@@ -23,9 +23,9 @@ $phonenumber = htmlspecialchars($_POST["phonenumber"]);
 // create order in db
 mysqli_query(
   $conn,
-  "INSERT INTO `orders` (`id`, `first_name`, `last_name`, `address`, `zip`, `country`, `email`, `phone`, `total_price`, `date`, `status`) VALUES (NULL, 'sadf', 'asdf', 'sdf', 'sdf', 'sdf', 'sdf', 'sdf', '-1', CURRENT_TIMESTAMP, 'PROCESSING');  "
-  // "INSERT INTO 'orders' ('first_name', 'last_name', 'address', 'zip', 'country', 'email', 'phonenumber') 
-  // VALUES ('$first_name', '$last_name', '$address', '$zip', '$country', '$email', '$phonenumber')"
+  // "INSERT INTO `orders` (`id`, `first_name`, `last_name`, `address`, `zip`, `country`, `email`, `phone`, `total_price`, `date`, `status`) VALUES (NULL, 'sadf', 'asdf', 'sdf', 'sdf', 'sdf', 'sdf', 'sdf', '-1', CURRENT_TIMESTAMP, 'PROCESSING');  "
+  "INSERT INTO orders (first_name, last_name, address, zip, country, email, phonenumber) 
+  VALUES ('$first_name', '$last_name', '$address', '$zip', '$country', '$email', '$phonenumber')"
 );
 
 // get the newly generated order id
