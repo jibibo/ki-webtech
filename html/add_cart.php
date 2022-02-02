@@ -1,7 +1,7 @@
 <?php
 session_start();
 $product_id = $_SESSION['product_id'];
-$username = $_SESSION['username'];
+$username = $_COOKIE['session_token'];
 unset($_SESSION['cart']);
 include "db_connect.php";
 

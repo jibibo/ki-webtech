@@ -7,8 +7,8 @@ $rows = 0;
 $subtotal = 0;
 
 
-if (isset($_SESSION["username"])) {
-  $username = $_SESSION["username"];
+if (isset($_COOKIE['session_token'])) {
+  $username = $_COOKIE['session_token'];
   $user_query = "SELECT id FROM customers WHERE email = '$username'";
   $user_result = mysqli_query($conn, $user_query);
   $user_id = mysqli_fetch_array($user_result);

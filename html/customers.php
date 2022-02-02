@@ -139,7 +139,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // /^[a-zA-Z ]+$/ */
 
-    $fname = clean_data($_POST["fname"]);
+    $fname = clean_data($_POST["first_name"]);
 
     // check if first name only consists of whitespaces and letters
     if (!preg_match("/^[a-zA-Z ]+$/", $fname)) {
@@ -150,7 +150,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $lname = clean_data($_POST["lname"]);
+    $lname = clean_data($_POST["last_name"]);
 
     // check if last name only consists of whitespaces and letters
     if (!preg_match("/^[a-zA-Z ]+$/", $lname)) {
@@ -161,19 +161,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $phonenumber = clean_data($_POST["phonenumber"]);
+    $phonenumber = clean_data($_POST["phone"]);
 
     // check if phone number is a valid number in the Netherlands
     // src regex: https://stackoverflow.com/a/123666/13216113
-    if (!preg_match("/^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/", $phonenumber)) {
+    // https://regexr.com/3aevr
+    if (!preg_match("/^((\+|00(\s|\s?\-\s?)?)31(\s|\s?\-\s?)?(\(0\)[\-\s]?)?|0)[1-9]((\s|\s?\-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$/", $phonenumber)) {
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid phone number');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
         exit;
     }
+    // /^((\+|00(\s|\s?\-\s?)?)31(\s|\s?\-\s?)?(\(0\)[\-\s]?)?|0)[1-9]((\s|\s?\-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$/gm
 
-    $emailaddress = clean_data($_POST["emailaddress"]);
+    $emailaddress = clean_data($_POST["email"]);
 
     // check if email address is valid and well-formed
     if (!filter_var($emailaddress, FILTER_VALIDATE_EMAIL)) {
@@ -184,7 +186,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $psw = clean_data($_POST["psw"]);
+    $psw = clean_data($_POST["password"]);
 
     // check if password contains at least 8 characters
     if (strlen($psw) < 8) {
@@ -283,6 +285,6 @@ if (mysqli_query($conn, $query)) {
 
 // close connection database
 include "db_disconnect.php";
-header("Location: index.php");
+//header("Location: index.php");
 
 ?>
