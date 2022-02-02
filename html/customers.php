@@ -285,6 +285,6 @@ if (mysqli_query($conn, $query)) {
 
 // close connection database
 include "db_disconnect.php";
-header("Location: index.php");
+//header("Location: index.php");
 
 ?>
