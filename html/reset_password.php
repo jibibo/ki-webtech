@@ -1,12 +1,12 @@
 <?php 
     // https://laratutorials.com/php-send-reset-password-link-email/
 
-    include "db_connect.php";
+    //include "db_connect.php";
 
     //if($_GET['key'] && $_GET['token'])
     //{        
         $email = $_GET["key"];
-        $token = $_GET["token"];
+        /*$token = $_GET["token"];
         $first_result = mysqli_query($conn,"SELECT id FROM customers WHERE email='$email'");
         $id = mysqli_fetch_assoc($first_result);
         $result = mysqli_query($conn,"SELECT customer FROM reset_password_tokens WHERE token='$token'");
@@ -18,10 +18,10 @@
             window.location.href='https://webtech-ki15.webtech-uva.nl/';
             </script>");
             exit;
-        } 
+        } */
    // } 
 
-    include "db_disconnect.php"; 
+    //include "db_disconnect.php"; 
 ?> 
 
 <!DOCTYPE html>
