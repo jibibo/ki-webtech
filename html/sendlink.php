@@ -35,7 +35,7 @@ if(isset($_POST['reset_password']) && $_POST['input_email'])
     if($row) {
         $token = md5($resetmail).rand(10,9999);
 
-        $update = mysqli_query($conn,"UPDATE users set  password='" . $password . "', token='" . $token . "' WHERE email='" . $emailId . "'");
+        $update = mysqli_query($conn,"UPDATE users set  password='" . $hashed_psw . "', token='" . $token . "' WHERE email='" . $resetmail . "'");
         $link = "<a href='https://webtech-ki15.webtech-uva.nl/index.php?key=".$resetmail."&token=".$token."'>Click To Reset password</a>";
 
         $to_email = "$resetmail";
