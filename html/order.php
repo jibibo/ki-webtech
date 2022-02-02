@@ -3,10 +3,12 @@
 include "db_connect.php";
 
 // redirect user if insufficient information provided
-if (!isset($_COOKIE["cart"]) || !isset($_POST["first_name"]) || 
-!isset($_POST["last_name"]) || !isset($_POST["address"]) || 
-!isset($_POST["zip"]) || !isset($_POST["country"]) || 
-!isset($_POST["email"]) || !isset($_POST["phonenumber"])) {
+if (
+  !isset($_COOKIE["cart"]) || !isset($_POST["first_name"]) ||
+  !isset($_POST["last_name"]) || !isset($_POST["address"]) ||
+  !isset($_POST["zip"]) || !isset($_POST["country"]) ||
+  !isset($_POST["email"]) || !isset($_POST["phonenumber"])
+) {
   header("Location: /");
   exit;
 }
@@ -24,7 +26,7 @@ $phonenumber = htmlspecialchars($_POST["phonenumber"]);
 mysqli_query(
   $conn,
   // "INSERT INTO `orders` (`id`, `first_name`, `last_name`, `address`, `zip`, `country`, `email`, `phone`, `total_price`, `date`, `status`) VALUES (NULL, 'sadf', 'asdf', 'sdf', 'sdf', 'sdf', 'sdf', 'sdf', '-1', CURRENT_TIMESTAMP, 'PROCESSING');  "
-  "INSERT INTO 'orders' ('first_name', 'last_name', 'address', 'zip', 'country', 'email', 'phonenumber') 
+  "INSERT INTO orders (first_name, last_name, address, zip, country, email, phonenumber) 
   VALUES ('$first_name', '$last_name', '$address', '$zip', '$country', '$email', '$phonenumber')"
 );
 
@@ -154,5 +156,3 @@ END;
 // {
 // unset($_SESSION['cart']);
 // }
-
-
