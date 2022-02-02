@@ -37,11 +37,11 @@ $result_categories = mysqli_query(
   WHERE pc.product=$product_id"
 );
 $product_category_ids = array();
-$product_category_names = array();
+$product_categories = array();
 
 while ($row = mysqli_fetch_assoc($result_categories)) {
   $product_category_ids[] = $row["id"];
-  $product_category_names[] = $row["name"];
+  $product_categories[] = $row;
 }
 
 // related products: related to product by sharing a category
@@ -153,9 +153,12 @@ include "db_disconnect.php";
 
         <div class="categories">
           <?php
-          foreach ($product_category_names as $category_name) {
+          foreach ($product_categories as $category) {
+            $category_id = $category["id"];
+            $category_name = $category["name"];
+
             echo <<<END
-            <a href="products.php">$category_name</a>
+            <a href="products.php?search=&c[]=$category_id">$category_name</a>
             END;
           }
           ?>
