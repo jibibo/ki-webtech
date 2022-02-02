@@ -7,7 +7,7 @@
         <a href="products.php">PRODUCTS</a>
         <a href="">huppelepup</a>
         <a href="terms.php">terms of service</a>
-        <a href="#">delivery</a>
+        <a href="del.php">delivery</a>
       </div>
       <div class="footer-heading footer-2">
         <h2>CONTACT</h2>
