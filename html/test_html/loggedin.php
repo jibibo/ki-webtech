@@ -21,7 +21,7 @@ if(!empty($_POST['username'])) {
 if ($success) {
     session_start();
     $_SESSION['username'] = $_POST['username'];
-    header("Location: index.php");
+    header("Location: /");
 } else {
     echo "
     

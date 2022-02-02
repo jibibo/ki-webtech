@@ -11,7 +11,7 @@ $(document).ready(() => {
     // if the current path is like this link, make it active
     if (
       (pathname !== "/" && el.href.indexOf(pathname) !== -1) ||
-      (pathname === "/" && el.href.indexOf("index.php") !== -1)
+      (pathname === "/" && el.href.indexOf("/") !== -1)
     ) {
       $(el).addClass("active");
       console.debug("added .active", el);cvx 

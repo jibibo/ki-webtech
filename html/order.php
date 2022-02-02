@@ -59,7 +59,7 @@ echo
 "
 <script>
 window.alert('Payment successful!');
-window.location.href = 'index.php';
+window.location.href = '/';
 </script>
 ";
 

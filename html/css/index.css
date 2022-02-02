@@ -1,29 +1,4 @@
-/* .register_container {
-  background-color: #fff;
-  padding: 20px;
-} */
-
-/* .register h1 {
-  color: #febd69;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-} */
-
-/* h1 {
-  color: rgb(8, 10, 10);
-} */
-
-/* index.php  */
-
-/*.container {
-  max-width: 1400px;
-  margin: auto;
-  padding-left: 25px;
-  padding-right: 25px; 
-} */
-
-/*https://www.w3schools.com/howto/howto_css_button_on_image.asp*/
+/* https://www.w3schools.com/howto/howto_css_button_on_image.asp */
 
 .imagecontainer img {
   display: block;
@@ -31,9 +6,6 @@
   margin-right: 100px;
   height: 600px;
   width: 1200px;
-  /*margin-left: 100px;
-      width: 90%;
-      height: 50%; */
 }
 
 .imagecontainer {
@@ -91,16 +63,7 @@
   padding-top: 200px;
 }
 
-/*.beautyrow,
-.trending {
-  display: flex;
-  width: 1300px;
-  margin-left: 100px;
-  / box-sizing: border-box; 
-  flex-wrap: wrap;
-}*/
-
-.beautyrow, 
+.beautyrow,
 .trending {
   display: flex;
   flex-wrap: nowrap;
@@ -115,10 +78,6 @@
   object-fit: cover;
 }
 
-.hover {
-  /* padding-right: 50px; */
-}
-
 .hover:hover,
 .view:hover {
   opacity: 0.3;
@@ -128,14 +87,6 @@
 .column {
   margin-top: 25px;
 }
-
-/*.category {
-  display: flex;
-  width: 1150px;
-  margin-left: 100px;
-  / box-sizing: border-box; 
-  flex-wrap: wrap;
-}*/
 
 .category {
   display: flex;
@@ -156,11 +107,6 @@
   height: 262px;
   object-fit: cover;
 }
-
-/*.hyperlinks {
-      margin-left: 130px;
-      background-color: white;
-  } */
 
 .imagelink {
   float: left;

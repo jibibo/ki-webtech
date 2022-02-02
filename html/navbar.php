@@ -1,13 +1,13 @@
 <nav>
   <div class="container-logo">
-    <a href="index.php">
+    <a href="/">
       <div class="logo">
         <img src="images/uvazon.png" alt="UvAzon Logo" width="250px" />
       </div>
     </a>
     <div class="sticky">
       <ul id="nav-ul">
-        <li><a href="index.php">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li class="dropdown-menu">
           <a href="products.php" class="dropdown-button">Products</a>
           <div class="dropdown-content">
