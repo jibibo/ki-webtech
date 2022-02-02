@@ -17,7 +17,6 @@
     ?>
     <div class="container">
         <div class="form">
-        <div class="title">Reset password</div>
         <?php /*
         if($_GET['key'] && $_GET['token'])
         {
@@ -38,6 +37,7 @@
         ?> 
 
             <form action="update_password.php" method="post" class="formscreen">
+            <div class="title">Reset password</div>
             <input type="hidden" name="email" >
             <input type="hidden" name="token" >
             <div class="textbox">
