@@ -1,7 +1,7 @@
 <?php 
     // https://laratutorials.com/php-send-reset-password-link-email/
 
-    include "db_connect.php";
+    /*include "db_connect.php";
 
     if($_GET['key'] && $_GET['token'])
     {        
@@ -21,7 +21,7 @@
         } 
     } 
 
-    include "db_disconnect.php";
+    include "db_disconnect.php"; */
 ?> 
 
 <!DOCTYPE html>
