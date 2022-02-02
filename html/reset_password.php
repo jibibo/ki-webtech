@@ -1,3 +1,29 @@
+<?php 
+    // https://laratutorials.com/php-send-reset-password-link-email/
+
+    include "db_connect.php";
+
+    if($_GET['key'] && $_GET['token'])
+    {        
+        $email = $_GET['key'];
+        $token = $_GET['token'];
+        $first_query = mysqli_query($conn,"SELECT id FROM customers WHERE email='$email'");
+        $id = mysqli_fetch_assoc($first_query);
+        $query = mysqli_query($conn,"SELECT customer FROM reset_password_tokens WHERE token='$token'");
+        $customer_id = mysqli_fetch_assoc($query);
+        
+        if ($id != $customer_id) {
+            echo ("<script LANGUAGE='JavaScript'>
+            window.alert('Your emailaddress doesn't match the submitted one.');
+            window.location.href='https://webtech-ki15.webtech-uva.nl/';
+            </script>");
+            exit;
+        } 
+    } 
+
+    include "db_disconnect.php";
+?> 
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,33 +41,9 @@
     <?php
     include "navbar.php";
     ?>
+
     <div class="container">
         <div class="form">
-        <?php 
-        // https://laratutorials.com/php-send-reset-password-link-email/
-
-        if($_GET['key'] && $_GET['token'])
-        {
-            include "db_connect.php";
-            
-            $email = $_GET['key'];
-            $token = $_GET['token'];
-            $first_query = mysqli_query($conn,"SELECT id FROM customers WHERE email='$email'");
-            $id = mysqli_fetch_assoc($first_query);
-            $query = mysqli_query($conn,"SELECT customer FROM reset_password_tokens WHERE token='$token'");
-            $customer_id = mysqli_fetch_assoc($query);
-            
-            if ($id != $customer_id) {
-                echo ("<script LANGUAGE='JavaScript'>
-                window.alert('Your emailaddress doesn't match the submitted one.');
-                window.location.href='https://webtech-ki15.webtech-uva.nl/';
-                </script>");
-                exit;
-            } 
-            include "db_disconnect.php";
-        } 
-        ?> 
-
             <form action="update_password.php" method="post" class="formscreen">
             <div class="title">Reset password</div>
             <input type="hidden" name="email" value="<?php echo $email;?>">
