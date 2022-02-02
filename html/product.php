@@ -7,10 +7,16 @@ include "db_connect.php";
 // rediret if "id" parameter is not set
 if (!isset($_GET["id"])) {
   header("Location: products.php");
+  exit;
 }
 
 // product-specific information
 $product_id = htmlspecialchars($_GET["id"]);
+if (!is_numeric($product_id)) {
+  // redirect user to products.php if selected id is invalid
+  header("Location: products.php");
+  exit;
+}
 $result_product = mysqli_query(
   $conn,
   "SELECT * 
@@ -18,10 +24,12 @@ $result_product = mysqli_query(
   WHERE id=$product_id 
   LIMIT 1"
 );
+
 $product = mysqli_fetch_assoc($result_product);
 if (!$product) {
   // redirect user to products.php if selected id does not exist
   header("Location: products.php");
+  exit;
 }
 $product_name = $product["name"];
 $product_description = $product["description"];
@@ -145,6 +153,7 @@ include "db_disconnect.php";
           <form method="post">
             <button formaction="add_cart.php" class="cart-btn shopping-btn">+ Cart</button>
           </form>
+          <button class="cart-btn shopping-btn">+ Cart</button>
           <button class="wishlist-btn shopping-btn">+ Wishlist</button>
         </div>
 

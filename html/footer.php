@@ -26,7 +26,7 @@
       </div>
       <div class="footer_emailform">
         <h2>JOIN OUR NEWSLETTER!</h2>
-        <form action="newsletter.php" method="post"> 
+        <form action="newsletter.php" method="post">
           <input type="email" placeholder="user@example.com" id="footer_email" name="email">
           <input type="submit" value="SIGN UP!" id="footer_email_btn" name="submit">
         </form>
@@ -46,7 +46,7 @@
   }
 </script> -->
 
-          <!-- required 
+<!-- required 
           oninvalid="this.setCustomValidity('Please enter an email address')"
           oninput="this.setCustomValidity('')"/> -->
 
@@ -54,3 +54,4 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="js/activeNavLink.js"></script>
+<script src="js/clickCart.js"></script>
