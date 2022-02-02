@@ -323,15 +323,16 @@
 }
 .modal{
   position: fixed;
-  float: left;
+  top: 50%;
+  left: 50%;
   border: 1px solid black;
   z-index: 10;
   background-color: white;
   width: 200px;
-  transform: scale(0);
+  transform: translate(-50%, -50%) scale(0);
 }
 .modal.active{
-  transform: scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 .cart-header{
   padding: 10px 15px;
