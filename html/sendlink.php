@@ -34,7 +34,7 @@ if(isset($_POST['reset_password']) && $_POST['input_email'])
 
     if($row) {
         $token = bin2hex(random_bytes(32));
-        $id = $customer["id"];
+        $id = $row["id"];
         mysqli_query($conn, "INSERT INTO reset_password_tokens (token, customer) VALUES ('$token', $id)");
 
         // $update = mysqli_query($conn,"UPDATE users set password='" . $password . "', token='" . $token . "' WHERE email='" . $resetmail . "'");
