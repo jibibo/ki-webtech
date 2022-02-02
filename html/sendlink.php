@@ -26,7 +26,7 @@ if(isset($_POST['reset_password']) && $_POST['input_email'])
     $result = mysqli_query($conn,"SELECT * FROM customers WHERE email='$resetmail'");
 
     if ($result) {
-        $customer = mysqli_fetch_assoc($query);
+        $customer = mysqli_fetch_assoc($result);
         $token = bin2hex(random_bytes(32));
         $id = $customer["id"];
 
