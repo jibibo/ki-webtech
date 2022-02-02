@@ -139,7 +139,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // /^[a-zA-Z ]+$/ */
 
-    $fname = clean_data($_POST["fname"]);
+    $fname = clean_data($_POST["first_name"]);
 
     // check if first name only consists of whitespaces and letters
     if (!preg_match("/^[a-zA-Z ]+$/", $fname)) {
