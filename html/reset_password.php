@@ -1,12 +1,12 @@
 <?php 
     // https://laratutorials.com/php-send-reset-password-link-email/
 
-    /*include "db_connect.php";
+    include "db_connect.php";
 
-    if($_GET['key'] && $_GET['token'])
-    {        
-        $email = $_GET['key'];
-        $token = $_GET['token'];
+    //if($_GET['key'] && $_GET['token'])
+    //{        
+        $email = $_GET["key"];
+        $token = $_GET["token"];
         $first_result = mysqli_query($conn,"SELECT id FROM customers WHERE email='$email'");
         $id = mysqli_fetch_assoc($first_result);
         $result = mysqli_query($conn,"SELECT customer FROM reset_password_tokens WHERE token='$token'");
@@ -19,7 +19,7 @@
             </script>");
             exit;
         } 
-    } 
+   // } 
 
     include "db_disconnect.php"; */
 ?> 
@@ -46,7 +46,7 @@
         <div class="form">
             <form action="update_password.php" method="post" class="formscreen">
             <div class="title">Reset password</div>
-            <input type="hidden" name="email" value="<?php echo $email;?>">
+            <input type="text" name="email" value="<?php echo $email;?>">
             <div class="textbox">
                 <input type="password" placeholder="New Password" name='password' required>
             </div>                

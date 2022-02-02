@@ -12,7 +12,7 @@ $pass = $confirm = "";
 
 if(isset($_POST['submit_password'])) {
 
-    $email= $_POST['email'];
+    $email= $_POST["email"];
     $pass = clean_data($_POST["password"]);
     $confirm = clean_data($_POST["cpassword"]);
 
