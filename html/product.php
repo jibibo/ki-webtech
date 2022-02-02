@@ -173,6 +173,7 @@ include "db_disconnect.php";
 
             </div>
             <div class="carting">
+              <p>producten producten producrten</p>
 
             </div>
           </div>

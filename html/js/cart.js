@@ -8,6 +8,12 @@ openModalButtons.forEach(button => {
     openModal(modal)
   })
 })
+.overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal.active')
+    modals.forEach(modal => {
+        closeModal(modal)
+    })
+})
 
 closeModalButtons.forEach(button => {
   button.addEventListener('click', () => {
@@ -15,6 +21,7 @@ closeModalButtons.forEach(button => {
     closeModal(modal)
   })
 })
+
 
 function openModal(modal){
   if (modal == null) return
