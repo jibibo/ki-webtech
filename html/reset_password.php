@@ -21,7 +21,7 @@
         } 
    // } 
 
-    include "db_disconnect.php"; */
+    include "db_disconnect.php"; 
 ?> 
 
 <!DOCTYPE html>
