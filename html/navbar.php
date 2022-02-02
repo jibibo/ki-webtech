@@ -36,7 +36,7 @@
             <li>
               <form action="session.php" method="post">
                 <input type="hidden" name="in_out" value="out" />
-                <button class="test" type="submit" title="Log out">Log out</button>
+                <button type="submit" title="Log out">Log out</button>
               </form>
             </li>
             END;
