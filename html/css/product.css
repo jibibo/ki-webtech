@@ -78,7 +78,7 @@
 
 .cart-btn {
   flex: 1 1 0px;
-  background-color:#febd69;
+  background-color: orange;
   color: #37475a;
   border: none;
   outline: none;
@@ -87,7 +87,7 @@
 .wishlist-btn {
   flex: 1 1 0px;
   background-color:#37475a;
-  color: #febd69;
+  color: orange;
   border: none;
   outline: none;
 }
