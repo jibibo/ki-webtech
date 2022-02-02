@@ -51,6 +51,8 @@ if(isset($_POST['reset_password']) && $_POST['input_email'])
         </body>
         </html>
         ";
+
+        echo $mail_content;
         $headers = "From: uvazon@contact.nl";
         mail($to_email,$subject,$mail_content,$headers);
 
