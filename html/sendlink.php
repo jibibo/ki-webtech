@@ -36,14 +36,19 @@ if(isset($_POST['reset_password']) && $_POST['input_email'])
         $token = md5($resetmail).rand(10,9999);
 
         // $update = mysqli_query($conn,"UPDATE users set password='" . $password . "', token='" . $token . "' WHERE email='" . $resetmail . "'");
-        $link = "<a href='https://webtech-ki15.webtech-uva.nl/index.php?key=".$resetmail."&token=".$token."'>Click To Reset password</a>";
+        //$link = "<a href='https://webtech-ki15.webtech-uva.nl/index.php?key=".$resetmail."&token=".$token."'>Click To Reset password</a>";
 
         $to_email = "$resetmail";
         $subject = "Reset password Uvazon";
-        $message = "$link";
+        $message = "echo <a href='https://webtech-ki15.webtech-uva.nl/index.php?key=".$resetmail."&token=".$token."'>Click To Reset password</a>";
         $headers = 'From: uvazon@contact.nl';
         mail($to_email,$subject,$message,$headers);
-        
+
+        echo "send";
+    }
+    else
+    {
+        echo "not send";
     }
 }
 
