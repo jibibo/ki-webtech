@@ -218,11 +218,15 @@ include "db_disconnect.php";
       <?php
 
       if ($user_session) {
+        $product_id = htmlspecialchars($_GET["id"]);
+
         echo <<<END
         <div class="make-review padding">
-          <form class="review-form" action="review.php" method="get">
-            <input id="rating" type="number" name="rating" min="1" max="5" placeholder="*?" required>
-            <input type="text" name="review" placeholder="Write us a review... (optional)">
+          <form class="review-form" action="review.php" method="post">
+            <input id="rating" type="number" name="rating" min="1" max="5" placeholder="★?" required />
+            <input type="text" name="title" placeholder="Review title (optional)" />
+            <input type="text" name="body" placeholder="Elaborate... (optional)" />
+            <input type="hidden" name="product_id" value="$product_id" />
             <button type="submit">Submit review</button>
           </form>
         </div>

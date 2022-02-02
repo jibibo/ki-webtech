@@ -12,7 +12,7 @@ include "db_connect.php";
 
 if (isset($_POST["rating"])) {
   $rating_raw = htmlspecialchars($_POST["rating"]);
-  if (!is_numeric($rating_raw) || !is_int($rating_raw)) {
+  if (!is_numeric($rating_raw)) {
     // rating is not int
     header("Location: /");
     exit;
@@ -20,7 +20,7 @@ if (isset($_POST["rating"])) {
 
   $rating = intval($rating_raw);
 
-  if ($rating < 1 || $rating > 5) {
+  if (!is_int($rating) || $rating < 1 || $rating > 5) {
     // invalid rating value, back to homepage
     header("Location: /");
     exit;
@@ -33,10 +33,38 @@ if (isset($_POST["rating"])) {
     $review = htmlspecialchars($_POST["review"]);
   }
 
-  customer_id
+  // get product id
+  $product_id_raw = htmlspecialchars($_POST["product_id"]);
+  if (!is_numeric($product_id_raw)) {
+    // invalid product id, back to homepage
+    header("Location: /");
+    exit;
+  }
+
+  $product_id = intval($product_id_raw);
+
+  $customer_id = $user_session["id"];
+
+  $product_exists_result = mysqli_query(
+    $conn,
+    "SELECT * FROM products WHERE id=$product_id"
+  );
+
+  if (!$product_exists_result) {
+    // product does not exist (anymore), back to homepage
+    header("Location: /");
+    exit;
+  }
+
+  $title = htmlspecialchars($_POST["title"]);
+  $body = htmlspecialchars($_POST["body"]);
+
+  mysqli_query(
+    $conn,
+    "INSERT INTO product_reviews (customer, product, rating, title, body) 
+    VALUES ($customer_id, $product_id, $rating, '$title', '$body')"
+  );
 }
-
-
 
 include "db_disconnect.php";
 
