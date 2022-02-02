@@ -1,9 +1,4 @@
 <?php 
-
-
-// info:
-// https://www.allphptricks.com/forgot-password-recovery-reset-using-php-and-mysql/
-
 include "db_connect.php";
 
 function clean_data($data) {
@@ -24,16 +19,17 @@ if(isset($_POST['reset_password']) && $_POST['input_email'])
     if (!filter_var($resetmail, FILTER_VALIDATE_EMAIL)) {
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid email address');
-        window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
+        window.location.href='https://webtech-ki15.webtech-uva.nl/forgot-password.php';
         </script>");
         exit;
     }
-    $query = mysqli_query($conn,"SELECT * FROM customers WHERE email='$resetmail'");
+    $result = mysqli_query($conn,"SELECT * FROM customers WHERE email='$resetmail'");
 
-    if ($query) {
+    if ($result) {
         $customer = mysqli_fetch_assoc($query);
         $token = bin2hex(random_bytes(32));
         $id = $customer["id"];
+
         mysqli_query($conn, "INSERT INTO reset_password_tokens (token, customer) VALUES ('$token', $id)");
 
         // $update = mysqli_query($conn,"UPDATE users set password='" . $password . "', token='" . $token . "' WHERE email='" . $resetmail . "'");
@@ -46,6 +42,7 @@ if(isset($_POST['reset_password']) && $_POST['input_email'])
         mail($to_email,$subject,$mail_content,$headers);
 
         echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Successfully sent email!');
         window.location.href='https://webtech-ki15.webtech-uva.nl/index.php';
         </script>");
     }
@@ -59,5 +56,4 @@ if(isset($_POST['reset_password']) && $_POST['input_email'])
 }
 
 include "db_disconnect.php";
-
 ?>

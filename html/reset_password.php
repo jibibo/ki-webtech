@@ -7,10 +7,10 @@
     {        
         $email = $_GET['key'];
         $token = $_GET['token'];
-        $first_query = mysqli_query($conn,"SELECT id FROM customers WHERE email='$email'");
-        $id = mysqli_fetch_assoc($first_query);
-        $query = mysqli_query($conn,"SELECT customer FROM reset_password_tokens WHERE token='$token'");
-        $customer_id = mysqli_fetch_assoc($query);
+        $first_result = mysqli_query($conn,"SELECT id FROM customers WHERE email='$email'");
+        $id = mysqli_fetch_assoc($first_result);
+        $result = mysqli_query($conn,"SELECT customer FROM reset_password_tokens WHERE token='$token'");
+        $customer_id = mysqli_fetch_assoc($result);
         
         if ($id != $customer_id) {
             echo ("<script LANGUAGE='JavaScript'>
