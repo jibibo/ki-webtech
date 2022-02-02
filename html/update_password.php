@@ -34,8 +34,7 @@ if(isset($_POST['submit_password']) {
         window.location.href='https://webtech-ki15.webtech-uva.nl/index.php';
         </script>");
         exit;
-    } else
-    {
+    } else {
         echo ("<script LANGUAGE='JavaScript'>
         window.alert('Something went wrong, please try again.');
         window.location.href='https://webtech-ki15.webtech-uva.nl/reset_password.php';
