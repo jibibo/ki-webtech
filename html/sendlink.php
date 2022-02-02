@@ -36,7 +36,7 @@ if(isset($_POST['reset_password']) && $_POST['input_email'])
         $token = md5($resetmail).rand(10,9999);
 
         // $update = mysqli_query($conn,"UPDATE users set password='" . $password . "', token='" . $token . "' WHERE email='" . $resetmail . "'");
-        $link = "Click on the following link to reset your password: https://webtech-ki15.webtech-uva.nl/index.php?key=".$resetmail."&token=".$token."";
+        $link = "Click on the following link to reset your password: https://webtech-ki15.webtech-uva.nl/reset_password.php?key=".$resetmail."&token=".$token."";
 
         $to_email = "$resetmail";
         $subject = "Reset password Uvazon";
@@ -44,11 +44,16 @@ if(isset($_POST['reset_password']) && $_POST['input_email'])
         $headers = "From: uvazon@contact.nl";
         mail($to_email,$subject,$mail_content,$headers);
 
-        echo "send";
+        echo ("<script LANGUAGE='JavaScript'>
+        window.location.href='https://webtech-ki15.webtech-uva.nl/index.php';
+        </script>");
     }
     else
     {
-        echo "not send";
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Something went wrong, please try again.');
+        window.location.href='https://webtech-ki15.webtech-uva.nl/forgot-password.php';
+        </script>");
     }
 }
 
