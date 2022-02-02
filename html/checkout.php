@@ -1,33 +1,17 @@
-<?php 
+<?php
 
-include "db_connect.php";
-# include "cookies.php";
-session_start();
-$rows = 0;
-$subtotal = 0;
+include "user_session.php";
 
+$cart_ids = array();
 
-if (isset($_COOKIE['session_token'])) {
-  $username = $_COOKIE['session_token'];
-  $user_query = "SELECT id FROM customers WHERE email = '$username'";
-  $user_result = mysqli_query($conn, $user_query);
-  $user_id = mysqli_fetch_array($user_result);
-
-
-  $cart_query = "SELECT product_id FROM cart_items WHERE user_id = '$username'";
-  $cart_result = mysqli_query($conn, $cart_query);
-  $rows = mysqli_num_rows($cart_result);
+// check if cart cookie is set and put products id in array
+if (isset($_COOKIE["cart"])) {
+  $cartcookie = htmlspecialchars($_COOKIE["cart"]);
+  $cart_ids = explode("|", $cartcookie);
 }
 
-
-
-
-/*
-$product_query = "SELECT * FROM products WHERE id = $product_id";
-$product_result = mysqli_query($conn, $product_query);
-$product_info = mysqli_fetch_assoc($product_result);
-*/
-
+$cart_count = count($cart_ids);
+$subtotal = 0;
 
 ?>
 
@@ -59,25 +43,27 @@ $product_info = mysqli_fetch_assoc($product_result);
       <h2 class="bottom">Shipping information </h2>
       <form id="order-form" action="order.php" method="post">
         <label for="first-name">First name</label>
-        <input type="text" name="first-name" required><br>
+        <input type="text" name="first-name" required value="<?php if ($user_session) echo $user_session["first_name"] ?>"><br>
         <label for="last-name">Last name</label>
-        <input type="text" name="last-name" required><br>
+        <input type="text" name="last-name" required value="<?php if ($user_session) echo $user_session["last_name"] ?>"><br>
 
         <label for="adress">Street name and house number</label>
-        <input type="text" name="adress" required><br>
+        <input type="text" name="adress" required value="<?php if ($user_session) echo $user_session["address"] ?>"><br>
         <label for="postal-code">Postal code</label>
-        <input type="text" name="postal-code" required><br>
-     
+        <input type="text" name="postal-code" required value="<?php if ($user_session) echo $user_session["zip"] ?>"><br>
+        <label for="country">Country</label>
+        <input type="text" name="country" required value="<?php if ($user_session) echo $user_session["country"] ?>"><br>
+
         <div class="contact-info">
           <h2 class="bottom">Contact information </h2>
           <label for="e-mail">E-mail adress</label>
-          <input type="text" name="e-mail" required>
+          <input type="text" name="e-mail" required value="<?php if ($user_session) echo $user_session["email"] ?>">
           <label for="phone">Phone number</label>
-          <input type="text" name="phone" required>
+          <input type="text" name="phone" required value="<?php if ($user_session) echo $user_session["phonenumber"] ?>">
           <label><input type="checkbox" id="save-account"> Make an account for faster checkout</label>
-          <label><input type="checkbox" id="agree-tos"> I agree to the <a href="#">Terms of Service</a></label>
+          <label><input type="checkbox" id="agree-tos" required> I agree to the <a href="#">Terms of Service</a></label>
           <div class="payment">
-            <input type="submit" value="Buy now"/>
+            <input type="submit" value="Buy now" />
           </div>
         </div>
       </form>
@@ -88,46 +74,60 @@ $product_info = mysqli_fetch_assoc($product_result);
         <h2 class="bottom">Cart</h2>
         <div class="order-info">
           <table>
-            <?php 
-            if($rows === 0) {
-              echo
-              "
+            <?php
+            include "db_connect.php";
+
+            if (!$cart_count) {
+              echo <<<END
               <tr>
                 <td><h3>Nothing added to cart yet</h3></td>
               </tr>
-              ";
-            } 
-            else {
-              while($cart_items = mysqli_fetch_array($cart_result)) {
+              END;
+            } else {
+              foreach ($cart_ids as $product_id_str) {
+                // product id is not numeric
+                if (!is_numeric($product_id_str)) {
+                  continue;
+                }
+
+                $product_id = intval($product_id_str);
                 
-                $product_id = $cart_items['product_id'];
-                $product_query = "SELECT * FROM products WHERE id = '$product_id'";
-                $product_result = mysqli_query($conn, $product_query);
-                $product_info = mysqli_fetch_assoc($product_result);
+                // get product info
+                $product_result = mysqli_query(
+                  $conn,
+                  "SELECT * FROM products WHERE id=$product_id LIMIT 1"
+                );
 
-                $product_name = $product_info['name'];
-                $image_url = $product_info['image_url'];
-                $price = $product_info['price'];
-                $subtotal = $subtotal + $price;
+                // product id doesnt exist
+                if (!$product_result) {
+                  continue;
+                }
 
-                echo 
-                "
+                $product = mysqli_fetch_assoc($product_result);
+                $product_name = $product["name"];
+                $product_price = $product["price"];
+                $product_image = $product["image_url"];
+                $subtotal = $subtotal + $product_price;
+                
+                echo <<<END
                 <tr>
                   <td>
-                  <img src=$image_url width=100px height=100px>
+                  <img src="$product_image" width="100px" height="100px">
                   </td>
                   <td>
                     <h3>$product_name</h3>
                   </td>
-                  <td class='left'>
-                    <h3> €$price</h3>
+                  <td class="left">
+                    <h3>€ $product_price</h3>
                   </td>
                 </tr>
-                ";
+                END;
               }
-          }              
-          ?>
-          <!--
+            }
+
+            include "db_disconnect.php";
+            ?>
+            <!--
             <tr>
               <td>
                 <h3>Product name 1</h3>
@@ -153,31 +153,30 @@ $product_info = mysqli_fetch_assoc($product_result);
               </td>
             </tr>
           -->
-          <?php 
-          if ($rows > 0) {
-            echo 
-            "
-            <tr>
-              <tfoot>
-                <td>
-                  <h3>Subtotal:</h3>
-                </td>
-                <td class='left'>
-                  <h3>€$subtotal</h3>
-                </td>
-              </tfoot>
-            </tr>
-            ";
-          }
-          ?>
-            
+            <?php
+            if ($cart_count) {
+              echo <<<END
+              <tr>
+                <tfoot>
+                  <td>
+                    <h3>Subtotal:</h3>
+                  </td>
+                  <td class="left">
+                    <h3>€ $subtotal</h3>
+                  </td>
+                </tfoot>
+              </tr>
+              END;
+            }
+            ?>
+
 
           </table>
         </div>
       </div>
     </div>
   </div>
-  
+
 
   <?php
   include "footer.php";
