@@ -17,10 +17,10 @@
             <a href="products.php?c[]=3">Schoenen</a>
           </div>
         </li>
-        <li><a href="about.php">About us</a></li>
         <li><a href="checkout.php">Checkout</a></li>
         <li><a href="session.php">Log in/out | Register</a></li>
         <li><a href="contact.php">Contact us</a></li>
+        <li><a href="about.php">About us</a></li>
         <div class="search-wrapper">
           <form action="products.php" method="get">
             <input class="search-input" type="text" placeholder="Search products" name="search">
