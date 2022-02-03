@@ -273,7 +273,7 @@ if (mysqli_query($conn, $query)) {
     // header ("Location: https://webtech-ki15.webtech-uva.nl/");
     echo ("<script LANGUAGE='JavaScript'>
         window.alert('Thank You for Signing Up!');
-        window.location.href='https://webtech-ki15.webtech-uva.nl/';
+        window.location.href='https://webtech-ki15.webtech-uva.nl/session.php';
         </script>");
 } else {
     //header ("Location: https://webtech-ki15.webtech-uva.nl/register.php");

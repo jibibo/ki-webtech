@@ -34,46 +34,45 @@ include "db_disconnect.php";
     <div class="form">
       <form action="customers.php" method="post" class="formscreen">
         <div class="title">CREATE AN ACCOUNT</div>
-        <p class="required"><span>* required field</span>
 
         <div class="register">
-          <input type="text" placeholder="First name" name="first_name" required><span> * </span>
+          <input type="text" placeholder="First name" name="first_name" required>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="Last name" name="last_name" required><span> * </span>
+          <input type="text" placeholder="Last name" name="last_name" required>
         </div>
 
         <div class="register">
-          <input type="tel" placeholder="Phone number" name="phone" required><span> * </span>
+          <input type="tel" placeholder="Phone number" name="phone" required>
         </div>
 
         <div class="register">
-          <input type="email" placeholder="Email address" name="email" required><span> * </span>
+          <input type="email" placeholder="Email address" name="email" required>
         </div>
 
         <div class="register">
-          <input type="password" placeholder="Password (8+ characters)" name="password" required><span> * </span>
+          <input type="password" placeholder="Password (8+ characters)" name="password" required>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="Address" name="address" required><span> * </span>
+          <input type="text" placeholder="Address" name="address" required>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="Zip code" name="zipcode" required><span> * </span>
+          <input type="text" placeholder="Zip code" name="zipcode" required>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="City" name="city" required><span> * </span>
+          <input type="text" placeholder="City" name="city" required>
         </div>
 
         <div class="register">
-          <input type="text" placeholder="Country" name="country" required><span> * </span>
+          <input type="text" placeholder="Country" name="country" required>
         </div>
 
         <div class="agree">
-          <p>By creating an account you agree to our <a href="#" class="terms">Terms & Privacy</a>.</p>
+          <p>By creating an account you agree to our <a href="terms.php" class="terms">Terms & Privacy</a>.</p>
         </div>
 
         <div>

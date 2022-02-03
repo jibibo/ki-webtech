@@ -1,4 +1,54 @@
-<!doctype html>
+<?php 
+    // https://laratutorials.com/php-send-reset-password-link-email/ --> ter inspiratie gebruikt
+
+    // connect with database
+    include "db_connect.php";
+
+    //if($_GET['key'] && $_GET['token'])
+    //{
+        
+        // get key value from url
+        $email = $_GET["key"];
+        // get token value from url
+        $token = $_GET["token"];
+
+        // select everything from customers table where the given email is the same
+        $first_result = mysqli_query($conn,"SELECT * FROM customers WHERE email='$email'");
+
+        // select everything from reset_password_tokens where the given token is the samen
+        $result = mysqli_query($conn,"SELECT * FROM reset_password_tokens WHERE token='$token'");
+       
+        // if query succeeds, get customer id from customers table
+        if($first_result) {
+            $customer = mysqli_fetch_assoc($first_result);
+            $id = $customer["id"];
+        } 
+
+        // if query succeeds, get customer id from reset_password_tokens table
+        if($result)
+        {
+            $customer_reset = mysqli_fetch_assoc($result);
+            $customer_id = $customer_reset["customer"];
+        }
+        //$id = mysqli_fetch_assoc($first_result);
+        //$result = mysqli_query($conn,"SELECT customer FROM reset_password_tokens WHERE token='$token'");
+        //$customer_id = mysqli_fetch_assoc($result);
+        
+        // if those two customer id's do not match, print error message and return to forgot password page
+        if ($id != $customer_id) {
+            echo ("<script LANGUAGE='JavaScript'>
+            window.alert('Your emailaddress doesn't match the submitted one.');
+            window.location.href='https://webtech-ki15.webtech-uva.nl/forgot-password.php';
+            </script>");
+            exit;
+        } 
+   // } 
+
+   // disconnect database
+   include "db_disconnect.php"; 
+?> 
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Reset | UvAzon</title>
@@ -15,33 +65,12 @@
     <?php
     include "navbar.php";
     ?>
+
     <div class="container">
         <div class="form">
-        <?php /*
-        // https://laratutorials.com/php-send-reset-password-link-email/
-
-        if($_GET['key'] && $_GET['token'])
-        {
-            include "db_connect.php";
-            
-            $email = $_GET['key'];
-            $token = $_GET['token'];
-            $query = mysqli_query($conn,
-            "SELECT * FROM `users` WHERE `token`='".$token."' and `email`='".$email."';"
-            );
-            
-            if (mysqli_num_rows($query) > 0) {
-                $row= mysqli_fetch_array($query);
-            }
-
-            include "db_disconnect.php";
-        } */
-        ?> 
-
             <form action="update_password.php" method="post" class="formscreen">
             <div class="title">Reset password</div>
-            <input type="hidden" name="email" >
-            <input type="hidden" name="token" >
+            <input type="hidden" name="email" value="<?php echo $email;?>">
             <div class="textbox">
                 <input type="password" placeholder="New Password" name='password' required>
             </div>                

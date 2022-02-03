@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  height: 150%;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  align-content: space-between;
+  flex-direction: column;
+}
+
+.message {
+  margin-top: 2em;
+  color: #febd69;
+  text-align: center;
+  font-size: 175%;
+}
+
+.order-info {
+  border: 2px solid black;
+  outline: none;
+  background-color: white;
+  border-radius: 0.3em;
+  margin-top: 1em;
+  height: 1000px;
+  width: 750px;
+  overflow-y: scroll;
+  overflow-x: auto;
+}
+
+table {
+  font-size: 140%;
+}
+
+.invoice {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.subtotal {
+  margin-top: 2em;
+  padding-top: 2em;
+  font-weight: bold;
+  margin-bottom: 2em;
+}
+
+.return input[type="submit"] {
+  width: 750px;
+  background-color: #febd69;
+  border: 1px solid black;
+  border-radius: 0.3em;
+  padding: 1.5em;
+  cursor: pointer;
+  font-size: 20px;
+  color: #37475a;
+  margin-top: 1em;
+}
+
+.return input[type="submit"]:hover {
+  background-color: #ebaf60;
+}
+
+.bold {
+  font-weight: bold;
+}
