@@ -75,6 +75,7 @@ $subtotal = 0;
         <?php
 
         if ($cart_count) {
+          echo $cart_count;
           // we have items in our cart, so give the user the option to remove
           echo <<<END
           <div class="remove-cart-button">
