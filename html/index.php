@@ -76,7 +76,7 @@
         </div>
         <div class="picture">
           <a href="">
-            <img src="https://image.gsmpunt.nl/product/90000/82387/360x432/dux-ducis-apple-iphone-11-tempered-glass-screen-protector_8.jpg" alt="screenprotector" class="hover">
+            <img src="https://www.amac.nl/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/b/e/belkin_f8w972zzblk_1.jpg" alt="screenprotector" class="hover">
           </a>
         </div>
         <div class="picture">
