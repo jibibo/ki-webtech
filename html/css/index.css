@@ -52,9 +52,9 @@
 
 .text_center {
   position: absolute;
-  top: 0%;
+  top: 25%;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, -25%);
 }
 
 /* https://www.w3schools.com/cssref/css3_pr_flex-wrap.asp
