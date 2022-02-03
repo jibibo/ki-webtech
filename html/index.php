@@ -92,26 +92,26 @@
       <div class="category">
         <div class="column">
           <a href="">
-            <img src="https://static.iphoned.nl/orca/products/9009/apple-macbook-pro-2021.png" alt="Laptops" class="view">
+            <img src="https://static.iphoned.nl/orca/products/9009/apple-macbook-pro-2021.png" alt="Electronics" class="view">
           </a>
           <div class="imagelink">
-            <a href="" class="shop">Laptops</a>
+            <a href="" class="shop">Electronics</a>
           </div>
         </div>
         <div class="column">
           <a href="">
-            <img src="https://www.beatsbydre.com/content/dam/beats/web/product/headphones/studio3-wireless/plp/bbd.plpasset.headphones.studio3-v2.jpg.large.1x.jpg" alt="Earphones" class="view">
+            <img src="https://cdn.shopify.com/s/files/1/1862/4277/products/GlassScreenProtector_iPhone12Pro.jpg?v=1618431180" alt="Screenprotectors" class="view">
           </a>
           <div class="imagelink">
-            <a href="" class="shop">Earphones</a>
+            <a href="" class="shop">Screenprotectors</a>
           </div>
         </div>
         <div class="column">
           <a href="">
-            <img src="https://cdn.thewirecutter.com/wp-content/media/2020/11/usbphonechargers-2048px-278.jpg" alt="Phone charger" class="view">
+            <img src="https://cdn.webshopapp.com/shops/256679/files/370778642/case2go-case2go-laptoptas-geschikt-voor-lenovo-thi.jpg" alt="Laptop bags" class="view">
           </a>
           <div class="imagelink">
-            <a href="" class="shop">Phone chargers</a>
+            <a href="" class="shop">Laptop bags</a>
           </div>
         </div>
         <div class="column">
