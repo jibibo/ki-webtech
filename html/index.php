@@ -66,7 +66,7 @@
         </div>
         <div class="picture">
           <a href="">
-            <img src="https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/leap-petite-global/shop/Shop-all-page-Hero.jpg?$responsive$&cropPathE=mobile&fit=stretch,1&fmt=pjpeg&wid=640" alt="Dyson airwrap" class="hover">
+            <img src="https://consumentenbond-res.cloudinary.com/w_600,f_auto/e_improve:30/v1635406250/productvergelijker/NOTEB/14811976_kk_1" alt="Macbook" class="hover">
           </a>
         </div>
         <div class="picture">
