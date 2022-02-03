@@ -52,8 +52,8 @@
 
 .text_center {
   position: absolute;
-  z-index: 100;
-  float: left;
+  left: 50px;
+  top: 8px;
   font-size: 30px;
   font-weight: bolder;
   color: white;
