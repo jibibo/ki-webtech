@@ -53,13 +53,11 @@ h1 {
   padding-bottom: 30px;
 }
 
-input {
+.input-form {
+  padding: 6px;
   width: 100%;
   border: 1px solid;
   outline: none;
-}
-.input-form {
-  padding: 6px;
 }
 
 textarea {
@@ -81,7 +79,7 @@ label {
   outline: none;
   height: 35px;
   border-radius: 30px;
-  margin-top: 20px;
+  margin: 15px 15px;
   cursor: pointer;
   box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
 }

@@ -51,7 +51,7 @@ nav a {
     justify-content: center;
     align-items: center;
   }
-  button {
+  .logoutbutton {
     margin-left: 40.5%;
     margin-right: auto;
   }
@@ -138,7 +138,7 @@ nav a.active {
   position: sticky;
 }
 
-button {
+.logoutbutton {
   background-color: #febd69;
   border: none;
   padding: 0.92rem;
@@ -147,7 +147,7 @@ button {
   font-family: "Roboto", sans-serif;
 }
 
-button:hover {
+.logoutbutton:hover {
   background-color: #c28e49;
   cursor: pointer;
 }

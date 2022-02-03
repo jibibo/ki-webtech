@@ -191,22 +191,93 @@ $order_products_info_joined = join("\n", $order_products_info);
 ?>
 
 <html>
-
 <head>
-
+  <title>Home | UvAzon</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/invoice.css" />
 </head>
 
 <body>
-  Thank you for your purchase:
-  <br />
-  <?php echo join("<br />", $order_products_info) ?>
   <?php
+  include "navbar.php";
+  ?>
 
-  include "utils.php";
+  <div class="container">
+    <div class="message">
+      <?php 
+      echo 
+      "
+      <h1>Thank you for your purchase, ".$_POST['first_name']."! </h1>
+      ";
+      ?>
+    </div>
+    <div class="order-info">
+      <table class="invoice">
+        <tr class="bold">
+          <td>Product</td>
+          <td>Quantity</td>
+          <td>Image</td>
+        </tr>
+        <br />
+        <?php //echo join("<br /><tr><td>", $order_products_info) ?>
+        
+        <?php
+        // include "utils.php";
+        // pre_print($product_counts);
+        foreach ($product_ids_unique as $product_id) {
+          // get product info
+          $product_result = mysqli_query(
+            $conn,
+            "SELECT * FROM products WHERE id=$product_id"
+          );
+        
+          if (!$product_result) {
+            // product id not found, ignore
+            continue;
+          }
+        
+          $product = mysqli_fetch_assoc($product_result);
+          $product_id = $product["id"];
+          $product_name = $product["name"];
+          $quantity = $product_counts[$product_id];
+          $subtotal += $product["price"] * $quantity;
+          $image = $product["image_url"];
 
-  pre_print($product_counts);
-
+          echo 
+          "
+          <tr>
+            <td>$product_name</td>
+            <td>$quantity</td>
+            <td class='right'> <img src='$image' width='150px' height='150px'></td>
+          </tr>
+          
+          "; }
+          echo 
+          "
+          <tr class='subtotal'>
+            <td>Total price: €$subtotal</td>
+          </tr>
+          ";
+        ?>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="return">
+          <form method="post">
+            <input type="submit" value="Return to home page" /> 
+          </form>
+    </div>
+  </div>
+  <?php
+  include "footer.php";
   ?>
 </body>
-
 </html>
