@@ -15,23 +15,23 @@
 .imagecontainer button {
   border-radius: 40px;
   position: absolute;
-  left: 43%;
-  top: 80%;
+  left: 44%;
+  top: 90%;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
-  font-size: 25px;
+  font-size: 35px;
   margin-bottom: 100px;
-  background-color: black;
-  border-color: #febd69;
+  background-color: rgb(169, 201, 250);
+  border-color: rgb(71, 90, 119);
 }
 
 .imagecontainer button:hover {
-  background-color: #4e4d4c;
+  background-color: rgb(219, 231, 250);
 }
 
 .applelink {
   text-decoration: none;
-  color: #febd69;
+  color: rgb(71, 90, 119);
   font-family: "Roboto", sans-serif;
 }
 

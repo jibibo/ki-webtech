@@ -92,7 +92,7 @@
       <div class="category">
         <div class="column">
           <a href="">
-            <img src="https://static.iphoned.nl/orca/products/9009/apple-macbook-pro-2021.png" alt="Electronics" class="view">
+            <img src="https://static.iphoned.nl/orca/products/9402/apple-macbook-pro.jpg" alt="Electronics" class="view">
           </a>
           <div class="imagelink">
             <a href="" class="shop">Electronics</a>
