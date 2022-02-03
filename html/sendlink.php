@@ -17,7 +17,7 @@ $resetmail = "";
 if(isset($_POST["reset_password"]) && $_POST["input_email"])
 {
     // cleans input data
-    $resetmail = clean_data($_POST["input_email"]);
+    $resetmail = htmlspecialchars($_POST["input_email"]);
 
     // show error message if the email is not valid
     if (!filter_var($resetmail, FILTER_VALIDATE_EMAIL)) {
