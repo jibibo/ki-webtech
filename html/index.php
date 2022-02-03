@@ -61,7 +61,7 @@
       <div class="trending">
         <div class="picture">
           <a href="">
-            <img src="https://m.media-amazon.com/images/I/81DN5b9LvKL._SX466_.jpg" alt="PS5 spider-man game" class="hover">
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/2253/2253772_sa.jpg;maxHeight=640;maxWidth=550" alt="Iphone charger" class="hover">
           </a>
         </div>
         <div class="picture">
