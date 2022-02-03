@@ -92,7 +92,7 @@
       <div class="category">
         <div class="column">
           <a href="">
-            <img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-2021-14in.png" alt="Electronics" class="view">
+            <img src="https://static.iphoned.nl/orca/products/9402/apple-macbook-pro.jpg" alt="Electronics" class="view">
           </a>
           <div class="imagelink">
             <a href="" class="shop">Electronics</a>
