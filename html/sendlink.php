@@ -2,14 +2,6 @@
 // connect with database
 include "db_connect.php";
 
-// funtion that cleans input data
-function clean_data($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-} 
-
 // set variable
 $resetmail = "";
 
