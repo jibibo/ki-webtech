@@ -32,7 +32,7 @@
 @media (max-width: 1400px) {
   .imagecontainer button {
     font-size: 3vw;
-    left: auto;
+    left: 3vw;
   }
 }
 
@@ -66,7 +66,7 @@
   font-weight: bolder;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1650px) {
   .text_center {
     font-size: 3vw;
   }
