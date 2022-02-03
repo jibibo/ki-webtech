@@ -3,7 +3,6 @@
 include "redirect_http.php";
 
 include "db_connect.php";
-include "utils.php";
 
 // src: https://stackoverflow.com/a/6324360/13216113
 // get the name, id and the amount of categories for each category
