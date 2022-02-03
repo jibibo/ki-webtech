@@ -3,7 +3,7 @@
 .imagecontainer img {
   height: auto;
   width: 100%;
-  margin: none;
+  display: block;
 }
 
 .imagecontainer {
