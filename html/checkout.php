@@ -9,10 +9,10 @@ if (isset($_COOKIE["cart"])) {
   $cartcookie = htmlspecialchars($_COOKIE["cart"]);
   $cart_ids = explode("|", $cartcookie);
 
-  // if ($cart_ids[0] == "") {
-  //   // if cart_ids contains an empty string
-  //   $cart_ids = array();
-  // }
+  if ($cart_ids[0] == "") {
+    // if cart_ids[0] is an empty string after clearing cookie, empty the array
+    $cart_ids = array();
+  }
 }
 
 $cart_count = count($cart_ids);
