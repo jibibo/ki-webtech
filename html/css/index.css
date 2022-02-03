@@ -73,6 +73,12 @@
 
 @media (max-width: 900px) {
   .text_center {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .text_center {
     font-size: 15px;
   }
 }
