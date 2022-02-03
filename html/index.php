@@ -124,7 +124,7 @@
         </div>
         <div class="column">
           <a href="">
-            <img src="https://media.s-bol.com/Yo8RQV9NARO/1200x1199.jpg" alt="Office supplies" class="view">
+            <img src="https://www.ubuy.co.nl/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvOTFFbG9DUnF6dUwuX0FDX1NMMTUwMF8uanBn.jpg" alt="Office supplies" class="view">
           </a>
           <div class="imagelink">
             <a href="" class="shop">Office supplies</a>
