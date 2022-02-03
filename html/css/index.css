@@ -125,8 +125,6 @@
 
 .category {
   display: flex;
-  /*width: 1200;
-  margin-right: 100px; */
   margin-left: 100px;
   flex-wrap: nowrap;
   flex-direction: row;
