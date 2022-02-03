@@ -2,7 +2,7 @@
 
 .imagecontainer img {
   display: block;
-  height: 600px;
+  height: auto;
   width: 100%;
 }
 

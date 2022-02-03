@@ -21,7 +21,7 @@
   <div class="container">
     <div class="imagecontainer">
       <span class="headertext">Begin the year with Nike</span>
-      <img src="https://images.firstpost.com/wp-content/uploads/2021/03/Apple-says-sale.jpg" alt="Apple products" class="nike">
+      <img src="https://www.rtlnieuws.nl/sites/default/files/content/images/2021/09/07/apple-event.png?itok=Zn29uG2Z&offsetX=0&offsetY=19&cropWidth=1978&cropHeight=1113&width=2048&height=1152&impolicy=dynamic" alt="Apple products" class="nike">
       <button><a href="https://webtech-ki15.webtech-uva.nl/products.php?search=&c%5B%5D=20" class="nikelink">Go to collection</a></button>
     </div>
 
