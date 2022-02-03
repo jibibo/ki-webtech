@@ -112,7 +112,7 @@
   flex-direction: row;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1400px) {
   .category {
     flex-direction: column;
     flex-wrap: wrap;
