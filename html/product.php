@@ -17,6 +17,7 @@ if (!is_numeric($product_id)) {
   header("Location: products.php");
   exit;
 }
+
 $result_product = mysqli_query(
   $conn,
   "SELECT * 
@@ -31,6 +32,7 @@ if (!$product) {
   header("Location: products.php");
   exit;
 }
+
 $product_name = $product["name"];
 $product_description = $product["description"];
 $product_image_url = $product["image_url"];
@@ -44,6 +46,7 @@ $result_categories = mysqli_query(
   JOIN categories c ON pc.category=c.id 
   WHERE pc.product=$product_id"
 );
+
 $product_category_ids = array();
 $product_categories = array();
 
