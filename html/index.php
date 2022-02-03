@@ -30,27 +30,27 @@
       <div class="beautyrow">
         <div class="picture">
           <a href="">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/71OK6VII-lL._SL1500_.jpg" alt="Fenty eyeshadow palette" class="hover">
+            <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MWP22?wid=1144&hei=1144&fmt=jpeg&qlt=80&.v=1591634795000" alt="Apple airpods" class="hover">
           </a>
         </div>
         <div class="picture">
           <a href="">
-            <img src="https://i0.wp.com/angelteam.biz/wp-content/uploads/2019/06/s2113033-main-zoom.jpg?fit=2000%2C2000&ssl=1" alt="Fenty highlighter" class="hover">
+            <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MKU93_VW_34FR+watch-40-alum-gold-nc-se_VW_34FR_WF_CO?wid=1400&hei=1400&trim=1,0&fmt=p-jpg&qlt=95&.v=1632171039000,1630712417000" alt="Apple watch" class="hover">
           </a>
         </div>
         <div class="picture">
           <a href="">
-            <img src="https://shielabeautyworld.com/wp-content/uploads/2020/03/sweet-mouth.png" alt="Fenty lip gloss" class="hover">
+            <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/airtag-4pack-select-202104_FMT_WHH?wid=1000&hei=1000&fmt=jpeg&qlt=95&.v=1617761669000" alt="Apple airtags" class="hover">
           </a>
         </div>
         <div class="picture">
           <a href="">
-            <img src="https://cdn11.bigcommerce.com/s-h0vxbu2ww9/images/stencil/500x500/products/2696/6282/5602__29379.1575033839.jpg?c=2" alt="Laneige lip balm" class="hover">
+            <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mbp-spacegray-select-202011_GEO_EMEA_LANG_NL?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632948906000" alt="Macbook pro" class="hover">
           </a>
         </div>
         <div class="picture">
           <a href="">
-            <img src="https://cdn.webshopapp.com/shops/243452/files/323036432/image.jpg" alt="Belif eye cream" class="hover">
+            <img src="https://images.mobilefun.co.uk/graphics/450pixelp/83357.jpg" alt="Magsafe iphone charger" class="hover">
           </a>
         </div>
       </div>
@@ -66,22 +66,22 @@
         </div>
         <div class="picture">
           <a href="">
-            <img src="https://media.s-bol.com/V0Q2J6QBjY85/MQ1o9Jm/168x131.jpg" alt="HP laptop" class="hover">
+            <img src="https://www.notebookcheck.nl/uploads/tx_nbc2/AcerChromebook11-CB311-9HT__1_.JPG" alt="Acer chromebook" class="hover">
           </a>
         </div>
         <div class="picture">
           <a href="">
-            <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MWP22?wid=1144&hei=1144&fmt=jpeg&qlt=80&.v=1591634795000" alt="Apple airpods" class="hover">
+            <img src="https://images.mobilefun.co.uk/graphics/productgalleries/82982/b.jpg" alt="Iphone charger" class="hover">
           </a>
         </div>
         <div class="picture">
           <a href="">
-            <img src="https://www.amac.nl/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/b/e/belkin_f8w972zzblk_1.jpg" alt="screenprotector" class="hover">
+            <img src="https://image.gsmpunt.nl/product/90000/82387/360x432/dux-ducis-apple-iphone-11-tempered-glass-screen-protector_8.jpg" alt="screenprotector" class="hover">
           </a>
         </div>
         <div class="picture">
           <a href="">
-            <img src="https://www.safehome.org/app/uploads/2018/12/Ring-Doorbell-Camera.jpg" alt="Ring camera" class="hover">
+            <img src="https://media.travelbags-cdn.nl/sqaure-1360/72734/image.jpg" alt="Herschel bag" class="hover">
           </a>
         </div>
       </div>
