@@ -47,6 +47,11 @@ label {
   padding: 1em;
   display: flex;
 }
+@media (max-width: 600px){
+  .shipping-info input[type="text"]{
+    width: 100%;
+  }
+}
 
 .shipping-info input[type="submit"] {
   width: 100%;
