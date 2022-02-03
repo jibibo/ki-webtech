@@ -9,7 +9,7 @@ h4 {
 .col-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
   padding: 2rem;
@@ -88,6 +88,7 @@ label {
 
 .bottom {
   margin-bottom: 0.5em;
+  margin-top: 20px;
 }
 
 .order-bottom {
