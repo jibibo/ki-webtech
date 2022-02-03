@@ -77,7 +77,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .text_center {
     font-size: 18px;
   }
