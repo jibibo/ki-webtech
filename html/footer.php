@@ -35,21 +35,6 @@
   </div>
 </div>
 
-<!-- <script>
-  function message() {
-    var input_valid = document.getElementById("footer_email");
-    if (input_valid.checkValidity()) {
-      alert("Thank You For Signing Up!");
-    } //else {
-      //alert("Invalid email");  test internet
-    //} 
-  }
-</script> -->
-
-<!-- required 
-          oninvalid="this.setCustomValidity('Please enter an email address')"
-          oninput="this.setCustomValidity('')"/> -->
-
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

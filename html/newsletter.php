@@ -27,10 +27,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       // if input is not valid, return to home page and exit code
       if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo ("<script LANGUAGE='JavaScript'>
-        window.alert('Please enter a valid email address');
-        window.location.href='https://webtech-ki15.webtech-uva.nl/';
-        </script>");
+        echo <<<END
+        <script language="JavaScript">
+        window.alert("Please enter a valid email address");
+        window.location.href="https://webtech-ki15.webtech-uva.nl/";
+        </script>
+        END;
         exit;
       } 
   }
@@ -39,41 +41,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // only insert form data into database if input was valid
 $query = "INSERT INTO newsletter VALUES ('$email')";
 
-/*if (mysqli_query($conn, $query)) {
-        echo "Succesfully subscribed to our Newsletter!";
-} else {
-        echo "This email is already subscribed, please enter with an other email." . mysqli_error($conn);
-}*/
-
-// shows alert message if the user is subscribed or not subscribed 
-/*if (mysqli_query($conn, $query)) {
-  echo '<script language="javascript">';
-  echo 'alert("Thank You for subscribing to our Newsletter!")';
-  echo '</script>';
-} else {
-  echo '<script language="javascript">';
-  echo 'alert("This email is already subscribed, please enter with an other email.")';
-  echo '</script>';
-}*/
-
 // if the email is already subscribed, alert user and redirect user to homepage
 if (!mysqli_query($conn, $query)) {
-  echo ("<script LANGUAGE='JavaScript'>
-      window.alert('This email is already subscribed, please enter with an other email.');
-      window.location.href='https://webtech-ki15.webtech-uva.nl/';
-      </script>");
+  echo <<<END
+  <script language="JavaScript">
+  window.alert("This email is already subscribed, please enter with an other email.");
+  window.location.href="https://webtech-ki15.webtech-uva.nl/";
+  </script>
+  END;
 }
-  /*echo ("<script LANGUAGE='JavaScript'>
-      window.alert('Thank You for subscribing to our Newsletter!');
-      </script>");
-} else {
-  echo ("<script LANGUAGE='JavaScript'>
-      window.alert('This email is already subscribed, please enter with an other email.');
-      window.location.href='https://webtech-ki15.webtech-uva.nl/';
-      </script>");
-} */
 
-// disconnect with database
+// disconnect from database
 include "db_disconnect.php"
 
 ?>

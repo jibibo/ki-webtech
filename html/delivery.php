@@ -1,8 +1,14 @@
+<?php
+
+include "redirect_http.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>delivery | UvAzon</title>
+  <title>Delivery | UvAzon</title>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,26 +23,25 @@
   <?php
   include "navbar.php";
   ?>
+
   <div class="termscontainer">
-      <p>IRELAND - 2-3 DAYS<br><br>
+    <p>IRELAND - 2-3 DAYS<br><br>
 
-         USA - NOW EXPRESS AS STANDARD - WITHIN 4 WORKING DAYS<br><br>
+      USA - NOW EXPRESS AS STANDARD - WITHIN 4 WORKING DAYS<br><br>
 
-         GERMANY - 4-5 DAYS<br><br>
+      GERMANY - 4-5 DAYS<br><br>
 
-         NL, DENMARK, FRANCE, BELGIUM, SWEDEN, AUSTRIA - 4-6 DAYS<br><br>
+      NL, DENMARK, FRANCE, BELGIUM, SWEDEN, AUSTRIA - 4-6 DAYS<br><br>
 
-         SPAIN, ITALY, PORTUGAL, NORWAY, SWITZERLAND - 5-7 DAYS<br><br>
+      SPAIN, ITALY, PORTUGAL, NORWAY, SWITZERLAND - 5-7 DAYS<br><br>
 
-         AUSTRALIA - 6-9 DAYS<br><br>
+      AUSTRALIA - 6-9 DAYS<br><br>
 
-         ROW - 6-12 DAYS (allow longer in certain places)<br><br></p>
-      <a href="index.php">
+      ROW - 6-12 DAYS (allow longer in certain places)<br><br></p>
+    <a href="index.php">
       <button class="termbutton">Klik hier om terug te gaan</button>
+    </a>
   </div>
-
-
-  
 
   <?php
   include "footer.php";

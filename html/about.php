@@ -24,18 +24,6 @@ include "redirect_http.php";
   include "navbar.php";
   ?>
 
-  <!--<div class="container">-->
-  <!-- <img class="nicepix" src="images/Location-Roeterseiland.jpeg" alt="UVA"> -->
-  <!--<div class="about-us-text">
-      <h1>About us</h1>
-      <h5>How it started</h5>
-      <p>UvAzon (not related to Amazon.com, Inc. in any form), is a small
-        startup company based in the Netherlands. Created by four enthousiastic
-        students (FOTO'S!) their aim is to provide any other student with all
-        the supplies they need during their stay on the University of Amsterdan
-        and Science Park.</p>
-    </div>
-  </div>-->
   <div class="container_about">
     <div class="mission">
       <img src="https://assets-cdn-folia.boondrive.com/1240x698/13924_1561558700220_UvA-SciencePark_Dag01_0605%20copy.jpg" alt="UvA Science park">
@@ -49,8 +37,6 @@ include "redirect_http.php";
       <p> After months of hard work and sleepless nights, we now present to you the solution of our future: Uvazon.</p>
     </div>
     <div class="mission">
-      <!--<div class="mission"><img src="https://student.uva.nl/binaries/_ht_1548843571179/pagebanner/content/gallery/faculteiten-en-diensten/restyling18-generiek-beeld/uva-summer-school-cycling-city-22072015_659%E2%94%AC%E2%8C%90-maartje-strijbis.jpg" alt="Students"></div>
-        <div class="mission"><img src="https://www.uva.nl/binaries/_ht_1631012828576/pagebanner/content/gallery/evenementen/2021/banner-uva-bachelorweek-v2.png" alt="students"></div> -->
       <img src="https://summerschool.uva.nl/binaries/_ht_1614873822651/pagebanner/content/gallery/subsites/uva-summer-school/gsss-spo-wouter-van-der-wold-2019-4.jpg" alt="students">
     </div>
     <div class="text">
@@ -72,7 +58,6 @@ include "redirect_http.php";
       <p> Where we can grow together as a community.</p>
       <p> And where we can bring Uvazon closer to you.</p>
     </div>
-  </div>
   </div>
 
   <?php

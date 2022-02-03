@@ -11,37 +11,34 @@
         <li class="dropdown-menu">
           <a href="products.php" class="dropdown-button">Products</a>
           <div class="dropdown-content">
-            <!-- https://stackoverflow.com/questions/6243051/how-to-pass-an-array-within-a-query-string -->
+            <!-- src: https://stackoverflow.com/questions/6243051/how-to-pass-an-array-within-a-query-string -->
             <a href="products.php?c[]=12&c[]=13">Kleding</a>
             <a href="products.php?c[]=2">Auto's</a>
             <a href="products.php?c[]=3">Schoenen</a>
           </div>
         </li>
         <li><a href="checkout.php">Checkout</a></li>
-       <!-- <li><a href="session.php">Log in/out | Register</a></li> -->
         <li><a href="contact.php">Contact us</a></li>
         <li><a href="about.php">About us</a></li>
 
-        <?php 
-          if(!isset($_COOKIE['session_token']))
-          {
-            echo 
-            "
-              <li><a href='session.php'>Log-in / Register</a></li>
-            ";
-          }
+        <?php
+        if (!isset($_COOKIE['session_token'])) {
+          echo <<<END
+          <li><a href='session.php'>Log-in / Register</a></li>
+          END;
+        }
 
-          if (isset($_COOKIE["session_token"])) {
-            echo <<<END
-            <li>
-              <form action="session.php" method="post">
-                <input type="hidden" name="in_out" value="out" />
-                <button class="logoutbutton" type="submit" title="Log out">Log out</button>
-              </form>
-            </li>
-            END;
-          }
-          ?>
+        if (isset($_COOKIE["session_token"])) {
+          echo <<<END
+          <li>
+            <form action="session.php" method="post">
+              <input type="hidden" name="in_out" value="out" />
+              <button class="logoutbutton" type="submit" title="Log out">Log out</button>
+            </form>
+          </li>
+          END;
+        }
+        ?>
 
         <div class="search-wrapper">
           <form action="products.php" method="get">

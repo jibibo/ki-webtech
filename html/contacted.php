@@ -14,7 +14,7 @@ $email = htmlspecialchars($_POST["email"]);
 $subject = htmlspecialchars($_POST["subject"]);
 $message = htmlspecialchars($_POST["message"]);
 
-$query = "INSERT INTO `contact_form` (`name`, `phone`, `email`, `subject`, `message`, `id`) VALUES ('$name', '$phone', '$email', '$subject', '$message', NULL);";
+$query = "INSERT INTO 'contact_form' ('name', 'phone', 'email', 'subject', 'message') VALUES ('$name', '$phone', '$email', '$subject', '$message');";
 $success = false;
 if (mysqli_query($conn, $query)) {
   $success = true;
@@ -24,12 +24,11 @@ include "db_disconnect.php";
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Thanks you! | UvAzon</title>
+  <title>Thank you! | UvAzon</title>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />

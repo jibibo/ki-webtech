@@ -68,17 +68,17 @@ include "redirect_http.php";
         <table>
           <tr>
             <td>Email us!</td>
-            
-              <td><a href="mailto:info@uvazon.nl">info@uvazon.nl</a></td>
-            
+
+            <td><a href="mailto:info@uvazon.nl">info@uvazon.nl</a></td>
+
           </tr>
           <tr>
             <td>Call us!</td>
-            <td>+31 20 12345678</td>
+            <td><a href="tel:+312012345678">+31 20 12345678</a></td>
           </tr>
           <tr>
             <td>Visit us!</td>
-            <td><a href="https://www.google.com/maps/place/Science+Park+904/@52.3544089,4.9535252,17z/data=!3m1!4b1!4m5!3m4!1s0x47c60944ecd0187d:0xbae0bc22b93e4985!8m2!3d52.3544089!4d4.9557139" >Science Park 904, 1098 XH Amsterdam</a></td>
+            <td><a href="https://www.google.com/maps/place/Science+Park+904/@52.3544089,4.9535252,17z/data=!3m1!4b1!4m5!3m4!1s0x47c60944ecd0187d:0xbae0bc22b93e4985!8m2!3d52.3544089!4d4.9557139">Science Park 904, 1098 XH Amsterdam</a></td>
           </tr>
         </table>
       </div>
