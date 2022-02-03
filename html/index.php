@@ -61,7 +61,7 @@
       <div class="trending">
         <div class="picture">
           <a href="">
-            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/2253/2253772_sa.jpg;maxHeight=640;maxWidth=550" alt="Iphone charger" class="hover">
+            <img src="https://as-images.apple.com/is/MXJ92?wid=445&hei=445&fmt=jpeg&qlt=95&.v=1580420175341" alt="Beats studio3" class="hover">
           </a>
         </div>
         <div class="picture">
