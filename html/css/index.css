@@ -52,11 +52,8 @@
 
 .text_center {
   position: absolute;
-  left: 50px;
   top: 8px;
-  font-size: 30px;
-  font-weight: bolder;
-  color: white;
+  left: 16px;
 }
 
 /* https://www.w3schools.com/cssref/css3_pr_flex-wrap.asp
