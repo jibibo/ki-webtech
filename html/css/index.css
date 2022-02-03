@@ -29,6 +29,12 @@
   background-color: rgb(219, 231, 250);
 }
 
+@media (max-width: 600px) {
+  .imagecontainer button {
+    background-size: 100% auto;
+  }
+}
+
 .applelink {
   text-decoration: none;
   color: rgb(71, 90, 119);
