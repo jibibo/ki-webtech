@@ -15,14 +15,14 @@
 .imagecontainer button {
   border-radius: 40px;
   position: absolute;
-  left: 43%;
-  top: 80%;
+  left: 50%;
+  top: 90%;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
   font-size: 25px;
   margin-bottom: 100px;
-  background-color: black;
-  border-color: #febd69;
+  background-color: rgb(169, 201, 250);
+  border-color: rgb(71, 90, 119);
 }
 
 .imagecontainer button:hover {
