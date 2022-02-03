@@ -13,10 +13,9 @@
 }
 
 .imagecontainer button {
-  display: inline-block;
   border-radius: 40px;
   position: absolute;
-  left: 50%;
+  left: 44%;
   top: 90%;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
@@ -64,6 +63,18 @@
   color: rgb(169, 201, 250);
   font-size: 70px;
   font-weight: bolder;
+}
+
+@media (max-width: 900px) {
+  .text_center {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .text_center {
+    font-size: 30px;
+  }
 }
 
 /* https://www.w3schools.com/cssref/css3_pr_flex-wrap.asp
