@@ -1,5 +1,7 @@
 <?php
 
+include "redirect_http.php";
+
 include "user_session.php";
 
 include "db_connect.php";

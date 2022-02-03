@@ -1,5 +1,7 @@
 <?php
 
+include "redirect_http.php";
+
 include "db_connect.php";
 include "utils.php";
 
@@ -209,7 +211,7 @@ include "db_disconnect.php";
         ?>
 
       </div>
-      
+
     </div>
   </div>
 

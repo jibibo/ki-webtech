@@ -1,5 +1,7 @@
 <?php
 
+include "redirect_http.php";
+
 include "db_connect.php";
 
 $status = "";
@@ -126,6 +128,7 @@ if (isset($_POST["in_out"])) {
       <?php
 
       if (isset($_COOKIE["session_token"])) {
+        // user is logged in, show option to log out
         echo <<<END
         <div>
           <form action="session.php" method="post" class="formscreen">

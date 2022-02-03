@@ -1,5 +1,7 @@
 <?php
 
+include "redirect_http.php";
+
 include "db_connect.php";
 
 // redirect user if insufficient information provided

@@ -1,11 +1,6 @@
 <?php
 
-include "db_connect.php";
-
-
-
-
-include "db_disconnect.php";
+include "redirect_http.php";
 
 ?>
 
@@ -82,7 +77,7 @@ include "db_disconnect.php";
         </div>
       </form>
     </div>
-  </div> 
+  </div>
 
   <?php
   include "footer.php";

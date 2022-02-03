@@ -1,5 +1,7 @@
 <?php
 
+// script to get the user's info if they are logged in (checks token cookie)
+
 $user_session = null;
 
 if (isset($_COOKIE["session_token"])) {
@@ -8,6 +10,7 @@ if (isset($_COOKIE["session_token"])) {
 
   $session_token = htmlspecialchars($_COOKIE["session_token"]);
 
+  // get user info from db
   $query_result = mysqli_query(
     $conn,
     "SELECT * 
@@ -17,6 +20,7 @@ if (isset($_COOKIE["session_token"])) {
   );
 
   if ($query_result) {
+    // if user is set, set info, otherwise it remains null
     $user_session = mysqli_fetch_assoc($query_result);
   }
 

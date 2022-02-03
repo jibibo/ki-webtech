@@ -1,5 +1,7 @@
 <?php
 
+include "redirect_http.php";
+
 include "user_session.php";
 
 // if user is not logged in, redirect to homepage
@@ -28,7 +30,7 @@ if (isset($_POST["rating"])) {
 
   $review = null;
 
-  // check if review is provided
+  // check if review is provided (otherwise it will be null)
   if (isset($_POST["review"])) {
     $review = htmlspecialchars($_POST["review"]);
   }
@@ -43,6 +45,7 @@ if (isset($_POST["rating"])) {
 
   $product_id = intval($product_id_raw);
 
+  // get logged in user's id
   $customer_id = $user_session["id"];
 
   $product_exists_result = mysqli_query(
@@ -59,6 +62,7 @@ if (isset($_POST["rating"])) {
   $title = htmlspecialchars($_POST["title"]);
   $body = htmlspecialchars($_POST["body"]);
 
+  // insert review into db
   mysqli_query(
     $conn,
     "INSERT INTO product_reviews (customer, product, rating, title, body) 

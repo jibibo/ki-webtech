@@ -1,10 +1,14 @@
+<?php
 
+include "redirect_http.php";
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Terms of service | UvAzon</title>
+  <title>Terms of Service | UvAzon</title>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,14 +23,12 @@
   <?php
   include "navbar.php";
   ?>
+
   <div class="termscontainer">
-      <h1>Waarom ben je hier, niemand kijkt hier naar</h1>
-      <a href="index.php">
-      <button class="termbutton">Klik hier om terug te gaan</button>
+    <h1>Why are you here, nobody every treads these terms</h1>
+    <a href="/">
+      <button class="termbutton">Click here to go back home!</button>
   </div>
-
-
-  
 
   <?php
   include "footer.php";

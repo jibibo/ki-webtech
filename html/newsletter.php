@@ -1,4 +1,7 @@
 <?php 
+
+include "redirect_http.php";
+
 // create connection with database
 include "db_connect.php";
 
