@@ -1,4 +1,6 @@
 function removeCartItems() {
+  // clear cookie
   document.cookie = "cart=";
-  console.debug("updated", getCookie());
+  // refresh the page
+  location.reload();
 }
