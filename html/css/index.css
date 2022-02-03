@@ -29,9 +29,10 @@
   background-color: rgb(219, 231, 250);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1400px) {
   .imagecontainer button {
-    display: block;
+    width: 100vw;
+    height: auto;
   }
 }
 
