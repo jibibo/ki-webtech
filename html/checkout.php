@@ -96,6 +96,7 @@ $subtotal = 0;
             include "db_connect.php";
 
             if (!$cart_count) {
+              // cart is empty
               echo <<<END
               <tr>
                 <td><h3>Nothing added to cart yet</h3></td>
@@ -125,6 +126,8 @@ $subtotal = 0;
                 $product_name = $product["name"];
                 $product_price = $product["price"];
                 $product_image = $product["image_url"];
+
+                // accumulate total price while iterating over the products
                 $subtotal = $subtotal + $product_price;
 
                 echo <<<END
@@ -141,9 +144,8 @@ $subtotal = 0;
                 </tr>
                 END;
               }
-            }
 
-            if ($cart_count) {
+              // cart does have items so show total price
               echo <<<END
               <tr>
                 <tfoot>
