@@ -4,6 +4,7 @@ include "db_connect.php";
 include "utils.php";
 
 // src: https://stackoverflow.com/a/6324360/13216113
+// get the name, id and the amount of categories for each category
 $result_categories = mysqli_query(
   $conn,
   "SELECT name, c.id, COUNT(*) 
@@ -20,6 +21,7 @@ while ($row = mysqli_fetch_assoc($result_categories)) {
 // src: https://stackoverflow.com/a/1222248/13216113
 $categories_checked = array();
 foreach ($_GET as $key => $values) {
+  // wrong get variable, skip it
   if ($key != "c" || !is_array($values)) {
     continue;
   }
@@ -35,6 +37,7 @@ foreach ($_GET as $key => $values) {
       continue;
     }
 
+    // enable the checkbox for this category
     $categories_checked[] = $category_id;
   }
 }
@@ -45,6 +48,7 @@ if (isset($_GET["search"])) {
 
   if ($categories_join) {
     if ($search) {
+      // query for search AND categories selected
       // src: https://stackoverflow.com/a/16082874/13216113
       $products_query = "SELECT *
         FROM products p 
@@ -52,6 +56,7 @@ if (isset($_GET["search"])) {
         WHERE pc.category IN ($categories_join)
           AND LOWER(p.name) LIKE LOWER('%$search%');";
     } else {
+      // ONLY categories selected
       $products_query = "SELECT *
       FROM products p 
         JOIN product_categories pc ON p.id=pc.product 
@@ -59,18 +64,22 @@ if (isset($_GET["search"])) {
     }
   } else {
     if ($search) {
+      // ONLY search given
       $products_query = "SELECT *
         FROM products p 
           JOIN product_categories pc ON p.id=pc.product 
         WHERE LOWER(p.name) LIKE LOWER('%$search%');";
     } else {
+      // no filter options given
       $products_query = "SELECT * FROM products;";
     }
   }
 } else {
+  // no get paramters given
   $products_query = "SELECT * FROM products;";
 }
 
+// get search results
 $products_result = mysqli_query($conn, $products_query);
 $products_count = mysqli_num_rows($products_result);
 $products = array();
@@ -200,11 +209,8 @@ include "db_disconnect.php";
         ?>
 
       </div>
-
+      
     </div>
-
-
-
   </div>
 
   <?php
