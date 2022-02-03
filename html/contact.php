@@ -1,3 +1,9 @@
+<?php
+
+include "redirect_http.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

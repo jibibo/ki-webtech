@@ -1,6 +1,5 @@
 function clickCart(id) {
   let oldCookie = getCookie();
-  console.debug(oldCookie);
 
   // if previous cookie is set, append
   if (oldCookie) {
@@ -9,7 +8,6 @@ function clickCart(id) {
     // set new cookie as it didn t exist yet
     document.cookie = "cart=" + id;
   }
-  console.debug("updated", getCookie());
 }
 
 // from: https://www.w3schools.com/js/js_cookies.asp

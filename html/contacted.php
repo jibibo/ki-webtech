@@ -1,5 +1,7 @@
 <?php
 
+include "redirect_http.php";
+
 include "db_connect.php";
 
 if (!isset($_POST["name"])) {
@@ -42,26 +44,26 @@ include "db_disconnect.php";
   <?php
   include "navbar.php";
   ?>
- 
+
   <div class="container">
-      <?php
+    <?php
 
-      if ($success) {
-        echo <<<END
-        <div class="concontainer">
-          <h1>THANK YOU FOR CONTACTING US!</h1>
-          <h5>We will reply as soon as possible.</h5>
-        </div>
-        END;
-      } else {
-        echo <<<END
-        <h1>Something went wrong!</h1>
-        END;
-      }
-      
-      ?>
+    if ($success) {
+      echo <<<END
+      <div class="concontainer">
+        <h1>THANK YOU FOR CONTACTING US!</h1>
+        <h5>We will reply as soon as possible.</h5>
+      </div>
+      END;
+    } else {
+      echo <<<END
+      <h1>Something went wrong!</h1>
+      END;
+    }
 
-</div>
+    ?>
+
+  </div>
 
   <?php
   include "footer.php";

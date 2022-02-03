@@ -1,14 +1,18 @@
-<?php 
+<?php
+
+include "redirect_http.php";
+
 // create connection with database
 include "db_connect.php";
 
 // cleans the input of users 
-function clean_data($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-} 
+function clean_data($data)
+{
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
 
 // did not include password yet!!
 // address weghalen --> ook in phpmyadmin weghalen? 
@@ -21,7 +25,7 @@ $fname = $lname = $phonenumber = $emailaddress = $psw = $address = $zipcode = $c
 
 // checks whether form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    /*if (empty($_POST["fname"])) {
+  /*if (empty($_POST["fname"])) {
         $fname_err = "First name is required";
     } else {
         $fname = clean_data($_POST["fname"]);
@@ -139,127 +143,125 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // /^[a-zA-Z ]+$/ */
 
-    $fname = clean_data($_POST["first_name"]);
+  $fname = clean_data($_POST["first_name"]);
 
-    // check if first name only consists of whitespaces and letters
-    if (!preg_match("/^[a-zA-Z ]+$/", $fname)) {
-        echo ("<script LANGUAGE='JavaScript'>
+  // check if first name only consists of whitespaces and letters
+  if (!preg_match("/^[a-zA-Z ]+$/", $fname)) {
+    echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid name');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
-        exit;
-    }
+    exit;
+  }
 
-    $lname = clean_data($_POST["last_name"]);
+  $lname = clean_data($_POST["last_name"]);
 
-    // check if last name only consists of whitespaces and letters
-    if (!preg_match("/^[a-zA-Z ]+$/", $lname)) {
-        echo ("<script LANGUAGE='JavaScript'>
+  // check if last name only consists of whitespaces and letters
+  if (!preg_match("/^[a-zA-Z ]+$/", $lname)) {
+    echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid name');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
-        exit;
-    }
+    exit;
+  }
 
-    $phonenumber = clean_data($_POST["phone"]);
+  $phonenumber = clean_data($_POST["phone"]);
 
-    // check if phone number is a valid number in the Netherlands
-    // src regex: https://stackoverflow.com/a/123666/13216113
-    // https://regexr.com/3aevr
-    if (!preg_match("/^((\+|00(\s|\s?\-\s?)?)31(\s|\s?\-\s?)?(\(0\)[\-\s]?)?|0)[1-9]((\s|\s?\-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$/", $phonenumber)) {
-        echo ("<script LANGUAGE='JavaScript'>
+  // check if phone number is a valid number in the Netherlands
+  // src regex: https://stackoverflow.com/a/123666/13216113
+  // https://regexr.com/3aevr
+  if (!preg_match("/^((\+|00(\s|\s?\-\s?)?)31(\s|\s?\-\s?)?(\(0\)[\-\s]?)?|0)[1-9]((\s|\s?\-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$/", $phonenumber)) {
+    echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid phone number');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
-        exit;
-    }
-    // /^((\+|00(\s|\s?\-\s?)?)31(\s|\s?\-\s?)?(\(0\)[\-\s]?)?|0)[1-9]((\s|\s?\-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$/gm
+    exit;
+  }
+  // /^((\+|00(\s|\s?\-\s?)?)31(\s|\s?\-\s?)?(\(0\)[\-\s]?)?|0)[1-9]((\s|\s?\-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$/gm
 
-    $emailaddress = clean_data($_POST["email"]);
+  $emailaddress = clean_data($_POST["email"]);
 
-    // check if email address is valid and well-formed
-    if (!filter_var($emailaddress, FILTER_VALIDATE_EMAIL)) {
-        echo ("<script LANGUAGE='JavaScript'>
+  // check if email address is valid and well-formed
+  if (!filter_var($emailaddress, FILTER_VALIDATE_EMAIL)) {
+    echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid email address');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
-        exit;
-    }
+    exit;
+  }
 
-    $psw = clean_data($_POST["password"]);
+  $psw = clean_data($_POST["password"]);
 
-    // check if password contains at least 8 characters
-    if (strlen($psw) < 8) {
-        echo ("<script LANGUAGE='JavaScript'>
+  // check if password contains at least 8 characters
+  if (strlen($psw) < 8) {
+    echo ("<script LANGUAGE='JavaScript'>
         window.alert('The password should contain at least 8 characters');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
-        exit;
-    }
+    exit;
+  }
 
-    // password hashing
+  // password hashing
 
-    $hashed_psw = password_hash($psw, PASSWORD_DEFAULT);
+  $hashed_psw = password_hash($psw, PASSWORD_DEFAULT);
 
 
 
-// https://murani.nl/blog/2015-09-28/nederlandse-reguliere-expressies/ --> address regex
+  // https://murani.nl/blog/2015-09-28/nederlandse-reguliere-expressies/ --> address regex
 
-    $address = clean_data($_POST["address"]);
+  $address = clean_data($_POST["address"]);
 
-    // check if address is a valid address in the Netherlands
-    if (!preg_match("/^([1-9][e][\s])*([a-zA-Z]+(([\.][\s])|([\s]))?)+[1-9][0-9]*(([-][1-9][0-9]*)|([\s]?[a-zA-Z]+))?$/i", $address)) {
-        echo ("<script LANGUAGE='JavaScript'>
+  // check if address is a valid address in the Netherlands
+  if (!preg_match("/^([1-9][e][\s])*([a-zA-Z]+(([\.][\s])|([\s]))?)+[1-9][0-9]*(([-][1-9][0-9]*)|([\s]?[a-zA-Z]+))?$/i", $address)) {
+    echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid address');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
-        exit;
-    }
+    exit;
+  }
 
-// address weghalen --> ook in phpmyadmin? 
-// zipcode voldoende en makkelijker? 
-//https://stackoverflow.com/questions/17898523/regular-expression-for-dutch-zip-postal-code
+  // address weghalen --> ook in phpmyadmin? 
+  // zipcode voldoende en makkelijker? 
+  //https://stackoverflow.com/questions/17898523/regular-expression-for-dutch-zip-postal-code
 
-    $zipcode = clean_data($_POST["zipcode"]);
+  $zipcode = clean_data($_POST["zipcode"]);
 
-    // check if zipcode is a valid zipcode in the Netherlands
-    if (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i", $zipcode)) {
-        echo ("<script LANGUAGE='JavaScript'>
+  // check if zipcode is a valid zipcode in the Netherlands
+  if (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i", $zipcode)) {
+    echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid zipcode');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
-        exit;
-    }
+    exit;
+  }
 
-//[1-9][0-9]{3}˽?[A-z]{2}/
-// /^(?:NL-)?(\d{4})\s*([A-Z]{2})$/i
+  //[1-9][0-9]{3}˽?[A-z]{2}/
+  // /^(?:NL-)?(\d{4})\s*([A-Z]{2})$/i
 
-    $city = clean_data($_POST["city"]);
+  $city = clean_data($_POST["city"]);
 
-    // check if city only consists of whitespaces and letters
-    if (!preg_match("/^[a-zA-Z ]+$/", $city)) {
-        $city_err = "Please enter a valid city";
-        echo ("<script LANGUAGE='JavaScript'>
+  // check if city only consists of whitespaces and letters
+  if (!preg_match("/^[a-zA-Z ]+$/", $city)) {
+    $city_err = "Please enter a valid city";
+    echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid city');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
-        exit;
-    }
+    exit;
+  }
 
 
-    $country = clean_data($_POST["country"]);
+  $country = clean_data($_POST["country"]);
 
-    // check if country only consists of whitespaces and letters
-    if (!preg_match("/^[a-zA-Z ]+$/", $country)) {
-        $country_err = "Please enter a valid country";
-        echo ("<script LANGUAGE='JavaScript'>
+  // check if country only consists of whitespaces and letters
+  if (!preg_match("/^[a-zA-Z ]+$/", $country)) {
+    $country_err = "Please enter a valid country";
+    echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid country');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
-        exit;
-    }
-    
-
+    exit;
+  }
 }
 
 // insert data into database if all input was valid
@@ -270,14 +272,14 @@ VALUES ('$fname', '$lname', '$phonenumber', '$emailaddress', '$hashed_psw', '$ad
 
 // if query is succeeded return to homepage, else try again on the register page
 if (mysqli_query($conn, $query)) {
-    // header ("Location: https://webtech-ki15.webtech-uva.nl/");
-    echo ("<script LANGUAGE='JavaScript'>
+  // header ("Location: https://webtech-ki15.webtech-uva.nl/");
+  echo ("<script LANGUAGE='JavaScript'>
         window.alert('Thank You for Signing Up!');
         window.location.href='https://webtech-ki15.webtech-uva.nl/session.php';
         </script>");
 } else {
-    //header ("Location: https://webtech-ki15.webtech-uva.nl/register.php");
-    echo ("<script LANGUAGE='JavaScript'>
+  //header ("Location: https://webtech-ki15.webtech-uva.nl/register.php");
+  echo ("<script LANGUAGE='JavaScript'>
         window.alert('This email is already in use, please register with an other email.');
         window.location.href='https://webtech-ki15.webtech-uva.nl/register.php';
         </script>");
@@ -286,5 +288,3 @@ if (mysqli_query($conn, $query)) {
 // close connection database
 include "db_disconnect.php";
 //header("Location: /");
-
-?>
