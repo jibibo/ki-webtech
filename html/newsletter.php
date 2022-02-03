@@ -6,7 +6,7 @@ include "redirect_http.php";
 include "db_connect.php";
 
 // set variables to empty values
-$email = $email_err = "";
+$email = "";
 
 // checks whether form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
