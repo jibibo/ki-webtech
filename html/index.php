@@ -116,10 +116,10 @@
         </div>
         <div class="column">
           <a href="">
-            <img src="https://cdn.webshopapp.com/shops/262924/files/332112864/890x820x2/eastpak-eastpak-padded-pakr-grijs.jpg" alt="Bags" class="view">
+            <img src="https://hwimages.beslist.net/beslist-images/bbeZVFcPM95ECvHoLZ8MfncQBmq/394/F300/5824af9726beb01ddb30fc93da44e43e/Schooltassen/Eastpak-Out-of-Office-Rugzak-44-cm-laptopvak-sunday-grey.jpg" alt="Backbags" class="view">
           </a>
           <div class="imagelink">
-            <a href="" class="shopshoes">Bags</a>
+            <a href="" class="shopshoes">Backpacks</a>
           </div>
         </div>
         <div class="column">
