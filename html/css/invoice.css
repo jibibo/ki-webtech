@@ -21,8 +21,7 @@
   background-color: white;
   border-radius: 0.3em;
   margin-top: 1em;
-  height: 1000px;
-  width: 750px;
+  width: 900px;
   overflow-y: scroll;
   overflow-x: auto;
 }
@@ -47,7 +46,7 @@ td {
   margin-top: 2em;
   padding-top: 2em;
   font-weight: bold;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .return input[type="submit"] {
