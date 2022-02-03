@@ -2,8 +2,6 @@
 
 include "redirect_http.php";
 
-// https://laratutorials.com/php-send-reset-password-link-email/ --> ter inspiratie gebruikt
-
 // connect with database
 include "db_connect.php";
 
