@@ -52,6 +52,7 @@
 
 .text_center {
   position: absolute;
+  top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 30px;
