@@ -29,7 +29,7 @@
   background-color: rgb(219, 231, 250);
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1500px) {
   .imagecontainer button {
     font-size: 3vw;
     left: 39%;
