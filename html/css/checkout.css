@@ -51,6 +51,10 @@ label {
   .shipping-info input[type="text"]{
     width: 100%;
   }
+  .order-info{
+    height: 350px;
+    justify-content: center;
+  }
 }
 
 .shipping-info input[type="submit"] {
