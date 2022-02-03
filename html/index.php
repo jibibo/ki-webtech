@@ -22,7 +22,7 @@
     <div class="imagecontainer">
       <span class="headertext">Begin the year with Nike</span>
       <img src="https://theplaybook.asia/wp-content/uploads/sites/27/2019/06/cropped-sale_malaysia_nike_com.png" alt="Nike sale" class="nike">
-      <button><a href="" class="nikelink">Go to collection</a></button>
+      <button><a href="https://webtech-ki15.webtech-uva.nl/products.php?search=&c%5B%5D=20" class="nikelink">Go to collection</a></button>
     </div>
 
     <div class="beautycontainer">
