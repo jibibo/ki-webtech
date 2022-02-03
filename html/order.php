@@ -219,7 +219,7 @@ $order_products_info_joined = join("\n", $order_products_info);
       ?>
     </div>
     <div class="order-info">
-      <table class="invoice">
+      <table class="invoice-container">
         <tr class="bold">
           <td>Product</td>
           <td>Quantity</td>
