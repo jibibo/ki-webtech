@@ -92,31 +92,31 @@
       <div class="category">
         <div class="column">
           <a href="">
-            <img src="https://static.iphoned.nl/orca/products/9009/apple-macbook-pro-2021.png" alt="Laptops" class="view">
+            <img src="https://static.iphoned.nl/orca/products/9009/apple-macbook-pro-2021.png" alt="Electronics" class="view">
           </a>
           <div class="imagelink">
-            <a href="" class="shop">Laptops</a>
+            <a href="" class="shop">Electronics</a>
           </div>
         </div>
         <div class="column">
           <a href="">
-            <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MX432?wid=532&hei=582&fmt=png-alpha&.v=1570119317387" alt="Earphones" class="view">
+            <img src="https://cdn.shopify.com/s/files/1/1862/4277/products/GlassScreenProtector_iPhone12Pro.jpg?v=1618431180" alt="Screenprotectors" class="view">
           </a>
           <div class="imagelink">
-            <a href="" class="shop">Earphones</a>
+            <a href="" class="shop">Screenprotectors</a>
           </div>
         </div>
         <div class="column">
           <a href="">
-            <img src="https://cdn.thewirecutter.com/wp-content/media/2020/11/usbphonechargers-2048px-278.jpg" alt="Phone charger" class="view">
+            <img src="https://cdn.webshopapp.com/shops/256679/files/370778642/case2go-case2go-laptoptas-geschikt-voor-lenovo-thi.jpg" alt="Laptop bags" class="view">
           </a>
           <div class="imagelink">
-            <a href="" class="shop">Phone chargers</a>
+            <a href="" class="shop">Laptop bags</a>
           </div>
         </div>
         <div class="column">
           <a href="">
-            <img src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/35d7eef5-0dbd-4d37-bc3b-f977ca87a8e7/air-jordan-1-bordeaux-555088-611-release-date.jpg" alt="Shoes" class="view">
+            <img src="https://media.travelbags-cdn.nl/product-square-320/2580/image.jpg" alt="Bags" class="view">
           </a>
           <div class="imagelink">
             <a href="" class="shopshoes">Bags</a>
@@ -124,10 +124,10 @@
         </div>
         <div class="column">
           <a href="">
-            <img src="https://www.volvocars.com/images/v/-/media/project/contentplatform/data/media/my23/homepage/homepage-gallery-01-1x1.jpg?h=1080&iar=0&w=1080" alt="Cars" class="view">
+            <img src="https://media.s-bol.com/Yo8RQV9NARO/1200x1199.jpg" alt="Office supplies" class="view">
           </a>
           <div class="imagelink">
-            <a href="" class="shop">Notebooks</a>
+            <a href="" class="shop">Office supplies</a>
           </div>
         </div>
       </div>

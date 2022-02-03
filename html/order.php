@@ -255,7 +255,7 @@ $order_products_info_joined = join("\n", $order_products_info);
           <tr>
             <td>$product_name</td>
             <td>$quantity</td>
-            <td class='right'> <img src='$image' width='150px' height='150px'></td>
+            <td class='right'> <img src='$image' width='200px' height='200px'></td>
           </tr>
           
           "; }

@@ -15,7 +15,7 @@
         // select everything from customers table where the given email is the same
         $first_result = mysqli_query($conn,"SELECT * FROM customers WHERE email='$email'");
 
-        // select everything from reset_password_tokens where the given token is the samen
+        // select everything from reset_password_tokens where the given token is the same
         $result = mysqli_query($conn,"SELECT * FROM reset_password_tokens WHERE token='$token'");
        
         // if query succeeds, get customer id from customers table
@@ -42,6 +42,8 @@
             </script>");
             exit;
         } 
+
+
    // } 
 
    // disconnect database
@@ -70,7 +72,8 @@
         <div class="form">
             <form action="update_password.php" method="post" class="formscreen">
             <div class="title">Reset password</div>
-            <input type="hidden" name="email" value="<?php echo $email;?>">
+            <input type="hidden" name="email" value="<?php echo $email ?>">
+            <input type="hidden" name="token" value="<?php echo $token ?>" />
             <div class="textbox">
                 <input type="password" placeholder="New Password" name='password' required>
             </div>                

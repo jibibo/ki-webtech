@@ -39,7 +39,7 @@ $product_price = number_format($product["price"], 2);
 // product's categories
 $result_categories = mysqli_query(
   $conn,
-  "SELECT id, name
+  "SELECT c.id, name
   FROM product_categories pc
   JOIN categories c ON pc.category=c.id 
   WHERE pc.product=$product_id"
@@ -60,7 +60,7 @@ $related_products = array();
 if (count($product_category_ids) > 0) {
   $result_related = mysqli_query(
     $conn,
-    "SELECT DISTINCT id, name, price, image_url
+    "SELECT DISTINCT p.id, name, price, image_url
     FROM product_categories pc
       JOIN products p ON pc.product=p.id
     WHERE pc.category IN ($category_array)
