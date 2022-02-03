@@ -61,7 +61,7 @@
       <div class="trending">
         <div class="picture">
           <a href="">
-            <img src="https://m.media-amazon.com/images/I/81DN5b9LvKL._SX466_.jpg" alt="PS5 spider-man game" class="hover">
+            <img src="https://as-images.apple.com/is/MXJ92?wid=445&hei=445&fmt=jpeg&qlt=95&.v=1580420175341" alt="Beats studio3" class="hover">
           </a>
         </div>
         <div class="picture">
