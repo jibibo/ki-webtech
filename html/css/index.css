@@ -74,7 +74,7 @@
 .beautyrow,
 .trending {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-left: 100px;
   flex-direction: row;
@@ -83,8 +83,6 @@
 @media (max-width: 600px) {
   .beautyrow, .trending {
     flex-direction: column;
-    flex-wrap: wrap;
-    flex: 100%;
   }
 }
 
