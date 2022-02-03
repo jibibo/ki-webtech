@@ -1,3 +1,5 @@
+console.log("SDIFJKDIGJSFDIGJSIDFGJ IMPORT");
+
 const openModalButtons = document.querySelectorAll("[data-modal-target]");
 const openModalButtons = document.querySelectorAll("[data-close-button]");
 console.log(openModalButtons);
