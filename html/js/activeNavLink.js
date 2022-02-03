@@ -4,9 +4,8 @@
 $(document).ready(() => {
   let pathname = location.pathname;
   $("#nav-ul li a").each((_i, el) => {
-    if (el.href.indexOf("?") !== -1) return;
-
     console.debug("href:", e.href, "pathname:", pathname);
+    if (el.href.indexOf("?") !== -1) return;
 
     // if the current path is like this link, make it active
     if (
