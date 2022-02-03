@@ -15,11 +15,11 @@
 .imagecontainer button {
   border-radius: 40px;
   position: absolute;
-  left: 50%;
-  top: 90%;
+  left: 40%;
+  top: 85%;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
-  font-size: 25px;
+  font-size: 35px;
   margin-bottom: 100px;
   background-color: rgb(169, 201, 250);
   border-color: rgb(71, 90, 119);
@@ -31,7 +31,7 @@
 
 .applelink {
   text-decoration: none;
-  color: #febd69;
+  color: rgb(71, 90, 119);
   font-family: "Roboto", sans-serif;
 }
 
