@@ -49,7 +49,7 @@ label {
 }
 @media (max-width: 600px){
   .shipping-info input[type="text"]{
-    width: 80%;
+    width: 100%;
   }
 }
 
