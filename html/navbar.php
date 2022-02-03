@@ -7,7 +7,7 @@
     </a>
     <div class="sticky">
       <ul id="nav-ul">
-        <li><a href="index.php">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li class="dropdown-menu">
           <a href="products.php" class="dropdown-button">Products</a>
           <div class="dropdown-content">
