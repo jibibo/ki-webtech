@@ -2,14 +2,6 @@
 // create connection with database
 include "db_connect.php";
 
-// cleans the input of users 
-function clean_data($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-} 
-
 // set variables to empty values
 $email = $email_err = "";
 
@@ -17,13 +9,15 @@ $email = $email_err = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // if empty return to homepage and exit code, else get input value
   if (empty($_POST["email"])) {
-    echo ("<script LANGUAGE='JavaScript'>
-    window.alert('This field is empty, please enter an email for signing up.');
-    window.location.href='https://webtech-ki15.webtech-uva.nl/';
-    </script>");
+    echo <<<END
+    <script language="JavaScript">
+    window.alert("This field is empty, please enter an email for signing up.");
+    window.location.href="https://webtech-ki15.webtech-uva.nl/";
+    </script>
+    END;
     exit;
   } else {
-      $email = clean_data($_POST["email"]);
+      $email = htmlspecialchars($_POST["email"]);
 
       // if input is not valid, return to home page and exit code
       if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -77,9 +71,6 @@ include "db_disconnect.php"
   ?>
 
   <div class="gif">
-    <!--<img src="https://c.tenor.com/q-zZSTX6jSIAAAAC/mail-download.gif" alt="Mail gif">-->
-
-    <!-- shows user that the subscription to the newsletter was successfull -->
     <img src="https://cdn.dribbble.com/users/1551941/screenshots/6346538/thankyoudribble.gif" alt="Mail gif">
   </div>
 
