@@ -5,19 +5,6 @@ include "redirect_http.php";
 // create connection with database
 include "db_connect.php";
 
-// cleans the input of users 
-function clean_data($data)
-{
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-
-// did not include password yet!!
-// address weghalen --> ook in phpmyadmin weghalen? 
-// wachtwoord in zelfde table stoppen?? 
-// zipcode voldoende en makkelijker? 
 
 // set variables to empty values
 $fname = $lname = $phonenumber = $emailaddress = $psw = $address = $zipcode = $city = $country = "";
@@ -143,7 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // /^[a-zA-Z ]+$/ */
 
-  $fname = clean_data($_POST["first_name"]);
+  $fname = htmlspecialchars($_POST["first_name"]);
 
   // check if first name only consists of whitespaces and letters
   if (!preg_match("/^[a-zA-Z ]+$/", $fname)) {
@@ -154,7 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit;
   }
 
-  $lname = clean_data($_POST["last_name"]);
+  $lname = htmlspecialchars($_POST["last_name"]);
 
   // check if last name only consists of whitespaces and letters
   if (!preg_match("/^[a-zA-Z ]+$/", $lname)) {
@@ -165,7 +152,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit;
   }
 
-  $phonenumber = clean_data($_POST["phone"]);
+  $phonenumber = htmlspecialchars($_POST["phone"]);
 
   // check if phone number is a valid number in the Netherlands
   // src regex: https://stackoverflow.com/a/123666/13216113
@@ -179,7 +166,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
   // /^((\+|00(\s|\s?\-\s?)?)31(\s|\s?\-\s?)?(\(0\)[\-\s]?)?|0)[1-9]((\s|\s?\-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$/gm
 
-  $emailaddress = clean_data($_POST["email"]);
+  $emailaddress = htmlspecialchars($_POST["email"]);
 
   // check if email address is valid and well-formed
   if (!filter_var($emailaddress, FILTER_VALIDATE_EMAIL)) {
@@ -190,7 +177,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit;
   }
 
-  $psw = clean_data($_POST["password"]);
+  $psw = htmlspecialchars($_POST["password"]);
 
   // check if password contains at least 8 characters
   if (strlen($psw) < 8) {
@@ -209,7 +196,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // https://murani.nl/blog/2015-09-28/nederlandse-reguliere-expressies/ --> address regex
 
-  $address = clean_data($_POST["address"]);
+  $address = htmlspecialchars($_POST["address"]);
 
   // check if address is a valid address in the Netherlands
   if (!preg_match("/^([1-9][e][\s])*([a-zA-Z]+(([\.][\s])|([\s]))?)+[1-9][0-9]*(([-][1-9][0-9]*)|([\s]?[a-zA-Z]+))?$/i", $address)) {
@@ -224,7 +211,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // zipcode voldoende en makkelijker? 
   //https://stackoverflow.com/questions/17898523/regular-expression-for-dutch-zip-postal-code
 
-  $zipcode = clean_data($_POST["zipcode"]);
+  $zipcode = htmlspecialchars($_POST["zipcode"]);
 
   // check if zipcode is a valid zipcode in the Netherlands
   if (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i", $zipcode)) {
@@ -238,7 +225,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   //[1-9][0-9]{3}˽?[A-z]{2}/
   // /^(?:NL-)?(\d{4})\s*([A-Z]{2})$/i
 
-  $city = clean_data($_POST["city"]);
+  $city = htmlspecialchars($_POST["city"]);
 
   // check if city only consists of whitespaces and letters
   if (!preg_match("/^[a-zA-Z ]+$/", $city)) {
@@ -251,7 +238,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
 
-  $country = clean_data($_POST["country"]);
+  $country = htmlspecialchars($_POST["country"]);
 
   // check if country only consists of whitespaces and letters
   if (!preg_match("/^[a-zA-Z ]+$/", $country)) {
