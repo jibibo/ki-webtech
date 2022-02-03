@@ -116,7 +116,7 @@
         </div>
         <div class="column">
           <a href="">
-            <img src="https://media.travelbags-cdn.nl/product-square-320/2580/image.jpg" alt="Bags" class="view">
+            <img src="https://cdn.webshopapp.com/shops/262924/files/332112864/890x820x2/eastpak-eastpak-padded-pakr-grijs.jpg" alt="Bags" class="view">
           </a>
           <div class="imagelink">
             <a href="" class="shopshoes">Bags</a>
