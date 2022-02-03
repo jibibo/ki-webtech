@@ -92,26 +92,26 @@
       <div class="category">
         <div class="column">
           <a href="">
-            <img src="https://static.iphoned.nl/orca/products/9009/apple-macbook-pro-2021.png" alt="Electronics" class="view">
+            <img src="https://static.iphoned.nl/orca/products/9009/apple-macbook-pro-2021.png" alt="Laptops" class="view">
           </a>
           <div class="imagelink">
-            <a href="" class="shop">Electronics</a>
+            <a href="" class="shop">Laptops</a>
           </div>
         </div>
         <div class="column">
           <a href="">
-            <img src="https://fashionista.com/.image/t_share/MTQ5ODI4NDYxNzUyNDk0MDQz/fenty-beauty-by-rihanna-group-shot.jpg" alt="Cosmetics" class="view">
+            <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MX432?wid=532&hei=582&fmt=png-alpha&.v=1570119317387" alt="Earphones" class="view">
           </a>
           <div class="imagelink">
-            <a href="" class="shop">Cosmetics</a>
+            <a href="" class="shop">Earphones</a>
           </div>
         </div>
         <div class="column">
           <a href="">
-            <img src="https://photos.queens.cz/queens/2020-03/large/daily-paper-alias-hoodie-100039_1.jpg" alt="Clothing" class="view">
+            <img src="https://cdn.thewirecutter.com/wp-content/media/2020/11/usbphonechargers-2048px-278.jpg" alt="Phone charger" class="view">
           </a>
           <div class="imagelink">
-            <a href="" class="shop">Clothing</a>
+            <a href="" class="shop">Phone chargers</a>
           </div>
         </div>
         <div class="column">
@@ -119,7 +119,7 @@
             <img src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/35d7eef5-0dbd-4d37-bc3b-f977ca87a8e7/air-jordan-1-bordeaux-555088-611-release-date.jpg" alt="Shoes" class="view">
           </a>
           <div class="imagelink">
-            <a href="" class="shopshoes">Shoes</a>
+            <a href="" class="shopshoes">Bags</a>
           </div>
         </div>
         <div class="column">
@@ -127,7 +127,7 @@
             <img src="https://www.volvocars.com/images/v/-/media/project/contentplatform/data/media/my23/homepage/homepage-gallery-01-1x1.jpg?h=1080&iar=0&w=1080" alt="Cars" class="view">
           </a>
           <div class="imagelink">
-            <a href="" class="shop">Cars</a>
+            <a href="" class="shop">Notebooks</a>
           </div>
         </div>
       </div>

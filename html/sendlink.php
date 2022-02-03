@@ -35,6 +35,16 @@ if(isset($_POST["reset_password"]) && $_POST["input_email"])
     if ($result) {
         // get all information of the query
         $customer = mysqli_fetch_assoc($result);
+        
+        if (!$customer) {
+            // show error message if customer is not set
+            echo ("<script LANGUAGE='JavaScript'>
+            window.alert('Something went wrong, please try again.');
+            window.location.href='https://webtech-ki15.webtech-uva.nl/forgot-password.php';
+            </script>");
+            exit;
+        }
+
         // set token
         $token = bin2hex(random_bytes(32));
         // get user id
@@ -63,9 +73,10 @@ if(isset($_POST["reset_password"]) && $_POST["input_email"])
     {
         // else show error message
         echo ("<script LANGUAGE='JavaScript'>
-        window.alert('Something went wrong, please try again.');
+        window.alert('Something went wrong: email not found');
         window.location.href='https://webtech-ki15.webtech-uva.nl/forgot-password.php';
         </script>");
+        exit;
     }
 }
 
