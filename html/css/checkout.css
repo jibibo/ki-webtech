@@ -9,7 +9,7 @@ h4 {
 .col-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
   padding: 2rem;
@@ -46,6 +46,11 @@ label {
   box-sizing: border-box;
   padding: 1em;
   display: flex;
+}
+@media (max-width: 600px){
+  .shipping-info input[type="text"]{
+    width: 100%;
+  }
 }
 
 .shipping-info input[type="submit"] {
@@ -88,6 +93,7 @@ label {
 
 .bottom {
   margin-bottom: 0.5em;
+  margin-top: 20px;
 }
 
 .order-bottom {

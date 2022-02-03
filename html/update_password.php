@@ -2,14 +2,6 @@
 // connect with database
 include "db_connect.php";
 
-// funtion to clean input data
-function clean_data($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-} 
-
 // set variables
 $pass = $confirm = "";
 
@@ -17,11 +9,11 @@ $pass = $confirm = "";
 if(isset($_POST['submit_password'])) {
 
     // get submitted email value
-    $email = clean_data($_POST["email"]);
-    $token = clean_data($_POST["token"]);
+    $email = htmlspecialchars($_POST["email"]);
+    $token = htmlspecialchars($_POST["token"]);
     // clean password input
-    $pass = clean_data($_POST["password"]);
-    $confirm = clean_data($_POST["cpassword"]);
+    $pass = htmlspecialchars($_POST["password"]);
+    $confirm = htmlspecialchars($_POST["cpassword"]);
 
     // if both passwords doesn't contain at least 8 characters, print error message
     if (strlen($pass) < 8 || strlen($confirm) < 8) {
