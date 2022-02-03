@@ -62,10 +62,12 @@
   transform: translate(-50%, -5%);
   color: rgb(169, 201, 250);
   font-size: 70px;
+  font-size: vw;
   font-weight: bolder;
 }
 
-@media (max-width: 1400px) {
+
+/*@media (max-width: 1400px) {
   .text_center {
     font-size: 40px;
   }
@@ -81,7 +83,7 @@
   .text_center {
     font-size: 18px;
   }
-}
+}*/
 
 /* https://www.w3schools.com/cssref/css3_pr_flex-wrap.asp
      https://www.w3schools.com/howto/howto_css_images_side_by_side.asp
