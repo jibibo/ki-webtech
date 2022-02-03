@@ -9,7 +9,6 @@
 .imagecontainer {
   background-color: white;
   position: relative;
-  padding-top: 40px;
   size: 100%;
 }
 
@@ -52,11 +51,11 @@
 
 .text_center {
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 50%;
-  transform: translate(-50%, -10%);
+  transform: translate(-50%, -5%);
   color: white;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bolder;
 }
 
