@@ -66,14 +66,14 @@
   font-weight: bolder;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1500px) {
   .text_center {
     font-size: 3vw;
   }
 }
 
-
-/*@media (max-width: 1400px) {
+/*
+@media (max-width: 1400px) {
   .text_center {
     font-size: 40px;
   }
@@ -83,8 +83,8 @@
   .text_center {
     font-size: 30px;
   }
-}
-
+}*/
+/*
 @media (max-width: 700px) {
   .text_center {
     font-size: 18px;
