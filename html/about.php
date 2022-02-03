@@ -30,7 +30,7 @@
         and Science Park.</p>
     </div>
   </div>-->
-  <div>
+  <div class="container_about">
     <div class="mission">
         <img src="https://assets-cdn-folia.boondrive.com/1240x698/13924_1561558700220_UvA-SciencePark_Dag01_0605%20copy.jpg" alt="UvA Science park">
     </div>
