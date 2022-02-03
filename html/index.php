@@ -26,7 +26,7 @@
     </div>
 
     <div class="beautycontainer">
-      <span class="headertext">Beauty Bestsellers</span>
+      <span class="headertext">Apple Bestsellers</span>
       <div class="beautyrow">
         <div class="picture">
           <a href="">
@@ -66,7 +66,7 @@
         </div>
         <div class="picture">
           <a href="">
-            <img src="https://consumentenbond-res.cloudinary.com/w_600,f_auto/e_improve:30/v1635406250/productvergelijker/NOTEB/14811976_kk_1" alt="Macbook" class="hover">
+            <img src="https://media.s-bol.com/V0Q2J6QBjY85/MQ1o9Jm/168x131.jpg" alt="HP laptop" class="hover">
           </a>
         </div>
         <div class="picture">
