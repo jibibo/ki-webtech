@@ -31,7 +31,7 @@
 
 @media (max-width: 1400px) {
   .imagecontainer button {
-    width: 3vw;
+    width: 3vh;
     height: auto;
   }
 }
