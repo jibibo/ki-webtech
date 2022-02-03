@@ -31,6 +31,7 @@ $subtotal = 0;
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&amp;display=swap" rel="stylesheet">
+  <script src="js/removeCartItems.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -71,6 +72,18 @@ $subtotal = 0;
     <div class="cart">
       <div class="cart-container">
         <h2 class="bottom">Cart</h2>
+        <?php
+
+        if ($cart_count > 0) {
+          // we have items in our cart, so give the user the option to remove
+          echo <<<END
+          <div class="remove-cart-button">
+            <button onclick="removeCartItems()">Empty your cart</button>
+          </div>
+          END;
+        }
+
+        ?>
         <div class="order-info">
           <table>
             <?php
@@ -111,7 +124,7 @@ $subtotal = 0;
                 echo <<<END
                 <tr>
                   <td>
-                  <img src="$product_image" width="100px" height="100px">
+                    <img src="$product_image" width="100px" height="100px">
                   </td>
                   <td>
                     <h3>$product_name</h3>
