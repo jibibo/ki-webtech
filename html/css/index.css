@@ -15,7 +15,7 @@
 .imagecontainer button {
   border-radius: 40px;
   position: absolute;
-  left: 40%;
+  left: 43%;
   top: 85%;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
@@ -26,7 +26,7 @@
 }
 
 .imagecontainer button:hover {
-  background-color: #4e4d4c;
+  background-color: rgb(203, 222, 250);
 }
 
 .applelink {
