@@ -36,7 +36,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .imagecontainer button {
     font-size: 3vw;
     left: 37%;
