@@ -94,65 +94,38 @@
           <a href="">
             <img src="https://static.iphoned.nl/orca/products/9402/apple-macbook-pro.jpg" alt="Electronics" class="view">
           </a>
-          <!--<div class="imagelink">
+          <div class="imagelink">
             <a href="" class="shop">Electronics</a>
-          </div> -->
+          </div>
         </div>
         <div class="column">
           <a href="">
             <img src="https://cdn.shopify.com/s/files/1/1862/4277/products/GlassScreenProtector_iPhone12Pro.jpg?v=1618431180" alt="Screenprotectors" class="view">
           </a>
-          <!--<div class="imagelink">
+          <div class="imagelink">
             <a href="" class="shop">Screenprotectors</a>
-          </div> -->
+          </div>
         </div>
         <div class="column">
           <a href="">
             <img src="https://cdn.webshopapp.com/shops/256679/files/370778642/case2go-case2go-laptoptas-geschikt-voor-lenovo-thi.jpg" alt="Laptop bags" class="view">
           </a>
-          <!-- <div class="imagelink">
+          <div class="imagelink">
             <a href="" class="shop">Laptop bags</a>
-          </div> -->
+          </div>
         </div>
         <div class="column">
           <a href="">
             <img src="https://www.eastpak.com/media/catalog/product/cache/eb67a0d22981a734ad506236900cb984/import/item/6/EK62021S.jpg" alt="Backbags" class="view">
           </a>
-          <!--<div class="imagelink">
+          <div class="imagelink">
             <a href="" class="shopshoes">Backpacks</a>
-          </div>-->
+          </div>
         </div>
         <div class="column">
           <a href="">
             <img src="https://www.ubuy.co.nl/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvOTFFbG9DUnF6dUwuX0FDX1NMMTUwMF8uanBn.jpg" alt="Office supplies" class="view">
           </a>
-          <!--<div class="imagelink">
-            <a href="" class="shop">Office supplies</a>
-          </div> -->
-        </div>
-      </div>
-      <div class="category_text">
-        <div class="column">
-          <div class="imagelink">
-            <a href="" class="shop">Electronics</a>
-          </div>
-        </div>
-        <div class="column">
-          <div class="imagelink">
-            <a href="" class="shop">Screenprotectors</a>
-          </div>
-        </div>
-        <div class="column">
-          <div class="imagelink">
-            <a href="" class="shop">Laptop bags</a>
-          </div>
-        </div>
-        <div class="column">
-          <div class="imagelink">
-            <a href="" class="shopshoes">Backpacks</a>
-          </div>
-        </div>
-        <div class="column">
           <div class="imagelink">
             <a href="" class="shop">Office supplies</a>
           </div>

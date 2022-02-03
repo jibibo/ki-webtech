@@ -108,20 +108,14 @@
   /*width: 1200;
   margin-right: 100px; */
   margin-left: 100px;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.category_text {
-  display: flex;
-  margin-left: 100px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
 }
 
 @media (max-width: 600px) {
   .category {
     flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 
