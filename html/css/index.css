@@ -15,7 +15,7 @@
 .imagecontainer button {
   border-radius: 40px;
   position: absolute;
-  left: 44%;
+  left: 43%;
   top: 90%;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
@@ -32,7 +32,14 @@
 @media (max-width: 1400px) {
   .imagecontainer button {
     font-size: 3vw;
-    left: 40%;
+    left: 39%;
+  }
+}
+
+@media (max-width: 900px) {
+  .imagecontainer button {
+    font-size: 3vw;
+    left: 35%;
   }
 }
 
