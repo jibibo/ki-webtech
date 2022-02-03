@@ -39,7 +39,7 @@ if(isset($_POST["reset_password"]) && $_POST["input_email"])
         if (!$customer) {
             // show error message if customer is not set
             echo ("<script LANGUAGE='JavaScript'>
-            window.alert('Something went wrong, please try again.');
+            window.alert('Something went wrong, email does not exist.');
             window.location.href='https://webtech-ki15.webtech-uva.nl/forgot-password.php';
             </script>");
             exit;
@@ -60,7 +60,7 @@ if(isset($_POST["reset_password"]) && $_POST["input_email"])
         $to_email = "$resetmail";
         $subject = "Reset password Uvazon";
         $mail_content = "$link";
-        $headers = "From: uvazon@contact.nl";
+        $headers = "From: noreply@uvazon.nl";
         mail($to_email,$subject,$mail_content,$headers);
 
         // after send, show succeed message
