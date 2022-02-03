@@ -53,13 +53,11 @@ h1 {
   padding-bottom: 30px;
 }
 
-input {
+.input-form {
+  padding: 6px;
   width: 100%;
   border: 1px solid;
   outline: none;
-}
-.input-form {
-  padding: 6px;
 }
 
 textarea {
