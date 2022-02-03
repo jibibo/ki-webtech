@@ -21,8 +21,7 @@
   font-size: 35px;
   margin-bottom: 100px;
   background-color: rgb(169, 201, 250);
-  border-color: rgb(71, 90, 119);
-  width: 100%;
+  border-color: white;
 }
 
 .imagecontainer button:hover {
@@ -37,7 +36,7 @@
 
 .applelink {
   text-decoration: none;
-  color: rgb(71, 90, 119);
+  color: white;
   font-family: "Roboto", sans-serif;
 }
 
