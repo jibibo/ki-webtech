@@ -8,6 +8,7 @@ if (isset($_COOKIE["session_token"])) {
 
   include "db_connect.php";
 
+  // read cookie
   $session_token = htmlspecialchars($_COOKIE["session_token"]);
 
   // get user info from db
