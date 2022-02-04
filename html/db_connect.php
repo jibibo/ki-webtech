@@ -3,7 +3,7 @@
 // print all errors, helps with debugging
 error_reporting(E_ALL);
 
-// REMOVE IN PRODUCTION
+// display errors
 ini_set("display_errors", "On");
 
 include "db_credentials.php";
