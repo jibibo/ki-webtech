@@ -124,7 +124,6 @@ include "db_disconnect.php";
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/product.css" />
   <script src="js/clickCart.js"></script>
-  <script defer src="js/cart.js"></script>
 
 </head>
 
