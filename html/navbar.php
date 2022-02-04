@@ -24,7 +24,7 @@
         if (isset($_COOKIE["cart"])) {
           $products_in_cart = explode("|", $_COOKIE["cart"]);
 
-          if ($cart_ids[0] == "") {
+          if ($products_in_cart[0] == "") {
             // if element [0] is an empty string after clearing cookie, set empty array
             $products_in_cart = array();
           }
