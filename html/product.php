@@ -185,6 +185,7 @@ include "db_disconnect.php";
 
         <div class="categories">
           <?php
+          // iterate over each category and add a link to filter by that category
           foreach ($product_categories as $category) {
             $category_id = $category["id"];
             $category_name = $category["name"];
@@ -207,12 +208,19 @@ include "db_disconnect.php";
       <div class="related-products-list">
 
         <?php
+        // if product has any related product(s)
+
         if ($related_products) {
           foreach ($related_products as $product) {
+            // show each product in the related products section
+
             $product_id = $product["id"];
             $product_img = $product["image_url"];
             $product_name = $product["name"];
+            
+            // format each product's price
             $product_price = number_format($product["price"], 2);
+
             echo <<<END
             <div class="product-list-item">
               <div class="product-img-wrapper">
@@ -238,6 +246,8 @@ include "db_disconnect.php";
             END;
           }
         } else {
+          // this product has no related products
+
           echo <<<END
           <h3><em>No related products</em></h3>
           END;
@@ -268,6 +278,7 @@ include "db_disconnect.php";
         </div>
         END;
       } else {
+        // user is not signed in, they have to sign in first
         echo <<<END
         <div class="make-review">
           <div class="sign-in">Please sign in to submit a review</div>
@@ -279,7 +290,9 @@ include "db_disconnect.php";
 
       <div class="customer-reviews" id="reviews">
         <?php
+        // if product has a rating (which means there are reviews)
         if ($rating) {
+          // show each review in the customer reviews section
           foreach ($reviews as $review) {
             $review_rating = $review["rating"];
             $review_title = $review["title"];
@@ -298,6 +311,7 @@ include "db_disconnect.php";
             END;
           }
         } else {
+          // no reviews for this product yet
           echo <<<END
           <div class="review">
             <div class="review-top">
