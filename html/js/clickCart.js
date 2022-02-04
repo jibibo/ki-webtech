@@ -21,9 +21,13 @@ function getCookie() {
   // iterate over cookie string to find our desired cookie
   for (let i = 0; i < splitCookie.length; i++) {
     let singleCookie = splitCookie[i];
+
+    // remove whitespaces
     while (singleCookie.charAt(0) == " ") {
       singleCookie = singleCookie.substring(1);
     }
+
+    // check if the current cookie's name is the one we want
     if (singleCookie.indexOf(name) == 0) {
       return singleCookie.substring(name.length);
     }
@@ -39,6 +43,7 @@ function updateNavbar() {
   let splitCookie = getCookie().split("|");
   let count = splitCookie.length;
 
+  // update the inner content of the element, the part the user sees
   if (count === 1 && splitCookie[0] === "") {
     aTag.innerHTML = "Checkout (0)";
   } else {
