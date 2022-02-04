@@ -115,11 +115,11 @@
           </div>
         </div>
         <div class="column">
-          <a href="">
+          <a href="https://webtech-ki15.webtech-uva.nl/products.php?search=&c%5B%5D=25">
             <img src="https://www.eastpak.com/media/catalog/product/cache/eb67a0d22981a734ad506236900cb984/import/item/6/EK62021S.jpg" alt="Backbags" class="view">
           </a>
           <div class="imagelink">
-            <a href="" class="shopshoes">Backpacks</a>
+            <a href="https://webtech-ki15.webtech-uva.nl/products.php?search=&c%5B%5D=25" class="shopshoes">Backpacks</a>
           </div>
         </div>
         <div class="column">
