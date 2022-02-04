@@ -164,10 +164,6 @@ include "db_disconnect.php";
         </span>
 
         <div class="shopping-btns">
-          <!-- <form method="post">
-            <button formaction="add_cart.php" class="cart-btn shopping-btn">+ Cart</button>
-          </form> -->
-
           <!-- <div class="product-buttons">
                     <button class="product-cart">
                       <ion-icon name="cart-outline"></ion-icon>
@@ -177,19 +173,7 @@ include "db_disconnect.php";
                     </button>
                   </div>
                 class="cart-btn shopping-btn" onclick="clickCa -->
-          <button data-modal-target="#modal" class="cart-btn shopping-btn" onclick="clickCart(<?php echo $product_id ?>)">ADD <ion-icon name="cart-outline"></ion-icon></button>
-          <div class="modal" id="modal">
-            <div class="cart-header">
-              <div class="cart-title">CART</div>
-              <button data-close-button class="close-button">&times;</button>
-
-            </div>
-            <div class="carting">
-              <p>producten producten producrten</p>
-
-            </div>
-          </div>
-          <div id="overlay"></div>
+          <button class="cart-btn shopping-btn" onclick="clickCart(<?php echo $product_id ?>)">ADD <ion-icon name="cart-outline"></ion-icon></button>
           <button class="wishlist-btn shopping-btn">ADD <ion-icon name="heart-outline"></ion-icon></button>
         </div>
 
