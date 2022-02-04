@@ -60,27 +60,27 @@
       <span class="headertext">Trending</span>
       <div class="trending">
         <div class="picture">
-          <a href="">
+          <a href="https://webtech-ki15.webtech-uva.nl/product.php?id=57">
             <img src="https://as-images.apple.com/is/MXJ92?wid=445&hei=445&fmt=jpeg&qlt=95&.v=1580420175341" alt="Beats studio3" class="hover">
           </a>
         </div>
         <div class="picture">
-          <a href="">
+          <a href="https://webtech-ki15.webtech-uva.nl/product.php?id=58">
             <img src="https://www.notebookcheck.nl/uploads/tx_nbc2/AcerChromebook11-CB311-9HT__1_.JPG" alt="Acer chromebook" class="hover">
           </a>
         </div>
         <div class="picture">
-          <a href="">
+          <a href="https://webtech-ki15.webtech-uva.nl/product.php?id=26">
             <img src="https://images.mobilefun.co.uk/graphics/productgalleries/82982/b.jpg" alt="Iphone charger" class="hover">
           </a>
         </div>
         <div class="picture">
-          <a href="">
-            <img src="https://www.amac.nl/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/b/e/belkin_f8w972zzblk_1.jpg" alt="screenprotector" class="hover">
+          <a href="https://webtech-ki15.webtech-uva.nl/product.php?id=59">
+            <img src="https://www.amac.nl/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/b/e/belkin_f8w972zzblk_1.jpg" alt="Screenprotector" class="hover">
           </a>
         </div>
         <div class="picture">
-          <a href="">
+          <a href="https://webtech-ki15.webtech-uva.nl/product.php?id=60">
             <img src="https://media.travelbags-cdn.nl/sqaure-1360/72734/image.jpg" alt="Herschel bag" class="hover">
           </a>
         </div>
