@@ -25,7 +25,7 @@ include "redirect_http.php";
   ?>
 
   <div class="termscontainer">
-    <h1>Why are you here, nobody every treads these terms</h1>
+    <h1>Why are you here, nobody every reads these terms</h1>
     <a href="/">
       <button class="termbutton">Click here to go back home!</button>
   </div>
