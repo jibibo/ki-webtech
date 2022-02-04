@@ -9,7 +9,7 @@ ini_set("display_errors", "On");
 include "db_credentials.php";
 
 // db server info
-$db_server = "localhost";
+$db_server = "127.0.0.1";
 $db_name = "uvazon";
 
 // connect to db
