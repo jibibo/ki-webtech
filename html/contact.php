@@ -58,8 +58,6 @@ include "redirect_http.php";
           <div class="messagebutton">
             <button type="submit">Submit</button>
           </div>
-
-
         </form>
 
       </div>
@@ -68,9 +66,7 @@ include "redirect_http.php";
         <table>
           <tr>
             <td>Email us!</td>
-
             <td><a href="mailto:info@uvazon.nl">info@uvazon.nl</a></td>
-
           </tr>
           <tr>
             <td>Call us!</td>

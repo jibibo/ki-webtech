@@ -15,6 +15,7 @@ $email = htmlspecialchars($_POST["email"]);
 $subject = htmlspecialchars($_POST["subject"]);
 $message = htmlspecialchars($_POST["message"]);
 
+// insert the contact information into our db
 $query = "INSERT INTO 'contact_form' ('name', 'phone', 'email', 'subject', 'message') VALUES ('$name', '$phone', '$email', '$subject', '$message');";
 $success = false;
 if (mysqli_query($conn, $query)) {
@@ -49,6 +50,7 @@ include "db_disconnect.php";
     <?php
 
     if ($success) {
+      // if contact information was successfully inserted into the db
       echo <<<END
       <div class="concontainer">
         <h1>THANK YOU FOR CONTACTING US!</h1>
@@ -56,6 +58,7 @@ include "db_disconnect.php";
       </div>
       END;
     } else {
+      // something went wrong inserting the data into the db
       echo <<<END
       <h1>Something went wrong!</h1>
       END;

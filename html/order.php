@@ -188,7 +188,7 @@ setcookie("cart");
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/index.css" />
-  <link rel="stylesheet" href="css/invoice.css" />
+  <link rel="stylesheet" href="css/order.css" />
 </head>
 
 <body>
@@ -214,6 +214,8 @@ setcookie("cart");
         <br />
 
         <?php
+        // iterate over each product bought and get its information
+
         foreach ($product_ids_unique as $product_id) {
           // get product info
           $product_result = mysqli_query(

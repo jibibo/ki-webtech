@@ -1,6 +1,6 @@
 <?php
 
-// check if https is not set
+// check if https is not set, if not, redirect traffic to http (more secure)
 if (empty($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] === "off") {
   // change the url to https://...
   $location = "https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
