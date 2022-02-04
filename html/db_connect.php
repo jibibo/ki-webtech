@@ -13,7 +13,7 @@ $db_server = "localhost";
 $db_name = "uvazon";
 
 // connect to db
-$conn = mysqli_connect($db_server, $db_username, $db_password, $db_name);
+$conn = mysqli_connect($db_server, $db_username, $db_password, $db_name, 3307);
 
 if (!$conn) {
   // abort
