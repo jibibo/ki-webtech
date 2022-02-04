@@ -17,14 +17,30 @@
             <a href="products.php?c[]=3">Schoenen</a>
           </div>
         </li>
-        <li><a href="checkout.php">Checkout</a></li>
+
+        <?php
+        // update cart count tally on page load
+        $count = 0;
+        if (isset($_COOKIE["cart"])) {
+          $products_in_cart = explode("|", $_COOKIE["cart"]);
+
+          if ($cart_ids[0] == "") {
+            // if element [0] is an empty string after clearing cookie, set empty array
+            $products_in_cart = array();
+          }
+
+          $count = count($products_in_cart);
+        }
+        ?>
+
+        <li><a href="checkout.php" id="navbar-checkout"><?php echo "Checkout ($count)" ?></a></li>
         <li><a href="contact.php">Contact us</a></li>
         <li><a href="about.php">About us</a></li>
 
         <?php
-        if (!isset($_COOKIE['session_token'])) {
+        if (!isset($_COOKIE["session_token"])) {
           echo <<<END
-          <li><a href='session.php'>Log-in / Register</a></li>
+          <li><a href="session.php">Log-in / Register</a></li>
           END;
         }
 

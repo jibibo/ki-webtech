@@ -1,3 +1,5 @@
+import updateNavbar from "./updateNavbar";
+
 function clickCart(id) {
   let oldCookie = getCookie();
 
@@ -8,6 +10,8 @@ function clickCart(id) {
     // set new cookie as it didn t exist yet
     document.cookie = "cart=" + id;
   }
+
+  updateNavbar();
 }
 
 // from: https://www.w3schools.com/js/js_cookies.asp
@@ -29,4 +33,17 @@ function getCookie() {
 
   // cookie not found
   return "";
+}
+
+function updateNavbar() {
+  // get the target element
+  let aTag = document.getElementById("navbar-checkout");
+  let splitCookie = getCookie().split("|");
+  let count = splitCookie.length;
+
+  if (count === 1 && splitCookie[0] === "") {
+    aTag.innerHTML = "Checkout (0)";
+  } else {
+    aTag.innerHTML = "Checkout (" + count + ")";
+  }
 }
