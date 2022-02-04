@@ -22,34 +22,34 @@
     <div class="imagecontainer">
       <img src="https://www.rtlnieuws.nl/sites/default/files/content/images/2021/09/07/apple-event.png?itok=Zn29uG2Z&offsetX=0&offsetY=19&cropWidth=1978&cropHeight=1113&width=2048&height=1152&impolicy=dynamic" alt="Apple products" class="apple">
       <div class="text_center">Begin the year with Apple</div>
-      <button><a href="https://webtech-ki15.webtech-uva.nl/products.php?search=&c%5B%5D=20" class="applelink">Go to collection</a></button>
+      <button><a href="https://webtech-ki15.webtech-uva.nl/products.php?search=&c%5B%5D=22" class="applelink">Go to collection</a></button>
     </div>
 
     <div class="beautycontainer">
       <span class="headertext">Apple Bestsellers</span>
       <div class="beautyrow">
         <div class="picture">
-          <a href="">
+          <a href="https://webtech-ki15.webtech-uva.nl/product.php?id=35">
             <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MWP22?wid=1144&hei=1144&fmt=jpeg&qlt=80&.v=1591634795000" alt="Apple airpods" class="hover">
           </a>
         </div>
         <div class="picture">
-          <a href="">
+          <a href="https://webtech-ki15.webtech-uva.nl/product.php?id=47">
             <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MKU93_VW_34FR+watch-40-alum-gold-nc-se_VW_34FR_WF_CO?wid=1400&hei=1400&trim=1,0&fmt=p-jpg&qlt=95&.v=1632171039000,1630712417000" alt="Apple watch" class="hover">
           </a>
         </div>
         <div class="picture">
-          <a href="">
+          <a href="https://webtech-ki15.webtech-uva.nl/product.php?id=46">
             <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/airtag-4pack-select-202104_FMT_WHH?wid=1000&hei=1000&fmt=jpeg&qlt=95&.v=1617761669000" alt="Apple airtags" class="hover">
           </a>
         </div>
         <div class="picture">
-          <a href="">
+          <a href="https://webtech-ki15.webtech-uva.nl/product.php?id=45">
             <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mbp-spacegray-select-202011_GEO_EMEA_LANG_NL?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632948906000" alt="Macbook pro" class="hover">
           </a>
         </div>
         <div class="picture">
-          <a href="">
+          <a href="https://webtech-ki15.webtech-uva.nl/product.php?id=44">
             <img src="https://images.mobilefun.co.uk/graphics/450pixelp/83357.jpg" alt="Magsafe iphone charger" class="hover">
           </a>
         </div>
