@@ -91,27 +91,27 @@
       <span class="headertext">Categories</span>
       <div class="category">
         <div class="column">
-          <a href="">
+          <a href="https://webtech-ki15.webtech-uva.nl/products.php?search=&c%5B%5D=14">
             <img src="https://static.iphoned.nl/orca/products/9402/apple-macbook-pro.jpg" alt="Electronics" class="view">
           </a>
           <div class="imagelink">
-            <a href="" class="shop">Electronics</a>
+            <a href="https://webtech-ki15.webtech-uva.nl/products.php?search=&c%5B%5D=14" class="shop">Electronics</a>
           </div>
         </div>
         <div class="column">
-          <a href="">
+          <a href="https://webtech-ki15.webtech-uva.nl/products.php?search=&c%5B%5D=23">
             <img src="https://cdn.shopify.com/s/files/1/1862/4277/products/GlassScreenProtector_iPhone12Pro.jpg?v=1618431180" alt="Screenprotectors" class="view">
           </a>
           <div class="imagelink">
-            <a href="" class="shop">Screenprotectors</a>
+            <a href="https://webtech-ki15.webtech-uva.nl/products.php?search=&c%5B%5D=23" class="shop">Screenprotectors</a>
           </div>
         </div>
         <div class="column">
-          <a href="">
+          <a href="https://webtech-ki15.webtech-uva.nl/products.php?search=&c%5B%5D=24">
             <img src="https://cdn.webshopapp.com/shops/256679/files/370778642/case2go-case2go-laptoptas-geschikt-voor-lenovo-thi.jpg" alt="Laptop bags" class="view">
           </a>
           <div class="imagelink">
-            <a href="" class="shop">Laptop bags</a>
+            <a href="https://webtech-ki15.webtech-uva.nl/products.php?search=&c%5B%5D=24" class="shop">Laptop bags</a>
           </div>
         </div>
         <div class="column">
@@ -123,11 +123,11 @@
           </div>
         </div>
         <div class="column">
-          <a href="">
+          <a href="https://webtech-ki15.webtech-uva.nl/products.php?search=&c%5B%5D=26">
             <img src="https://www.ubuy.co.nl/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvOTFFbG9DUnF6dUwuX0FDX1NMMTUwMF8uanBn.jpg" alt="Office supplies" class="view">
           </a>
           <div class="imagelink">
-            <a href="" class="shop">Office supplies</a>
+            <a href="https://webtech-ki15.webtech-uva.nl/products.php?search=&c%5B%5D=26" class="shop">Office supplies</a>
           </div>
         </div>
       </div>
