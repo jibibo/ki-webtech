@@ -11,7 +11,7 @@ $(document).ready(() => {
     if (
       (pathname !== "/" && el.href.indexOf(pathname) !== -1) ||
       (pathname === "/" && el.href.indexOf("index.php") !== -1) ||
-      (pathname === "/" && el.href.indexOf("/") !== -1)
+      (pathname === "/" && el.href === "/")
     ) {
       $(el).addClass("active");
     }

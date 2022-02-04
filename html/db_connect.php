@@ -9,7 +9,7 @@ ini_set("display_errors", "On");
 include "db_credentials.php";
 
 // db server address & db name
-$db_server = "webtech-ki15.webtech-uva.nl";
+$db_server = "localhost";
 $db_name = "uvazon";
 
 // connect to db
