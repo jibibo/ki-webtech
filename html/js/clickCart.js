@@ -1,5 +1,3 @@
-import updateNavbar from "./updateNavbar";
-
 function clickCart(id) {
   let oldCookie = getCookie();
 
