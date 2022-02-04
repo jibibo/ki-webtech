@@ -164,19 +164,6 @@ include "db_disconnect.php";
         </span>
 
         <div class="shopping-btns">
-          <!-- <form method="post">
-            <button formaction="add_cart.php" class="cart-btn shopping-btn">+ Cart</button>
-          </form> -->
-
-          <!-- <div class="product-buttons">
-                    <button class="product-cart">
-                      <ion-icon name="cart-outline"></ion-icon>
-                    </button>
-                    <button class="product-wishlist">
-                      <ion-icon name="heart-outline"></ion-icon>
-                    </button>
-                  </div>
-                class="cart-btn shopping-btn" onclick="clickCa -->
           <button data-modal-target="#modal" class="cart-btn shopping-btn" onclick="clickCart(<?php echo $product_id ?>)">ADD <ion-icon name="cart-outline"></ion-icon></button>
           <div class="modal" id="modal">
             <div class="cart-header">
@@ -265,6 +252,7 @@ include "db_disconnect.php";
 
       <?php
 
+      // if user session is set, show review form, otherwise not
       if ($user_session) {
         $product_id = htmlspecialchars($_GET["id"]);
 
