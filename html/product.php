@@ -164,15 +164,6 @@ include "db_disconnect.php";
         </span>
 
         <div class="shopping-btns">
-          <!-- <div class="product-buttons">
-                    <button class="product-cart">
-                      <ion-icon name="cart-outline"></ion-icon>
-                    </button>
-                    <button class="product-wishlist">
-                      <ion-icon name="heart-outline"></ion-icon>
-                    </button>
-                  </div>
-                class="cart-btn shopping-btn" onclick="clickCa -->
           <button class="cart-btn shopping-btn" onclick="clickCart(<?php echo $product_id ?>)">ADD <ion-icon name="cart-outline"></ion-icon></button>
           <button class="wishlist-btn shopping-btn">ADD <ion-icon name="heart-outline"></ion-icon></button>
         </div>
