@@ -17,7 +17,6 @@ h4 {
   margin: auto;
 }
 
-
 .user-info {
   flex-direction: column;
 }
@@ -28,7 +27,6 @@ table {
 tbody {
   border-bottom: 5px solid #8aa1b1;
 }
-
 
 label {
   display: block;
@@ -47,11 +45,11 @@ label {
   padding: 1em;
   display: flex;
 }
-@media (max-width: 600px){
-  .shipping-info input[type="text"]{
+@media (max-width: 600px) {
+  .shipping-info input[type="text"] {
     width: 100%;
   }
-  .order-info{
+  .order-info {
     height: 350px;
     justify-content: center;
   }

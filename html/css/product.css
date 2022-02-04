@@ -70,7 +70,7 @@
   height: 50px;
   font-size: 1.2em;
 }
-.shopping-btns button ion-icon{
+.shopping-btns button ion-icon {
   cursor: pointer;
   font-size: 1.2em;
   margin-top: 5px;
@@ -86,7 +86,7 @@
 
 .wishlist-btn {
   flex: 1 1 0px;
-  background-color:#37475a;
+  background-color: #37475a;
   color: orange;
   border: none;
   outline: none;
@@ -293,7 +293,6 @@
   font-size: 24px;
 }
 
-
 /* img & img wrapper */
 .product-list-item .product-img-wrapper {
   display: flex;
@@ -321,7 +320,7 @@
   display: flex;
   justify-content: space-between;
 }
-.modal{
+.modal {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -331,45 +330,42 @@
   width: 200px;
   transform: translate(-50%, -50%) scale(0);
 }
-.modal.active{
+.modal.active {
   transform: translate(-50%, -50%) scale(1);
 }
-.cart-header{
+.cart-header {
   padding: 10px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid black;
-
 }
-.cart-header .cart-title{
+.cart-header .cart-title {
   font-size: 1.25rem;
   font: bold;
-
 }
-.cart-header .close-button{
+.cart-header .close-button {
   cursor: pointer;
   border: none;
   outline: none;
-  background:none;
+  background: none;
   font-size: 1.25rem;
   font: bold;
-
 }
-.carting{
+.carting {
   padding: 10px 15px;
 }
-#overlay{
+#overlay {
   position: fixed;
   opacity: 0;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0,0,0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   pointer-events: none;
 }
-#overlay.active{
+#overlay.active {
   opacity: 1;
   pointer-events: all;
 }

@@ -1,24 +1,6 @@
 * {
   box-sizing: border-box;
-  /* padding: 0; */
-  /* margin: 0; */
 }
-
-/*body {
-  background-image: url("../images/Location-Roeterseiland.jpeg") !important;
-}
-
-.about-us-text {
-  width: 100%;
-  padding: 78px 0px;
-}
-.nicepix {
-  height: 100vh;
-  width: 100vw;
-}
-.container {
-  margin-top: 400px;
-}*/
 
 body {
   background-color: white;
