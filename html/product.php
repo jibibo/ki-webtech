@@ -20,6 +20,7 @@ if (!is_numeric($product_id)) {
   exit;
 }
 
+// get the product the user wants to view
 $result_product = mysqli_query(
   $conn,
   "SELECT * 
@@ -38,6 +39,8 @@ if (!$product) {
 $product_name = $product["name"];
 $product_description = $product["description"];
 $product_image_url = $product["image_url"];
+
+// format the price (float) to price format
 $product_price = number_format($product["price"], 2);
 
 // product's categories
@@ -57,12 +60,16 @@ while ($row = mysqli_fetch_assoc($result_categories)) {
   $product_categories[] = $row;
 }
 
+
 // related products: related to product by sharing a category
 // src: https://stackoverflow.com/a/3919563/13216113
+
+// join category id's for the mysql query
 $category_array = join(",", $product_category_ids);
 $related_products = array();
 
 if (count($product_category_ids) > 0) {
+  // select all product id's, names and images of those that share a category
   $result_related = mysqli_query(
     $conn,
     "SELECT DISTINCT p.id, name, price, image_url

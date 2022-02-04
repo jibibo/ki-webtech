@@ -38,8 +38,8 @@ include "redirect_http.php";
       AUSTRALIA - 6-9 DAYS<br><br>
 
       ROW - 6-12 DAYS (allow longer in certain places)<br><br></p>
-    <a href="index.php">
-      <button class="termbutton">Klik hier om terug te gaan</button>
+    <a href="/">
+      <button class="termbutton">Click here to go back home</button>
     </a>
   </div>
 

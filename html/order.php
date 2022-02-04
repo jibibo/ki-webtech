@@ -136,8 +136,8 @@ foreach ($cart_ids as $product_id_str) {
 
 $product_ids_unique = array_unique($product_ids);
 // src: https://stackoverflow.com/a/5945242/13216113
+// create array containing occurences of each value in the original array
 $product_counts = array_count_values($product_ids);
-$order_products_info = array();
 
 $subtotal = 0;
 foreach ($product_ids_unique as $product_id) {
@@ -163,11 +163,7 @@ foreach ($product_ids_unique as $product_id) {
     "INSERT INTO order_products (order_id, product_id, quantity) 
     VALUES ($order_id, $product_id, $quantity)"
   );
-
-  $order_products_info[] = "$product_name ($quantity x)";
 }
-
-$order_products_info[] = "Total: € $subtotal";
 
 // update recently created order to show the total price
 mysqli_query(
@@ -177,9 +173,6 @@ mysqli_query(
 
 // clear user's cart cookie
 setcookie("cart");
-
-// alert the user of the order info
-$order_products_info_joined = join("\n", $order_products_info);
 
 ?>
 
@@ -219,8 +212,6 @@ $order_products_info_joined = join("\n", $order_products_info);
           <td>Image</td>
         </tr>
         <br />
-        <?php //echo join("<br /><tr><td>", $order_products_info) 
-        ?>
 
         <?php
         foreach ($product_ids_unique as $product_id) {
@@ -250,6 +241,8 @@ $order_products_info_joined = join("\n", $order_products_info);
           </tr>
           END;
         }
+
+        // print calculated total price
         echo <<<END
         <tr class="subtotal">
           <td>Total price: €$subtotal</td>

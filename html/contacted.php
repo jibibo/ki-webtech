@@ -4,6 +4,7 @@ include "redirect_http.php";
 
 include "db_connect.php";
 
+// redirect user if they didn't provide information
 if (!isset($_POST["name"])) {
   header("Location: /");
 }
@@ -61,7 +62,6 @@ include "db_disconnect.php";
     }
 
     ?>
-
   </div>
 
   <?php

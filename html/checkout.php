@@ -17,6 +17,7 @@ if (isset($_COOKIE["cart"])) {
   }
 }
 
+// calculate the amount of items in the cart
 $cart_count = count($cart_ids);
 $subtotal = 0;
 
@@ -79,7 +80,6 @@ $subtotal = 0;
         <?php
 
         if ($cart_count) {
-          echo $cart_count;
           // we have items in our cart, so give the user the option to remove
           echo <<<END
           <div class="remove-cart-button">

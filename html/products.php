@@ -122,17 +122,21 @@ include "db_disconnect.php";
         <div class="category-checkboxes">
           <?php
 
+          // if there are categories
           if (count($categories) > 0) {
             foreach ($categories as $category) {
+              // get each category's data
               $category_name = $category["name"];
               $category_id = $category["id"];
               $category_count = $category["COUNT(*)"];
               $category_checked = "";
 
+              // check if this category is checked
               if (in_array($category_id, $categories_checked)) {
                 $category_checked = "checked";
               }
 
+              // show the category checkbox
               echo <<<END
               <div class="category-checkbox">
                 <input type="checkbox" name="c[]" value="$category_id" id="$category_id" $category_checked/>
@@ -141,6 +145,7 @@ include "db_disconnect.php";
               END;
             }
           } else {
+            // there are no categories in the database
             echo <<<END
             <div class="no-categories">
               <span>No categories!</span>
@@ -162,6 +167,7 @@ include "db_disconnect.php";
       if (
         (isset($_GET["search"]) && $_GET["search"]) || (isset($_GET["c"]) && $_GET["c"])
       ) {
+        // show the search
         echo <<<END
         <span>$products_count product(s) found</span>
         END;

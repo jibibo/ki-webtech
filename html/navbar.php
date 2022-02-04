@@ -16,6 +16,7 @@
         // update cart count tally on page load
         $count = 0;
         if (isset($_COOKIE["cart"])) {
+          // split cookie string
           $products_in_cart = explode("|", $_COOKIE["cart"]);
 
           if ($products_in_cart[0] == "") {

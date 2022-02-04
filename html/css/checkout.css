@@ -109,3 +109,20 @@ label {
 .contact-info input[type="checkbox"] {
   margin-bottom: 10px;
 }
+
+.remove-cart-button button {
+  background: #febd69;
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 35px;
+  border-radius: 5px;
+  margin-top: 8px;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+  margin-bottom: 1rem;
+}
+
+.remove-cart-button button:hover {
+  background-color: #ae7c3b;
+}
