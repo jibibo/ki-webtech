@@ -64,7 +64,7 @@ while ($row = mysqli_fetch_assoc($result_categories)) {
 // related products: related to product by sharing a category
 // src: https://stackoverflow.com/a/3919563/13216113
 
-// join category id's for the mysql query
+// join category id's for the sql query
 $category_array = join(",", $product_category_ids);
 $related_products = array();
 
@@ -164,6 +164,19 @@ include "db_disconnect.php";
         </span>
 
         <div class="shopping-btns">
+          <!-- <form method="post">
+            <button formaction="add_cart.php" class="cart-btn shopping-btn">+ Cart</button>
+          </form> -->
+
+          <!-- <div class="product-buttons">
+                    <button class="product-cart">
+                      <ion-icon name="cart-outline"></ion-icon>
+                    </button>
+                    <button class="product-wishlist">
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+                  </div>
+                class="cart-btn shopping-btn" onclick="clickCa -->
           <button data-modal-target="#modal" class="cart-btn shopping-btn" onclick="clickCart(<?php echo $product_id ?>)">ADD <ion-icon name="cart-outline"></ion-icon></button>
           <div class="modal" id="modal">
             <div class="cart-header">
@@ -185,7 +198,6 @@ include "db_disconnect.php";
 
         <div class="categories">
           <?php
-          // iterate over each category and add a link to filter by that category
           foreach ($product_categories as $category) {
             $category_id = $category["id"];
             $category_name = $category["name"];
@@ -208,19 +220,12 @@ include "db_disconnect.php";
       <div class="related-products-list">
 
         <?php
-        // if product has any related product(s)
-
         if ($related_products) {
           foreach ($related_products as $product) {
-            // show each product in the related products section
-
             $product_id = $product["id"];
             $product_img = $product["image_url"];
             $product_name = $product["name"];
-            
-            // format each product's price
             $product_price = number_format($product["price"], 2);
-
             echo <<<END
             <div class="product-list-item">
               <div class="product-img-wrapper">
@@ -246,8 +251,6 @@ include "db_disconnect.php";
             END;
           }
         } else {
-          // this product has no related products
-
           echo <<<END
           <h3><em>No related products</em></h3>
           END;
@@ -262,7 +265,6 @@ include "db_disconnect.php";
 
       <?php
 
-      // if user session is set, show review form, otherwise not
       if ($user_session) {
         $product_id = htmlspecialchars($_GET["id"]);
 
@@ -278,7 +280,6 @@ include "db_disconnect.php";
         </div>
         END;
       } else {
-        // user is not signed in, they have to sign in first
         echo <<<END
         <div class="make-review">
           <div class="sign-in">Please sign in to submit a review</div>
@@ -290,9 +291,7 @@ include "db_disconnect.php";
 
       <div class="customer-reviews" id="reviews">
         <?php
-        // if product has a rating (which means there are reviews)
         if ($rating) {
-          // show each review in the customer reviews section
           foreach ($reviews as $review) {
             $review_rating = $review["rating"];
             $review_title = $review["title"];
@@ -311,7 +310,6 @@ include "db_disconnect.php";
             END;
           }
         } else {
-          // no reviews for this product yet
           echo <<<END
           <div class="review">
             <div class="review-top">
