@@ -33,13 +33,13 @@
         <li><a href="about.php">About us</a></li>
 
         <?php
+        // if user is not logged in, show different buttton text
         if (!isset($_COOKIE["session_token"])) {
           echo <<<END
           <li><a href="session.php">Log-in / Register</a></li>
           END;
-        }
-
-        if (isset($_COOKIE["session_token"])) {
+        } else {
+          // enable the user to log out right away by clicking on a navbar link
           echo <<<END
           <li>
             <form action="session.php" method="post">

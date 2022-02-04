@@ -33,7 +33,7 @@ include "redirect_http.php";
           <div class="input_row">
             <div class="input_group">
               <label>Name</label>
-              <input name="name" class="input-form" type="text" placeholder="dr.bibo" required></input>
+              <input name="name" class="input-form" type="text" placeholder="Name..." required></input>
 
             </div>
             <div class="input_group">
@@ -44,17 +44,17 @@ include "redirect_http.php";
 
             <div class="input_group">
               <label>Email address</label>
-              <input name="email" class="input-form" type="email" placeholder="dr.bibo@gmail.com" required></input>
+              <input name="email" class="input-form" type="email" placeholder="email@example.com" required></input>
 
             </div>
             <div class="input_group">
               <label>Subject</label>
-              <input name="subject" class="input-form" type="text" placeholder="subject of contact" required></input>
+              <input name="subject" class="input-form" type="text" placeholder="Subject" required></input>
 
             </div>
           </div>
           <label>Message</label>
-          <textarea name="message" rows="10" placeholder="max 200 characters" required></textarea>
+          <textarea name="message" rows="10" placeholder="Message..." required></textarea>
           <div class="messagebutton">
             <button type="submit">Submit</button>
           </div>

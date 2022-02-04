@@ -240,6 +240,7 @@ include "db_disconnect.php";
 
       <?php
 
+      // if user is logged in, show submit review form
       if ($user_session) {
         $product_id = htmlspecialchars($_GET["id"]);
 
@@ -255,6 +256,7 @@ include "db_disconnect.php";
         </div>
         END;
       } else {
+        // user is not logged in, cant post review
         echo <<<END
         <div class="make-review">
           <div class="sign-in">Please sign in to submit a review</div>
@@ -268,6 +270,8 @@ include "db_disconnect.php";
         <?php
         // if product has a rating (which means there are reviews)
         if ($rating) {
+          
+          // iterate over each review and show the review data for the user
           foreach ($reviews as $review) {
             $review_rating = $review["rating"];
             $review_title = $review["title"];
@@ -286,6 +290,7 @@ include "db_disconnect.php";
             END;
           }
         } else {
+          // the product has no reviews yet
           echo <<<END
           <div class="review">
             <div class="review-top">
