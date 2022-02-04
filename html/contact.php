@@ -49,7 +49,7 @@ include "redirect_http.php";
             </div>
             <div class="input_group">
               <label>Subject</label>
-              <input name="subject" class="input-form" type="text" placeholder="Subject" required></input>
+              <input name="subject" class="input-form" type="text" placeholder="Subject..." required></input>
 
             </div>
           </div>
