@@ -213,6 +213,7 @@ setcookie("cart");
   <div class="container">
     <div class="message">
       <?php
+      // inform the user that they have successfully bought their products
       echo <<<END
       <h1>Thank you for your purchase, $first_name! </h1>
       END;
