@@ -152,6 +152,7 @@ include "db_disconnect.php";
         <span class="rating-reviews">
           <a href="#reviews">
             <?php
+            // if product has a rating (calculated based on reviews)
             if ($rating) {
               echo <<<END
               <span class="stars">$rating</span> ($review_count review(s))
@@ -226,6 +227,7 @@ include "db_disconnect.php";
             END;
           }
         } else {
+          // product has no related products
           echo <<<END
           <h3><em>No related products</em></h3>
           END;
@@ -270,7 +272,7 @@ include "db_disconnect.php";
         <?php
         // if product has a rating (which means there are reviews)
         if ($rating) {
-          
+
           // iterate over each review and show the review data for the user
           foreach ($reviews as $review) {
             $review_rating = $review["rating"];

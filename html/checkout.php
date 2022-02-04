@@ -57,6 +57,8 @@ $subtotal = 0;
         <input type="text" name="address" required value="<?php if ($user_session) echo $user_session["address"] ?>"><br>
         <label for="postal-code">Postal code</label>
         <input type="text" name="zip" required value="<?php if ($user_session) echo $user_session["zip"] ?>"><br>
+        <label for="city">City</label>
+        <input type="text" name="city" required value="<?php if ($user_session) echo $user_session["city"] ?>"><br>
         <label for="country">Country</label>
         <input type="text" name="country" required value="<?php if ($user_session) echo $user_session["country"] ?>"><br>
 

@@ -80,7 +80,7 @@ if (isset($_GET["search"])) {
   $products_query = "SELECT * FROM products;";
 }
 
-// get search results
+// get info on search results
 $products_result = mysqli_query($conn, $products_query);
 $products_count = mysqli_num_rows($products_result);
 $products = array();

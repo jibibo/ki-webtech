@@ -9,7 +9,8 @@ if (
   !isset($_COOKIE["cart"]) || !isset($_POST["first_name"]) ||
   !isset($_POST["last_name"]) || !isset($_POST["address"]) ||
   !isset($_POST["zip"]) || !isset($_POST["country"]) ||
-  !isset($_POST["email"]) || !isset($_POST["phonenumber"])
+  !isset($_POST["email"]) || !isset($_POST["phonenumber"]) ||
+  !isset($_POST["city"])
 ) {
   header("Location: /");
   exit;
@@ -69,6 +70,19 @@ if (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i", $zip)) {
   exit;
 }
 
+$city = htmlspecialchars($_POST["city"]);
+
+// check if city only consists of whitespaces and letters
+if (!preg_match("/^[a-zA-Z ]+$/", $city)) {
+  echo <<<END
+  <script LANGUAGE='JavaScript'>
+  window.alert('Please enter a valid city');
+  window.location.href='https://webtech-ki15.webtech-uva.nl/checkout.php';
+  </script>
+  END;
+  exit;
+}
+
 $country = htmlspecialchars($_POST["country"]);
 
 // check if country only consists of whitespaces and letters
@@ -112,8 +126,8 @@ if (!preg_match("/^((\+|00(\s|\s?\-\s?)?)31(\s|\s?\-\s?)?(\(0\)[\-\s]?)?|0)[1-9]
 // create order in db
 mysqli_query(
   $conn,
-  "INSERT INTO orders (first_name, last_name, address, zip, country, email, phonenumber) 
-  VALUES ('$first_name', '$last_name', '$address', '$zip', '$country', '$email', '$phonenumber')"
+  "INSERT INTO orders (first_name, last_name, address, zip, city, country, email, phonenumber) 
+  VALUES ('$first_name', '$last_name', '$address', '$zip', '$city', '$country', '$email', '$phonenumber')"
 );
 
 // get the newly generated order id

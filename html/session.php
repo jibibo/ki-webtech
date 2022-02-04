@@ -52,6 +52,7 @@ if (isset($_POST["in_out"])) {
       LIMIT 1"
     );
 
+    // if the searched session token exists, delete the entry in the database
     if ($query_result) {
       mysqli_query(
         $conn,
