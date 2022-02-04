@@ -4,14 +4,14 @@
 $(document).ready(() => {
   let pathname = location.pathname;
   $("#nav-ul li a").each((_i, el) => {
-    console.debug("href:", e.href, "pathname:", pathname);
+    console.debug("href:", el.href, "pathname:", pathname);
     if (el.href.indexOf("?") !== -1) return;
 
     // if the current path is like this link, make it active
     if (
       (pathname !== "/" && el.href.indexOf(pathname) !== -1) ||
-      (pathname === "/" && el.href.indexOf("index.php") !== -1) ||
-      (pathname === "/" && el.href === "/")
+      (pathname === "/index.php" && el.href.endsWith("/")) ||
+      (pathname === "/" && el.href.endsWith("/"))
     ) {
       $(el).addClass("active");
     }
