@@ -49,6 +49,12 @@ td {
   margin-bottom: 1em;
 }
 
+@media (max-width: 600px) {
+  .order-info {
+    width: 400px;
+  }
+}
+
 .return input[type="submit"] {
   width: 900px;
   background-color: #febd69;
