@@ -36,8 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   $phonenumber = htmlspecialchars($_POST["phone"]);
 
-  // check if phone number is a valid number in the Netherlands
   // https://regexr.com/3aevr
+  // check if phone number is a valid number in the Netherlands
   if (!preg_match("/^((\+|00(\s|\s?\-\s?)?)31(\s|\s?\-\s?)?(\(0\)[\-\s]?)?|0)[1-9]((\s|\s?\-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$/", $phonenumber)) {
     echo ("<script LANGUAGE='JavaScript'>
         window.alert('Please enter a valid phone number');
@@ -73,7 +73,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
   // https://murani.nl/blog/2015-09-28/nederlandse-reguliere-expressies/ --> address regex
-
   $address = htmlspecialchars($_POST["address"]);
 
   // check if address is a valid address in the Netherlands
@@ -85,10 +84,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit;
   }
 
-  //https://stackoverflow.com/questions/17898523/regular-expression-for-dutch-zip-postal-code
-
   $zipcode = htmlspecialchars($_POST["zipcode"]);
 
+  // https://stackoverflow.com/questions/17898523/regular-expression-for-dutch-zip-postal-code
   // check if zipcode is a valid zipcode in the Netherlands
   if (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/i", $zipcode)) {
     echo ("<script LANGUAGE='JavaScript'>
@@ -128,7 +126,6 @@ $query = "INSERT INTO customers (first_name, last_name, phonenumber, email, pass
 VALUES ('$fname', '$lname', '$phonenumber', '$emailaddress', '$hashed_psw', '$address', '$zipcode', '$city', '$country')";
 
 // https://www.codegrepper.com/code-examples/javascript/how+to+redirect+to+another+page+in+php+after+alert+message
-
 // if query is succeeded return to homepage, else try again on the register page
 if (mysqli_query($conn, $query)) {
   echo ("<script LANGUAGE='JavaScript'>
