@@ -266,6 +266,7 @@ include "db_disconnect.php";
 
       <div class="customer-reviews" id="reviews">
         <?php
+        // if product has a rating (which means there are reviews)
         if ($rating) {
           foreach ($reviews as $review) {
             $review_rating = $review["rating"];
