@@ -68,7 +68,7 @@ $subtotal = 0;
           <input type="text" name="phonenumber" required value="<?php if ($user_session) echo $user_session["phonenumber"] ?>">
           <label><input type="checkbox" id="agree-tos" required> I agree to the <a href="terms.php">Terms of Service</a></label>
           <div class="payment">
-            <input type="submit" value="Buy now" />
+            <input type="submit" value="Buy now" <?php if (!$cart_count) echo "disabled" ?> />
           </div>
         </div>
       </form>
