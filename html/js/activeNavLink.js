@@ -3,7 +3,10 @@
 
 $(document).ready(() => {
   let pathname = location.pathname;
+
+  // iterate over each a element in the navigation menu
   $("#nav-ul li a").each((_i, el) => {
+    // if the url contains parameters, dont make it active
     if (el.href.indexOf("?") !== -1) return;
 
     // if the current path is like this link, make it active
@@ -12,6 +15,7 @@ $(document).ready(() => {
       (pathname === "/index.php" && el.href.endsWith("/")) ||
       (pathname === "/" && el.href.endsWith("/"))
     ) {
+      // add the "active" class
       $(el).addClass("active");
     }
   });
